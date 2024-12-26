@@ -20,7 +20,7 @@
                                     <img src="./images/item/line-throw-title.png" alt="">
                                 </div>
                                 <div class="breadcrumb">
-                                    <a href="index.html">Home</a>
+                                    <a href="/">Home</a>
                                     <div class="icon">
                                         <i class="icon-arrow-right1"></i>
                                     </div>

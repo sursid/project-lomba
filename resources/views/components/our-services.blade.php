@@ -20,7 +20,7 @@
                                     <img src="./images/item/line-throw-title.png" alt="">
                                 </div>
                                 <div class="breadcrumb">
-                                    <a href="index.html">Home</a>
+                                    <a href="/">Home</a>
                                     <div class="icon">
                                         <i class="icon-arrow-right1"></i>
                                     </div>
@@ -109,7 +109,7 @@
                                         <p>Environmental protection is the focus</p>
                                     </li>
                                 </ul>
-                                <a href="shop-products.html" class="tf-btn">
+                                <a href="shop-products" class="tf-btn">
                                     <span class="text-style">View Shop Product</span>
                                     <div class="icon"><i class="icon-arrow_right"></i></div>
                                 </a>
@@ -135,7 +135,7 @@
                                                 <div class="icon hover-icon style-circle">
                                                     <img src="./icons/tomato.png" alt="">
                                                 </div>
-                                                <a href="our-commitments.html" class="caption fw-6  font-worksans hover-text-secondary">
+                                                <a href="our-commitments" class="caption fw-6  font-worksans hover-text-secondary">
                                                     100% Organic Products
                                                 </a>
                                                 <p class="text font-nunito">
@@ -151,7 +151,7 @@
                                                 <div class="icon style-circle hover-icon img-hover-2">
                                                     <i class="fa-solid fa-tractor"></i>
                                                 </div>
-                                                <a href="our-commitments.html" class="caption fw-6  font-worksans hover-text-secondary">
+                                                <a href="our-commitments" class="caption fw-6  font-worksans hover-text-secondary">
                                                     Absolute Quality
                                                 </a>
                                                 <p class="text font-nunito">
@@ -166,7 +166,7 @@
                                                 <div class="icon hover-icon style-circle">
                                                     <i class="fa-solid fa-leaf"></i>
                                                 </div>
-                                                <a href="our-commitments.html" class="caption fw-6  font-worksans hover-text-secondary">
+                                                <a href="our-commitments" class="caption fw-6  font-worksans hover-text-secondary">
                                                     Environmentally Friendly
                                                 </a>
                                                 <p class="text font-nunito">
@@ -181,7 +181,7 @@
                                                 <div class="icon hover-icon style-circle">
                                                     <img src="./icons/dollar-circle.png" alt="">
                                                 </div>
-                                                <a href="our-commitments.html" class="caption fw-6  font-worksans hover-text-secondary">
+                                                <a href="our-commitments" class="caption fw-6  font-worksans hover-text-secondary">
                                                     Reasonable Price
                                                 </a>
                                                 <p class="text font-nunito">
@@ -234,7 +234,7 @@
                                         </div>
                                     </div>
                                     <div class="content">
-                                        <a href="service-detail.html" class="title fs-23 fw-6 font-worksans hover-text-4">
+                                        <a href="service-detail" class="title fs-23 fw-6 font-worksans hover-text-4">
                                             Clean Vegetables
                                         </a>
                                         <p class="text font-nunito">
@@ -242,7 +242,7 @@
                                             nibh sit amet
                                             commodo nulla.
                                         </p>
-                                        <a href="our-services.html" class="tf-btn-read hover-text-4">Read More</a>
+                                        <a href="our-services" class="tf-btn-read hover-text-4">Read More</a>
                                     </div>
                                 </div>
                                 <div class="box-infor ic-hover img-hover style-1 wow fadeInUp" data-wow-delay="0.1s">
@@ -253,7 +253,7 @@
                                         </div>
                                     </div>
                                     <div class="content">
-                                        <a href="service-detail.html" class="title fs-23 fw-6 font-worksans hover-text-4">
+                                        <a href="service-detail" class="title fs-23 fw-6 font-worksans hover-text-4">
                                             Pure Cow's Milk
                                         </a>
                                         <p class="text font-nunito">
@@ -261,7 +261,7 @@
                                             nibh sit amet
                                             commodo nulla.
                                         </p>
-                                        <a href="our-services.html" class="tf-btn-read hover-text-4">Read More</a>
+                                        <a href="our-services" class="tf-btn-read hover-text-4">Read More</a>
                                     </div>
                                 </div>
                                 <div class="box-infor ic-hover img-hover style-1 wow fadeInUp" data-wow-delay="0.2s">
@@ -273,7 +273,7 @@
                                         </div>
                                     </div>
                                     <div class="content">
-                                        <a href="service-detail.html" class="title fs-23 fw-6 font-worksans hover-text-4">
+                                        <a href="service-detail" class="title fs-23 fw-6 font-worksans hover-text-4">
                                             Clean Chicken And Eggs
                                         </a>
                                         <p class="text font-nunito">
@@ -281,7 +281,7 @@
                                             nibh sit amet
                                             commodo nulla.
                                         </p>
-                                        <a href="our-services.html" class="tf-btn-read hover-text-4">Read More</a>
+                                        <a href="our-services" class="tf-btn-read hover-text-4">Read More</a>
                                     </div>
                                 </div>
                                 <div class="box-infor ic-hover img-hover style-1 wow fadeInUp" data-wow-delay="0s">
@@ -292,7 +292,7 @@
                                         </div>
                                     </div>
                                     <div class="content">
-                                        <a href="service-detail.html" class="title fs-23 fw-6 font-worksans hover-text-4">
+                                        <a href="service-detail" class="title fs-23 fw-6 font-worksans hover-text-4">
                                             Fertilizer Products
                                         </a>
                                         <p class="text font-nunito">
@@ -300,7 +300,7 @@
                                             nibh sit amet
                                             commodo nulla.
                                         </p>
-                                        <a href="our-services.html" class="tf-btn-read hover-text-4">Read More</a>
+                                        <a href="our-services" class="tf-btn-read hover-text-4">Read More</a>
                                     </div>
                                 </div>
                                 <div class="box-infor ic-hover img-hover style-1 wow fadeInUp" data-wow-delay="0.1s">
@@ -311,7 +311,7 @@
                                         </div>
                                     </div>
                                     <div class="content">
-                                        <a href="service-detail.html" class="title fs-23 fw-6 font-worksans hover-text-4">
+                                        <a href="service-detail" class="title fs-23 fw-6 font-worksans hover-text-4">
                                             Tubers And Fruits
                                         </a>
                                         <p class="text font-nunito">
@@ -319,7 +319,7 @@
                                             nibh sit amet
                                             commodo nulla.
                                         </p>
-                                        <a href="our-services.html" class="tf-btn-read hover-text-4">Read More</a>
+                                        <a href="our-services" class="tf-btn-read hover-text-4">Read More</a>
                                     </div>
                                 </div>
                                 <div class="box-infor ic-hover img-hover style-1 wow fadeInUp" data-wow-delay="0.2s">
@@ -330,7 +330,7 @@
                                         </div>
                                     </div>
                                     <div class="content">
-                                        <a href="service-detail.html" class="title fs-23 fw-6 font-worksans hover-text-4">
+                                        <a href="service-detail" class="title fs-23 fw-6 font-worksans hover-text-4">
                                             Meat Of Cattle And Poultry
                                         </a>
                                         <p class="text font-nunito">
@@ -338,7 +338,7 @@
                                             nibh sit amet
                                             commodo nulla.
                                         </p>
-                                        <a href="our-services.html" class="tf-btn-read hover-text-4">Read More</a>
+                                        <a href="our-services" class="tf-btn-read hover-text-4">Read More</a>
                                     </div>
                                 </div>
                             </div>
@@ -401,7 +401,7 @@
                                         <p>100 freight shipments / month</p>
                                     </li>
                                 </ul>
-                                <a href="contact-us.html" class="tf-btn bg-white ">
+                                <a href="contact-us" class="tf-btn bg-white ">
                                     <span class="text-style cl-primary">
                                         Get Started
                                     </span>
@@ -450,7 +450,7 @@
                                         <p>100 freight shipments / month</p>
                                     </li>
                                 </ul>
-                                <a href="contact-us.html" class="tf-btn bg-white ">
+                                <a href="contact-us" class="tf-btn bg-white ">
                                     <span class="text-style cl-primary">
                                         Get Started
                                     </span>
@@ -494,7 +494,7 @@
                                         <p>100 freight shipments / month</p>
                                     </li>
                                 </ul>
-                                <a href="contact-us.html" class="tf-btn bg-white ">
+                                <a href="contact-us" class="tf-btn bg-white ">
                                     <span class="text-style cl-primary">
                                         Get Started
                                     </span>

@@ -20,11 +20,11 @@
                                     <img src="./images/item/line-throw-title.png" alt="">
                                 </div>
                                 <div class="breadcrumb">
-                                    <a href="index.html">Home</a>
+                                    <a href="/">Home</a>
                                     <div class="icon">
                                         <i class="icon-arrow-right1"></i>
                                     </div>
-                                    <a href="about-us.html"> About Us</a>
+                                    <a href="about-us"> About Us</a>
                                     <div class="icon">
                                         <i class="icon-arrow-right1"></i>
                                     </div>
@@ -74,7 +74,7 @@
                                             <div class="image hover-item">
                                                 <img class=" lazyload" src="./images/widget/history-1.jpg" data-src="./images/widget/history-1.jpg" alt="">
                                             </div>
-                                            <a href="gallery.html" class="add-gallery">
+                                            <a href="gallery" class="add-gallery">
                                                 +
                                             </a>
                                         </div>
@@ -84,7 +84,7 @@
                                             <div class="image hover-item">
                                                 <img class=" lazyload" src="./images/widget/history-2.jpg" data-src="./images/widget/history-2.jpg" alt="">
                                             </div>
-                                            <a href="gallery.html" class="add-gallery">
+                                            <a href="gallery" class="add-gallery">
                                                 +
                                             </a>
                                         </div>
@@ -94,7 +94,7 @@
                                             <div class="image hover-item">
                                                 <img class=" lazyload" src="./images/widget/history-3.jpg" data-src="./images/widget/history-3.jpg" alt="">
                                             </div>
-                                            <a href="gallery.html" class="add-gallery">
+                                            <a href="gallery" class="add-gallery">
                                                 +
                                             </a>
                                         </div>
@@ -104,7 +104,7 @@
                                             <div class="image hover-item">
                                                 <img class=" lazyload" src="./images/widget/history-4.jpg" data-src="./images/widget/history-4.jpg" alt="">
                                             </div>
-                                            <a href="gallery.html" class="add-gallery">
+                                            <a href="gallery" class="add-gallery">
                                                 +
                                             </a>
                                         </div>

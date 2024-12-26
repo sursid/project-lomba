@@ -20,7 +20,7 @@
                                     <img src="./images/item/line-throw-title.png" alt="">
                                 </div>
                                 <div class="breadcrumb">
-                                    <a href="index.html">Home</a>
+                                    <a href="/">Home</a>
                                     <div class="icon">
                                         <i class="icon-arrow-right1"></i>
                                     </div>
@@ -270,7 +270,7 @@
                                     <div class="image">
                                         <img src="./images/item/haagen.png" data-src="./images/item/haagen.png" alt="" class="lazyload">
                                     </div>
-                                    <a href="shop-details.html" class="name-product font-worksans hover-text-4">
+                                    <a href="shop-details" class="name-product font-worksans hover-text-4">
                                         Häagen-Dazs Salted
                                     </a>
                                     <div class="pricing-star">
@@ -287,7 +287,7 @@
                                         </div>
                                     </div>
                                     <div class="product-btn-list">
-                                        <a href="shop-details.html" class="icon shoping">
+                                        <a href="shop-details" class="icon shoping">
 
                                             <div class="tt-text">
 
@@ -335,7 +335,7 @@
                                     <div class="image">
                                         <img src="./images/item/vimto.png" data-src="./images/item/vimto.png" alt="" class="lazyload">
                                     </div>
-                                    <a href="shop-details.html" class="name-product font-worksans hover-text-4">
+                                    <a href="shop-details" class="name-product font-worksans hover-text-4">
                                         Vimto Squash Remix
                                     </a>
                                     <div class="pricing-star">
@@ -353,7 +353,7 @@
                                         </div>
                                     </div>
                                     <div class="product-btn-list">
-                                        <a href="shop-details.html" class="icon shoping">
+                                        <a href="shop-details" class="icon shoping">
 
                                             <div class="tt-text">
 
@@ -402,7 +402,7 @@
                                     <div class="image">
                                         <img src="./images/item/bag.png" data-src="./images/item/bag.png" alt="" class="lazyload">
                                     </div>
-                                    <a href="shop-details.html" class="name-product font-worksans hover-text-4">
+                                    <a href="shop-details" class="name-product font-worksans hover-text-4">
                                         Bag Of Succulent Oranges
                                     </a>
                                     <div class="pricing-star">
@@ -421,7 +421,7 @@
                                         </div>
                                     </div>
                                     <div class="product-btn-list">
-                                        <a href="shop-details.html" class="icon shoping">
+                                        <a href="shop-details" class="icon shoping">
 
                                             <div class="tt-text">
 
@@ -473,7 +473,7 @@
                                     <div class="image">
                                         <img src="./images/item/macaroni.png" data-src="./images/item/macaroni.png" alt="" class="lazyload">
                                     </div>
-                                    <a href="shop-details.html" class="name-product font-worksans hover-text-4">
+                                    <a href="shop-details" class="name-product font-worksans hover-text-4">
                                         Iceland Macaroni Cheese
                                     </a>
                                     <div class="pricing-star">
@@ -490,7 +490,7 @@
                                         </div>
                                     </div>
                                     <div class="product-btn-list">
-                                        <a href="shop-details.html" class="icon shoping">
+                                        <a href="shop-details" class="icon shoping">
 
                                             <div class="tt-text">
 
@@ -534,7 +534,7 @@
                                     <div class="image">
                                         <img src="./images/item/extre-budweiser.png" data-src="./images/item/extre-budweiser.png" alt="" class="lazyload">
                                     </div>
-                                    <a href="shop-details.html" class="name-product font-worksans hover-text-4">
+                                    <a href="shop-details" class="name-product font-worksans hover-text-4">
                                         Extreme Budweiser
                                     </a>
                                     <div class="pricing-star">
@@ -550,7 +550,7 @@
                                         </div>
                                     </div>
                                     <div class="product-btn-list">
-                                        <a href="shop-details.html" class="icon shoping">
+                                        <a href="shop-details" class="icon shoping">
 
                                             <div class="tt-text">
 
@@ -602,7 +602,7 @@
                                     <div class="image">
                                         <img src="./images/item/sitema.png" data-src="./images/item/sitema.png" alt="" class="lazyload">
                                     </div>
-                                    <a href="shop-details.html" class="name-product font-worksans hover-text-4">
+                                    <a href="shop-details" class="name-product font-worksans hover-text-4">
                                         Sitema BakeIT Plastic Box
                                     </a>
                                     <div class="pricing-star">
@@ -618,7 +618,7 @@
                                         </div>
                                     </div>
                                     <div class="product-btn-list">
-                                        <a href="shop-details.html" class="icon shoping">
+                                        <a href="shop-details" class="icon shoping">
 
                                             <div class="tt-text">
 
@@ -662,7 +662,7 @@
                                     <div class="image">
                                         <img src="./images/item/avocado.png" data-src="./images/item/avocado.png" alt="" class="lazyload">
                                     </div>
-                                    <a href="shop-details.html" class="name-product font-worksans hover-text-4">
+                                    <a href="shop-details" class="name-product font-worksans hover-text-4">
                                         Handmade And Created
                                     </a>
                                     <div class="pricing-star">
@@ -678,7 +678,7 @@
                                         </div>
                                     </div>
                                     <div class="product-btn-list">
-                                        <a href="shop-details.html" class="icon shoping">
+                                        <a href="shop-details" class="icon shoping">
 
                                             <div class="tt-text">
 
@@ -722,7 +722,7 @@
                                     <div class="image">
                                         <img src="./images/item/banana.png" data-src="./images/item/banana.png" alt="" class="lazyload">
                                     </div>
-                                    <a href="shop-details.html" class="name-product font-worksans hover-text-4">
+                                    <a href="shop-details" class="name-product font-worksans hover-text-4">
                                         Avocado The Most Nutrient
                                     </a>
                                     <div class="pricing-star">
@@ -738,7 +738,7 @@
                                         </div>
                                     </div>
                                     <div class="product-btn-list">
-                                        <a href="shop-details.html" class="icon shoping">
+                                        <a href="shop-details" class="icon shoping">
 
                                             <div class="tt-text">
 
@@ -782,7 +782,7 @@
                                     <div class="image">
                                         <img src="./images/item/flover.png" data-src="./images/item/flover.png" alt="" class="lazyload">
                                     </div>
-                                    <a href="shop-details.html" class="name-product font-worksans hover-text-4">
+                                    <a href="shop-details" class="name-product font-worksans hover-text-4">
                                         Golden Curcuma Flavored
                                     </a>
                                     <div class="pricing-star">
@@ -798,7 +798,7 @@
                                         </div>
                                     </div>
                                     <div class="product-btn-list">
-                                        <a href="shop-details.html" class="icon shoping">
+                                        <a href="shop-details" class="icon shoping">
 
                                             <div class="tt-text">
 
@@ -848,7 +848,7 @@
                                     <div class="image">
                                         <img src="./images/item/dense.png" data-src="./images/item/dense.png" alt="" class="lazyload">
                                     </div>
-                                    <a href="shop-details.html" class="name-product font-worksans hover-text-4">
+                                    <a href="shop-details" class="name-product font-worksans hover-text-4">
                                         Dense Superfood Available
                                     </a>
                                     <div class="pricing-star">
@@ -864,7 +864,7 @@
                                         </div>
                                     </div>
                                     <div class="product-btn-list">
-                                        <a href="shop-details.html" class="icon shoping">
+                                        <a href="shop-details" class="icon shoping">
 
                                             <div class="tt-text">
 
@@ -914,7 +914,7 @@
                                     <div class="image">
                                         <img src="./images/item/beef.png" data-src="./images/item/beef.png" alt="" class="lazyload">
                                     </div>
-                                    <a href="shop-details.html" class="name-product font-worksans hover-text-4">
+                                    <a href="shop-details" class="name-product font-worksans hover-text-4">
                                         Organic Beef Box 1kg
                                     </a>
                                     <div class="pricing-star">
@@ -930,7 +930,7 @@
                                         </div>
                                     </div>
                                     <div class="product-btn-list">
-                                        <a href="shop-details.html" class="icon shoping">
+                                        <a href="shop-details" class="icon shoping">
 
                                             <div class="tt-text">
 
@@ -980,7 +980,7 @@
                                     <div class="image">
                                         <img src="./images/item/from.png" data-src="./images/item/from.png" alt="" class="lazyload">
                                     </div>
-                                    <a href="shop-details.html" class="name-product font-worksans hover-text-4">
+                                    <a href="shop-details" class="name-product font-worksans hover-text-4">
                                         Orange Juice From Fruits
                                     </a>
                                     <div class="pricing-star">
@@ -996,7 +996,7 @@
                                         </div>
                                     </div>
                                     <div class="product-btn-list">
-                                        <a href="shop-details.html" class="icon shoping">
+                                        <a href="shop-details" class="icon shoping">
 
                                             <div class="tt-text">
 

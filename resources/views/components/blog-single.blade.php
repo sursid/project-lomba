@@ -20,11 +20,11 @@
                                     <img src="./images/item/line-throw-title.png" alt="">
                                 </div>
                                 <div class="breadcrumb">
-                                    <a href="index.html">Home</a>
+                                    <a href="">Home</a>
                                     <div class="icon">
                                         <i class="icon-arrow-right1"></i>
                                     </div>
-                                    <a href="blog-right-sidebar.html"> Blog Right Sidebar</a>
+                                    <a href="blog-right-sidebar"> Blog Right Sidebar</a>
                                     <div class="icon">
                                         <i class="icon-arrow-right1"></i>
                                     </div>

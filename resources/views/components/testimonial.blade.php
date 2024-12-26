@@ -19,7 +19,7 @@
                                     <img src="./images/item/line-throw-title.png" alt="">
                                 </div>
                                 <div class="breadcrumb">
-                                    <a href="index.html">Home</a>
+                                    <a href="/">Home</a>
                                     <div class="icon">
                                         <i class="icon-arrow-right1"></i>
                                     </div>
@@ -99,7 +99,7 @@
                                     their
                                     testimonials.
                                 </p>
-                                <a href="contact-us.html" class="tf-btn btn-read-more scale-50">
+                                <a href="contact-us" class="tf-btn btn-read-more scale-50">
                                     <span class="text-style text-anime-style-1">
                                         Talk About Your Review
                                     </span>

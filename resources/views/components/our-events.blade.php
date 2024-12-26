@@ -20,11 +20,11 @@
                                     <img src="./images/item/line-throw-title.png" alt="">
                                 </div>
                                 <div class="breadcrumb">
-                                    <a href="index.html">Home</a>
+                                    <a href="/">Home</a>
                                     <div class="icon">
                                         <i class="icon-arrow-right1"></i>
                                     </div>
-                                    <a href="about-us.html">About Us </a>
+                                    <a href="about-us">About Us </a>
                                     <div class="icon">
                                         <i class="icon-arrow-right1"></i>
                                     </div>
@@ -130,7 +130,7 @@
                                                     <div class="img-item">
                                                         <img src="./images/item/rice-plant-2.png" alt="">
                                                     </div>
-                                                    <a href="event-detail.html" class="title fw-7 font-worksans">
+                                                    <a href="event-detail" class="title fw-7 font-worksans">
                                                         Discover Farm Tour
                                                     </a>
                                                     <p class="text">
@@ -142,7 +142,7 @@
                                                         elit. Sed a cursus
                                                         massa.
                                                     </p>
-                                                    <a href="event-detail.html" class="tf-btn-read hover-text-4">Read
+                                                    <a href="event-detail" class="tf-btn-read hover-text-4">Read
                                                         More</a>
                                                 </div>
                                             </div>
@@ -156,7 +156,7 @@
                                                     <div class="img-item">
                                                         <img src="./images/item/rice-plant-2.png" alt="">
                                                     </div>
-                                                    <a href="event-detail.html" class="title fw-7 font-worksans">
+                                                    <a href="event-detail" class="title fw-7 font-worksans">
                                                         Farm In Summer
                                                     </a>
                                                     <p class="text">
@@ -168,7 +168,7 @@
                                                         elit. Sed a cursus
                                                         massa.
                                                     </p>
-                                                    <a href="event-detail.html" class="tf-btn-read hover-text-4">Read
+                                                    <a href="event-detail" class="tf-btn-read hover-text-4">Read
                                                         More</a>
                                                 </div>
                                             </div>
@@ -182,7 +182,7 @@
                                                     <div class="img-item">
                                                         <img src="./images/item/rice-plant-2.png" alt="">
                                                     </div>
-                                                    <a href="event-detail.html" class="title fw-7 font-worksans">
+                                                    <a href="event-detail" class="title fw-7 font-worksans">
                                                         Children's Summer Camp
                                                     </a>
                                                     <p class="text">
@@ -194,7 +194,7 @@
                                                         elit. Sed a cursus
                                                         massa.
                                                     </p>
-                                                    <a href="event-detail.html" class="tf-btn-read hover-text-4">Read
+                                                    <a href="event-detail" class="tf-btn-read hover-text-4">Read
                                                         More</a>
                                                 </div>
                                             </div>
@@ -241,7 +241,7 @@
                                     </div>
                                 </div>
                                 <div class="content">
-                                    <a href="event-detail.html" class="hover-text-4 fs-30 title fw-7 font-worksans">
+                                    <a href="event-detail" class="hover-text-4 fs-30 title fw-7 font-worksans">
                                         Strawberry Harvesting Activities
                                     </a>
                                     <ul class="infor-event">
@@ -271,7 +271,7 @@
                                         rutrum, quam
                                         vestibulum placerat sodales
                                     </p>
-                                    <a href="event-detail.html" class="tf-btn">
+                                    <a href="event-detail" class="tf-btn">
                                         <span class="text-style">Read More</span>
                                         <div class="icon">
                                             <i class="icon-arrow_right"></i>
@@ -292,7 +292,7 @@
                                     </div>
                                 </div>
                                 <div class="content">
-                                    <a href="event-detail.html" class="hover-text-4 fs-30 title fw-7 font-worksans">
+                                    <a href="event-detail" class="hover-text-4 fs-30 title fw-7 font-worksans">
                                         Sightseeing And Cow Milking Activities
                                     </a>
                                     <ul class="infor-event">
@@ -322,7 +322,7 @@
                                         rutrum, quam
                                         vestibulum placerat sodales
                                     </p>
-                                    <a href="event-detail.html" class="tf-btn">
+                                    <a href="event-detail" class="tf-btn">
                                         <span class="text-style">Read More</span>
                                         <div class="icon">
                                             <i class="icon-arrow_right"></i>
@@ -346,7 +346,7 @@
                                     </div>
                                 </div>
                                 <div class="content">
-                                    <a href="event-detail.html" class="hover-text-4 fs-30 title fw-7 font-worksans">
+                                    <a href="event-detail" class="hover-text-4 fs-30 title fw-7 font-worksans">
                                         Harvest The Fruits &amp; Vegetables
                                     </a>
                                     <ul class="infor-event">
@@ -376,7 +376,7 @@
                                         rutrum, quam
                                         vestibulum placerat sodales
                                     </p>
-                                    <a href="event-detail.html" class="tf-btn">
+                                    <a href="event-detail" class="tf-btn">
                                         <span class="text-style">Read More</span>
                                         <div class="icon">
                                             <i class="icon-arrow_right"></i>
@@ -407,11 +407,11 @@
                         </div>
 
                         <div class="bot">
-                            <a href="contact-us.html" class="tf-btn wow fadeInUp" data-wow-delay="0s" data-wow-offset="10">
+                            <a href="contact-us" class="tf-btn wow fadeInUp" data-wow-delay="0s" data-wow-offset="10">
                                 <span class="text-style">Contact Us Today</span>
                                 <div class="icon"><i class="icon-arrow_right"></i></div>
                             </a>
-                            <a href="faq.html" class="tf-btn style-3 pd-defalt wow fadeInUp" data-wow-delay="0.1s">
+                            <a href="faq" class="tf-btn style-3 pd-defalt wow fadeInUp" data-wow-delay="0.1s">
                                 <span class="text-style">View FAQs Page</span>
                                 <div class="icon"><i class="icon-arrow_right"></i></div>
                             </a>

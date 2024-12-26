@@ -166,7 +166,7 @@
                         <div class="header-topbar">
                             <div class="header-left">
                                 <div class="logo-site">
-                                    <a href="index.html">
+                                    <a href="/">
                                         <img src="./images/logo/logo.png" alt="">
                                     </a>
                                 </div>
@@ -212,7 +212,7 @@
                                     <a href="#" class="icon style-circle">
                                         <i class="icon-heart111"></i>
                                     </a>
-                                    <a href="shop-products.html" class="icon style-circle wg-bag">
+                                    <a href="shop-products" class="icon style-circle wg-bag">
                                         <i class="icon-basket"></i>
                                     </a>
 
@@ -245,17 +245,17 @@
                                             <a href="javascript:void(0)">Home</a>
                                             <ul class="sub-nav">
                                                 <li class="">
-                                                    <a href="index.html">
+                                                    <a href="/">
                                                         <span>
                                                             Home 1
                                                         </span>
                                                     </a>
                                                 </li>
-                                                <li><a href="home-2.html"><span>
+                                                <li><a href="home-2"><span>
                                                             Home 2
                                                         </span>
                                                     </a></li>
-                                                <li><a href="home-3.html"><span>
+                                                <li><a href="home-3"><span>
                                                             Home 3
                                                         </span>
                                                     </a></li>
@@ -265,77 +265,77 @@
                                             <a href="javascript:void(0)">Page</a>
                                             <ul class="sub-nav">
                                                 <li>
-                                                    <a href="about-us.html">
+                                                    <a href="about-us">
                                                         <span>
                                                             About Us
                                                         </span>
                                                     </a>
                                                 </li>
                                                 <li>
-                                                    <a href="our-commitments.html">
+                                                    <a href="our-commitments">
                                                         <span>
                                                             Our Commitments
                                                         </span>
                                                     </a>
                                                 </li>
                                                 <li>
-                                                    <a href="our-events.html">
+                                                    <a href="our-events">
                                                         <span>
                                                             Our Events
                                                         </span>
                                                     </a>
                                                 </li>
                                                 <li>
-                                                    <a href="our-farmers.html">
+                                                    <a href="our-farmers">
                                                         <span>
                                                             Our Farmers
                                                         </span>
                                                     </a>
                                                 </li>
                                                 <li>
-                                                    <a href="our-history.html">
+                                                    <a href="our-history">
                                                         <span>
                                                             Our History
                                                         </span>
                                                     </a>
                                                 </li>
                                                 <li>
-                                                    <a href="coming-soon.html">
+                                                    <a href="coming-soon">
                                                         <span>
                                                             Coming Soon
                                                         </span>
                                                     </a>
                                                 </li>
                                                 <li>
-                                                    <a href="404.html">
+                                                    <a href="404">
                                                         <span>
                                                             404
                                                         </span>
                                                     </a>
                                                 </li>
                                                 <li>
-                                                    <a href="event-detail.html">
+                                                    <a href="event-detail">
                                                         <span>
                                                             Event Detail
                                                         </span>
                                                     </a>
                                                 </li>
                                                 <li>
-                                                    <a href="faq.html">
+                                                    <a href="faq">
                                                         <span>
                                                             FAQs
                                                         </span>
                                                     </a>
                                                 </li>
                                                 <li>
-                                                    <a href="gallery.html">
+                                                    <a href="gallery">
                                                         <span>
                                                             Gallery
                                                         </span>
                                                     </a>
                                                 </li>
                                                 <li>
-                                                    <a href="testimonial.html">
+                                                    <a href="testimonial">
                                                         <span>
                                                             Testimonial
                                                         </span>
@@ -348,28 +348,28 @@
                                             <ul class="sub-nav">
 
                                                 <li>
-                                                    <a href="portfolio-style-1.html">
+                                                    <a href="portfolio-style-1">
                                                         <span>
                                                             Portfolio Style 1
                                                         </span>
                                                     </a>
                                                 </li>
                                                 <li>
-                                                    <a href="portfolio-style-2.html">
+                                                    <a href="portfolio-style-2">
                                                         <span>
                                                             Portfolio Style 2
                                                         </span>
                                                     </a>
                                                 </li>
                                                 <li>
-                                                    <a href="portfolio-style-3.html">
+                                                    <a href="portfolio-style-3">
                                                         <span>
                                                             Portfolio Style 3
                                                         </span>
                                                     </a>
                                                 </li>
                                                 <li>
-                                                    <a href="portfolio-details.html">
+                                                    <a href="portfolio-details">
                                                         <span>
                                                             Portfolio Details
                                                         </span>
@@ -382,14 +382,14 @@
                                             <ul class="sub-nav">
 
                                                 <li>
-                                                    <a href="shop-products.html">
+                                                    <a href="shop-products">
                                                         <span>
                                                             Shop Products
                                                         </span>
                                                     </a>
                                                 </li>
                                                 <li class="current-item">
-                                                    <a href="shop-details.html">
+                                                    <a href="shop-details">
                                                         <span>
                                                             Shop Details
                                                         </span>
@@ -401,14 +401,14 @@
                                             <a href="javascript:void(0)">Services</a>
                                             <ul class="sub-nav">
                                                 <li>
-                                                    <a href="our-services.html">
+                                                    <a href="our-services">
                                                         <span>
                                                             Our Services
                                                         </span>
                                                     </a>
                                                 </li>
                                                 <li>
-                                                    <a href="service-detail.html">
+                                                    <a href="service-detail">
                                                         <span>
                                                             Service Detail
                                                         </span>
@@ -420,21 +420,21 @@
                                             <a href="javascript:void(0)">Blog</a>
                                             <ul class="sub-nav">
                                                 <li>
-                                                    <a href="blog-full-width.html">
+                                                    <a href="blog-full-width">
                                                         <span>
                                                             Blog Full Width
                                                         </span>
                                                     </a>
                                                 </li>
                                                 <li class="">
-                                                    <a href="blog-right-sidebar.html">
+                                                    <a href="blog-right-sidebar">
                                                         <span>
                                                             Blog Right Sidebar
                                                         </span>
                                                     </a>
                                                 </li>
                                                 <li>
-                                                    <a href="blog-single.html">
+                                                    <a href="blog-single">
                                                         <span>
                                                             Blog Single
                                                         </span>
@@ -443,7 +443,7 @@
                                             </ul>
                                         </li>
                                         <li class="item has-child">
-                                            <a href="contact-us.html">Contact</a>
+                                            <a href="contact-us">Contact</a>
 
                                         </li>
                                     </ul>
@@ -481,17 +481,17 @@
                                                 <a href="javascript:void(0)">Home</a>
                                                 <ul class="sub-nav">
                                                     <li class="">
-                                                        <a href="index.html">
+                                                        <a href="/">
                                                             <span>
                                                                 Home 1
                                                             </span>
                                                         </a>
                                                     </li>
-                                                    <li><a href="home-2.html"><span>
+                                                    <li><a href="home-2"><span>
                                                                 Home 2
                                                             </span>
                                                         </a></li>
-                                                    <li><a href="home-3.html"><span>
+                                                    <li><a href="home-3"><span>
                                                                 Home 3
                                                             </span>
                                                         </a></li>
@@ -501,77 +501,77 @@
                                                 <a href="javascript:void(0)">Page</a>
                                                 <ul class="sub-nav">
                                                     <li>
-                                                        <a href="about-us.html">
+                                                        <a href="about-us">
                                                             <span>
                                                                 About Us
                                                             </span>
                                                         </a>
                                                     </li>
                                                     <li>
-                                                        <a href="our-commitments.html">
+                                                        <a href="our-commitments">
                                                             <span>
                                                                 Our Commitments
                                                             </span>
                                                         </a>
                                                     </li>
                                                     <li>
-                                                        <a href="our-events.html">
+                                                        <a href="our-events">
                                                             <span>
                                                                 Our Events
                                                             </span>
                                                         </a>
                                                     </li>
                                                     <li>
-                                                        <a href="our-farmers.html">
+                                                        <a href="our-farmers">
                                                             <span>
                                                                 Our Farmers
                                                             </span>
                                                         </a>
                                                     </li>
                                                     <li>
-                                                        <a href="our-history.html">
+                                                        <a href="our-history">
                                                             <span>
                                                                 Our History
                                                             </span>
                                                         </a>
                                                     </li>
                                                     <li>
-                                                        <a href="coming-soon.html">
+                                                        <a href="coming-soon">
                                                             <span>
                                                                 Coming Soon
                                                             </span>
                                                         </a>
                                                     </li>
                                                     <li>
-                                                        <a href="404.html">
+                                                        <a href="404">
                                                             <span>
                                                                 404
                                                             </span>
                                                         </a>
                                                     </li>
                                                     <li>
-                                                        <a href="event-detail.html">
+                                                        <a href="event-detail">
                                                             <span>
                                                                 Event Detail
                                                             </span>
                                                         </a>
                                                     </li>
                                                     <li>
-                                                        <a href="faq.html">
+                                                        <a href="faq">
                                                             <span>
                                                                 FAQs
                                                             </span>
                                                         </a>
                                                     </li>
                                                     <li>
-                                                        <a href="gallery.html">
+                                                        <a href="gallery">
                                                             <span>
                                                                 Gallery
                                                             </span>
                                                         </a>
                                                     </li>
                                                     <li>
-                                                        <a href="testimonial.html">
+                                                        <a href="testimonial">
                                                             <span>
                                                                 Testimonial
                                                             </span>
@@ -584,28 +584,28 @@
                                                 <ul class="sub-nav">
 
                                                     <li>
-                                                        <a href="portfolio-style-1.html">
+                                                        <a href="portfolio-style-1">
                                                             <span>
                                                                 Portfolio Style 1
                                                             </span>
                                                         </a>
                                                     </li>
                                                     <li>
-                                                        <a href="portfolio-style-2.html">
+                                                        <a href="portfolio-style-2">
                                                             <span>
                                                                 Portfolio Style 2
                                                             </span>
                                                         </a>
                                                     </li>
                                                     <li>
-                                                        <a href="portfolio-style-3.html">
+                                                        <a href="portfolio-style-3">
                                                             <span>
                                                                 Portfolio Style 3
                                                             </span>
                                                         </a>
                                                     </li>
                                                     <li>
-                                                        <a href="portfolio-details.html">
+                                                        <a href="portfolio-details">
                                                             <span>
                                                                 Portfolio Details
                                                             </span>
@@ -618,14 +618,14 @@
                                                 <ul class="sub-nav">
 
                                                     <li>
-                                                        <a href="shop-products.html">
+                                                        <a href="shop-products">
                                                             <span>
                                                                 Shop Products
                                                             </span>
                                                         </a>
                                                     </li>
                                                     <li class="current-item">
-                                                        <a href="shop-details.html">
+                                                        <a href="shop-details">
                                                             <span>
                                                                 Shop Details
                                                             </span>
@@ -637,14 +637,14 @@
                                                 <a href="javascript:void(0)">Services</a>
                                                 <ul class="sub-nav">
                                                     <li>
-                                                        <a href="our-services.html">
+                                                        <a href="our-services">
                                                             <span>
                                                                 Our Services
                                                             </span>
                                                         </a>
                                                     </li>
                                                     <li>
-                                                        <a href="service-detail.html">
+                                                        <a href="service-detail">
                                                             <span>
                                                                 Service Detail
                                                             </span>
@@ -656,21 +656,21 @@
                                                 <a href="javascript:void(0)">Blog</a>
                                                 <ul class="sub-nav">
                                                     <li>
-                                                        <a href="blog-full-width.html">
+                                                        <a href="blog-full-width">
                                                             <span>
                                                                 Blog Full Width
                                                             </span>
                                                         </a>
                                                     </li>
                                                     <li class="">
-                                                        <a href="blog-right-sidebar.html">
+                                                        <a href="blog-right-sidebar">
                                                             <span>
                                                                 Blog Right Sidebar
                                                             </span>
                                                         </a>
                                                     </li>
                                                     <li>
-                                                        <a href="blog-single.html">
+                                                        <a href="blog-single">
                                                             <span>
                                                                 Blog Single
                                                             </span>
@@ -679,7 +679,7 @@
                                                 </ul>
                                             </li>
                                             <li class="item has-child">
-                                                <a href="contact-us.html">Contact</a>
+                                                <a href="contact-us">Contact</a>
 
                                             </li>
                                         </ul>
@@ -736,7 +736,7 @@
             <div class="inner-mobile-nav overflow-y-auto">
                 <div class="top">
                     <div class="logo">
-                        <a href="index.html" rel="home" class="main-logo">
+                        <a href="/" rel="home" class="main-logo">
                             <img id="mobile-logo_header" alt="" src="./images/logo/logo-2.png" />
                         </a>
                         <div class="mobile-nav-close">
@@ -752,13 +752,13 @@
                                 </a>
                                 <ul class="sub-menu-mobile">
                                     <li class="menu-item ">
-                                        <a href="index.html">Home 1</a>
+                                        <a href="/">Home 1</a>
                                     </li>
                                     <li class="menu-item">
-                                        <a href="home-2.html">Home 2</a>
+                                        <a href="home-2">Home 2</a>
                                     </li>
                                     <li class="menu-item">
-                                        <a href="home-3.html">Home 3</a>
+                                        <a href="home-3">Home 3</a>
                                     </li>
                                 </ul>
                             </li>
@@ -769,37 +769,37 @@
                                 </a>
                                 <ul class="sub-menu-mobile">
                                     <li class="menu-item">
-                                        <a href="about-us.html">About Us</a>
+                                        <a href="about-us">About Us</a>
                                     </li>
                                     <li class="menu-item">
-                                        <a href="our-commitments.html">Our Commitments</a>
+                                        <a href="our-commitments">Our Commitments</a>
                                     </li>
                                     <li class="menu-item">
-                                        <a href="our-events.html">Our Events</a>
+                                        <a href="our-events">Our Events</a>
                                     </li>
                                     <li class="menu-item">
-                                        <a href="our-farmers.html">Our Farmers</a>
+                                        <a href="our-farmers">Our Farmers</a>
                                     </li>
                                     <li class="menu-item">
-                                        <a href="our-history.html">Our History</a>
+                                        <a href="our-history">Our History</a>
                                     </li>
                                     <li class="menu-item">
-                                        <a href="coming-soon.html">Coming Soon</a>
+                                        <a href="coming-soon">Coming Soon</a>
                                     </li>
                                     <li class="menu-item">
-                                        <a href="404.html">404</a>
+                                        <a href="404">404</a>
                                     </li>
                                     <li class="menu-item">
-                                        <a href="event-detail.html">Event Detail</a>
+                                        <a href="event-detail">Event Detail</a>
                                     </li>
                                     <li class="menu-item">
-                                        <a href="faq.html">FAQs</a>
+                                        <a href="faq">FAQs</a>
                                     </li>
                                     <li class="menu-item">
-                                        <a href="gallery.html">Gallery</a>
+                                        <a href="gallery">Gallery</a>
                                     </li>
                                     <li class="menu-item">
-                                        <a href="testimonial.html">Testimonial</a>
+                                        <a href="testimonial">Testimonial</a>
                                     </li>
                                 </ul>
                             </li>
@@ -823,7 +823,7 @@
                                             3</a>
                                     </li>
                                     <li class="menu-item">
-                                        <a href="index.html">Portfolio Detail</a>
+                                        <a href="/">Portfolio Detail</a>
                                     </li>
                                 </ul>
                             </li>
@@ -835,10 +835,10 @@
                                 <ul class="sub-menu-mobile">
 
                                     <li class="menu-item ">
-                                        <a href="shop-products.html">Shop Product</a>
+                                        <a href="shop-products">Shop Product</a>
                                     </li>
                                     <li class="menu-item current">
-                                        <a href="shop-details.html">Shop Detail</a>
+                                        <a href="shop-details">Shop Detail</a>
                                     </li>
                                 </ul>
                             </li>
@@ -849,10 +849,10 @@
                                 </a>
                                 <ul class="sub-menu-mobile">
                                     <li class="menu-item">
-                                        <a href="our-services.html">Our Services</a>
+                                        <a href="our-services">Our Services</a>
                                     </li>
                                     <li class="menu-item">
-                                        <a href="service-detail.html">Service Detail</a>
+                                        <a href="service-detail">Service Detail</a>
                                     </li>
                                 </ul>
                             </li>
@@ -861,19 +861,19 @@
                                     <i class="icon-arrow_down"></i></a>
                                 <ul class="sub-menu-mobile">
                                     <li class="menu-item">
-                                        <a href="blog-full-width.html">Blog Full Width</a>
+                                        <a href="blog-full-width">Blog Full Width</a>
                                     </li>
                                     <li class="menu-item">
-                                        <a href="blog-right-sidebar.html">Blog Right
+                                        <a href="blog-right-sidebar">Blog Right
                                             Sidebar</a>
                                     </li>
                                     <li class="menu-item">
-                                        <a href="blog-single.html">Blog Single</a>
+                                        <a href="blog-single">Blog Single</a>
                                     </li>
                                 </ul>
                             </li>
                             <li class="menu-item menu-item-has-children-mobile">
-                                <a class="item-menu-mobile" href="contact-us.html">Contact</a>
+                                <a class="item-menu-mobile" href="contact-us">Contact</a>
                             </li>
                         </ul>
                     </nav>
@@ -882,7 +882,7 @@
                             <i class="icon-magnifying-glass fs-21"> </i>
                             Search
                         </a>
-                        <a href="shop-products.html" class="site-nav-icon wg-bag">
+                        <a href="shop-products" class="site-nav-icon wg-bag">
                             <i class="icon-basket"></i>
                             Shop
                         </a>
@@ -961,11 +961,11 @@
                                     <img src="./images/item/line-throw-title.png" alt="">
                                 </div>
                                 <div class="breadcrumb">
-                                    <a href="index.html">Home</a>
+                                    <a href="/">Home</a>
                                     <div class="icon">
                                         <i class="icon-arrow-right1"></i>
                                     </div>
-                                    <a href="shop-products.html"> Shop Products </a>
+                                    <a href="shop-products"> Shop Products </a>
                                     <div class="icon">
                                         <i class="icon-arrow-right1"></i>
                                     </div>
@@ -1808,7 +1808,7 @@
                         <div class="footer-top">
                             <div class="footer-left">
                                 <div class="logo">
-                                    <a href="index.html">
+                                    <a href="/">
                                         <img src="./images/logo/logo-2.png" alt="">
                                     </a>
                                 </div>
@@ -1932,7 +1932,7 @@
                                 <ul class="link-list tf-collapse-content">
                                     <li class="item">
 
-                                        <a href="about-us.html">
+                                        <a href="about-us">
                                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" width="14"
                                                 height="16">
                                                 <path
@@ -1944,7 +1944,7 @@
                                     </li>
                                     <li class="item">
 
-                                        <a href="our-services.html">
+                                        <a href="our-services">
 
                                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" width="14"
                                                 height="16">
@@ -1955,7 +1955,7 @@
                                             Services We Provide</a>
                                     </li>
                                     <li class="item">
-                                        <a href="portfolio-style-1.html">
+                                        <a href="portfolio-style-1">
                                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" width="14"
                                                 height="16">
                                                 <path
@@ -1965,7 +1965,7 @@
                                             View Recent Projects</a>
                                     </li>
                                     <li class="item">
-                                        <a href="our-farmers.html">
+                                        <a href="our-farmers">
                                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" width="14"
                                                 height="16">
                                                 <path
@@ -1975,7 +1975,7 @@
                                             Meet The Farmers</a>
                                     </li>
                                     <li class="item">
-                                        <a href="coming-soon.html">
+                                        <a href="coming-soon">
                                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" width="14"
                                                 height="16">
                                                 <path

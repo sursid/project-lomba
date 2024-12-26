@@ -22,15 +22,15 @@
                                     <img src="./images/item/line-throw-title.png" alt="">
                                 </div>
                                 <div class="breadcrumb">
-                                    <a href="index.html">Home</a>
+                                    <a href="/">Home</a>
                                     <div class="icon">
                                         <i class="icon-arrow-right1"></i>
                                     </div>
-                                    <a href="about-us.html">About Us </a>
+                                    <a href="about-us">About Us </a>
                                     <div class="icon">
                                         <i class="icon-arrow-right1"></i>
                                     </div>
-                                    <a href="our-events.html">Our Events </a>
+                                    <a href="our-events">Our Events </a>
                                     <div class="icon">
                                         <i class="icon-arrow-right1"></i>
                                     </div>
@@ -142,7 +142,7 @@
                                             <img src="./images/widget/portfolio-1.jpg" data-src="./images/widget/portfolio-1.jpg" alt="" class="lazyload">
                                         </div>
                                         <div class="text-wrap">
-                                            <a href="event-detail.html" class="name-tour hover-text-4">Visit a Sheep
+                                            <a href="event-detail" class="name-tour hover-text-4">Visit a Sheep
                                                 Farm</a>
                                             <p class="sub">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                                                 Proin ut aliquam mauris. Maecenas porta odio lorem, in aliquet diam
@@ -155,7 +155,7 @@
                                             <img src="./images/section/s-faq.jpg" data-src="./images/section/s-faq.jpg" alt="" class="lazyload">
                                         </div>
                                         <div class="text-wrap">
-                                            <a href="event-detail.html" class="name-tour hover-text-4">Olive Oil
+                                            <a href="event-detail" class="name-tour hover-text-4">Olive Oil
                                                 Showroom</a>
                                             <p class="sub">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                                                 Proin ut aliquam mauris. Maecenas porta odio lorem, in aliquet diam
@@ -168,7 +168,7 @@
                                             <img src="./images/widget/gallery-item-1.jpg" data-src="./images/widget/gallery-item-1.jpg" alt="" class="lazyload">
                                         </div>
                                         <div class="text-wrap">
-                                            <a href="event-detail.html" class="name-tour hover-text-4">Visit and Milk
+                                            <a href="event-detail" class="name-tour hover-text-4">Visit and Milk
                                                 Cows</a>
                                             <p class="sub">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                                                 Proin ut aliquam mauris. Maecenas porta odio lorem, in aliquet diam
@@ -181,7 +181,7 @@
                                             <img src="./images/widget/tea.jpg" data-src="./images/widget/tea.jpg" alt="" class="lazyload">
                                         </div>
                                         <div class="text-wrap">
-                                            <a href="event-detail.html" class="name-tour hover-text-4">Learn About the
+                                            <a href="event-detail" class="name-tour hover-text-4">Learn About the
                                                 Production
                                                 Process
 
@@ -282,7 +282,7 @@
                                         We are here for you. <br>
                                         Get in Touch!
                                     </p>
-                                    <a href="contact-us.html" class="tf-btn-read text-white hover-text-secondary">
+                                    <a href="contact-us" class="tf-btn-read text-white hover-text-secondary">
                                         Contact Us
                                         Today</a>
                                 </div>

@@ -20,11 +20,11 @@
                                     <img src="./images/item/line-throw-title.png" alt="">
                                 </div>
                                 <div class="breadcrumb">
-                                    <a href="index.html">Home</a>
+                                    <a href="/">Home</a>
                                     <div class="icon">
                                         <i class="icon-arrow-right1"></i>
                                     </div>
-                                    <a href="our-services.html"> Our Services </a>
+                                    <a href="our-services/"> Our Services </a>
                                     <div class="icon">
                                         <i class="icon-arrow-right1"></i>
                                     </div>
@@ -397,7 +397,7 @@
                                         We are here for you. <br>
                                         Get in Touch!
                                     </p>
-                                    <a href="contact-us.html" class="tf-btn-read text-white hover-text-secondary">
+                                    <a href="contact-us/" class="tf-btn-read text-white hover-text-secondary">
                                         Contact Us
                                         Today</a>
                                 </div>

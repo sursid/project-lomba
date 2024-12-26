@@ -21,7 +21,7 @@
                                     <img src="./images/item/line-throw-title.png" alt="">
                                 </div>
                                 <div class="breadcrumb">
-                                    <a href="index.html">Home</a>
+                                    <a href="/">Home</a>
                                     <div class="icon">
                                         <i class="icon-arrow-right1"></i>
                                     </div>
@@ -508,7 +508,7 @@
                                     <p class="question">
                                         Ask Us A Question.
                                     </p>
-                                    <a href="contact-us.html" class="tf-btn bg-white">
+                                    <a href="contact-us" class="tf-btn bg-white">
                                         <span class="text-style cl-primary">
                                             Contact us Today
                                         </span>

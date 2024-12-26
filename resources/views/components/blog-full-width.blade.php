@@ -20,7 +20,7 @@
                                     <img src="./images/item/line-throw-title.png" alt="">
                                 </div>
                                 <div class="breadcrumb">
-                                    <a href="index.html">Home</a>
+                                    <a href="">Home</a>
                                     <div class="icon">
                                         <i class="icon-arrow-right1"></i>
                                     </div>
@@ -177,7 +177,7 @@
                                             </li>
                                         </ul>
                                         <h3 class="title fw-7">
-                                            <a href="blog-single.html">
+                                            <a href="blog-single">
                                                 How to Care for Cows to have the Best
                                                 Quality Meat
                                             </a>
@@ -191,7 +191,7 @@
                                             torquent per conubia nostra...
                                         </p>
                                         <div class="bot">
-                                            <a class="tf-btn gap-35" href="blog-single.html">
+                                            <a class="tf-btn gap-35" href="blog-single">
                                                 <span class="text-style">
                                                     Continue Reading
                                                 </span>
@@ -280,7 +280,7 @@
                                             </li>
                                         </ul>
                                         <h3 class="title fw-7">
-                                            <a href="blog-single.html">
+                                            <a href="blog-single">
                                                 The Best Time to Harvest Corn Without Wilting
                                             </a>
                                         </h3>
@@ -293,7 +293,7 @@
                                             torquent per conubia nostra...
                                         </p>
                                         <div class="bot">
-                                            <a class="tf-btn gap-35" href="blog-single.html">
+                                            <a class="tf-btn gap-35" href="blog-single">
                                                 <span class="text-style">
                                                     Continue Reading
                                                 </span>
@@ -424,7 +424,7 @@
                                             </li>
                                         </ul>
                                         <h3 class="title fw-7">
-                                            <a href="blog-single.html">
+                                            <a href="blog-single">
                                                 The Joy of Working Every Day on a Sheep Farm
                                             </a>
                                         </h3>
@@ -437,7 +437,7 @@
                                             torquent per conubia nostra...
                                         </p>
                                         <div class="bot">
-                                            <a class="tf-btn gap-35" href="blog-single.html">
+                                            <a class="tf-btn gap-35" href="blog-single">
                                                 <span class="text-style">
                                                     Continue Reading
                                                 </span>
@@ -485,7 +485,7 @@
                                                 <i class="fa-solid fa-link"></i>
                                             </div>
                                             <p class="font-snowfall cite font-worksans fw-7">
-                                                <a href="https://illuminationconsulting.com/blog/" class="hover-text-secondary text-white ">
+                                                <a href="https://illuminationconsulting.com/blog" class="hover-text-secondary text-white ">
 
                                                     Investing in Controlled Environment Agriculture with Confidence
                                                 </a>
@@ -564,7 +564,7 @@
                                             </li>
                                         </ul>
                                         <h3 class="title fw-7">
-                                            <a href="blog-single.html">
+                                            <a href="blog-single">
                                                 The Case for Investing in Greenhouses
                                             </a>
                                         </h3>
@@ -577,7 +577,7 @@
                                             torquent per conubia nostra...
                                         </p>
                                         <div class="bot">
-                                            <a class="tf-btn gap-35" href="blog-single.html">
+                                            <a class="tf-btn gap-35" href="blog-single">
                                                 <span class="text-style">
                                                     Continue Reading
                                                 </span>

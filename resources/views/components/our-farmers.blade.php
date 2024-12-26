@@ -21,11 +21,11 @@
                                     <img src="./images/item/line-throw-title.png" alt="">
                                 </div>
                                 <div class="breadcrumb">
-                                    <a href="index.html">Home</a>
+                                    <a href="/">Home</a>
                                     <div class="icon">
                                         <i class="icon-arrow-right1"></i>
                                     </div>
-                                    <a href="about-us.html">About Us </a>
+                                    <a href="about-us">About Us </a>
                                     <div class="icon">
                                         <i class="icon-arrow-right1"></i>
                                     </div>
@@ -56,7 +56,7 @@
                                     <img src="./images/widget/card-provide-3.jpg" data-src="./images/widget/card-provide-3.jpg" alt="" class="lazyload">
                                 </div>
                                 <div class="content">
-                                    <a href="about-us.html" class="hover-text-primary title font-worksans">
+                                    <a href="about-us" class="hover-text-primary title font-worksans">
 
                                         We Are Family
                                     </a>
@@ -76,7 +76,7 @@
                                 </div>
                                 <div class="content">
 
-                                    <a href="about-us.html" class="hover-text-primary title font-worksans">
+                                    <a href="about-us" class="hover-text-primary title font-worksans">
                                         We Love Nature
                                     </a>
                                     <p class="text">
@@ -124,7 +124,7 @@
                                     Farm Owner Donald Farm Happiness
                                 </p>
                             </div>
-                            <a href="testimonial.html" class="tf-btn-read hover-text-4">
+                            <a href="testimonial" class="tf-btn-read hover-text-4">
                                 Read About Donald Christoper
                             </a>
                         </div>
@@ -305,7 +305,7 @@
                                         now!
                                     </p>
 
-                                    <a href="contact-us.html" class="tf-btn bg-white scale-40">
+                                    <a href="contact-us" class="tf-btn bg-white scale-40">
                                         <span class="text-style cl-primary text-anime-style-1">
                                             Contact Us Today
                                         </span>

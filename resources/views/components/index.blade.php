@@ -8,7 +8,7 @@
             <div class="swiper-slide">
                 <div class="slide-home-1">
                     <div class="image overflow-hidden">
-                        <img src="./images/page-title/index-1.jpg" data-src="./images/page-title/index-1.jpg"
+                        <img src="./images/page-title//-1.jpg" data-src="./images/page-title//-1.jpg"
                             alt="" class="lazyload tf-animate-zoom-in-out" />
                     </div>
                     <div class="content-wrap">
@@ -31,7 +31,7 @@
                                 decades has been that everything
                                 depends on innovation.
                             </p>
-                            <a href="our-services.html"
+                            <a href="our-services"
                                 class="tf-btn btn-view bg-white tf-fade-bottom fade-item-5">
                                 <span class="text-style cl-primary">
                                     See Our Services
@@ -48,7 +48,7 @@
             <div class="swiper-slide">
                 <div class="slide-home-1">
                     <div class="image overflow-hidden">
-                        <img src="./images/page-title/index-2.jpg" data-src="./images/page-title/index-2.jpg"
+                        <img src="./images/page-title//-2.jpg" data-src="./images/page-title//-2.jpg"
                             alt="" class="lazyload tf-animate-zoom-in-out" />
                     </div>
                     <div class="content-wrap">
@@ -71,7 +71,7 @@
                                 decades has been that everything
                                 depends on innovation.
                             </p>
-                            <a href="our-services.html"
+                            <a href="our-services"
                                 class="tf-btn btn-view bg-white tf-fade-bottom fade-item-5">
                                 <span class="text-style cl-primary">
                                     See Our Services
@@ -88,7 +88,7 @@
             <div class="swiper-slide">
                 <div class="slide-home-1">
                     <div class="image overflow-hidden">
-                        <img src="./images/page-title/index-3.jpg" data-src="./images/page-title/index-3.jpg"
+                        <img src="./images/page-title//-3.jpg" data-src="./images/page-title//-3.jpg"
                             alt="" class="lazyload tf-animate-zoom-in-out" />
                     </div>
                     <div class="content-wrap">
@@ -111,7 +111,7 @@
                                 decades has been that everything
                                 depends on innovation.
                             </p>
-                            <a href="our-services.html"
+                            <a href="our-services"
                                 class="tf-btn btn-view bg-white tf-fade-bottom fade-item-5">
                                 <span class="text-style cl-primary">
                                     See Our Services
@@ -148,7 +148,7 @@
 </div><!-- /.Page-title-home-1 -->
 
 <!-- Main-content -->
-<div class="main-content pt-0 page-index">
+<div class="main-content pt-0 page-/">
 
     <!-- Section-break-page -->
     <section class="s-break-page">
@@ -180,7 +180,7 @@
                             <div class="icon hover02">
                                 <i class="icon-healthy-food-1"></i>
                             </div>
-                            <a href="our-services.html" class="title fs-22 font-worksans fw-6 hover-text-4">
+                            <a href="our-services" class="title fs-22 font-worksans fw-6 hover-text-4">
                                 We Use New Technology</a>
                             <p class="text font-nunito">
                                 Ultrices sagittis orci a scelerisque
@@ -189,7 +189,7 @@
                                 nulla.
                             </p>
                             <div class="bot">
-                                <a href="our-services.html" class="btn-read font-worksans fw-5">
+                                <a href="our-services" class="btn-read font-worksans fw-5">
                                     Read More
                                 </a>
                             </div>
@@ -206,7 +206,7 @@
                             <div class="icon">
                                 <i class="icon-healthy-food-1"></i>
                             </div>
-                            <a href="our-services.html" class="title fs-22 font-worksans fw-6 hover-text-4">
+                            <a href="our-services" class="title fs-22 font-worksans fw-6 hover-text-4">
                                 Making Healthy Foods</a>
                             <p class="text font-nunito">
                                 Ultrices sagittis orci a scelerisque
@@ -215,7 +215,7 @@
                                 nulla.
                             </p>
                             <div class="bot">
-                                <a href="our-services.html" class="btn-read font-worksans fw-5">
+                                <a href="our-services" class="btn-read font-worksans fw-5">
                                     Read More
                                 </a>
                             </div>
@@ -232,7 +232,7 @@
                             <div class="icon">
                                 <i class="icon-healthy-food-1"></i>
                             </div>
-                            <a href="our-services.html" class="title fs-23 font-worksans fw-6 hover-text-4">
+                            <a href="our-services" class="title fs-23 font-worksans fw-6 hover-text-4">
                                 Reforming In The Systems</a>
                             <p class="text font-nunito">
                                 Ultrices sagittis orci a scelerisque
@@ -241,7 +241,7 @@
                                 nulla.
                             </p>
                             <div class="bot">
-                                <a href="our-services.html" class="btn-read font-worksans fw-5">
+                                <a href="our-services" class="btn-read font-worksans fw-5">
                                     Read More
                                 </a>
                             </div>
@@ -290,7 +290,7 @@
                                 and markets mycorrhizal fungi which
                                 accelerate plant performance.
                             </p>
-                            <a href="about-us.html" class="tf-btn btn-read-more gap-34">
+                            <a href="about-us" class="tf-btn btn-read-more gap-34">
                                 <span class="text-style">
                                     More About Us
                                 </span>
@@ -360,7 +360,7 @@
                                                 <div class="icon style-circle hover-icon">
                                                     <i class="icon-farmer"></i>
                                                 </div>
-                                                <a href="about-us.html"
+                                                <a href="about-us"
                                                     class="caption fw-6 font-worksans text-upper hover-text-secondary">
                                                     Highly Qualified & <br>
                                                     Specialized Farmers
@@ -373,7 +373,7 @@
                                                 <div class="icon style-circle hover-icon">
                                                     <i class="icon-chicken"></i>
                                                 </div>
-                                                <a href="about-us.html"
+                                                <a href="about-us"
                                                     class="caption fw-6 font-worksans text-upper hover-text-secondary">
                                                     Fruit, Vegetables <br>
                                                     And Livestock
@@ -381,7 +381,7 @@
                                             </div>
                                         </li>
                                     </ul>
-                                    <a href="about-us.html" class="tf-btn-read text-white hover-text-secondary">
+                                    <a href="about-us" class="tf-btn-read text-white hover-text-secondary">
                                         Read More
                                     </a>
                                 </div>
@@ -445,7 +445,7 @@
                         <div class="icon hover-icon style-circle">
                             <i class="icon-cow"></i>
                         </div>
-                        <a href="service-detail.html" class="caption fw-6 font-worksans hover-text-secondary">
+                        <a href="service-detail" class="caption fw-6 font-worksans hover-text-secondary">
                             Pure Cow's Milk
                         </a>
                         <p class="text font-nunito">
@@ -454,7 +454,7 @@
                             purus<br /> semper eget duis at.
                             Sollictudin nibh <br /> sit amet commodo nulla.
                         </p>
-                        <a href="service-detail.html" class="btn-read">
+                        <a href="service-detail" class="btn-read">
                             <svg version="1.0" xmlns="http://www.w3.org/2000/svg" width="80px" height="20px"
                                 viewBox="0 0 80 20" preserveAspectRatio="xMidYMid meet">
                                 <g fill="#ffffff">
@@ -470,7 +470,7 @@
                         <div class="icon hover-icon style-circle">
                             <i class="icon-chicken-2 fs-67"></i>
                         </div>
-                        <a href="service-detail.html" class="caption fw-6 font-worksans hover-text-secondary">
+                        <a href="service-detail" class="caption fw-6 font-worksans hover-text-secondary">
                             Clean Chicken And Eggs
                         </a>
                         <p class="text font-nunito">
@@ -479,7 +479,7 @@
                             purus<br /> semper eget duis at.
                             Sollictudin nibh <br /> sit amet commodo nulla.
                         </p>
-                        <a href="service-detail.html" class="btn-read">
+                        <a href="service-detail" class="btn-read">
                             <svg version="1.0" xmlns="http://www.w3.org/2000/svg" width="80px" height="20px"
                                 viewBox="0 0 80 20" preserveAspectRatio="xMidYMid meet">
                                 <g fill="#ffffff">
@@ -495,7 +495,7 @@
                         <div class="icon hover-icon style-circle">
                             <i class="icon-seed-bag"></i>
                         </div>
-                        <a href="service-detail.html" class="caption fw-6 font-worksans hover-text-secondary">
+                        <a href="service-detail" class="caption fw-6 font-worksans hover-text-secondary">
                             Fertilizer Product
                         </a>
                         <p class="text font-nunito">
@@ -504,7 +504,7 @@
                             purus<br /> semper eget duis at.
                             Sollictudin nibh <br /> sit amet commodo nulla.
                         </p>
-                        <a href="service-detail.html" class="btn-read">
+                        <a href="service-detail" class="btn-read">
                             <svg version="1.0" xmlns="http://www.w3.org/2000/svg" width="80px" height="20px"
                                 viewBox="0 0 80 20" preserveAspectRatio="xMidYMid meet">
                                 <g fill="#ffffff">
@@ -577,7 +577,7 @@
                                 uses pesticides, herbicides, genetic
                                 modification.
                             </p>
-                            <a href="our-history.html" class="tf-btn btn-read-more scale-40">
+                            <a href="our-history" class="tf-btn btn-read-more scale-40">
                                 <span class="text-style">
                                     More Why Choose Us
                                 </span>
@@ -593,7 +593,7 @@
                                 <div class="icon">
                                     <i class="fa-solid fa-circle-check"></i>
                                 </div>
-                                <a href="our-commitments.html"
+                                <a href="our-commitments"
                                     class="h5 hover-text-secondary title fw-6 font-worksans">
                                     100% Organic Products
                                 </a>
@@ -608,7 +608,7 @@
                                 <div class="icon">
                                     <i class="fa-solid fa-circle-check"></i>
                                 </div>
-                                <a href="our-commitments.html"
+                                <a href="our-commitments"
                                     class="h5 hover-text-secondary title fw-6 font-worksans">
                                     Absolute Quality
                                 </a>
@@ -623,7 +623,7 @@
                                 <div class="icon">
                                     <i class="fa-solid fa-circle-check"></i>
                                 </div>
-                                <a href="our-commitments.html"
+                                <a href="our-commitments"
                                     class="h5 hover-text-secondary title fw-6 font-worksans">
                                     Environmentally Friendly
                                 </a>
@@ -679,7 +679,7 @@
                                         <div class="icon style-circle hover-icon">
                                             <i class="icon-chemical"></i>
                                         </div>
-                                        <a href="our-commitments.html"
+                                        <a href="our-commitments"
                                             class="caption fw-6 font-worksans hover-text-4">
                                             Minimal Chemicals Used
                                         </a>
@@ -690,7 +690,7 @@
                                         <div class="icon style-circle hover-icon">
                                             <i class="icon-worm"></i>
                                         </div>
-                                        <a href="our-commitments.html"
+                                        <a href="our-commitments"
                                             class="caption fw-6 font-worksans hover-text-4">
                                             Minimal Chemicals Used
                                         </a>
@@ -701,7 +701,7 @@
                                         <div class="icon style-circle hover-icon">
                                             <i class="icon-disposal"></i>
                                         </div>
-                                        <a href="our-commitments.html"
+                                        <a href="our-commitments"
                                             class="caption fw-6 font-worksans hover-text-4">
                                             All Organic Waste Reused
                                         </a>
@@ -712,7 +712,7 @@
                                         <div class="icon style-circle hover-icon">
                                             <i class="icon-light-bulb"></i>
                                         </div>
-                                        <a href="our-commitments.html"
+                                        <a href="our-commitments"
                                             class="caption fw-6 font-worksans hover-text-4">
                                             Do Not Use Artificial
                                             Light
@@ -721,7 +721,7 @@
                                 </li>
                             </ul>
 
-                            <a href="our-commitments.html" class="tf-btn btn-read-more scale-50">
+                            <a href="our-commitments" class="tf-btn btn-read-more scale-50">
                                 <span class="text-style">
                                     See More Our Commitment
                                 </span>
@@ -796,7 +796,7 @@
                                             <p class="sub font-farmhouse text-upper">
                                                 Agriculture - farm
                                             </p>
-                                            <a href="portfolio-details.html"
+                                            <a href="portfolio-details"
                                                 class="title fs-23 font-worksans fw-6 hover-text-secondary">The
                                                 Joy
                                                 Of Sheep Farming</a>
@@ -808,7 +808,7 @@
                                                     nibh <br> vehicula fermentum. natoque
                                                     penatibus.
                                                 </p>
-                                                <a href="portfolio-details.html"
+                                                <a href="portfolio-details"
                                                     class="btn-read icon style-circle">
                                                     <i class="icon-arrow_right"></i>
                                                 </a>
@@ -827,7 +827,7 @@
                                             <p class="sub font-farmhouse text-upper">
                                                 Agriculture - farm
                                             </p>
-                                            <a href="portfolio-details.html"
+                                            <a href="portfolio-details"
                                                 class="title fs-23 font-worksans fw-6 hover-text-secondary">The
                                                 Joy
                                                 Of Sheep Farming</a>
@@ -839,7 +839,7 @@
                                                     nibh <br> vehicula fermentum. natoque
                                                     penatibus.
                                                 </p>
-                                                <a href="portfolio-details.html"
+                                                <a href="portfolio-details"
                                                     class="btn-read icon style-circle">
                                                     <i class="icon-arrow_right"></i>
                                                 </a>
@@ -858,7 +858,7 @@
                                             <p class="sub font-farmhouse text-upper">
                                                 Agriculture - farm
                                             </p>
-                                            <a href="portfolio-details.html"
+                                            <a href="portfolio-details"
                                                 class="title fs-23 font-worksans fw-6 hover-text-secondary">The
                                                 Joy
                                                 Of Sheep Farming</a>
@@ -870,7 +870,7 @@
                                                     nibh <br> vehicula fermentum. natoque
                                                     penatibus.
                                                 </p>
-                                                <a href="portfolio-details.html"
+                                                <a href="portfolio-details"
                                                     class="btn-read icon style-circle">
                                                     <i class="icon-arrow_right"></i>
                                                 </a>
@@ -885,7 +885,7 @@
                     <div class="col-lg-12">
                         <div class="bot">
                             <div class="swiper-pagination style-1 pagination-s-project"></div>
-                            <a href="portfolio-style-1.html" class="tf-btn-read hover-text-4">View All Latest
+                            <a href="portfolio-style-1" class="tf-btn-read hover-text-4">View All Latest
                                 Projects</a>
                         </div>
                     </div>
@@ -1207,7 +1207,7 @@
                                 You didn't find your question? See
                                 more questions and ask us today!
                             </p>
-                            <a href="faq.html" class="tf-btn bg-white">
+                            <a href="faq" class="tf-btn bg-white">
                                 <span class="text-style cl-primary">
                                     Read More
                                 </span>
@@ -1255,7 +1255,7 @@
                                             <div class="img-item">
                                                 <img src="./images/item/rice-plant-2.png" alt="" />
                                             </div>
-                                            <a href="event-detail.html" class="title fw-7 font-worksans">
+                                            <a href="event-detail" class="title fw-7 font-worksans">
                                                 Discover Farm Tour
                                             </a>
                                             <p class="text">
@@ -1267,7 +1267,7 @@
                                                 elit. Sed a cursus
                                                 massa.
                                             </p>
-                                            <a href="our-events.html" class="tf-btn-read hover-text-4">Read
+                                            <a href="our-events" class="tf-btn-read hover-text-4">Read
                                                 More</a>
                                         </div>
                                     </div>
@@ -1283,7 +1283,7 @@
                                             <div class="img-item">
                                                 <img src="./images/item/rice-plant-2.png" alt="" />
                                             </div>
-                                            <a href="event-detail.html" class="title fw-7 font-worksans">
+                                            <a href="event-detail" class="title fw-7 font-worksans">
                                                 Farm In Summer
                                             </a>
                                             <p class="text">
@@ -1295,7 +1295,7 @@
                                                 elit. Sed a cursus
                                                 massa.
                                             </p>
-                                            <a href="our-events.html" class="tf-btn-read hover-text-4">Read
+                                            <a href="our-events" class="tf-btn-read hover-text-4">Read
                                                 More</a>
                                         </div>
                                     </div>
@@ -1311,7 +1311,7 @@
                                             <div class="img-item">
                                                 <img src="./images/item/rice-plant-2.png" alt="" />
                                             </div>
-                                            <a href="event-detail.html" class="title fw-7 font-worksans">
+                                            <a href="event-detail" class="title fw-7 font-worksans">
                                                 Children's Summer Camp
                                             </a>
                                             <p class="text">
@@ -1323,7 +1323,7 @@
                                                 elit. Sed a cursus
                                                 massa.
                                             </p>
-                                            <a href="our-events.html" class="tf-btn-read hover-text-4">Read
+                                            <a href="our-events" class="tf-btn-read hover-text-4">Read
                                                 More</a>
                                         </div>
                                     </div>
@@ -1409,7 +1409,7 @@
                                                 </li>
                                             </ul>
                                             <h3 class="title fw-6">
-                                                <a href="blog-single.html">
+                                                <a href="blog-single">
                                                     How to Care for
                                                     Cows to have the
                                                     Best Quality
@@ -1427,7 +1427,7 @@
                                                 nulla.
                                             </p>
                                             <div class="bot">
-                                                <a href="blog-single.html"
+                                                <a href="blog-single"
                                                     class="tf-btn-read hover-text-4">Continue
                                                     Reading</a>
                                             </div>
@@ -1481,7 +1481,7 @@
                                                 </li>
                                             </ul>
                                             <h3 class="title fw-6">
-                                                <a href="blog-single.html">
+                                                <a href="blog-single">
                                                     The Best Time to Harvest <br>
                                                     Corn Without Wilting
                                                 </a>
@@ -1497,7 +1497,7 @@
                                                 nulla.
                                             </p>
                                             <div class="bot">
-                                                <a href="blog-single.html"
+                                                <a href="blog-single"
                                                     class="tf-btn-read hover-text-4">Continue
                                                     Reading</a>
                                             </div>
@@ -1551,7 +1551,7 @@
                                                 </li>
                                             </ul>
                                             <h3 class="title fw-6">
-                                                <a href="blog-single.html">
+                                                <a href="blog-single">
                                                     The Joy of Working Every Day <br> on a Sheep Farm
                                                 </a>
                                             </h3>
@@ -1566,7 +1566,7 @@
                                                 nulla.
                                             </p>
                                             <div class="bot">
-                                                <a href="blog-single.html"
+                                                <a href="blog-single"
                                                     class="tf-btn-read hover-text-4">Continue
                                                     Reading</a>
                                             </div>

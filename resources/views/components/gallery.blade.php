@@ -21,7 +21,7 @@
                                     <img src="./images/item/line-throw-title.png" alt="">
                                 </div>
                                 <div class="breadcrumb">
-                                    <a href="index.html">Home</a>
+                                    <a href="/">Home</a>
                                     <div class="icon">
                                         <i class="icon-arrow-right1"></i>
                                     </div>
@@ -61,7 +61,7 @@
                                             <div class="image">
                                                 <img class="lazyload" src="./images/widget/gallery-item-1.jpg" data-src="./images/widget/gallery-item-1.jpg" alt="">
                                             </div>
-                                            <a href="gallery.html" class="add-gallery">
+                                            <a href="gallery" class="add-gallery">
                                                 +
                                             </a>
                                         </div>
@@ -69,49 +69,49 @@
                                             <div class="image">
                                                 <img class="lazyload" src="./images/widget/gallery-item-2.jpg" data-src="./images/widget/gallery-item-2.jpg" alt="">
                                             </div>
-                                            <a href="gallery.html" class="add-gallery">+</a>
+                                            <a href="gallery" class="add-gallery">+</a>
 
                                         </div>
                                         <div class="gallery-item item-3 wow fadeInUp" data-wow-delay="0.2s">
                                             <div class="image">
                                                 <img class="lazyload" src="./images/widget/gallery-item-3.jpg" data-src="./images/widget/gallery-item-3.jpg" alt="">
                                             </div>
-                                            <a href="gallery.html" class="add-gallery">+</a>
+                                            <a href="gallery" class="add-gallery">+</a>
 
                                         </div>
                                         <div class="gallery-item item-4 wow fadeInUp" data-wow-delay="0s">
                                             <div class="image">
                                                 <img class="lazyload" src="./images/widget/gallery-item-4.jpg" data-src="./images/widget/gallery-item-4.jpg" alt="">
                                             </div>
-                                            <a href="gallery.html" class="add-gallery">+</a>
+                                            <a href="gallery" class="add-gallery">+</a>
 
                                         </div>
                                         <div class="gallery-item item-5 wow fadeInUp" data-wow-delay="0.1s">
                                             <div class="image">
                                                 <img class="lazyload" src="./images/widget/gallery-item-5.jpg" data-src="./images/widget/gallery-item-5.jpg" alt="">
                                             </div>
-                                            <a href="gallery.html" class="add-gallery">+</a>
+                                            <a href="gallery" class="add-gallery">+</a>
 
                                         </div>
                                         <div class="gallery-item item-6 wow fadeInUp" data-wow-delay="0s">
                                             <div class="image">
                                                 <img class="lazyload" src="./images/widget/gallery-item-6.jpg" data-src="./images/widget/gallery-item-6.jpg" alt="">
                                             </div>
-                                            <a href="gallery.html" class="add-gallery">+</a>
+                                            <a href="gallery" class="add-gallery">+</a>
 
                                         </div>
                                         <div class="gallery-item item-7 wow fadeInUp" data-wow-delay="0.1s">
                                             <div class="image">
                                                 <img class="lazyload" src="./images/widget/gallery-item-7.jpg" data-src="./images/widget/gallery-item-7.jpg" alt="">
                                             </div>
-                                            <a href="gallery.html" class="add-gallery">+</a>
+                                            <a href="gallery" class="add-gallery">+</a>
 
                                         </div>
                                         <div class="gallery-item item-8 wow fadeInUp" data-wow-delay="0.2s">
                                             <div class="image">
                                                 <img class="lazyload" src="./images/widget/gallery-item-8.jpg" data-src="./images/widget/gallery-item-8.jpg" alt="">
                                             </div>
-                                            <a href="gallery.html" class="add-gallery">+</a>
+                                            <a href="gallery" class="add-gallery">+</a>
 
                                         </div>
                                     </div>
@@ -122,7 +122,7 @@
                                             <div class="image">
                                                 <img class="lazyload" src="./images/widget/gallery-item-1.jpg" data-src="./images/widget/gallery-item-1.jpg" alt="">
                                             </div>
-                                            <a href="gallery.html" class="add-gallery">
+                                            <a href="gallery" class="add-gallery">
                                                 +
                                             </a>
                                         </div>
@@ -130,49 +130,49 @@
                                             <div class="image">
                                                 <img class="lazyload" src="./images/widget/gallery-item-2.jpg" data-src="./images/widget/gallery-item-2.jpg" alt="">
                                             </div>
-                                            <a href="gallery.html" class="add-gallery">+</a>
+                                            <a href="gallery" class="add-gallery">+</a>
 
                                         </div>
                                         <div class="gallery-item item-3">
                                             <div class="image">
                                                 <img class="lazyload" src="./images/widget/gallery-item-3.jpg" data-src="./images/widget/gallery-item-3.jpg" alt="">
                                             </div>
-                                            <a href="gallery.html" class="add-gallery">+</a>
+                                            <a href="gallery" class="add-gallery">+</a>
 
                                         </div>
                                         <div class="gallery-item item-4">
                                             <div class="image">
                                                 <img class="lazyload" src="./images/widget/gallery-item-4.jpg" data-src="./images/widget/gallery-item-4.jpg" alt="">
                                             </div>
-                                            <a href="gallery.html" class="add-gallery">+</a>
+                                            <a href="gallery" class="add-gallery">+</a>
 
                                         </div>
                                         <div class="gallery-item item-5">
                                             <div class="image">
                                                 <img class="lazyload" src="./images/widget/gallery-item-5.jpg" data-src="./images/widget/gallery-item-5.jpg" alt="">
                                             </div>
-                                            <a href="gallery.html" class="add-gallery">+</a>
+                                            <a href="gallery" class="add-gallery">+</a>
 
                                         </div>
                                         <div class="gallery-item item-6">
                                             <div class="image">
                                                 <img class="lazyload" src="./images/widget/gallery-item-6.jpg" data-src="./images/widget/gallery-item-6.jpg" alt="">
                                             </div>
-                                            <a href="gallery.html" class="add-gallery">+</a>
+                                            <a href="gallery" class="add-gallery">+</a>
 
                                         </div>
                                         <div class="gallery-item item-7">
                                             <div class="image">
                                                 <img class="lazyload" src="./images/widget/gallery-item-7.jpg" data-src="./images/widget/gallery-item-7.jpg" alt="">
                                             </div>
-                                            <a href="gallery.html" class="add-gallery">+</a>
+                                            <a href="gallery" class="add-gallery">+</a>
 
                                         </div>
                                         <div class="gallery-item item-8">
                                             <div class="image">
                                                 <img class="lazyload" src="./images/widget/gallery-item-8.jpg" data-src="./images/widget/gallery-item-8.jpg" alt="">
                                             </div>
-                                            <a href="gallery.html" class="add-gallery">+</a>
+                                            <a href="gallery" class="add-gallery">+</a>
 
                                         </div>
                                     </div>
@@ -183,7 +183,7 @@
                                             <div class="image">
                                                 <img class="lazyload" src="./images/widget/gallery-item-1.jpg" data-src="./images/widget/gallery-item-1.jpg" alt="">
                                             </div>
-                                            <a href="gallery.html" class="add-gallery">
+                                            <a href="gallery" class="add-gallery">
                                                 +
                                             </a>
                                         </div>
@@ -191,49 +191,49 @@
                                             <div class="image">
                                                 <img class="lazyload" src="./images/widget/gallery-item-2.jpg" data-src="./images/widget/gallery-item-2.jpg" alt="">
                                             </div>
-                                            <a href="gallery.html" class="add-gallery">+</a>
+                                            <a href="gallery" class="add-gallery">+</a>
 
                                         </div>
                                         <div class="gallery-item item-3">
                                             <div class="image">
                                                 <img class="lazyload" src="./images/widget/gallery-item-3.jpg" data-src="./images/widget/gallery-item-3.jpg" alt="">
                                             </div>
-                                            <a href="gallery.html" class="add-gallery">+</a>
+                                            <a href="gallery" class="add-gallery">+</a>
 
                                         </div>
                                         <div class="gallery-item item-4">
                                             <div class="image">
                                                 <img class="lazyload" src="./images/widget/gallery-item-4.jpg" data-src="./images/widget/gallery-item-4.jpg" alt="">
                                             </div>
-                                            <a href="gallery.html" class="add-gallery">+</a>
+                                            <a href="gallery" class="add-gallery">+</a>
 
                                         </div>
                                         <div class="gallery-item item-5">
                                             <div class="image">
                                                 <img class="lazyload" src="./images/widget/gallery-item-5.jpg" data-src="./images/widget/gallery-item-5.jpg" alt="">
                                             </div>
-                                            <a href="gallery.html" class="add-gallery">+</a>
+                                            <a href="gallery" class="add-gallery">+</a>
 
                                         </div>
                                         <div class="gallery-item item-6">
                                             <div class="image">
                                                 <img class="lazyload" src="./images/widget/gallery-item-6.jpg" data-src="./images/widget/gallery-item-6.jpg" alt="">
                                             </div>
-                                            <a href="gallery.html" class="add-gallery">+</a>
+                                            <a href="gallery" class="add-gallery">+</a>
 
                                         </div>
                                         <div class="gallery-item item-7">
                                             <div class="image">
                                                 <img class="lazyload" src="./images/widget/gallery-item-7.jpg" data-src="./images/widget/gallery-item-7.jpg" alt="">
                                             </div>
-                                            <a href="gallery.html" class="add-gallery">+</a>
+                                            <a href="gallery" class="add-gallery">+</a>
 
                                         </div>
                                         <div class="gallery-item item-8">
                                             <div class="image">
                                                 <img class="lazyload" src="./images/widget/gallery-item-8.jpg" data-src="./images/widget/gallery-item-8.jpg" alt="">
                                             </div>
-                                            <a href="gallery.html" class="add-gallery">+</a>
+                                            <a href="gallery" class="add-gallery">+</a>
 
                                         </div>
                                     </div>
@@ -244,7 +244,7 @@
                                             <div class="image">
                                                 <img class="lazyload" src="./images/widget/gallery-item-1.jpg" data-src="./images/widget/gallery-item-1.jpg" alt="">
                                             </div>
-                                            <a href="gallery.html" class="add-gallery">
+                                            <a href="gallery" class="add-gallery">
                                                 +
                                             </a>
                                         </div>
@@ -252,49 +252,49 @@
                                             <div class="image">
                                                 <img class="lazyload" src="./images/widget/gallery-item-2.jpg" data-src="./images/widget/gallery-item-2.jpg" alt="">
                                             </div>
-                                            <a href="gallery.html" class="add-gallery">+</a>
+                                            <a href="gallery" class="add-gallery">+</a>
 
                                         </div>
                                         <div class="gallery-item item-3">
                                             <div class="image">
                                                 <img class="lazyload" src="./images/widget/gallery-item-3.jpg" data-src="./images/widget/gallery-item-3.jpg" alt="">
                                             </div>
-                                            <a href="gallery.html" class="add-gallery">+</a>
+                                            <a href="gallery" class="add-gallery">+</a>
 
                                         </div>
                                         <div class="gallery-item item-4">
                                             <div class="image">
                                                 <img class="lazyload" src="./images/widget/gallery-item-4.jpg" data-src="./images/widget/gallery-item-4.jpg" alt="">
                                             </div>
-                                            <a href="gallery.html" class="add-gallery">+</a>
+                                            <a href="gallery" class="add-gallery">+</a>
 
                                         </div>
                                         <div class="gallery-item item-5">
                                             <div class="image">
                                                 <img class="lazyload" src="./images/widget/gallery-item-5.jpg" data-src="./images/widget/gallery-item-5.jpg" alt="">
                                             </div>
-                                            <a href="gallery.html" class="add-gallery">+</a>
+                                            <a href="gallery" class="add-gallery">+</a>
 
                                         </div>
                                         <div class="gallery-item item-6">
                                             <div class="image">
                                                 <img class="lazyload" src="./images/widget/gallery-item-6.jpg" data-src="./images/widget/gallery-item-6.jpg" alt="">
                                             </div>
-                                            <a href="gallery.html" class="add-gallery">+</a>
+                                            <a href="gallery" class="add-gallery">+</a>
 
                                         </div>
                                         <div class="gallery-item item-7">
                                             <div class="image">
                                                 <img class="lazyload" src="./images/widget/gallery-item-7.jpg" data-src="./images/widget/gallery-item-7.jpg" alt="">
                                             </div>
-                                            <a href="gallery.html" class="add-gallery">+</a>
+                                            <a href="gallery" class="add-gallery">+</a>
 
                                         </div>
                                         <div class="gallery-item item-8">
                                             <div class="image">
                                                 <img class="lazyload" src="./images/widget/gallery-item-8.jpg" data-src="./images/widget/gallery-item-8.jpg" alt="">
                                             </div>
-                                            <a href="gallery.html" class="add-gallery">+</a>
+                                            <a href="gallery" class="add-gallery">+</a>
 
                                         </div>
                                     </div>
@@ -305,7 +305,7 @@
                                             <div class="image">
                                                 <img class="lazyload" src="./images/widget/gallery-item-1.jpg" data-src="./images/widget/gallery-item-1.jpg" alt="">
                                             </div>
-                                            <a href="gallery.html" class="add-gallery">
+                                            <a href="gallery" class="add-gallery">
                                                 +
                                             </a>
                                         </div>
@@ -313,49 +313,49 @@
                                             <div class="image">
                                                 <img class="lazyload" src="./images/widget/gallery-item-2.jpg" data-src="./images/widget/gallery-item-2.jpg" alt="">
                                             </div>
-                                            <a href="gallery.html" class="add-gallery">+</a>
+                                            <a href="gallery" class="add-gallery">+</a>
 
                                         </div>
                                         <div class="gallery-item item-3">
                                             <div class="image">
                                                 <img class="lazyload" src="./images/widget/gallery-item-3.jpg" data-src="./images/widget/gallery-item-3.jpg" alt="">
                                             </div>
-                                            <a href="gallery.html" class="add-gallery">+</a>
+                                            <a href="gallery" class="add-gallery">+</a>
 
                                         </div>
                                         <div class="gallery-item item-4">
                                             <div class="image">
                                                 <img class="lazyload" src="./images/widget/gallery-item-4.jpg" data-src="./images/widget/gallery-item-4.jpg" alt="">
                                             </div>
-                                            <a href="gallery.html" class="add-gallery">+</a>
+                                            <a href="gallery" class="add-gallery">+</a>
 
                                         </div>
                                         <div class="gallery-item item-5">
                                             <div class="image">
                                                 <img class="lazyload" src="./images/widget/gallery-item-5.jpg" data-src="./images/widget/gallery-item-5.jpg" alt="">
                                             </div>
-                                            <a href="gallery.html" class="add-gallery">+</a>
+                                            <a href="gallery" class="add-gallery">+</a>
 
                                         </div>
                                         <div class="gallery-item item-6">
                                             <div class="image">
                                                 <img class="lazyload" src="./images/widget/gallery-item-6.jpg" data-src="./images/widget/gallery-item-6.jpg" alt="">
                                             </div>
-                                            <a href="gallery.html" class="add-gallery">+</a>
+                                            <a href="gallery" class="add-gallery">+</a>
 
                                         </div>
                                         <div class="gallery-item item-7">
                                             <div class="image">
                                                 <img class="lazyload" src="./images/widget/gallery-item-7.jpg" data-src="./images/widget/gallery-item-7.jpg" alt="">
                                             </div>
-                                            <a href="gallery.html" class="add-gallery">+</a>
+                                            <a href="gallery" class="add-gallery">+</a>
 
                                         </div>
                                         <div class="gallery-item item-8">
                                             <div class="image">
                                                 <img class="lazyload" src="./images/widget/gallery-item-8.jpg" data-src="./images/widget/gallery-item-8.jpg" alt="">
                                             </div>
-                                            <a href="gallery.html" class="add-gallery">+</a>
+                                            <a href="gallery" class="add-gallery">+</a>
 
                                         </div>
                                     </div>
@@ -366,7 +366,7 @@
                                             <div class="image">
                                                 <img class="lazyload" src="./images/widget/gallery-item-1.jpg" data-src="./images/widget/gallery-item-1.jpg" alt="">
                                             </div>
-                                            <a href="gallery.html" class="add-gallery">
+                                            <a href="gallery" class="add-gallery">
                                                 +
                                             </a>
                                         </div>
@@ -374,49 +374,49 @@
                                             <div class="image">
                                                 <img class="lazyload" src="./images/widget/gallery-item-2.jpg" data-src="./images/widget/gallery-item-2.jpg" alt="">
                                             </div>
-                                            <a href="gallery.html" class="add-gallery">+</a>
+                                            <a href="gallery" class="add-gallery">+</a>
 
                                         </div>
                                         <div class="gallery-item item-3">
                                             <div class="image">
                                                 <img class="lazyload" src="./images/widget/gallery-item-3.jpg" data-src="./images/widget/gallery-item-3.jpg" alt="">
                                             </div>
-                                            <a href="gallery.html" class="add-gallery">+</a>
+                                            <a href="gallery" class="add-gallery">+</a>
 
                                         </div>
                                         <div class="gallery-item item-4">
                                             <div class="image">
                                                 <img class="lazyload" src="./images/widget/gallery-item-4.jpg" data-src="./images/widget/gallery-item-4.jpg" alt="">
                                             </div>
-                                            <a href="gallery.html" class="add-gallery">+</a>
+                                            <a href="gallery" class="add-gallery">+</a>
 
                                         </div>
                                         <div class="gallery-item item-5">
                                             <div class="image">
                                                 <img class="lazyload" src="./images/widget/gallery-item-5.jpg" data-src="./images/widget/gallery-item-5.jpg" alt="">
                                             </div>
-                                            <a href="gallery.html" class="add-gallery">+</a>
+                                            <a href="gallery" class="add-gallery">+</a>
 
                                         </div>
                                         <div class="gallery-item item-6">
                                             <div class="image">
                                                 <img class="lazyload" src="./images/widget/gallery-item-6.jpg" data-src="./images/widget/gallery-item-6.jpg" alt="">
                                             </div>
-                                            <a href="gallery.html" class="add-gallery">+</a>
+                                            <a href="gallery" class="add-gallery">+</a>
 
                                         </div>
                                         <div class="gallery-item item-7">
                                             <div class="image">
                                                 <img class="lazyload" src="./images/widget/gallery-item-7.jpg" data-src="./images/widget/gallery-item-7.jpg" alt="">
                                             </div>
-                                            <a href="gallery.html" class="add-gallery">+</a>
+                                            <a href="gallery" class="add-gallery">+</a>
 
                                         </div>
                                         <div class="gallery-item item-8">
                                             <div class="image">
                                                 <img class="lazyload" src="./images/widget/gallery-item-8.jpg" data-src="./images/widget/gallery-item-8.jpg" alt="">
                                             </div>
-                                            <a href="gallery.html" class="add-gallery">+</a>
+                                            <a href="gallery" class="add-gallery">+</a>
 
                                         </div>
                                     </div>
@@ -427,7 +427,7 @@
                                             <div class="image">
                                                 <img class="lazyload" src="./images/widget/gallery-item-1.jpg" data-src="./images/widget/gallery-item-1.jpg" alt="">
                                             </div>
-                                            <a href="gallery.html" class="add-gallery">
+                                            <a href="gallery" class="add-gallery">
                                                 +
                                             </a>
                                         </div>
@@ -435,49 +435,49 @@
                                             <div class="image">
                                                 <img class="lazyload" src="./images/widget/gallery-item-2.jpg" data-src="./images/widget/gallery-item-2.jpg" alt="">
                                             </div>
-                                            <a href="gallery.html" class="add-gallery">+</a>
+                                            <a href="gallery" class="add-gallery">+</a>
 
                                         </div>
                                         <div class="gallery-item item-3">
                                             <div class="image">
                                                 <img class="lazyload" src="./images/widget/gallery-item-3.jpg" data-src="./images/widget/gallery-item-3.jpg" alt="">
                                             </div>
-                                            <a href="gallery.html" class="add-gallery">+</a>
+                                            <a href="gallery" class="add-gallery">+</a>
 
                                         </div>
                                         <div class="gallery-item item-4">
                                             <div class="image">
                                                 <img class="lazyload" src="./images/widget/gallery-item-4.jpg" data-src="./images/widget/gallery-item-4.jpg" alt="">
                                             </div>
-                                            <a href="gallery.html" class="add-gallery">+</a>
+                                            <a href="gallery" class="add-gallery">+</a>
 
                                         </div>
                                         <div class="gallery-item item-5">
                                             <div class="image">
                                                 <img class="lazyload" src="./images/widget/gallery-item-5.jpg" data-src="./images/widget/gallery-item-5.jpg" alt="">
                                             </div>
-                                            <a href="gallery.html" class="add-gallery">+</a>
+                                            <a href="gallery" class="add-gallery">+</a>
 
                                         </div>
                                         <div class="gallery-item item-6">
                                             <div class="image">
                                                 <img class="lazyload" src="./images/widget/gallery-item-6.jpg" data-src="./images/widget/gallery-item-6.jpg" alt="">
                                             </div>
-                                            <a href="gallery.html" class="add-gallery">+</a>
+                                            <a href="gallery" class="add-gallery">+</a>
 
                                         </div>
                                         <div class="gallery-item item-7">
                                             <div class="image">
                                                 <img class="lazyload" src="./images/widget/gallery-item-7.jpg" data-src="./images/widget/gallery-item-7.jpg" alt="">
                                             </div>
-                                            <a href="gallery.html" class="add-gallery">+</a>
+                                            <a href="gallery" class="add-gallery">+</a>
 
                                         </div>
                                         <div class="gallery-item item-8">
                                             <div class="image">
                                                 <img class="lazyload" src="./images/widget/gallery-item-8.jpg" data-src="./images/widget/gallery-item-8.jpg" alt="">
                                             </div>
-                                            <a href="gallery.html" class="add-gallery">+</a>
+                                            <a href="gallery" class="add-gallery">+</a>
 
                                         </div>
                                     </div>
