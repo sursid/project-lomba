@@ -227,14 +227,14 @@
                                             <a href="javascript:void(0)">Page</a>
                                             <ul class="sub-nav">
                                                 <li>
-                                                    <a href="about-us.html">
+                                                    <a href="about-us">
                                                         <span>
                                                             About Us
                                                         </span>
                                                     </a>
                                                 </li>
                                                 <li>
-                                                    <a href="our-commitments.html">
+                                                    <a href="our-commitments">
                                                         <span>
                                                             Our Commitments
                                                         </span>
@@ -478,10 +478,10 @@
                                                 </a>
                                                 <ul class="sub-menu-mobile">
                                                     <li class="menu-item">
-                                                        <a href="about-us.html">About Us</a>
+                                                        <a href="about-us">About Us</a>
                                                     </li>
                                                     <li class="menu-item">
-                                                        <a href="our-commitments.html">Our Commitments</a>
+                                                        <a href="our-commitments">Our Commitments</a>
                                                     </li>
                                                     <li class="menu-item">
                                                         <a href="our-events.html">Our Events</a>
@@ -689,14 +689,14 @@
                                                 <a href="javascript:void(0)">Page</a>
                                                 <ul class="sub-nav">
                                                     <li>
-                                                        <a href="about-us.html">
+                                                        <a href="about-us">
                                                             <span>
                                                                 About Us
                                                             </span>
                                                         </a>
                                                     </li>
                                                     <li>
-                                                        <a href="our-commitments.html">
+                                                        <a href="our-commitments">
                                                             <span>
                                                                 Our Commitments
                                                             </span>
@@ -1047,7 +1047,7 @@
                                 <ul class="link-list tf-collapse-content">
                                     <li class="item">
 
-                                        <a href="about-us.html">
+                                        <a href="about-us">
                                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" width="14"
                                                 height="16">
                                                 <path
