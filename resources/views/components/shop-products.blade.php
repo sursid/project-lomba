@@ -455,6 +455,7 @@
                     </div>
                 </div>
             </div>
+
             <div class="fixed-header style-absolute">
                 <div class="tf-container w-1780">
                     <div class="row">
@@ -954,13 +955,7 @@
                                 <div class="icon-img">
                                     <img src="./images/item/line-throw-title.png" alt="">
                                 </div>
-                                <div class="breadcrumb">
-                                    <a href="/">Home</a>
-                                    <div class="icon">
-                                        <i class="icon-arrow-right1"></i>
-                                    </div>
-                                    <a href="javascript:void(0)"> Shop Products </a>
-                                </div>
+                            
                             </div>
                         </div>
                     </div>
@@ -978,20 +973,12 @@
                 <div class="row">
                     <div class="col-lg-8">
                         <div class="tf-shop-control" id="tf-shop-control">
-                            <div class="control-left">
-                                <div class="btn-view view-grid">
-                                    <i class="fa-solid fa-grip"></i>
-                                </div>
-                                <div class="btn-view view-list">
-                                    <i class="fa-solid fa-list"></i>
-                                </div>
-                                <p class="font-worksans fw-5">
-                                    Showing 1–15 of 30 results
-                                </p>
-                            </div>
+                            
                             <div class="control-right">
                                 <div class="tf-control-sorting">
                                     <div class="tf-dropdown-sort">
+
+                                        <!-- nanti ganti class jadi 'default sorting' -->
                                         <div class="tf-btn style-2" data-bs-toggle="dropdown">
                                             <span class="text-sort-value">Default sorting</span>
                                             <i class="icon-arrow_down"></i>
@@ -1018,10 +1005,13 @@
                                                 </span>
                                             </div>
                                         </div>
+                                        <!-- smpe sini -->
+
                                     </div>
                                 </div>
                             </div>
                         </div>
+
                         <div class="wg-shop-content ">
                             <div class="grid-layout-3 gap-30-20">
 
@@ -1809,6 +1799,7 @@
                                 </div>
                             </div>
                         </div>
+
                         <div class=" tf-page-pagination">
                             <ul>
                                 <li>
