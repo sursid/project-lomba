@@ -14011,7 +14011,7 @@ i.fs-12 {
 }
 @media (min-width: 992px) and (max-width: 1439px) {
   .wg-shop-content .grid-layout-3 {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(4, 1fr);
   }
   .main-content.page-service-detail .content .benefit {
     gap: 15px;
