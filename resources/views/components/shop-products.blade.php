@@ -40,6 +40,13 @@
     <!-- Favicon and Touch Icons  -->
     <link rel="shortcut icon" href="images/logo/logo3x.png" />
     <link rel="apple-touch-icon-precomposed" href="images/logo/logo3x.png" />
+    <style>
+        .text{
+            color: red;
+            display: flex;
+            gap: 2px;
+        }
+    </style>
 
     <!--[if lt IE 9]>
         <script src="javascript/html5shiv.js"></script>
@@ -976,182 +983,6 @@
         <div class="main-content page-shop-product pt-0">
             <div class="tf-container">
                 <div class="row">
-                    <div class="col-lg-4">
-                        <div class="tf-sidebar">
-                            <div class="sidebar-item sb-category">
-                                <h5 class="sb-title">
-                                    Categories
-                                </h5>
-                                <div class="sb-content">
-                                    <ul class="category-list">
-                                        <li class="item">
-                                            <a href="#tf-shop-control">Jam And Jelly (2)</a>
-                                        </li>
-                                        <li class="item">
-                                            <a href="#tf-shop-control">Superfood (5)
-                                            </a>
-                                        </li>
-                                        <li class="item">
-                                            <a href="#tf-shop-control">Vegetables (6)</a>
-                                        </li>
-                                        <li class="item">
-                                            <a href="#tf-shop-control">Premium Nuts (3)</a>
-                                        </li>
-                                        <li class="item">
-                                            <a href="#tf-shop-control">Detox Drinks (1)</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="sidebar-item ">
-                                <h5 class="sb-title">
-                                    Color
-                                </h5>
-                                <div class="sb-content sb-color">
-                                    <ul class="color-list">
-                                        <li class="color-1"></li>
-                                        <li class="active color-2"></li>
-                                        <li class="color-3"></li>
-                                        <li class="color-4"></li>
-                                        <li class="color-5"></li>
-                                        <li class="color-6"></li>
-                                        <li class="color-7"></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="sidebar-item ">
-                                <h5 class="sb-title">
-                                    Filter by Price
-                                </h5>
-                                <div class="sb-content sb-filter-price">
-                                    <div class="range-slider">
-                                        <div id="range-two-val"></div>
-                                        <div class="bottom">
-                                            <div class="price-wrap">
-                                                <span class="text font-nunito">
-                                                    Price:
-                                                </span>
-                                                <div class="value">
-                                                    <div id="skip-value-lower"></div>
-                                                    <span class="line">
-
-
-                                                    </span>
-                                                    <div id="skip-value-upper"></div>
-                                                </div>
-                                            </div>
-                                            <a href="#"
-                                                class="tf-btn-read btn-filter font-worksans fw-5 hover-text-4">Filter</a>
-                                        </div>
-                                    </div>
-
-                                </div>
-                            </div>
-
-                            <div class="sidebar-item sb-latest-new">
-                                <h5 class="sb-title">
-                                    Popular Products
-                                </h5>
-                                <div class="sb-content sb-popular-product">
-                                    <ul class="latest-list style-2">
-                                        <li class="item img-hover">
-                                            <div class="image hover-item">
-                                                <img src="./images/widget/sb-new.jpg" alt="">
-                                            </div>
-                                            <div class="content">
-                                                <a href="#" class="name font-worksans fw-5 hover-text-4">
-                                                    Green prganic mix
-                                                    smoothie for everyday
-                                                </a>
-                                                <div class="pricing-star">
-                                                    <span class=" price font-worksans fw-6">$3.00</span>
-                                                    <div class="wg-rating">
-                                                        <i class="fa-solid fa-star"></i>
-                                                        <i class="fa-solid fa-star"></i>
-                                                        <i class="fa-solid fa-star"></i>
-                                                        <i class="fa-solid fa-star"></i>
-                                                        <i class="fa-solid fa-star"></i>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </li>
-                                        <li class="item img-hover">
-                                            <div class="image hover-item">
-
-                                                <img src="./images/widget/sb-new-2.jpg" alt="">
-                                            </div>
-                                            <div class="content">
-                                                <a href="#" class="name font-worksans fw-5 hover-text-4">
-                                                    Green prganic mix
-                                                    smoothie for everyday
-                                                </a>
-                                                <div class="pricing-star">
-                                                    <span class=" price font-worksans fw-6">$3.00</span>
-                                                    <div class="wg-rating">
-                                                        <i class="fa-solid fa-star"></i>
-                                                        <i class="fa-solid fa-star"></i>
-                                                        <i class="fa-solid fa-star"></i>
-                                                        <i class="fa-solid fa-star"></i>
-                                                        <i class="fa-solid fa-star"></i>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </li>
-                                        <li class="item img-hover">
-                                            <div class="image hover-item">
-                                                <img src="./images/widget/sb-new-3.jpg" alt="">
-                                            </div>
-                                            <div class="content">
-                                                <a href="#" class="name font-worksans fw-5 hover-text-4">
-                                                    Green prganic mix
-                                                    smoothie for everyday
-                                                </a>
-                                                <div class="pricing-star">
-                                                    <span class=" price font-worksans fw-6">$3.00</span>
-                                                    <div class="wg-rating">
-                                                        <i class="fa-solid fa-star"></i>
-                                                        <i class="fa-solid fa-star"></i>
-                                                        <i class="fa-solid fa-star"></i>
-                                                        <i class="fa-solid fa-star"></i>
-                                                        <i class="fa-solid fa-star"></i>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-
-                            <div class="sidebar-item sb-tag">
-                                <h5 class="sb-title">
-                                    Tags
-                                </h5>
-                                <div class="sb-content">
-
-                                    <ul class="tag-list">
-                                        <li class="item">
-                                            <a href="#">bread</a>
-                                        </li>
-                                        <li class="item">
-                                            <a href="#">fruits</a>
-                                        </li>
-                                        <li class="item">
-                                            <a href="#">healthy</a>
-                                        </li>
-                                        <li class="item">
-                                            <a href="#">juices</a>
-                                        </li>
-                                        <li class="item">
-                                            <a href="#">organic</a>
-                                        </li>
-                                        <li class="item">
-                                            <a href="#">vegatables</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                     <div class="col-lg-8">
                         <div class="tf-shop-control" id="tf-shop-control">
                             <div class="control-left">
@@ -1416,6 +1247,10 @@
                                     <a href="shop-details" class="name-product font-worksans hover-text-4">
                                         Iceland Macaroni Cheese
                                     </a>
+                                    <div class="text">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M12 11.5A2.5 2.5 0 0 1 9.5 9A2.5 2.5 0 0 1 12 6.5A2.5 2.5 0 0 1 14.5 9a2.5 2.5 0 0 1-2.5 2.5M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7"/></svg>
+                                    <p>kab.bogor</p>
+                                    </div> 
                                     <div class="pricing-star">
                                         <div class="price-wrap">
 
