@@ -42,6 +42,18 @@
     <link rel="shortcut icon" href="images/logo/logo3x.png" />
     <link rel="apple-touch-icon-precomposed" href="images/logo/logo3x.png" />
 
+    <style>
+        .hero{
+            display: flex;
+            justify-content: start;
+        }
+
+        .hero:hover{
+            color: green;
+            transition: green 1s ease in out;
+        }
+    </style>
+
     <!--[if lt IE 9]>
         <script src="javascript/html5shiv.js"></script>
         <script src="javascript/respond.min.js"></script>
@@ -1525,10 +1537,9 @@
                                             </div>
                                             <a href="#" class="name-product font-worksans hover-text-4">
                                                 Iceland Macaroni Cheese
-                                            </a>
+                                            </a>                                         
                                             <div class="pricing-star">
                                                 <div class="price-wrap">
-
                                                     <span class=" price-2">$3.00</span>
                                                 </div>
                                                 <div class="wg-rating">
@@ -1538,6 +1549,10 @@
                                                     <i class="fa-solid fa-star"></i>
                                                     <i class="fa-solid fa-star"></i>
                                                 </div>
+                                            </div>
+                                            <div class="hero">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M12 11.5A2.5 2.5 0 0 1 9.5 9A2.5 2.5 0 0 1 12 6.5A2.5 2.5 0 0 1 14.5 9a2.5 2.5 0 0 1-2.5 2.5M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7"/></svg>
+                                            <p>Kab.Tangerang</p>
                                             </div>
                                             <div class="product-btn-list">
                                                 <a href="#" class="icon shoping">
@@ -1602,6 +1617,10 @@
                                                     <i class="fa-solid fa-star"></i>
                                                     <i class="fa-solid fa-star"></i>
                                                 </div>
+                                            </div>
+                                            <div class="hero">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M12 11.5A2.5 2.5 0 0 1 9.5 9A2.5 2.5 0 0 1 12 6.5A2.5 2.5 0 0 1 14.5 9a2.5 2.5 0 0 1-2.5 2.5M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7"/></svg>
+                                            <p>Kab.bogor</p>
                                             </div>
                                             <div class="product-btn-list">
                                                 <a href="#" class="icon shoping">
@@ -1675,6 +1694,10 @@
                                                     <i class="fa-solid fa-star"></i>
                                                 </div>
                                             </div>
+                                            <div class="hero">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M12 11.5A2.5 2.5 0 0 1 9.5 9A2.5 2.5 0 0 1 12 6.5A2.5 2.5 0 0 1 14.5 9a2.5 2.5 0 0 1-2.5 2.5M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7"/></svg>
+                                            <p>Kota surabaya</p>
+                                            </div>
                                             <div class="product-btn-list">
                                                 <a href="#" class="icon shoping">
 
@@ -1738,6 +1761,10 @@
                                                     <i class="fa-solid fa-star"></i>
                                                     <i class="fa-solid fa-star"></i>
                                                 </div>
+                                            </div>
+                                            <div class="hero">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M12 11.5A2.5 2.5 0 0 1 9.5 9A2.5 2.5 0 0 1 12 6.5A2.5 2.5 0 0 1 14.5 9a2.5 2.5 0 0 1-2.5 2.5M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7"/></svg>
+                                            <p>kota jakarta barat</p>
                                             </div>
                                             <div class="product-btn-list">
                                                 <a href="#" class="icon shoping">
