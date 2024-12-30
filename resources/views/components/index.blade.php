@@ -164,24 +164,21 @@
                 <div class="col-lg-4">
                     <div class="box-portfolio style-4 tf-img-hover mb-s-991">
                         <div class="image hover01">
-                            <img src="./images/widget/tani.jpg"
-                                data-src="./images/widget/tani.jpg" alt="" class="lazyload" />
+                            <img src="./images/widget/tekno.jpg"
+                                data-src="./images/widget/teknoo.jpg" alt="" class="lazyload" />
                         </div>
                         <div class="content">
                             <div class="icon hover02">
                                 <i class="icon-healthy-food-1"></i>
                             </div>
                             <a href="our-services" class="title fs-22 font-worksans fw-6 hover-text-4">
-                                We Use New Technology</a>
+                                Menggunakan Teknologi Baru</a>
                             <p class="text font-nunito">
-                                Ultrices sagittis orci a scelerisque
-                                purus semper eget duis at.
-                                Sollicitudin nibh sit amet commodo
-                                nulla.
+                                Kami mengimplementasikan teknologi pertanian terbaru untuk meningkatkan hasil dan efisiensi.
                             </p>
                             <div class="bot">
                                 <a href="our-services" class="btn-read font-worksans fw-5">
-                                    Read More
+                                    Baca Selengkapnya
                                 </a>
                             </div>
                         </div>
@@ -190,24 +187,21 @@
                 <div class="col-lg-4 col-md-6">
                     <div class="box-portfolio style-4 tf-img-hover mb-s-991">
                         <div class="image hover01">
-                            <img src="./images/widget/box-portfolio-2.jpg"
-                                data-src="./images/widget/box-portfolio-2.jpg" alt="" class="lazyload" />
+                            <img src="./images/widget/kpanen.jpg"
+                                data-src="./images/widget/kpanen.jpg" alt="" class="lazyload" />
                         </div>
                         <div class="content">
                             <div class="icon">
                                 <i class="icon-healthy-food-1"></i>
                             </div>
                             <a href="our-services" class="title fs-22 font-worksans fw-6 hover-text-4">
-                                Making Healthy Foods</a>
+                                Membuat Panen Maksimal</a>
                             <p class="text font-nunito">
-                                Ultrices sagittis orci a scelerisque
-                                purus semper eget duis at.
-                                Sollicitudin nibh sit amet commodo
-                                nulla.
+                                Memberdayakan petani untuk hasil panen optimal melalui teknologi dan pelatihan.
                             </p>
                             <div class="bot">
                                 <a href="our-services" class="btn-read font-worksans fw-5">
-                                    Read More
+                                    Baca Selengkapnya
                                 </a>
                             </div>
                         </div>
@@ -216,24 +210,21 @@
                 <div class="col-lg-4 col-md-6">
                     <div class="box-portfolio style-4 tf-img-hover">
                         <div class="image hover01">
-                            <img src="./images/widget/petani.jpg"
-                                data-src="./images/widget/petani.jpg" alt="" class="lazyload" />
+                            <img src="./images/widget/sawah.jpg"
+                                data-src="./images/widget/sawah.jpg" alt="" class="lazyload" />
                         </div>
                         <div class="content">
                             <div class="icon">
                                 <i class="icon-healthy-food-1"></i>
                             </div>
                             <a href="our-services" class="title fs-23 font-worksans fw-6 hover-text-4">
-                                Reforming In The Systems</a>
+                                Reformasi Sistem Pertanian</a>
                             <p class="text font-nunito">
-                                Ultrices sagittis orci a scelerisque
-                                purus semper eget duis at.
-                                Sollicitudin nibh sit amet commodo
-                                nulla.
+                                Mereformasi sistem pertanian untuk hasil yang lebih efisien dan berkelanjutan.
                             </p>
                             <div class="bot">
                                 <a href="our-services" class="btn-read font-worksans fw-5">
-                                    Read More
+                                    Baca Selengkapnya
                                 </a>
                             </div>
                         </div>
@@ -252,38 +243,21 @@
                         <div class="content-left img-hover">
                             <div class="heading-section">
                                 <p class="sub-title wow fadeInUp" data-wow-delay="0s">
-                                    We have 30 years of agriculture
-                                    & eco farming experience
+                                    Kami Mendukung Kemajuan Pertanian melalui Teknologi
                                 </p>
                                 <p class="title text-container tf-animate-2">
-                                    Providing The Finest Products To
-                                    The Best Feed Suppliers.
+                                    Tentang NusaTani Membangun Komunitas Pertanian Digital
                                 </p>
                             </div>
                             <p class="text-1">
-                                Elders is headquartered in Adelaide,
-                                South Australia, where our story
-                                began in 1839, but our expansive
-                                network now reaches every corner of
-                                Australia.
+                                Di NusaTani, kami berkomitmen untuk mendukung dan memberdayakan komunitas pertanian melalui platform digital yang mudah diakses.
                             </p>
                             <p class="text-2">
-                                At Mycorrhizal Applications (MA), we
-                                are dedicated to sustainability by
-                                providing the agriculture,
-                                horticulture, landscaping, and
-                                forestry industries with efficient
-                                and effective microbial-based
-                                biorational solutions. As the
-                                world’s leading manufacturer and
-                                supplier of mycorrhizal soil
-                                inoculants, MA researches, produces,
-                                and markets mycorrhizal fungi which
-                                accelerate plant performance.
+                                Kami menciptakan situs web yang dirancang khusus untuk memfasilitasi komunikasi, berbagi informasi, dan meningkatkan kolaborasi di antara para pelaku dan pecinta pertanian. Tujuan kami adalah untuk menyediakan alat dan sumber daya yang membantu komunitas pertanian berkembang dalam era digital.
                             </p>
                             <a href="about-us" class="tf-btn btn-read-more gap-34">
                                 <span class="text-style">
-                                    More About Us
+                                    Selengkapnya Tentang Kami
                                 </span>
                                 <div class="icon">
                                     <i class="icon-arrow_right"></i>
@@ -302,7 +276,7 @@
                                             <i class="icon-wheat-grains"></i>
                                         </div>
                                         <p class="title font-worksans">
-                                            Trust By Clients
+                                            Kepercayaan Dari Pengguna
                                         </p>
                                         <div class="counter">
                                             <div id="odometer" class="odometer style-2">
@@ -311,10 +285,7 @@
                                             <span class="sub-odo">+</span>
                                         </div>
                                         <p class="text font-nunito">
-                                            Lorem ipsum dolor sit
-                                            amet, consectetur
-                                            adipiscing elit. Etiam
-                                            non porttitor felis.
+                                            Pengguna sangat berharga, karena satu pengguna dapat menarik pengguna lainnya. Kepuasan pengguna akan menciptakan loyalitas dan rekomendasi yang terus berkembang.
                                         </p>
                                     </div>
                                 </div>
@@ -325,22 +296,19 @@
                                         <li>
                                             <i class="fa-solid fa-circle-check"></i>
                                             <p>
-                                                Modern Agriculture
-                                                Equipment
+                                                Peralatan pertanian modern
                                             </p>
                                         </li>
                                         <li>
                                             <i class="fa-solid fa-circle-check"></i>
                                             <p>
-                                                Awesome Harvest of
-                                                Wheat
+                                                Hasil panen yang luar biasa
                                             </p>
                                         </li>
                                         <li>
                                             <i class="fa-solid fa-circle-check"></i>
                                             <p>
-                                                Fresh Fruits &
-                                                Vegetables
+                                                Sistem pertanian yang lebih efisien
                                             </p>
                                         </li>
                                     </ul>
@@ -353,8 +321,8 @@
                                                 </div>
                                                 <a href="about-us"
                                                     class="caption fw-6 font-worksans text-upper hover-text-secondary">
-                                                    Highly Qualified & <br>
-                                                    Specialized Farmers
+                                                    Petani yang sangat berkulifikasi & <br>
+                                                    terspesialisasi
                                                 </a>
                                             </div>
                                         </li>
@@ -366,14 +334,14 @@
                                                 </div>
                                                 <a href="about-us"
                                                     class="caption fw-6 font-worksans text-upper hover-text-secondary">
-                                                    Fruit, Vegetables <br>
-                                                    And Livestock
+                                                    Hasil Panen yang berkualitas <br>
+                                                    dan subur
                                                 </a>
                                             </div>
                                         </li>
                                     </ul>
                                     <a href="about-us" class="tf-btn-read text-white hover-text-secondary">
-                                        Read More
+                                        Lihat Selengkapnya
                                     </a>
                                 </div>
                             </div>

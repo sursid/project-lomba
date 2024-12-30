@@ -41,8 +41,8 @@
     <link rel="stylesheet" type="text/css" href="icons/fontawesome/css/all.min.css" />
 
     <!-- Favicon and Touch Icons  -->
-    <link rel="shortcut icon" href="images/logo/logo3x.png" />
-    <link rel="apple-touch-icon-precomposed" href="images/logo/logo3x.png" />
+    <link rel="shortcut icon" href="images/logo/logoo.jpg" />
+    <link rel="apple-touch-icon-precomposed" href="images/logo/logoo.jpg" />
 </head>
 
 <body class="counter-scroll">
@@ -57,8 +57,8 @@
                     <div class="col-lg-12">
                         <div class="topbar-inner">
                             <div class="topbar-left">
-                                <span class="fs-14 font-nunito">Welcome to DonalFarm</span>
-                                <span class="fs-14 font-nunito">Agriculture & Organic Farms</span>
+                                <span class="fs-14 font-nunito">Selamat Datang di NusaTani</span>
+                                <span class="fs-14 font-nunito">Teknologi Pertanian</span>
                             </div>
                             <div class="topbar-right">
                                 <ul class="contact-list">
@@ -66,14 +66,14 @@
                                         <a href="#" class="icon">
                                             <i class="fa-solid fa-phone"></i>
                                         </a>
-                                        <a href="#"> +1 987 654 3210 </a>
+                                        <a href="#"> +62 896 4990 8012 </a>
                                     </li>
                                     <li class="item">
                                         <a href="#" class="icon">
                                             <img src="./icons/mailbox.png" alt="" />
                                         </a>
                                         <a href="#">
-                                            Donalfarms@gmail.com
+                                            NusaTani@gmail.com
                                         </a>
                                     </li>
                                     <li class="item">
@@ -81,8 +81,7 @@
                                             <i class="fa-solid fa-location-dot"></i>
                                         </a>
                                         <a href="#">
-                                            Prinsengracht 250, Amsterdam
-                                            Netherlands
+                                            Indonesia, Universitas Esa Unggul
                                         </a>
                                     </li>
                                 </ul>
@@ -194,7 +193,7 @@
                             <div class="header-left">
                                 <div class="logo-site">
                                     <a href="index">
-                                        <img src="./images/logo/logo.png" alt="" />
+                                        <img src="./images/logo/Logoo.jpg" alt="" />
                                     </a>
                                 </div>
                                 <div class="main-nav">
@@ -446,7 +445,7 @@
                                 <div class="top">
                                     <div class="logo">
                                         <a href="index" rel="home" class="main-logo">
-                                            <img id="mobile-logo_header" alt="" src="./images/logo/logo-2.png" />
+                                            <img id="mobile-logo_header" alt="" src="./images/logo/logoo.jpg" />
                                         </a>
                                         <div class="mobile-nav-close">
                                             <i class="icon-close"></i>
@@ -656,7 +655,7 @@
                                 <div class="header-left">
                                     <div class="logo-site">
                                         <a href="index">
-                                            <img src="./images/logo/logo.png" alt="" />
+                                            <img src="./images/logo/logoo.jpg" alt="" />
                                         </a>
                                     </div>
                                     <div class="main-nav">
@@ -925,7 +924,7 @@
                             <div class="footer-left">
                                 <div class="logo">
                                     <a href="index">
-                                        <img src="./images/logo/logo-2.png" alt="" />
+                                        <img src="./images/logo/logoo.jpg" alt="" />
                                     </a>
                                 </div>
                             </div>
