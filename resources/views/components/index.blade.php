@@ -8,33 +8,30 @@
             <div class="swiper-slide">
                 <div class="slide-home-1">
                     <div class="image overflow-hidden">
-                        <img src="./images/page-title//-1.jpg" data-src="./images/page-title//-1.jpg"
+                        <img src="./images/page-title//nusatano-3.jpg" data-src="./images/page-title//nusatano-3.jpg"
                             alt="" class="lazyload tf-animate-zoom-in-out" />
                     </div>
                     <div class="content-wrap">
                         <div class="content">
                             <p class="sub-title font-snowfall tf-fade-top fade-item-1">
-                                Better Agriculture for Better Future
+                            Pertanian yang Lebih Baik untuk Masa Depan yang Lebih Baik
                             </p>
                             <h1 class="title font-farmhouse tf-fade-right fade-item-2">
-                                Every Crop Counts, <br />
-                                Every Farmer Matters.
+                                Kerja Keras Petani, <br />
+                                Harapan untuk Indonesia.
                             </h1>
                             <div class="img-item ">
                                 <img src="./images/item/line-throw-title.png"
                                     class="tf-trainsition-draw-left access-trainsition" alt="" />
                             </div>
                             <p class="text font-nunito tf-fade-left fade-item-4">
-                                The paramount doctrine of the
-                                economic and technological euphoria
-                                of recent <br />
-                                decades has been that everything
-                                depends on innovation.
+                                Kemajuan ekonomi Indonesia dapat tercapai, <br />
+                                melalui penerapan teknologi pertanian yang inovatif dan lebih efisien.
                             </p>
                             <a href="our-services"
                                 class="tf-btn btn-view bg-white tf-fade-bottom fade-item-5">
                                 <span class="text-style cl-primary">
-                                    See Our Services
+                                    Lihat layanan kami
                                 </span>
 
                                 <div class="icon">
@@ -48,33 +45,30 @@
             <div class="swiper-slide">
                 <div class="slide-home-1">
                     <div class="image overflow-hidden">
-                        <img src="./images/page-title//-2.jpg" data-src="./images/page-title//-2.jpg"
+                        <img src="./images/page-title//nusatani-2.jpg" data-src="./images/page-title//nusatani-2.jpg"
                             alt="" class="lazyload tf-animate-zoom-in-out" />
                     </div>
                     <div class="content-wrap">
                         <div class="content">
                             <p class="sub-title font-snowfall tf-fade-top fade-item-1">
-                                Better Agriculture for Better Future
+                                Pertanian Cerdas, Masa Depan Gemilang
                             </p>
                             <h1 class="title font-farmhouse tf-fade-right fade-item-2">
-                                Every Crop Counts, <br />
-                                Every Farmer Matters.
+                                Setiap Benih yang ditanam, <br />
+                                adalah harapan yang tumbuh.
                             </h1>
                             <div class="img-item ">
                                 <img class="tf-trainsition-draw-left access-trainsition"
                                     src="./images/item/line-throw-title.png" alt="" />
                             </div>
                             <p class="text font-nunito tf-fade-left fade-item-4">
-                                The paramount doctrine of the
-                                economic and technological euphoria
-                                of recent <br />
-                                decades has been that everything
-                                depends on innovation.
+                                Untuk membawa ekonomi Indonesia ke level yang lebih tinggi, <br />
+                                inovasi dalam teknologi pertanian menjadi sangat penting agar lebih modern dan produktif.
                             </p>
                             <a href="our-services"
                                 class="tf-btn btn-view bg-white tf-fade-bottom fade-item-5">
                                 <span class="text-style cl-primary">
-                                    See Our Services
+                                    Lihat layanan kami
                                 </span>
 
                                 <div class="icon">
@@ -88,33 +82,30 @@
             <div class="swiper-slide">
                 <div class="slide-home-1">
                     <div class="image overflow-hidden">
-                        <img src="./images/page-title//-3.jpg" data-src="./images/page-title//-3.jpg"
+                        <img src="./images/page-title//nusatani.jpg" data-src="./images/page-title//nusatani.jpg"
                             alt="" class="lazyload tf-animate-zoom-in-out" />
                     </div>
                     <div class="content-wrap">
                         <div class="content">
                             <p class="sub-title font-snowfall tf-fade-top fade-item-1">
-                                Better Agriculture for Better Future
+                                Inovasi Pertanian untuk Kesejahteraan yang Lebih Baik
                             </p>
                             <h1 class="title font-farmhouse tf-fade-right fade-item-2">
-                                Every Day Is A Good <br />
-                                Day To Be A Farmer
+                                Petani bertani, <br />
+                                Indonesia akan berkembang.
                             </h1>
                             <div class="img-item">
                                 <img class="tf-trainsition-draw-left access-trainsition"
                                     src="./images/item/line-throw-title.png" alt="" />
                             </div>
                             <p class="text font-nunito tf-fade-left fade-item-4">
-                                The paramount doctrine of the
-                                economic and technological euphoria
-                                of recent <br />
-                                decades has been that everything
-                                depends on innovation.
+                                Inovasi menjadi pendorong utama bagi kemajuan ekonomi Indonesia, <br />
+                                terutama dalam mengembangkan teknologi pertanian yang lebih modern dan efisien.
                             </p>
                             <a href="our-services"
                                 class="tf-btn btn-view bg-white tf-fade-bottom fade-item-5">
                                 <span class="text-style cl-primary">
-                                    See Our Services
+                                    Lihat layanan kami
                                 </span>
 
                                 <div class="icon">
@@ -173,8 +164,8 @@
                 <div class="col-lg-4">
                     <div class="box-portfolio style-4 tf-img-hover mb-s-991">
                         <div class="image hover01">
-                            <img src="./images/widget/box-portfolio-1.jpg"
-                                data-src="./images/widget/box-portfolio-1.jpg" alt="" class="lazyload" />
+                            <img src="./images/widget/tani.jpg"
+                                data-src="./images/widget/tani.jpg" alt="" class="lazyload" />
                         </div>
                         <div class="content">
                             <div class="icon hover02">
@@ -225,8 +216,8 @@
                 <div class="col-lg-4 col-md-6">
                     <div class="box-portfolio style-4 tf-img-hover">
                         <div class="image hover01">
-                            <img src="./images/widget/box-portfolio-3.jpg"
-                                data-src="./images/widget/box-portfolio-3.jpg" alt="" class="lazyload" />
+                            <img src="./images/widget/petani.jpg"
+                                data-src="./images/widget/petani.jpg" alt="" class="lazyload" />
                         </div>
                         <div class="content">
                             <div class="icon">
