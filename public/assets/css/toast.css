@@ -1,0 +1,164 @@
+.toast-container {
+    position: fixed;
+    top: 16px;
+    right: 16px;
+    z-index: 9999;
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Jarak antara toasts dalam mode PC */
+    width: auto; /* Atur lebar sesuai kebutuhan */
+    max-width: 100%; /* Batasi lebar maksimum sesuai preferensi */
+}
+
+@media (max-width: 768px) {
+    .toast-container {
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 0; /* Tidak ada jarak antara toasts dalam mode HP */
+        width: 100vw; /* Lebar sesuai dengan lebar viewport */
+        max-width: 100vw; /* Batasan lebar maksimum sesuai dengan lebar viewport */
+        box-sizing: border-box; /* Pastikan padding dihitung dalam lebar */
+        margin: 0; /* Hapus margin */
+        align-items: stretch; /* Pastikan toasts mulai dari tengah */
+    }
+
+    .toast {
+        width: 100%;
+        max-width: 100vw; /* Batasan lebar maksimum sesuai dengan lebar viewport */
+        margin: 0; /* Hapus margin */
+    }
+}
+
+/* Tambahan ini untuk menghapus margin antar toasts */
+.toast + .toast {
+    margin-top: 0; /* Hapus margin antar toasts */
+}
+
+/* CSS tambahan untuk full-width container jika diperlukan */
+.toast-container.full-width {
+    top: 0;
+    right: 0;
+    left: 0;
+    padding: 0 16px;
+    align-items: center;
+    gap: 0; /* Tidak ada jarak antara toasts dalam mode HP */
+}
+
+.toast {
+    position: relative;
+    padding: 16px;
+    margin-bottom: 0px;
+    border-radius: 2px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    display: flex;
+    align-items: center;
+    max-width: 500px;
+    min-width: 500; /* Pastikan ada nilai untuk min-width */
+    background-color: white; /* Warna latar belakang putih */
+    color: black;
+    opacity: 1;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    font-family: 'Arial', sans-serif; /* Ganti 'Arial' dengan font pilihan Anda */
+}
+
+.toast-container.full-width .toast {
+    width: 100%;
+    max-width: none;
+    margin: 0;
+}
+
+/* Animasi progress bar */
+.toast.success .progress-bar {
+    background-color: #4CAF50; /* Progress bar hijau */
+}
+
+.toast.error .progress-bar {
+    background-color: #f44336; /* Progress bar merah */
+}
+
+.toast.info .progress-bar {
+    background-color: #2196F3; /* Progress bar biru */
+}
+
+.toast.warning .progress-bar {
+    background-color: #FF9800; /* Progress bar kuning */
+}
+
+.toast .progress-bar {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 4px;
+    width: 100%;
+    border-radius: 0 0 4px 4px;
+    animation: progress-animation 7s linear forwards;
+}
+
+.toast .close-btn {
+    cursor: pointer;
+    margin-left: 12px;
+    padding: 8px;
+    background-color: transparent;
+    border: none;
+    color: grey;
+    font-size: 20px;
+    line-height: 1;
+}
+
+/* SVG icon untuk masing-masing jenis toast */
+.toast.success .svg-icon {
+    fill: #4CAF50; /* Warna hijau untuk success */
+}
+
+.toast.error .svg-icon {
+    fill: #f44336; /* Warna merah untuk error */
+}
+
+.toast.info .svg-icon {
+    fill: #2196F3; /* Warna biru untuk info */
+}
+
+.toast.warning .svg-icon {
+    fill: #FF9800; /* Warna kuning untuk warning */
+}
+
+.toast .svg-icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 8px;
+}
+
+.toast .message {
+    flex-grow: 1;
+}
+
+/* Animasi progress bar */
+@keyframes progress-animation {
+    0% {
+        width: 100%;
+    }
+    100% {
+        width: 0%;
+    }
+}
+
+/* Animasi slide-out untuk menghilangkan toast */
+@keyframes slide-out {
+    0% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+    100% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+}
+
+.slide-out {
+    animation: slide-out 0.5s forwards;
+}

@@ -29,7 +29,7 @@
 :root {
   --body-font: "Inter", sans-serif;
   --body-color: #F9FBFC;
-  --primary-color: #0085FF;
+  --primary-color: #00ff48;
   --secondary-color: #F3F3F3;
   --border-color: #E6E6E6;
   --border-1st-color: #E2E2E2;
@@ -56,7 +56,7 @@
 
 .dark-ui {
   --body-color: #152033;
-  --primary-color: #0085FF;
+  --primary-color: #00ff48;
   --secondary-color: #F3F3F3;
   --border-color: #2B3B58;
   --border-1st-color: #2B3B58;
@@ -72,7 +72,7 @@
   --para-6th-color: #A6ACB6;
   --box-1st-color: #2B3B58;
   --box-2nd-color: #2B3B58;
-  --btn-1st-color: #0085FF;
+  --btn-1st-color: #00ff48;
   --btn-2nd-color: #185E54;
   --section-1st-color: #212F48;
   --box-shadow: 0px 4px 26px rgba(66, 66, 66, 0.25);
@@ -207,7 +207,7 @@ button {
 }
 
 .link {
-  color: #0085FF;
+  color: #00ff48;
 }
 
 .single-input {
@@ -503,7 +503,7 @@ li {
 
 *::-webkit-scrollbar-button,
 *::-webkit-scrollbar-thumb {
-  background-color: rgba(0, 133, 255, 0.5);
+  background-color: rgba(0, 255, 94, 0.5);
 }
 
 .cus-scrollbar::-webkit-scrollbar-track {
@@ -523,7 +523,7 @@ li {
   background: rgba(255, 211, 198, 0.5);
 }
 .cus-scrollbar:hover::-webkit-scrollbar-button, .cus-scrollbar:hover::-webkit-scrollbar-thumb {
-  background-color: rgba(0, 133, 255, 0.5);
+  background-color: rgba(0, 255, 132, 0.5);
 }
 
 .scrollToTop {
@@ -655,7 +655,7 @@ li {
   color: var(--bs-white);
 }
 .cmn-btn:hover {
-  background: #036DCF;
+  background: #00bc35;
   color: var(--bs-white);
 }
 .cmn-btn:hover i, .cmn-btn:hover span {
@@ -2567,3 +2567,55 @@ li {
     width: 100% !important;
   }
 }/*# sourceMappingURL=style.css.map */
+@media (min-width:1400px) {
+  .nav-nusatani {
+      margin-left: 450px;
+  }
+  .nav-item-home {
+      margin-right: 50px;
+  }
+  .nav-item-feed {
+      margin-right: 50px;
+  }
+  .nav-item-group {
+      margin-right: 50px;
+  }
+  .nav-item-video {
+    margin-right: 100px;
+}
+}
+.profile-nusatani {
+  /* Base styles */
+  width: 50px;
+}
+
+/* Versi Mobile */
+@media (max-width: 767px) {
+  .profile-nusatani {
+      width: 120px;
+  }
+}
+
+/* Versi Desktop */
+@media (min-width: 768px) {
+  .profile-nusatani {
+      width: 50px;
+  }
+}
+/* Default styles (mobile first) */
+.bg-img {
+  width: 50%;
+  height: 290px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* Desktop styles (untuk layar >= 768px) */
+@media screen and (min-width: 768px) {
+  .bg-img {
+      width: 80%;
+      height: 250px;
+      object-fit: cover;
+      border-radius: 12px;
+  }
+}

@@ -1,531 +1,12 @@
+@extends('main-sosmed')
 
-<!doctype html>
-<html lang="en">
+@section('title', 'Beranda Sosial Media')
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="keywords" content="Circlehub">
-    <meta name="description" content="Circlehub HTML5 Template">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Circlehub - HTML Templates</title>
+@section('meta_description', 'Temukan dan bagikan momen terbaik Anda di Circlehub, platform sosial media terpercaya.')
 
-    <link rel="shortcut icon" href="{{ asset('assets/images/fav.png') }}" type="image/x-icon">
-    <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
-</head>
+@section('meta_keywords', 'Circlehub, social media, platform sosial, berbagi momen, komunitas online')
 
-<body>
-
-    <!-- start preloader -->
-    <div class="preloader align-items-center justify-content-center">
-        <span class="loader"></span>
-    </div>
-    <!-- end preloader -->
-
-    <!-- Scroll To Top Start-->
-    <button class="scrollToTop d-none d-lg-block"><i class="mat-icon fas fa-angle-double-up"></i></button>
-    <!-- Scroll To Top End -->
-
-    <!-- header-section start -->
-    <header class="header-section header-menu">
-        <nav class="navbar navbar-expand-lg p-0">
-            <div class="container">
-                <nav class="navbar w-100 navbar-expand-lg justify-content-betweenm">
-                    <a href="index.html" class="navbar-brand">
-                        <img src="{{ asset('assets/images/logo.png') }}" class="logo" alt="logo">
-                    </a>
-                    <button class="button search-active d-block d-md-none">
-                        <i class="d-center material-symbols-outlined fs-xxl mat-icon"> search </i>
-                    </button>
-                    <div class="search-form">
-                        <form action="#" class="input-area d-flex align-items-center">
-                            <i class="material-symbols-outlined mat-icon">search</i>
-                            <input type="text" placeholder="Search Circlehubtio" autocomplete="off">
-                        </form>
-                    </div>
-                    <ul class="navbar-nav feed flex-row gap-xl-20 gap-lg-10 gap-sm-7 gap-1 py-4 py-lg-0 m-lg-auto ms-auto ms-aut align-self-center">
-                        <li>
-                            <a href="index-2.html" class="nav-icon home active"><i class="mat-icon fs-xxl material-symbols-outlined mat-icon">home</i></a>
-                        </li>
-                        <li>
-                            <a href="#news-feed" class="nav-icon feed"><i class="mat-icon fs-xxl material-symbols-outlined mat-icon">feed</i></a>
-                        </li>
-                        <li>
-                            <a href="group.html" class="nav-icon"><i class="mat-icon fs-xxl material-symbols-outlined mat-icon">group</i></a>
-                        </li>
-                        <li>
-                            <a href="videos.html" class="nav-icon"><i class="mat-icon fs-xxl material-symbols-outlined mat-icon">smart_display</i></a>
-                        </li>
-                    </ul>
-                    <div class="right-area position-relative d-flex gap-3 gap-xxl-6 align-items-center">
-                        <div class="single-item d-none d-lg-block messages-area">
-                            <div class="messages-btn cmn-head">
-                                <div class="icon-area d-center position-relative">
-                                    <i class="material-symbols-outlined mat-icon">mail</i>
-                                    <span class="abs-area position-absolute d-center mdtxt">4</span>
-                                </div>
-                            </div>
-                            <div class="main-area p-5 messages-content">
-                                <h5 class="mb-8">Messages</h5>
-                                <div class="single-box p-0 mb-7">
-                                    <a href="profile-chat.html" class="d-flex gap-2 align-items-center">
-                                        <div class="avatar">
-                                            <img class="avatar-img max-un" src="{{ asset('assets/images/avatar-7.png') }}" alt="avatar">
-                                        </div>
-                                        <div class="text-area">
-                                            <div class="title-area position-relative d-inline-flex align-items-center">
-                                                <h6 class="m-0 d-inline-flex">Piter Maio</h6>
-                                                <span class="abs-area position-absolute d-center mdtxt">3</span>
-                                            </div>
-                                            <p class="mdtxt sms">Amet minim mollit non....</p>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div  class="single-box p-0 mb-7">
-                                    <a href="profile-chat.html" class="d-flex gap-2 align-items-center">
-                                        <div class="avatar">
-                                            <img class="avatar-img max-un" src="{{ asset('assets/images/avatar-1.png') }}" alt="avatar">
-                                        </div>
-                                        <div class="text-area">
-                                            <h6 class="m-0 mb-1">Annette Black</h6>
-                                            <p class="mdtxt">You: consequat sunt</p>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div  class="single-box p-0 mb-7">
-                                    <a href="profile-chat.html" class="d-flex gap-2 align-items-center">
-                                        <div class="avatar">
-                                            <img class="avatar-img max-un" src="{{ asset('assets/images/avatar-2.png') }}" alt="avatar">
-                                        </div>
-                                        <div class="text-area">
-                                            <h6 class="m-0 mb-1">Ralph Edwards</h6>
-                                            <p class="mdtxt sms">Amet minim mollit non....</p>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div  class="single-box p-0 mb-7">
-                                    <a href="profile-chat.html" class="d-flex gap-2 align-items-center">
-                                        <div class="avatar">
-                                            <img class="avatar-img max-un" src="{{ asset('assets/images/avatar-3.png') }}" alt="avatar">
-                                        </div>
-                                        <div class="text-area">
-                                            <h6 class="m-0 mb-1">Darrell Steward</h6>
-                                            <p class="mdtxt">You: consequat sunt</p>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div  class="single-box p-0 mb-7">
-                                    <a href="profile-chat.html" class="d-flex gap-2 align-items-center">
-                                        <div class="avatar">
-                                            <img class="avatar-img max-un" src="{{ asset('assets/images/avatar-4.png') }}" alt="avatar">
-                                        </div>
-                                        <div class="text-area">
-                                            <h6 class="m-0 mb-1">Wade Warren</h6>
-                                            <p class="mdtxt">You: consequat sunt</p>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div  class="single-box p-0 mb-7">
-                                    <a href="profile-chat.html" class="d-flex gap-2 align-items-center">
-                                        <div class="avatar">
-                                            <img class="avatar-img max-un" src="{{ asset('assets/images/avatar-5.png') }}" alt="avatar">
-                                        </div>
-                                        <div class="text-area">
-                                            <h6 class="m-0 mb-1">Kathryn Murphy</h6>
-                                            <p class="mdtxt">You: consequat sunt</p>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="single-box p-0 mb-7">
-                                    <a href="profile-chat.html" class="d-flex gap-2 align-items-center">
-                                        <div class="avatar">
-                                            <img class="avatar-img max-un" src="{{ asset('assets/images/avatar-6.png') }}" alt="avatar">
-                                        </div>
-                                        <div class="text-area">
-                                            <h6 class="m-0 mb-1">Jacob Jones</h6>
-                                            <p class="mdtxt">You: consequat sunt</p>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="btn-area">
-                                    <a href="profile-chat.html">See all inbox</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="single-item d-none d-lg-block messages-area notification-area">
-                            <div class="notification-btn cmn-head position-relative">
-                                <div class="icon-area d-center position-relative">
-                                    <i class="material-symbols-outlined mat-icon">notifications</i>
-                                    <span class="abs-area position-absolute d-center mdtxt">3</span>
-                                </div>
-                            </div>
-                            <div class="main-area p-5 notification-content">
-                                <h5 class="mb-8">Notification</h5>
-                                <div class="single-box p-0 mb-7">
-                                    <a href="profile-notification.html" class="d-flex justify-content-between align-items-center">
-                                        <div class="left-item position-relative d-inline-flex gap-3">
-                                            <div class="avatar position-relative d-inline-flex">
-                                                <img class="avatar-img max-un" src="{{ asset('assets/images/avatar-1.png') }}" alt="avatar">
-                                                <img class="abs-item position-absolute max-un" src="{{ asset('assets/images/icon/speech-bubble.png') }}" alt="icon">
-                                            </div>
-                                            <div class="text-area">
-                                                <h6 class="m-0 mb-1">Piter Maio</h6>
-                                                <p class="mdtxt">Comment on your post</p>
-                                            </div>
-                                        </div>
-                                        <div class="time-remaining">
-                                            <p class="mdtxt">Just now</p>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="single-box p-0 mb-7">
-                                    <a href="profile-notification.html" class="d-flex justify-content-between align-items-center">
-                                        <div class="left-item position-relative d-inline-flex gap-3">
-                                            <div class="avatar position-relative d-inline-flex">
-                                                <img class="avatar-img max-un" src="{{ asset('assets/images/avatar-2.png') }}" alt="avatar">
-                                                <img class="abs-item position-absolute max-un" src="{{ asset('assets/images/icon/emoji-love.png') }}" alt="icon">
-                                            </div>
-                                            <div class="text-area">
-                                                <h6 class="m-0 mb-1">Kathryn Murphy</h6>
-                                                <p class="mdtxt">Like your photo</p>
-                                            </div>
-                                        </div>
-                                        <div class="time-remaining">
-                                            <p class="mdtxt">2min</p>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="single-box p-0 mb-7">
-                                    <a href="profile-notification.html" class="d-flex justify-content-between align-items-center">
-                                        <div class="left-item position-relative d-inline-flex gap-3">
-                                            <div class="avatar position-relative d-inline-flex">
-                                                <img class="avatar-img max-un" src="{{ asset('assets/images/avatar-3.png') }}" alt="avatar">
-                                                <img class="abs-item position-absolute max-un" src="{{ asset('assets/images/icon/emoji-love.png') }}" alt="icon">
-                                            </div>
-                                            <div class="text-area">
-                                                <h6 class="m-0 mb-1">Jacob Jones</h6>
-                                                <p class="mdtxt">Sent you a request</p>
-                                            </div>
-                                        </div>
-                                        <div class="time-remaining">
-                                            <p class="mdtxt">1hr</p>
-                                        </div>
-                                    </a>
-                                    <div class="d-flex gap-3 mt-4">
-                                        <button class="cmn-btn">Accept</button>
-                                        <button class="cmn-btn alt">Delete</button>
-                                    </div>
-                                </div>                             
-                                <div class="single-box p-0 mb-7">
-                                    <a href="profile-notification.html" class="d-flex justify-content-between align-items-center">
-                                        <div class="left-item position-relative d-inline-flex gap-3">
-                                            <div class="avatar position-relative d-inline-flex">
-                                                <img class="avatar-img max-un" src="{{ asset('assets/images/avatar-4.png') }}" alt="avatar">
-                                                <img class="abs-item position-absolute max-un" src="{{ asset('assets/images/icon/emoji-love.png') }}" alt="icon">
-                                            </div>
-                                            <div class="text-area">
-                                                <h6 class="m-0 mb-1">Kathryn Murphy</h6>
-                                                <p class="mdtxt">officia consequat duis enim...</p>
-                                            </div>
-                                        </div>
-                                        <div class="time-remaining">
-                                            <p class="mdtxt">2hr</p>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="btn-area">
-                                    <a href="profile-notification.html">See all notification</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="single-item d-none d-lg-block profile-area position-relative">
-                            <div class="profile-pic d-flex align-items-center">
-                                <span class="avatar cmn-head active-status">
-                                    <img class="avatar-img max-un" src="{{ asset('assets/images/avatar-1.png') }}" alt="avatar">
-                                </span>
-                            </div>
-                            <div class="main-area p-5 profile-content">
-                                <div class="head-area">
-                                    <div class="d-flex gap-3 align-items-center">
-                                        <div class="avatar-item">
-                                            <img class="avatar-img max-un" src="{{ asset('assets/images/avatar-1.png') }}" alt="avatar">
-                                        </div>
-                                        <div class="text-area">
-                                            <h6 class="m-0 mb-1">Lori Ferguson</h6>
-                                            <p class="mdtxt">Web Developer</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="view-profile my-2">
-                                    <a href="profile-post.html" class="mdtxt w-100 text-center py-2">View profile</a>
-                                </div>
-                                <ul>
-                                    <li>
-                                        <a href="profile-edit.html" class="mdtxt">
-                                            <i class="material-symbols-outlined mat-icon"> settings </i>
-                                            Settings & Privacy
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#" class="mdtxt">
-                                            <i class="material-symbols-outlined mat-icon"> power_settings_new </i>
-                                            Sign Out
-                                        </a>
-                                    </li>
-                                </ul>
-                                <div class="switch-wrapper mt-4 d-flex gap-1 align-items-center">
-                                    <i class="mat-icon material-symbols-outlined sun icon"> light_mode </i>
-                                    <label class="switch">
-                                        <input type="checkbox" class="checkbox">
-                                        <span class="slider"></span>
-                                    </label>
-                                    <i class="mat-icon material-symbols-outlined moon icon"> dark_mode </i>
-                                    <span class="mdtxt ms-2">Dark mode</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </nav>
-            </div>
-        </nav>
-    </header>
-    <!-- header-section end -->
-
-    <!-- Bottom Menu start -->
-    <div class="header-menu py-3 header-menu d-block d-lg-none position-fixed bottom-0 w-100 cus-z">
-        <div class="right-area position-relative d-flex justify-content-around gap-3 gap-xxl-6 align-items-center">
-            <div class="single-item messages-area">
-                <div class="messages-btn cmn-head">
-                    <div class="icon-area d-center position-relative">
-                        <i class="material-symbols-outlined mat-icon">mail</i>
-                        <span class="abs-area position-absolute d-center mdtxt">4</span>
-                    </div>
-                </div>
-                <div class="main-area p-5 messages-content">
-                    <h5 class="mb-8">Messages</h5>
-                    <div class="single-box p-0 mb-7">
-                        <a href="profile-chat.html" class="d-flex gap-2 align-items-center">
-                            <div class="avatar">
-                                <img class="avatar-img max-un" src="{{ asset('assets/images/avatar-7.png') }}" alt="avatar">
-                            </div>
-                            <div class="text-area">
-                                <div class="title-area position-relative d-inline-flex align-items-center">
-                                    <h6 class="m-0 d-inline-flex">Piter Maio</h6>
-                                    <span class="abs-area position-absolute d-center mdtxt">3</span>
-                                </div>
-                                <p class="mdtxt sms">Amet minim mollit non....</p>
-                            </div>
-                        </a>
-                    </div>
-                    <div  class="single-box p-0 mb-7">
-                        <a href="profile-chat.html" class="d-flex gap-2 align-items-center">
-                            <div class="avatar">
-                                <img class="avatar-img max-un" src="{{ asset('assets/images/avatar-1.png') }}" alt="avatar">
-                            </div>
-                            <div class="text-area">
-                                <h6 class="m-0 mb-1">Annette Black</h6>
-                                <p class="mdtxt">You: consequat sunt</p>
-                            </div>
-                        </a>
-                    </div>
-                    <div  class="single-box p-0 mb-7">
-                        <a href="profile-chat.html" class="d-flex gap-2 align-items-center">
-                            <div class="avatar">
-                                <img class="avatar-img max-un" src="{{ asset('assets/images/avatar-2.png') }}" alt="avatar">
-                            </div>
-                            <div class="text-area">
-                                <h6 class="m-0 mb-1">Ralph Edwards</h6>
-                                <p class="mdtxt sms">Amet minim mollit non....</p>
-                            </div>
-                        </a>
-                    </div>
-                    <div  class="single-box p-0 mb-7">
-                        <a href="profile-chat.html" class="d-flex gap-2 align-items-center">
-                            <div class="avatar">
-                                <img class="avatar-img max-un" src="{{ asset('assets/images/avatar-3.png') }}" alt="avatar">
-                            </div>
-                            <div class="text-area">
-                                <h6 class="m-0 mb-1">Darrell Steward</h6>
-                                <p class="mdtxt">You: consequat sunt</p>
-                            </div>
-                        </a>
-                    </div>
-                    <div  class="single-box p-0 mb-7">
-                        <a href="profile-chat.html" class="d-flex gap-2 align-items-center">
-                            <div class="avatar">
-                                <img class="avatar-img max-un" src="{{ asset('assets/images/avatar-4.png') }}" alt="avatar">
-                            </div>
-                            <div class="text-area">
-                                <h6 class="m-0 mb-1">Wade Warren</h6>
-                                <p class="mdtxt">You: consequat sunt</p>
-                            </div>
-                        </a>
-                    </div>
-                    <div  class="single-box p-0 mb-7">
-                        <a href="profile-chat.html" class="d-flex gap-2 align-items-center">
-                            <div class="avatar">
-                                <img class="avatar-img max-un" src="{{ asset('assets/images/avatar-5.png') }}" alt="avatar">
-                            </div>
-                            <div class="text-area">
-                                <h6 class="m-0 mb-1">Kathryn Murphy</h6>
-                                <p class="mdtxt">You: consequat sunt</p>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="single-box p-0 mb-7">
-                        <a href="profile-chat.html" class="d-flex gap-2 align-items-center">
-                            <div class="avatar">
-                                <img class="avatar-img max-un" src="{{ asset('assets/images/avatar-6.png') }}" alt="avatar">
-                            </div>
-                            <div class="text-area">
-                                <h6 class="m-0 mb-1">Jacob Jones</h6>
-                                <p class="mdtxt">You: consequat sunt</p>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="btn-area">
-                        <a href="profile-chat.html">See all inbox</a>
-                    </div>
-                </div>
-            </div>
-            <div class="single-item messages-area notification-area">
-                <div class="notification-btn cmn-head position-relative">
-                    <div class="icon-area d-center position-relative">
-                        <i class="material-symbols-outlined mat-icon">notifications</i>
-                        <span class="abs-area position-absolute d-center mdtxt">3</span>
-                    </div>
-                </div>
-                <div class="main-area p-5 notification-content">
-                    <h5 class="mb-8">Notification</h5>
-                    <div class="single-box p-0 mb-7">
-                        <a href="profile-notification.html" class="d-flex justify-content-between align-items-center">
-                            <div class="left-item position-relative d-inline-flex gap-3">
-                                <div class="avatar position-relative d-inline-flex">
-                                    <img class="avatar-img max-un" src="{{ asset('assets/images/avatar-1.png') }}" alt="avatar">
-                                    <img class="abs-item position-absolute max-un" src="{{ asset('assets/images/icon/speech-bubble.png') }}" alt="icon">
-                                </div>
-                                <div class="text-area">
-                                    <h6 class="m-0 mb-1">Piter Maio</h6>
-                                    <p class="mdtxt">Comment on your post</p>
-                                </div>
-                            </div>
-                            <div class="time-remaining">
-                                <p class="mdtxt">Just now</p>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="single-box p-0 mb-7">
-                        <a href="profile-notification.html" class="d-flex justify-content-between align-items-center">
-                            <div class="left-item position-relative d-inline-flex gap-3">
-                                <div class="avatar position-relative d-inline-flex">
-                                    <img class="avatar-img max-un" src="{{ asset('assets/images/avatar-2.png') }}" alt="avatar">
-                                    <img class="abs-item position-absolute max-un" src="{{ asset('assets/images/icon/emoji-love.png') }}" alt="icon">
-                                </div>
-                                <div class="text-area">
-                                    <h6 class="m-0 mb-1">Kathryn Murphy</h6>
-                                    <p class="mdtxt">Like your photo</p>
-                                </div>
-                            </div>
-                            <div class="time-remaining">
-                                <p class="mdtxt">2min</p>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="single-box p-0 mb-7">
-                        <a href="profile-notification.html" class="d-flex justify-content-between align-items-center">
-                            <div class="left-item position-relative d-inline-flex gap-3">
-                                <div class="avatar position-relative d-inline-flex">
-                                    <img class="avatar-img max-un" src="{{ asset('assets/images/avatar-3.png') }}" alt="avatar">
-                                    <img class="abs-item position-absolute max-un" src="{{ asset('assets/images/icon/emoji-love.png') }}" alt="icon">
-                                </div>
-                                <div class="text-area">
-                                    <h6 class="m-0 mb-1">Jacob Jones</h6>
-                                    <p class="mdtxt">Sent you a request</p>
-                                </div>
-                            </div>
-                            <div class="time-remaining">
-                                <p class="mdtxt">1hr</p>
-                            </div>
-                        </a>
-                        <div class="d-flex gap-3 mt-4">
-                            <button class="cmn-btn">Accept</button>
-                            <button class="cmn-btn alt">Delete</button>
-                        </div>
-                    </div>                             
-                    <div class="single-box p-0 mb-7">
-                        <a href="profile-notification.html" class="d-flex justify-content-between align-items-center">
-                            <div class="left-item position-relative d-inline-flex gap-3">
-                                <div class="avatar position-relative d-inline-flex">
-                                    <img class="avatar-img max-un" src="{{ asset('assets/images/avatar-4.png') }}" alt="avatar">
-                                    <img class="abs-item position-absolute max-un" src="{{ asset('assets/images/icon/emoji-love.png') }}" alt="icon">
-                                </div>
-                                <div class="text-area">
-                                    <h6 class="m-0 mb-1">Kathryn Murphy</h6>
-                                    <p class="mdtxt">officia consequat duis enim...</p>
-                                </div>
-                            </div>
-                            <div class="time-remaining">
-                                <p class="mdtxt">2hr</p>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="btn-area">
-                        <a href="profile-notification.html">See all notification</a>
-                    </div>
-                </div>
-            </div>
-            <div class="single-item profile-area position-relative">
-                <div class="profile-pic d-flex align-items-center">
-                    <span class="avatar cmn-head active-status">
-                        <img class="avatar-img max-un" src="{{ asset('assets/images/avatar-1.png') }}" alt="avatar">
-                    </span>
-                </div>
-                <div class="main-area p-5 profile-content">
-                    <div class="head-area">
-                        <div class="d-flex gap-3 align-items-center">
-                            <div class="avatar-item">
-                                <img class="avatar-img max-un" src="{{ asset('assets/images/avatar-1.png') }}" alt="avatar">
-                            </div>
-                            <div class="text-area">
-                                <h6 class="m-0 mb-1">Lori Ferguson</h6>
-                                <p class="mdtxt">Web Developer</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="view-profile my-2">
-                        <a href="profile-post.html" class="mdtxt w-100 text-center py-2">View profile</a>
-                    </div>
-                    <ul>
-                        <li>
-                            <a href="profile-edit.html" class="mdtxt">
-                                <i class="material-symbols-outlined mat-icon"> settings </i>
-                                Settings & Privacy
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" class="mdtxt">
-                                <i class="material-symbols-outlined mat-icon"> power_settings_new </i>
-                                Sign Out
-                            </a>
-                        </li>
-                    </ul>
-                    <div class="switch-wrapper mt-4 d-flex gap-1 align-items-center">
-                        <i class="mat-icon material-symbols-outlined sun icon"> light_mode </i>
-                        <label class="switch">
-                            <input type="checkbox" class="checkbox">
-                            <span class="slider"></span>
-                        </label>
-                        <i class="mat-icon material-symbols-outlined moon icon"> dark_mode </i>
-                        <span class="mdtxt ms-2">Dark mode</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Bottom Menu end -->
-
-    <!-- Main Content start -->
+@section('content')
     <main class="main-content">
         <div class="container sidebar-toggler">
             <div class="row">
@@ -544,16 +25,20 @@
                         </div>
                         <div class="profile-pic d-flex gap-2 align-items-center">
                             <div class="avatar position-relative">
-                                <img class="avatar-img max-un" src="{{ asset('assets/images/avatar-1.png') }}" alt="avatar">
+                                <img class="profile-nusatani avatar-img max-un" src="{{ $user->avatar }}" alt="avatar">
                             </div>
                             <div class="text-area">
-                                <h6 class="m-0 mb-1"><a href="profile-post.html">Lerio Mao</a></h6>
-                                <p class="mdtxt">@maolio</p>
+                                <h6 class="m-0 mb-1"><a href="profile-post.html">
+                                        @if (isset($user))
+                                            {{ $user->name }}
+                                        @endif
+                                    </a></h6>
+                                <p class="mdtxt"><span>@</span>{{ $user->username }} </p>
                             </div>
                         </div>
                         <ul class="profile-link mt-7 mb-7 pb-7">
                             <li>
-                                <a href="index.html" class="d-flex gap-4 active">
+                                <a href="/sosmed" class="d-flex gap-4 active">
                                     <i class="material-symbols-outlined mat-icon"> home </i>
                                     <span>Home</span>
                                 </a>
@@ -638,12 +123,16 @@
                         </div>
                     </div>
                 </div>
+
                 <div class="col-xxl-6 col-xl-5 col-lg-8 mt-0 mt-lg-10 mt-xl-0 d-flex flex-column gap-7 cus-z">
+                    <!-- Story Carousel with Modal -->
+                    <!-- Story Carousel -->
                     <div class="story-carousel">
                         <div class="single-item">
                             <div class="single-slide">
-                                <a href="#" class="position-relative d-center">
-                                    <img class="bg-img" src="{{ asset('assets/images/story-slider-owner.png') }}" alt="icon">
+                                <a href="#" class="position-relative d-center story-trigger">
+                                    <img class="bg-img" src="{{ $user->avatar }}"
+                                        alt="icon">
                                     <div class="abs-area d-grid p-3 position-absolute bottom-0">
                                         <div class="icon-box m-auto d-center mb-3">
                                             <i class="material-symbols-outlined text-center mat-icon"> add </i>
@@ -653,65 +142,496 @@
                                 </a>
                             </div>
                         </div>
-                        <div class="single-item">
-                            <div class="single-slide">
-                                <div class="position-relative d-flex">
-                                    <img class="bg-img" src="{{ asset('assets/images/story-slider-1.png') }}" alt="image">
-                                    <a href="public-profile-post.html" class="abs-area p-3 position-absolute bottom-0">
-                                        <img src="{{ asset('assets/images/avatar-1.png') }}" alt="image">
-                                        <span class="mdtxt">Alen Lio</span>
-                                    </a>
-                                </div>
+                        @foreach ($stories as $story)
+                        <div class="single-slide {{ $story->is_active ? 'story-unseen' : '' }}">
+                            <div class="position-relative d-flex story-trigger"
+                                data-story="{{ asset($story->media_path) }}" 
+                                data-username="{{ $story->user->name }}"
+                                data-type="{{ $story->type }}"
+                                data-views="{{ $story->viewCount() }}"
+                                data-story-id="{{ $story->id }}">
+                                @if($story->type == 'video')
+                                    <video class="bg-img" src="{{ asset($story->media_path) }}" muted></video>
+                                @else
+                                    <img class="bg-img" src="{{ asset($story->media_path) }}" alt="story image">
+                                @endif
+                                <a href="javascript:void(0)" class="abs-area p-3 position-absolute bottom-0">
+                                    <img src="{{ $story->user->avatar }}" alt="user avatar">
+                                    <span class="mdtxt">{{ $story->user->name }}</span>
+                                    <div class="story-views">
+                                        <i class="material-symbols-outlined">visibility</i>
+                                        <span>{{ $story->viewCount() }}</span>
+                                    </div>
+                                </a>
                             </div>
                         </div>
-                        <div class="single-item">
-                            <div class="single-slide">
-                                <div class="position-relative d-flex">
-                                    <img class="bg-img" src="{{ asset('assets/images/story-slider-2.png') }}" alt="image">
-                                    <a href="public-profile-post.html" class="abs-area p-3 position-absolute bottom-0">
-                                        <img src="{{ asset('assets/images/avatar-2.png') }}" alt="image">
-                                        <span class="mdtxt">Josep</span>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="single-item">
-                            <div class="single-slide">
-                                <div class="position-relative d-flex">
-                                    <img class="bg-img" src="{{ asset('assets/images/story-slider-3.png') }}" alt="image">
-                                    <a href="public-profile-post.html" class="abs-area p-3 position-absolute bottom-0">
-                                        <img src="{{ asset('assets/images/avatar-3.png') }}" alt="image">
-                                        <span class="mdtxt">Jessica</span>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="single-item">
-                            <div class="single-slide">
-                                <div class="position-relative d-flex">
-                                    <img class="bg-img" src="{{ asset('assets/images/story-slider-4.png') }}" alt="image">
-                                    <a href="public-profile-post.html" class="abs-area p-3 position-absolute bottom-0">
-                                        <img src="{{ asset('assets/images/avatar-4.png') }}" alt="image">
-                                        <span class="mdtxt">Alen</span>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="single-item">
-                            <div class="single-slide">
-                                <div class="position-relative d-flex">
-                                    <img class="bg-img" src="{{ asset('assets/images/story-slider-4.png') }}" alt="image">
-                                    <a href="public-profile-post.html" class="abs-area p-3 position-absolute bottom-0">
-                                        <img src="{{ asset('assets/images/avatar-5.png') }}" alt="image">
-                                        <span class="mdtxt">Jacob Jones</span>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
+                        @endforeach
                     </div>
+                    <style>
+                        .story-views {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 5px 10px;
+    border-radius: 20px;
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.viewers-modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999999999;
+}
+
+.viewers-content {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 400px;
+    max-height: 80vh;
+    overflow-y: auto;
+}
+
+.viewer-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.viewer-item img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+                        .story-modal {
+                            display: none;
+                            position: fixed;
+                            inset: 0;
+                            width: 100%;
+                            height: 100%;
+                            background: rgba(0, 0, 0, 0.95);
+                            z-index: 999999999;
+                            overflow: hidden;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                        }
+
+                        .modal-content {
+                            position: relative;
+                            height: 100%;
+                            width: 100%;
+                            max-width: 500px;
+                            margin: 0 auto;
+                            display: flex;
+                            overflow: hidden;
+                        }
+
+                        #modalContent {
+                            width: 100%;
+                            height: 100%;
+                            overflow: hidden;
+                            display: flex;
+                            align-items: center;
+                        }
+
+                        #modalContent .story-content {
+                            width: 100%;
+                            height: 100%;
+                            position: relative;
+                            display: flex;
+                        }
+
+                        #modalContent img {
+                            width: 100%;
+                            height: 90vh;
+                            object-fit: cover;
+                            border-radius: 10px;
+                            margin-top: 50px;
+                            /* Added margin-top for desktop */
+                        }
+
+                        .close-modal {
+                            position: fixed;
+                            right: 20px;
+                            top: 20px;
+                            font-size: 28px;
+                            color: #fff;
+                            cursor: pointer;
+                            z-index: 9999999999;
+                            width: 40px;
+                            height: 40px;
+                            background: rgba(0, 0, 0, 0.5);
+                            border-radius: 50%;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                        }
+
+                        @media (max-width: 768px) {
+                            .story-modal {
+                                align-items: flex-start;
+                                justify-content: flex-start;
+                            }
+
+                            .modal-content {
+                                width: 100%;
+                                max-width: 100%;
+                                margin: 0;
+                                padding: 0;
+                            }
+
+                            #modalContent {
+                                width: 100%;
+                                height: 100%;
+                            }
+
+                            #modalContent .story-content {
+                                width: 100%;
+                                height: 100%;
+                            }
+
+                            #modalContent img {
+                                width: 100%;
+                                height: 100vh;
+                                border-radius: 0;
+                                margin: 0;
+                                /* Reset margin for mobile */
+                                object-fit: cover;
+                            }
+                        }
+
+                        .single-slide .abs-area>img {
+                            width: 50px;
+                            height: 50px;
+                            border-radius: 50%;
+                            object-fit: cover;
+                            border: 3px solid transparent;
+                        }
+
+                        /* Ring biru untuk story yang belum dilihat */
+                        .single-slide.story-unseen .abs-area>img {
+                            border-color: #00ff48;
+                            /* Warna biru Facebook */
+                            box-shadow: 0 0 0 3px rgba(40, 135, 52, 0.2);
+                            /* Efek glow tambahan */
+                            animation: pulse-ring 1.5s infinite;
+                            /* Animasi berkedip */
+                        }
+
+                        /* Animasi pulse ring */
+                        @keyframes pulse-ring {
+                            0% {
+                                box-shadow: 0 0 0 0 rgba(11, 93, 11, 0.4);
+                            }
+
+                            70% {
+                                box-shadow: 0 0 0 10px rgba(24, 119, 242, 0);
+                            }
+
+                            100% {
+                                box-shadow: 0 0 0 0 rgba(24, 119, 242, 0);
+                            }
+                        }
+
+                        /* Untuk story yang sudah dilihat */
+                        .single-slide.story-seen .abs-area>img {
+                            border-color: #8E8E8E;
+                            /* Warna abu-abu untuk story yang sudah dilihat */
+                            box-shadow: none;
+                            animation: none;
+                        }
+                    </style>
+                    <script>
+                        document.addEventListener('DOMContentLoaded', function() {
+                        const modal = document.getElementById('storyModal');
+                        const modalContent = document.getElementById('modalContent');
+                        const closeModal = document.querySelector('.close-modal');
+                        let currentStoryIndex = 0;
+                        let stories = [];
+                        let storyTimeout;
+
+                        // Fungsi untuk memeriksa dukungan localStorage
+                        const isLocalStorageSupported = () => {
+                            try {
+                                localStorage.setItem('test', 'test');
+                                localStorage.removeItem('test');
+                                return true;
+                            } catch (e) {
+                                return false;
+                            }
+                        };
+
+                        // Fungsi untuk menyimpan status story yang sudah dilihat
+                        const saveStoryViewStatus = (storyId) => {
+                            if (isLocalStorageSupported()) {
+                                const viewedStories = JSON.parse(localStorage.getItem('viewedStories') || '[]');
+                                if (!viewedStories.includes(storyId)) {
+                                    viewedStories.push(storyId);
+                                    localStorage.setItem('viewedStories', JSON.stringify(viewedStories));
+                                }
+                            }
+                        };
+
+                        // Fungsi untuk memeriksa status story yang sudah dilihat
+                        const isStoryViewed = (storyId) => {
+                            if (isLocalStorageSupported()) {
+                                const viewedStories = JSON.parse(localStorage.getItem('viewedStories') || '[]');
+                                return viewedStories.includes(storyId);
+                            }
+                            return false;
+                        };
+
+                        // Fungsi untuk mencatat view ke database
+                        const recordView = async (storyId) => {
+                            try {
+                                const response = await fetch('/api/story/view', {
+                                    method: 'POST',
+                                    headers: {
+                                        'Content-Type': 'application/json',
+                                        'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]').content
+                                    },
+                                    body: JSON.stringify({ story_id: storyId })
+                                });
+                                const data = await response.json();
+                                if (data.success) {
+                                    updateViewCount(storyId, data.viewCount);
+                                }
+                            } catch (error) {
+                                console.error('Error recording view:', error);
+                            }
+                        };
+
+                        // Fungsi untuk menampilkan daftar viewers
+                        const showViewers = async (storyId) => {
+                            try {
+                                const response = await fetch(`/api/story/${storyId}/viewers`);
+                                const viewers = await response.json();
+                                
+                                const viewersHTML = viewers.map(viewer => `
+                                    <div class="viewer-item">
+                                        <img src="${viewer.avatar}" alt="${viewer.name}">
+                                        <div class="viewer-info">
+                                            <span class="viewer-name">${viewer.name}</span>
+                                            <span class="viewer-time">${viewer.viewed_at}</span>
+                                        </div>
+                                    </div>
+                                `).join('');
+
+                                const viewersModal = document.createElement('div');
+                                viewersModal.className = 'viewers-modal';
+                                viewersModal.innerHTML = `
+                                    <div class="viewers-content">
+                                        <h4>Story Views</h4>
+                                        <div class="viewers-count">${viewers.length} views</div>
+                                        <div class="viewers-list">
+                                            ${viewersHTML}
+                                        </div>
+                                        <button class="close-viewers" onclick="this.parentElement.parentElement.remove()">Close</button>
+                                    </div>
+                                `;
+                                document.body.appendChild(viewersModal);
+
+                                // Event listener untuk menutup modal viewers
+                                const closeViewers = viewersModal.querySelector('.close-viewers');
+                                closeViewers.addEventListener('click', () => viewersModal.remove());
+
+                                // Tutup ketika klik di luar modal
+                                viewersModal.addEventListener('click', (e) => {
+                                    if (e.target === viewersModal) {
+                                        viewersModal.remove();
+                                    }
+                                });
+                            } catch (error) {
+                                console.error('Error fetching viewers:', error);
+                            }
+                        };
+
+                        // Fungsi untuk update jumlah views
+                        const updateViewCount = (storyId, count) => {
+                            const storyElement = document.querySelector(`[data-story-id="${storyId}"]`);
+                            if (storyElement) {
+                                const viewsElement = storyElement.querySelector('.story-views span');
+                                if (viewsElement) {
+                                    viewsElement.textContent = count;
+                                }
+                            }
+                        };
+
+                        // Fungsi untuk menampilkan story
+                        const showStory = (storyData) => {
+                            clearTimeout(storyTimeout);
+
+                            const contentHTML = storyData.type === 'video' 
+                                ? `<video src="${storyData.media}" controls autoplay></video>`
+                                : `<img src="${storyData.media}" alt="story">`;
+
+                            modalContent.innerHTML = `
+                                <div class="story-content">
+                                    ${contentHTML}
+                                    <div class="story-info">
+                                        <div class="story-user">
+                                            <img src="${storyData.userAvatar}" alt="${storyData.username}">
+                                            <span>${storyData.username}</span>
+                                        </div>
+                                        <div class="story-views" onclick="showViewers(${storyData.id})">
+                                            <i class="material-symbols-outlined">visibility</i>
+                                            <span>${storyData.viewCount} views</span>
+                                        </div>
+                                    </div>
+                                    <div class="story-progress">
+                                        ${stories.map((_, index) => 
+                                            `<div class="progress-bar ${index < currentStoryIndex ? 'completed' : ''}"></div>`
+                                        ).join('')}
+                                    </div>
+                                </div>
+                            `;
+
+                            // Rekam view
+                            recordView(storyData.id);
+                            saveStoryViewStatus(storyData.id);
+
+                            // Set timeout untuk next story
+                            if (storyData.type === 'image') {
+                                storyTimeout = setTimeout(nextStory, 5000);
+                            }
+
+                            // Handle video events jika type adalah video
+                            if (storyData.type === 'video') {
+                                const video = modalContent.querySelector('video');
+                                video.addEventListener('ended', nextStory);
+                            }
+                        };
+
+                        // Fungsi untuk next story
+                        const nextStory = () => {
+                            if (currentStoryIndex < stories.length - 1) {
+                                currentStoryIndex++;
+                                showStory(stories[currentStoryIndex]);
+                            } else {
+                                closeModalFunction();
+                            }
+                        };
+
+                        // Fungsi untuk previous story
+                        const previousStory = () => {
+                            if (currentStoryIndex > 0) {
+                                currentStoryIndex--;
+                                showStory(stories[currentStoryIndex]);
+                            }
+                        };
+
+                        // Fungsi untuk menutup modal
+                        const closeModalFunction = (e) => {
+                            if (e) {
+                                e.preventDefault();
+                                e.stopPropagation();
+                            }
+                            clearTimeout(storyTimeout);
+                            modal.style.display = 'none';
+                            document.body.style.overflow = '';
+                            currentStoryIndex = 0;
+                        };
+
+                        // Event listener untuk story click
+                        document.querySelectorAll('.single-slide').forEach((story, index) => {
+                            story.addEventListener('click', function(e) {
+                                e.preventDefault();
+                                e.stopPropagation();
+
+                                // Check jika ini adalah tombol "Add Story"
+                                if (this.querySelector('.icon-box')) {
+                                    // Implementasi Add Story
+                                    const input = document.createElement('input');
+                                    input.type = 'file';
+                                    input.accept = 'image/*,video/*';
+                                    input.onchange = function(e) {
+                                        const file = e.target.files[0];
+                                        if (file) {
+                                            const formData = new FormData();
+                                            formData.append('media', file);
+                                            // Implementasi upload story
+                                            // ...
+                                        }
+                                    };
+                                    input.click();
+                                    return;
+                                }
+
+                                const storyTrigger = this.querySelector('.story-trigger');
+                                if (storyTrigger) {
+                                    stories = Array.from(document.querySelectorAll('.story-trigger')).map(trigger => ({
+                                        id: trigger.dataset.storyId,
+                                        media: trigger.dataset.story,
+                                        type: trigger.dataset.type || 'image',
+                                        username: trigger.dataset.username,
+                                        userAvatar: trigger.querySelector('img').src,
+                                        viewCount: trigger.dataset.views || 0
+                                    }));
+
+                                    currentStoryIndex = index - 1; // -1 karena index 0 adalah "Add Story"
+                                    modal.style.display = 'flex';
+                                    document.body.style.overflow = 'hidden';
+                                    showStory(stories[currentStoryIndex]);
+                                }
+                            });
+                        });
+
+                        // Event listeners untuk navigasi story
+                        modal.addEventListener('click', function(e) {
+                            const rect = modalContent.getBoundingClientRect();
+                            const x = e.clientX - rect.left;
+                            
+                            if (x < rect.width / 2) {
+                                previousStory();
+                            } else {
+                                nextStory();
+                            }
+                        });
+
+                        // Event listeners untuk close modal
+                        closeModal.addEventListener('click', closeModalFunction);
+                        modal.addEventListener('click', function(e) {
+                            if (e.target === modal) {
+                                closeModalFunction(e);
+                            }
+                        });
+
+                        // Keyboard navigation
+                        document.addEventListener('keydown', function(e) {
+                            if (modal.style.display === 'flex') {
+                                switch(e.key) {
+                                    case 'ArrowLeft':
+                                        previousStory();
+                                        break;
+                                    case 'ArrowRight':
+                                        nextStory();
+                                        break;
+                                    case 'Escape':
+                                        closeModalFunction();
+                                        break;
+                                }
+                            }
+                        });
+                    });
+                    </script>
                     <div class="share-post d-flex gap-3 gap-sm-5 p-3 p-sm-5">
                         <div class="profile-box">
-                            <a href="#"><img src="{{ asset('assets/images/add-post-avatar.png') }}" class="max-un" alt="icon"></a>
+                            <a href="#"><img src="{{ asset('assets/images/add-post-avatar.png') }}" class="max-un"
+                                    alt="icon"></a>
                         </div>
                         <form action="#" class="w-100 position-relative">
                             <textarea cols="10" rows="2" placeholder="Write something to Lerio.."></textarea>
@@ -719,16 +639,22 @@
                                 <i class="material-symbols-outlined mat-icon xxltxt"> sentiment_satisfied </i>
                             </div>
                             <ul class="d-flex justify-content-between flex-wrap mt-3 gap-3">
-                                <li class="d-flex align-items-center gap-2" data-bs-toggle="modal" data-bs-target="#goLiveMod">
-                                    <img src="{{ asset('assets/images/icon/live-video.png') }}" class="max-un" alt="icon">
+                                <li class="d-flex align-items-center gap-2" data-bs-toggle="modal"
+                                    data-bs-target="#goLiveMod">
+                                    <img src="{{ asset('assets/images/icon/live-video.png') }}" class="max-un"
+                                        alt="icon">
                                     <span>Live</span>
                                 </li>
-                                <li class="d-flex align-items-center gap-2" data-bs-toggle="modal" data-bs-target="#photoVideoMod">
-                                    <img src="{{ asset('assets/images/icon/vgallery.png') }}" class="max-un" alt="icon">
+                                <li class="d-flex align-items-center gap-2" data-bs-toggle="modal"
+                                    data-bs-target="#photoVideoMod">
+                                    <img src="{{ asset('assets/images/icon/vgallery.png') }}" class="max-un"
+                                        alt="icon">
                                     <span>Photo/Video</span>
                                 </li>
-                                <li class="d-flex align-items-center gap-2" data-bs-toggle="modal" data-bs-target="#activityMod">
-                                    <img src="{{ asset('assets/images/icon/emoji-laughing.png') }}" class="max-un" alt="icon">
+                                <li class="d-flex align-items-center gap-2" data-bs-toggle="modal"
+                                    data-bs-target="#activityMod">
+                                    <img src="{{ asset('assets/images/icon/emoji-laughing.png') }}" class="max-un"
+                                        alt="icon">
                                     <span>Fallings/Activity</span>
                                 </li>
                             </ul>
@@ -740,7 +666,8 @@
                                 <div class="profile-area d-center justify-content-between">
                                     <div class="avatar-item d-flex gap-3 align-items-center">
                                         <div class="avatar position-relative">
-                                            <img class="avatar-img max-un" src="{{ asset('assets/images/avatar-1.png') }}" alt="avatar">
+                                            <img class="avatar-img max-un"
+                                                src="{{ asset('assets/images/avatar-1.png') }}" alt="avatar">
                                         </div>
                                         <div class="info-area">
                                             <h6 class="m-0"><a href="public-profile-post.html">Lori Cortez</a></h6>
@@ -748,7 +675,8 @@
                                         </div>
                                     </div>
                                     <div class="btn-group cus-dropdown">
-                                        <button type="button" class="dropdown-btn" data-bs-toggle="dropdown" aria-expanded="false">
+                                        <button type="button" class="dropdown-btn" data-bs-toggle="dropdown"
+                                            aria-expanded="false">
                                             <i class="material-symbols-outlined fs-xxl m-0"> more_horiz </i>
                                         </button>
                                         <ul class="dropdown-menu p-4 pt-2">
@@ -786,10 +714,12 @@
                                     </div>
                                 </div>
                                 <div class="py-4">
-                                    <p class="description">I created Roughly plugin to sketch crafted hand-drawn elements which can be used to any usage (diagrams/flows/decoration/etc)</p>
+                                    <p class="description">I created Roughly plugin to sketch crafted hand-drawn elements
+                                        which can be used to any usage (diagrams/flows/decoration/etc)</p>
                                 </div>
                                 <div class="post-img">
-                                    <img src="{{ asset('assets/images/post-img-1.png') }}" class="w-100" alt="image">
+                                    <img src="{{ asset('assets/images/post-img-1.png') }}" class="w-100"
+                                        alt="image">
                                 </div>
                             </div>
                             <div class="total-react-share pb-4 d-center gap-2 flex-wrap justify-content-between">
@@ -823,7 +753,8 @@
                             <form action="#">
                                 <div class="d-flex mt-5 gap-3">
                                     <div class="profile-box d-none d-xxl-block">
-                                        <a href="#"><img src="{{ asset('assets/images/add-post-avatar.png') }}" class="max-un" alt="icon"></a>
+                                        <a href="#"><img src="{{ asset('assets/images/add-post-avatar.png') }}"
+                                                class="max-un" alt="icon"></a>
                                     </div>
                                     <div class="form-content input-area py-1 d-flex gap-2 align-items-center w-100">
                                         <input placeholder="Write a comment..">
@@ -832,7 +763,8 @@
                                                 <label class="file">
                                                     <input type="file">
                                                     <span class="file-custom border-0 d-grid text-center">
-                                                        <span class="material-symbols-outlined mat-icon m-0 xxltxt"> gif_box </span>
+                                                        <span class="material-symbols-outlined mat-icon m-0 xxltxt">
+                                                            gif_box </span>
                                                     </span>
                                                 </label>
                                             </div>
@@ -840,7 +772,8 @@
                                                 <label class="file">
                                                     <input type="file">
                                                     <span class="file-custom border-0 d-grid text-center">
-                                                        <span class="material-symbols-outlined mat-icon m-0 xxltxt"> perm_media </span>
+                                                        <span class="material-symbols-outlined mat-icon m-0 xxltxt">
+                                                            perm_media </span>
                                                     </span>
                                                 </label>
                                             </div>
@@ -862,7 +795,8 @@
                                 <div class="profile-area d-center justify-content-between">
                                     <div class="avatar-item d-flex gap-3 align-items-center">
                                         <div class="avatar position-relative">
-                                            <img class="avatar-img max-un" src="{{ asset('assets/images/avatar-1.png') }}" alt="avatar">
+                                            <img class="avatar-img max-un"
+                                                src="{{ asset('assets/images/avatar-1.png') }}" alt="avatar">
                                         </div>
                                         <div class="info-area">
                                             <h6 class="m-0"><a href="public-profile-post.html">Lori Cortez</a></h6>
@@ -870,7 +804,8 @@
                                         </div>
                                     </div>
                                     <div class="btn-group cus-dropdown">
-                                        <button type="button" class="dropdown-btn" data-bs-toggle="dropdown" aria-expanded="false">
+                                        <button type="button" class="dropdown-btn" data-bs-toggle="dropdown"
+                                            aria-expanded="false">
                                             <i class="material-symbols-outlined fs-xxl m-0"> more_horiz </i>
                                         </button>
                                         <ul class="dropdown-menu p-4 pt-2">
@@ -908,7 +843,8 @@
                                     </div>
                                 </div>
                                 <div class="py-4">
-                                    <p class="description">I created Roughly plugin to sketch crafted hand-drawn elements which can be used to any usage (diagrams/flows/decoration/etc)</p>
+                                    <p class="description">I created Roughly plugin to sketch crafted hand-drawn elements
+                                        which can be used to any usage (diagrams/flows/decoration/etc)</p>
                                 </div>
                                 <div class="post-img  d-flex justify-content-between flex-wrap gap-2 gap-lg-3">
                                     <div class="single">
@@ -951,7 +887,8 @@
                             <form action="#">
                                 <div class="d-flex mt-5 gap-3">
                                     <div class="profile-box d-none d-xxl-block">
-                                        <a href="#"><img src="{{ asset('assets/images/add-post-avatar.png') }}" class="max-un" alt="icon"></a>
+                                        <a href="#"><img src="{{ asset('assets/images/add-post-avatar.png') }}"
+                                                class="max-un" alt="icon"></a>
                                     </div>
                                     <div class="form-content input-area py-1 d-flex gap-2 align-items-center w-100">
                                         <input placeholder="Write a comment..">
@@ -960,7 +897,8 @@
                                                 <label class="file">
                                                     <input type="file">
                                                     <span class="file-custom border-0 d-grid text-center">
-                                                        <span class="material-symbols-outlined mat-icon m-0 xxltxt"> gif_box </span>
+                                                        <span class="material-symbols-outlined mat-icon m-0 xxltxt">
+                                                            gif_box </span>
                                                     </span>
                                                 </label>
                                             </div>
@@ -968,7 +906,8 @@
                                                 <label class="file">
                                                     <input type="file">
                                                     <span class="file-custom border-0 d-grid text-center">
-                                                        <span class="material-symbols-outlined mat-icon m-0 xxltxt"> perm_media </span>
+                                                        <span class="material-symbols-outlined mat-icon m-0 xxltxt">
+                                                            perm_media </span>
                                                     </span>
                                                 </label>
                                             </div>
@@ -988,27 +927,35 @@
                                 <div class="single-comment-area ms-1 ms-xxl-15">
                                     <div class="parent-comment d-flex gap-2 gap-sm-4">
                                         <div class="avatar-item d-center align-items-baseline">
-                                            <img class="avatar-img max-un" src="{{ asset('assets/images/avatar-3.png') }}" alt="avatar">
+                                            <img class="avatar-img max-un"
+                                                src="{{ asset('assets/images/avatar-3.png') }}" alt="avatar">
                                         </div>
                                         <div class="info-item">
-                                            <div class="top-area px-4 py-3 d-flex gap-3 align-items-start justify-content-between">
+                                            <div
+                                                class="top-area px-4 py-3 d-flex gap-3 align-items-start justify-content-between">
                                                 <div class="title-area">
-                                                    <h6 class="m-0 mb-3"><a href="public-profile-post.html">Lori Cortez</a></h6>
-                                                    <p class="mdtxt">The only way to solve the problem is to code for the hardware directly</p>
+                                                    <h6 class="m-0 mb-3"><a href="public-profile-post.html">Lori
+                                                            Cortez</a></h6>
+                                                    <p class="mdtxt">The only way to solve the problem is to code for the
+                                                        hardware directly</p>
                                                 </div>
                                                 <div class="btn-group dropend cus-dropdown">
-                                                    <button type="button" class="dropdown-btn" data-bs-toggle="dropdown" aria-expanded="false">
+                                                    <button type="button" class="dropdown-btn" data-bs-toggle="dropdown"
+                                                        aria-expanded="false">
                                                         <i class="material-symbols-outlined fs-xxl m-0"> more_horiz </i>
                                                     </button>
                                                     <ul class="dropdown-menu p-4 pt-2">
                                                         <li>
-                                                            <a class="droplist d-flex align-items-center gap-2" href="#">
-                                                                <i class="material-symbols-outlined mat-icon"> hide_source </i>
+                                                            <a class="droplist d-flex align-items-center gap-2"
+                                                                href="#">
+                                                                <i class="material-symbols-outlined mat-icon"> hide_source
+                                                                </i>
                                                                 <span>Hide Comments</span>
                                                             </a>
                                                         </li>
                                                         <li>
-                                                            <a class="droplist d-flex align-items-center gap-2" href="#">
+                                                            <a class="droplist d-flex align-items-center gap-2"
+                                                                href="#">
                                                                 <i class="material-symbols-outlined mat-icon"> flag </i>
                                                                 <span>Report Comments</span>
                                                             </a>
@@ -1031,7 +978,8 @@
                                                 <div class="d-flex gap-3">
                                                     <input placeholder="Write a comment.." class="py-3">
                                                     <button class="cmn-btn px-2 px-sm-5 px-lg-6">
-                                                        <i class="material-symbols-outlined mat-icon m-0 fs-xxl"> near_me </i>
+                                                        <i class="material-symbols-outlined mat-icon m-0 fs-xxl"> near_me
+                                                        </i>
                                                     </button>
                                                 </div>
                                             </form>
@@ -1040,28 +988,37 @@
                                     <div class="single-comment-area comment-item-nested mt-4 mt-sm-7 ms-13 ms-sm-15">
                                         <div class="d-flex gap-2 gap-sm-4 align-items-baseline">
                                             <div class="avatar-item">
-                                                <img class="avatar-img max-un" src="{{ asset('assets/images/avatar-4.png') }}" alt="avatar">
+                                                <img class="avatar-img max-un"
+                                                    src="{{ asset('assets/images/avatar-4.png') }}" alt="avatar">
                                             </div>
                                             <div class="info-item">
-                                                <div class="top-area px-4 py-3 d-flex gap-3 align-items-start justify-content-between">
+                                                <div
+                                                    class="top-area px-4 py-3 d-flex gap-3 align-items-start justify-content-between">
                                                     <div class="title-area">
-                                                        <h6 class="m-0 mb-3"><a href="public-profile-post.html">Alex</a></h6>
+                                                        <h6 class="m-0 mb-3"><a href="public-profile-post.html">Alex</a>
+                                                        </h6>
                                                         <p class="mdtxt">The only way to solve the</p>
                                                     </div>
                                                     <div class="btn-group dropend cus-dropdown">
-                                                        <button type="button" class="dropdown-btn" data-bs-toggle="dropdown" aria-expanded="false">
-                                                            <i class="material-symbols-outlined fs-xxl m-0"> more_horiz </i>
+                                                        <button type="button" class="dropdown-btn"
+                                                            data-bs-toggle="dropdown" aria-expanded="false">
+                                                            <i class="material-symbols-outlined fs-xxl m-0"> more_horiz
+                                                            </i>
                                                         </button>
                                                         <ul class="dropdown-menu p-4 pt-2">
                                                             <li>
-                                                                <a class="droplist d-flex align-items-center gap-2" href="#">
-                                                                    <i class="material-symbols-outlined mat-icon"> hide_source </i>
+                                                                <a class="droplist d-flex align-items-center gap-2"
+                                                                    href="#">
+                                                                    <i class="material-symbols-outlined mat-icon">
+                                                                        hide_source </i>
                                                                     <span>Hide Comments</span>
                                                                 </a>
                                                             </li>
                                                             <li>
-                                                                <a class="droplist d-flex align-items-center gap-2" href="#">
-                                                                    <i class="material-symbols-outlined mat-icon"> flag </i>
+                                                                <a class="droplist d-flex align-items-center gap-2"
+                                                                    href="#">
+                                                                    <i class="material-symbols-outlined mat-icon"> flag
+                                                                    </i>
                                                                     <span>Report Comments</span>
                                                                 </a>
                                                             </li>
@@ -1083,7 +1040,8 @@
                                                     <div class="d-flex gap-3">
                                                         <input placeholder="Write a comment.." class="py-3">
                                                         <button class="cmn-btn px-2 px-sm-5 px-lg-6">
-                                                            <i class="material-symbols-outlined mat-icon m-0 fs-xxl"> near_me </i>
+                                                            <i class="material-symbols-outlined mat-icon m-0 fs-xxl">
+                                                                near_me </i>
                                                         </button>
                                                     </div>
                                                 </form>
@@ -1098,7 +1056,8 @@
                                 <div class="profile-area d-center justify-content-between">
                                     <div class="avatar-item d-flex gap-3 align-items-center">
                                         <div class="avatar-item">
-                                            <img class="avatar-img max-un" src="{{ asset('assets/images/avatar-5.png') }}" alt="avatar">
+                                            <img class="avatar-img max-un"
+                                                src="{{ asset('assets/images/avatar-5.png') }}" alt="avatar">
                                         </div>
                                         <div class="info-area">
                                             <h6 class="m-0"><a href="public-profile-post.html">Loprayos</a></h6>
@@ -1106,7 +1065,8 @@
                                         </div>
                                     </div>
                                     <div class="btn-group cus-dropdown">
-                                        <button type="button" class="dropdown-btn" data-bs-toggle="dropdown" aria-expanded="false">
+                                        <button type="button" class="dropdown-btn" data-bs-toggle="dropdown"
+                                            aria-expanded="false">
                                             <i class="material-symbols-outlined fs-xxl m-0"> more_horiz </i>
                                         </button>
                                         <ul class="dropdown-menu p-4 pt-2">
@@ -1144,7 +1104,10 @@
                                     </div>
                                 </div>
                                 <div class="py-4">
-                                    <p class="description">Nam ornare a nibh id sagittis. Vestibulum nec molestie urna, eget convallis mi. Vestibulum rhoncus ligula eget sem sollicitudin interdum. Aliquam massa lectus, fringilla non diam ut, laoreet convallis risus. Curabitur at metus imperdiet, pellentesque ligula vel,</p>
+                                    <p class="description">Nam ornare a nibh id sagittis. Vestibulum nec molestie urna,
+                                        eget convallis mi. Vestibulum rhoncus ligula eget sem sollicitudin interdum. Aliquam
+                                        massa lectus, fringilla non diam ut, laoreet convallis risus. Curabitur at metus
+                                        imperdiet, pellentesque ligula vel,</p>
                                 </div>
                             </div>
                             <div class="total-react-share pb-4 d-center gap-2 flex-wrap justify-content-between">
@@ -1178,7 +1141,8 @@
                             <form action="#">
                                 <div class="d-flex mt-5 gap-3">
                                     <div class="profile-box d-none d-xxl-block">
-                                        <a href="#"><img src="{{ asset('assets/images/add-post-avatar.png') }}" class="max-un" alt="icon"></a>
+                                        <a href="#"><img src="{{ asset('assets/images/add-post-avatar.png') }}"
+                                                class="max-un" alt="icon"></a>
                                     </div>
                                     <div class="form-content input-area py-1 d-flex gap-2 align-items-center w-100">
                                         <input placeholder="Write a comment..">
@@ -1187,7 +1151,8 @@
                                                 <label class="file">
                                                     <input type="file">
                                                     <span class="file-custom border-0 d-grid text-center">
-                                                        <span class="material-symbols-outlined mat-icon m-0 xxltxt"> gif_box </span>
+                                                        <span class="material-symbols-outlined mat-icon m-0 xxltxt">
+                                                            gif_box </span>
                                                     </span>
                                                 </label>
                                             </div>
@@ -1195,7 +1160,8 @@
                                                 <label class="file">
                                                     <input type="file">
                                                     <span class="file-custom border-0 d-grid text-center">
-                                                        <span class="material-symbols-outlined mat-icon m-0 xxltxt"> perm_media </span>
+                                                        <span class="material-symbols-outlined mat-icon m-0 xxltxt">
+                                                            perm_media </span>
                                                     </span>
                                                 </label>
                                             </div>
@@ -1215,27 +1181,35 @@
                                 <div class="single-comment-area ms-1 ms-xxl-15">
                                     <div class="parent-comment d-flex gap-2 gap-sm-4">
                                         <div class="avatar-item d-center align-items-baseline">
-                                            <img class="avatar-img max-un" src="{{ asset('assets/images/avatar-3.png') }}" alt="avatar">
+                                            <img class="avatar-img max-un"
+                                                src="{{ asset('assets/images/avatar-3.png') }}" alt="avatar">
                                         </div>
                                         <div class="info-item active">
-                                            <div class="top-area px-4 py-3 d-flex gap-3 align-items-start justify-content-between">
+                                            <div
+                                                class="top-area px-4 py-3 d-flex gap-3 align-items-start justify-content-between">
                                                 <div class="title-area">
-                                                    <h6 class="m-0 mb-3"><a href="public-profile-post.html">Lori Cortez</a></h6>
-                                                    <p class="mdtxt">The only way to solve the problem is to code for the hardware directly</p>
+                                                    <h6 class="m-0 mb-3"><a href="public-profile-post.html">Lori
+                                                            Cortez</a></h6>
+                                                    <p class="mdtxt">The only way to solve the problem is to code for the
+                                                        hardware directly</p>
                                                 </div>
                                                 <div class="btn-group dropend cus-dropdown">
-                                                    <button type="button" class="dropdown-btn" data-bs-toggle="dropdown" aria-expanded="false">
+                                                    <button type="button" class="dropdown-btn" data-bs-toggle="dropdown"
+                                                        aria-expanded="false">
                                                         <i class="material-symbols-outlined fs-xxl m-0"> more_horiz </i>
                                                     </button>
                                                     <ul class="dropdown-menu p-4 pt-2">
                                                         <li>
-                                                            <a class="droplist d-flex align-items-center gap-2" href="#">
-                                                                <i class="material-symbols-outlined mat-icon"> hide_source </i>
+                                                            <a class="droplist d-flex align-items-center gap-2"
+                                                                href="#">
+                                                                <i class="material-symbols-outlined mat-icon"> hide_source
+                                                                </i>
                                                                 <span>Hide Comments</span>
                                                             </a>
                                                         </li>
                                                         <li>
-                                                            <a class="droplist d-flex align-items-center gap-2" href="#">
+                                                            <a class="droplist d-flex align-items-center gap-2"
+                                                                href="#">
                                                                 <i class="material-symbols-outlined mat-icon"> flag </i>
                                                                 <span>Report Comments</span>
                                                             </a>
@@ -1258,37 +1232,48 @@
                                                 <div class="d-flex gap-3">
                                                     <input placeholder="Write a comment.." class="py-3">
                                                     <button class="cmn-btn px-2 px-sm-5 px-lg-6">
-                                                        <i class="material-symbols-outlined mat-icon m-0 fs-xxl"> near_me </i>
+                                                        <i class="material-symbols-outlined mat-icon m-0 fs-xxl"> near_me
+                                                        </i>
                                                     </button>
                                                 </div>
                                             </form>
                                         </div>
                                     </div>
-                                    <div class="sibling-comment comment-item-nested single-comment-area mt-7 ms-13 ms-sm-15">
+                                    <div
+                                        class="sibling-comment comment-item-nested single-comment-area mt-7 ms-13 ms-sm-15">
                                         <div class="d-flex gap-2 gap-sm-4 align-items-baseline">
                                             <div class="avatar-item">
-                                                <img class="avatar-img max-un" src="{{ asset('assets/images/avatar-4.png') }}" alt="avatar">
+                                                <img class="avatar-img max-un"
+                                                    src="{{ asset('assets/images/avatar-4.png') }}" alt="avatar">
                                             </div>
                                             <div class="info-item">
-                                                <div class="top-area px-4 py-3 d-flex gap-3 align-items-start justify-content-between">
+                                                <div
+                                                    class="top-area px-4 py-3 d-flex gap-3 align-items-start justify-content-between">
                                                     <div class="title-area">
-                                                        <h6 class="m-0 mb-3"><a href="public-profile-post.html">Alexa</a></h6>
+                                                        <h6 class="m-0 mb-3"><a href="public-profile-post.html">Alexa</a>
+                                                        </h6>
                                                         <p class="mdtxt">The only way to solve the</p>
                                                     </div>
                                                     <div class="btn-group dropend cus-dropdown">
-                                                        <button type="button" class="dropdown-btn" data-bs-toggle="dropdown" aria-expanded="false">
-                                                            <i class="material-symbols-outlined fs-xxl m-0"> more_horiz </i>
+                                                        <button type="button" class="dropdown-btn"
+                                                            data-bs-toggle="dropdown" aria-expanded="false">
+                                                            <i class="material-symbols-outlined fs-xxl m-0"> more_horiz
+                                                            </i>
                                                         </button>
                                                         <ul class="dropdown-menu p-4 pt-2">
                                                             <li>
-                                                                <a class="droplist d-flex align-items-center gap-2" href="#">
-                                                                    <i class="material-symbols-outlined mat-icon"> hide_source </i>
+                                                                <a class="droplist d-flex align-items-center gap-2"
+                                                                    href="#">
+                                                                    <i class="material-symbols-outlined mat-icon">
+                                                                        hide_source </i>
                                                                     <span>Hide Comments</span>
                                                                 </a>
                                                             </li>
                                                             <li>
-                                                                <a class="droplist d-flex align-items-center gap-2" href="#">
-                                                                    <i class="material-symbols-outlined mat-icon"> flag </i>
+                                                                <a class="droplist d-flex align-items-center gap-2"
+                                                                    href="#">
+                                                                    <i class="material-symbols-outlined mat-icon"> flag
+                                                                    </i>
                                                                     <span>Report Comments</span>
                                                                 </a>
                                                             </li>
@@ -1310,7 +1295,8 @@
                                                     <div class="d-flex gap-3">
                                                         <input placeholder="Write a comment.." class="py-3">
                                                         <button class="cmn-btn px-2 px-sm-5 px-lg-6">
-                                                            <i class="material-symbols-outlined mat-icon m-0 fs-xxl"> near_me </i>
+                                                            <i class="material-symbols-outlined mat-icon m-0 fs-xxl">
+                                                                near_me </i>
                                                         </button>
                                                     </div>
                                                 </form>
@@ -1320,28 +1306,37 @@
                                     <div class="single-comment-area comment-item-nested mt-7 ms-13 ms-sm-15">
                                         <div class="d-flex gap-2 gap-sm-4 align-items-baseline">
                                             <div class="avatar-item">
-                                                <img class="avatar-img max-un" src="{{ asset('assets/images/avatar-7.png') }}" alt="avatar">
+                                                <img class="avatar-img max-un"
+                                                    src="{{ asset('assets/images/avatar-7.png') }}" alt="avatar">
                                             </div>
                                             <div class="info-item">
-                                                <div class="top-area px-4 py-3 d-flex gap-3 align-items-start justify-content-between">
+                                                <div
+                                                    class="top-area px-4 py-3 d-flex gap-3 align-items-start justify-content-between">
                                                     <div class="title-area">
-                                                        <h6 class="m-0 mb-3"><a href="public-profile-post.html">Haplika</a></h6>
+                                                        <h6 class="m-0 mb-3"><a
+                                                                href="public-profile-post.html">Haplika</a></h6>
                                                         <p class="mdtxt">The only way to solve the</p>
                                                     </div>
                                                     <div class="btn-group dropend cus-dropdown">
-                                                        <button type="button" class="dropdown-btn" data-bs-toggle="dropdown" aria-expanded="false">
-                                                            <i class="material-symbols-outlined fs-xxl m-0"> more_horiz </i>
+                                                        <button type="button" class="dropdown-btn"
+                                                            data-bs-toggle="dropdown" aria-expanded="false">
+                                                            <i class="material-symbols-outlined fs-xxl m-0"> more_horiz
+                                                            </i>
                                                         </button>
                                                         <ul class="dropdown-menu p-4 pt-2">
                                                             <li>
-                                                                <a class="droplist d-flex align-items-center gap-2" href="#">
-                                                                    <i class="material-symbols-outlined mat-icon"> hide_source </i>
+                                                                <a class="droplist d-flex align-items-center gap-2"
+                                                                    href="#">
+                                                                    <i class="material-symbols-outlined mat-icon">
+                                                                        hide_source </i>
                                                                     <span>Hide Comments</span>
                                                                 </a>
                                                             </li>
                                                             <li>
-                                                                <a class="droplist d-flex align-items-center gap-2" href="#">
-                                                                    <i class="material-symbols-outlined mat-icon"> flag </i>
+                                                                <a class="droplist d-flex align-items-center gap-2"
+                                                                    href="#">
+                                                                    <i class="material-symbols-outlined mat-icon"> flag
+                                                                    </i>
                                                                     <span>Report Comments</span>
                                                                 </a>
                                                             </li>
@@ -1363,7 +1358,8 @@
                                                     <div class="d-flex gap-3">
                                                         <input placeholder="Write a comment.." class="py-3">
                                                         <button class="cmn-btn px-2 px-sm-5 px-lg-6">
-                                                            <i class="material-symbols-outlined mat-icon m-0 fs-xxl"> near_me </i>
+                                                            <i class="material-symbols-outlined mat-icon m-0 fs-xxl">
+                                                                near_me </i>
                                                         </button>
                                                     </div>
                                                 </form>
@@ -1376,29 +1372,37 @@
                                 <div class="single-comment-area ms-1 ms-xxl-15">
                                     <div class="d-flex gap-4">
                                         <div class="avatar-item d-center align-items-baseline">
-                                            <img class="avatar-img max-un" src="{{ asset('assets/images/avatar-3.png') }}" alt="avatar">
+                                            <img class="avatar-img max-un"
+                                                src="{{ asset('assets/images/avatar-3.png') }}" alt="avatar">
                                         </div>
                                         <div class="info-item w-100">
-                                            <div class="top-area px-4 py-3 d-flex gap-3 align-items-start justify-content-between">
+                                            <div
+                                                class="top-area px-4 py-3 d-flex gap-3 align-items-start justify-content-between">
                                                 <div class="title-area">
-                                                    <h6 class="m-0 mb-3"><a href="public-profile-post.html">Marlio</a></h6>
+                                                    <h6 class="m-0 mb-3"><a href="public-profile-post.html">Marlio</a>
+                                                    </h6>
                                                     <div class="post-img">
-                                                        <img src="{{ asset('assets/images/icon/emoji-love-2.png') }}" alt="icon">
+                                                        <img src="{{ asset('assets/images/icon/emoji-love-2.png') }}"
+                                                            alt="icon">
                                                     </div>
                                                 </div>
                                                 <div class="btn-group dropend cus-dropdown">
-                                                    <button type="button" class="dropdown-btn" data-bs-toggle="dropdown" aria-expanded="false">
+                                                    <button type="button" class="dropdown-btn" data-bs-toggle="dropdown"
+                                                        aria-expanded="false">
                                                         <i class="material-symbols-outlined fs-xxl m-0"> more_horiz </i>
                                                     </button>
                                                     <ul class="dropdown-menu p-4 pt-2">
                                                         <li>
-                                                            <a class="droplist d-flex align-items-center gap-2" href="#">
-                                                                <i class="material-symbols-outlined mat-icon"> hide_source </i>
+                                                            <a class="droplist d-flex align-items-center gap-2"
+                                                                href="#">
+                                                                <i class="material-symbols-outlined mat-icon"> hide_source
+                                                                </i>
                                                                 <span>Hide Comments</span>
                                                             </a>
                                                         </li>
                                                         <li>
-                                                            <a class="droplist d-flex align-items-center gap-2" href="#">
+                                                            <a class="droplist d-flex align-items-center gap-2"
+                                                                href="#">
                                                                 <i class="material-symbols-outlined mat-icon"> flag </i>
                                                                 <span>Report Comments</span>
                                                             </a>
@@ -1421,7 +1425,8 @@
                                                 <div class="d-flex gap-3">
                                                     <input placeholder="Write a comment.." class="py-3">
                                                     <button class="cmn-btn px-2 px-sm-5 px-lg-6">
-                                                        <i class="material-symbols-outlined mat-icon m-0 fs-xxl"> near_me </i>
+                                                        <i class="material-symbols-outlined mat-icon m-0 fs-xxl"> near_me
+                                                        </i>
                                                     </button>
                                                 </div>
                                             </form>
@@ -1435,7 +1440,8 @@
                                 <div class="profile-area d-center justify-content-between">
                                     <div class="avatar-item d-flex gap-3 align-items-center">
                                         <div class="avatar position-relative">
-                                            <img class="avatar-img max-un" src="{{ asset('assets/images/avatar-1.png') }}" alt="avatar">
+                                            <img class="avatar-img max-un"
+                                                src="{{ asset('assets/images/avatar-1.png') }}" alt="avatar">
                                         </div>
                                         <div class="info-area">
                                             <h6 class="m-0"><a href="public-profile-post.html">Lori Cortez</a></h6>
@@ -1443,7 +1449,8 @@
                                         </div>
                                     </div>
                                     <div class="btn-group cus-dropdown">
-                                        <button type="button" class="dropdown-btn" data-bs-toggle="dropdown" aria-expanded="false">
+                                        <button type="button" class="dropdown-btn" data-bs-toggle="dropdown"
+                                            aria-expanded="false">
                                             <i class="material-symbols-outlined fs-xxl m-0"> more_horiz </i>
                                         </button>
                                         <ul class="dropdown-menu p-4 pt-2">
@@ -1524,7 +1531,8 @@
                             <form action="#">
                                 <div class="d-flex mt-5 gap-3">
                                     <div class="profile-box d-none d-xxl-block">
-                                        <a href="#"><img src="{{ asset('assets/images/add-post-avatar.png') }}" class="max-un" alt="icon"></a>
+                                        <a href="#"><img src="{{ asset('assets/images/add-post-avatar.png') }}"
+                                                class="max-un" alt="icon"></a>
                                     </div>
                                     <div class="form-content input-area py-1 d-flex gap-2 align-items-center w-100">
                                         <input placeholder="Write a comment..">
@@ -1533,7 +1541,8 @@
                                                 <label class="file">
                                                     <input type="file">
                                                     <span class="file-custom border-0 d-grid text-center">
-                                                        <span class="material-symbols-outlined mat-icon m-0 xxltxt"> gif_box </span>
+                                                        <span class="material-symbols-outlined mat-icon m-0 xxltxt">
+                                                            gif_box </span>
                                                     </span>
                                                 </label>
                                             </div>
@@ -1541,7 +1550,8 @@
                                                 <label class="file">
                                                     <input type="file">
                                                     <span class="file-custom border-0 d-grid text-center">
-                                                        <span class="material-symbols-outlined mat-icon m-0 xxltxt"> perm_media </span>
+                                                        <span class="material-symbols-outlined mat-icon m-0 xxltxt">
+                                                            perm_media </span>
                                                     </span>
                                                 </label>
                                             </div>
@@ -1563,7 +1573,8 @@
                                 <div class="profile-area d-center justify-content-between">
                                     <div class="avatar-item d-flex gap-3 align-items-center">
                                         <div class="avatar position-relative">
-                                            <img class="avatar-img max-un" src="{{ asset('assets/images/avatar-1.png') }}" alt="avatar">
+                                            <img class="avatar-img max-un"
+                                                src="{{ asset('assets/images/avatar-1.png') }}" alt="avatar">
                                         </div>
                                         <div class="info-area">
                                             <h6 class="m-0"><a href="public-profile-post.html">Lori Cortez</a></h6>
@@ -1571,7 +1582,8 @@
                                         </div>
                                     </div>
                                     <div class="btn-group cus-dropdown">
-                                        <button type="button" class="dropdown-btn" data-bs-toggle="dropdown" aria-expanded="false">
+                                        <button type="button" class="dropdown-btn" data-bs-toggle="dropdown"
+                                            aria-expanded="false">
                                             <i class="material-symbols-outlined fs-xxl m-0"> more_horiz </i>
                                         </button>
                                         <ul class="dropdown-menu p-4 pt-2">
@@ -1609,10 +1621,12 @@
                                     </div>
                                 </div>
                                 <div class="py-4">
-                                    <p class="description">I created Roughly plugin to sketch crafted hand-drawn elements which can be used to any usage (diagrams/flows/decoration/etc)</p>
+                                    <p class="description">I created Roughly plugin to sketch crafted hand-drawn elements
+                                        which can be used to any usage (diagrams/flows/decoration/etc)</p>
                                 </div>
                                 <div class="post-img">
-                                    <img src="{{ asset('assets/images/post-img-1.png') }}" class="w-100" alt="image">
+                                    <img src="{{ asset('assets/images/post-img-1.png') }}" class="w-100"
+                                        alt="image">
                                 </div>
                             </div>
                             <div class="total-react-share pb-4 d-center gap-2 flex-wrap justify-content-between">
@@ -1646,7 +1660,8 @@
                             <form action="#">
                                 <div class="d-flex mt-5 gap-3">
                                     <div class="profile-box d-none d-xxl-block">
-                                        <a href="#"><img src="{{ asset('assets/images/add-post-avatar.png') }}" class="max-un" alt="icon"></a>
+                                        <a href="#"><img src="{{ asset('assets/images/add-post-avatar.png') }}"
+                                                class="max-un" alt="icon"></a>
                                     </div>
                                     <div class="form-content input-area py-1 d-flex gap-2 align-items-center w-100">
                                         <input placeholder="Write a comment..">
@@ -1655,7 +1670,8 @@
                                                 <label class="file">
                                                     <input type="file">
                                                     <span class="file-custom border-0 d-grid text-center">
-                                                        <span class="material-symbols-outlined mat-icon m-0 xxltxt"> gif_box </span>
+                                                        <span class="material-symbols-outlined mat-icon m-0 xxltxt">
+                                                            gif_box </span>
                                                     </span>
                                                 </label>
                                             </div>
@@ -1663,7 +1679,8 @@
                                                 <label class="file">
                                                     <input type="file">
                                                     <span class="file-custom border-0 d-grid text-center">
-                                                        <span class="material-symbols-outlined mat-icon m-0 xxltxt"> perm_media </span>
+                                                        <span class="material-symbols-outlined mat-icon m-0 xxltxt">
+                                                            perm_media </span>
                                                     </span>
                                                 </label>
                                             </div>
@@ -1705,15 +1722,21 @@
                                         <div class="single-single">
                                             <div class="profile-pic d-flex gap-3 align-items-center">
                                                 <div class="avatar">
-                                                    <img class="avatar-img max-un" src="{{ asset('assets/images/avatar-4.png') }}" alt="avatar">
+                                                    <img class="avatar-img max-un"
+                                                        src="{{ asset('assets/images/avatar-4.png') }}" alt="avatar">
                                                 </div>
                                                 <div class="text-area">
-                                                    <a href="public-profile-post.html"><h6 class="m-0">Lerio Mao</h6></a>
+                                                    <a href="public-profile-post.html">
+                                                        <h6 class="m-0">Lerio Mao</h6>
+                                                    </a>
                                                     <div class="friends-list d-flex gap-3 align-items-center text-center">
                                                         <ul class="d-flex align-items-center justify-content-center">
-                                                            <li><img src="{{ asset('assets/images/avatar-2.png') }}" alt="image"></li>
-                                                            <li><img src="{{ asset('assets/images/avatar-3.png') }}" alt="image"></li>
-                                                            <li><img src="{{ asset('assets/images/avatar-4.png') }}" alt="image"></li>
+                                                            <li><img src="{{ asset('assets/images/avatar-2.png') }}"
+                                                                    alt="image"></li>
+                                                            <li><img src="{{ asset('assets/images/avatar-3.png') }}"
+                                                                    alt="image"></li>
+                                                            <li><img src="{{ asset('assets/images/avatar-4.png') }}"
+                                                                    alt="image"></li>
                                                         </ul>
                                                         <span class="mdtxt d-center">10 mutual friends</span>
                                                     </div>
@@ -1727,15 +1750,19 @@
                                         <div class="single-single">
                                             <div class="profile-pic d-flex gap-3 align-items-center">
                                                 <div class="avatar">
-                                                    <img class="avatar-img max-un" src="{{ asset('assets/images/avatar-5.png') }}" alt="avatar">
+                                                    <img class="avatar-img max-un"
+                                                        src="{{ asset('assets/images/avatar-5.png') }}" alt="avatar">
                                                 </div>
                                                 <div class="text-area">
                                                     <h6 class="m-0"><a href="public-profile-post.html">Marinez</a></h6>
                                                     <div class="friends-list d-flex gap-3 align-items-center text-center">
                                                         <ul class="d-flex align-items-center justify-content-center">
-                                                            <li><img src="{{ asset('assets/images/avatar-2.png') }}" alt="image"></li>
-                                                            <li><img src="{{ asset('assets/images/avatar-3.png') }}" alt="image"></li>
-                                                            <li><img src="{{ asset('assets/images/avatar-4.png') }}" alt="image"></li>
+                                                            <li><img src="{{ asset('assets/images/avatar-2.png') }}"
+                                                                    alt="image"></li>
+                                                            <li><img src="{{ asset('assets/images/avatar-3.png') }}"
+                                                                    alt="image"></li>
+                                                            <li><img src="{{ asset('assets/images/avatar-4.png') }}"
+                                                                    alt="image"></li>
                                                         </ul>
                                                         <span class="mdtxt d-center">10 mutual friends</span>
                                                     </div>
@@ -1755,13 +1782,16 @@
                                         </h6>
                                     </div>
                                     <div class="d-flex flex-column gap-6">
-                                        <div class="profile-area d-center position-relative align-items-center justify-content-between">
+                                        <div
+                                            class="profile-area d-center position-relative align-items-center justify-content-between">
                                             <div class="avatar-item d-flex gap-3 align-items-center">
                                                 <div class="avatar-item">
-                                                    <img class="avatar-img max-un" src="{{ asset('assets/images/avatar-6.png') }}" alt="avatar">
+                                                    <img class="avatar-img max-un"
+                                                        src="{{ asset('assets/images/avatar-6.png') }}" alt="avatar">
                                                 </div>
                                                 <div class="info-area">
-                                                    <h6 class="m-0"><a href="public-profile-post.html" class="mdtxt">Piter Maio</a></h6>
+                                                    <h6 class="m-0"><a href="public-profile-post.html"
+                                                            class="mdtxt">Piter Maio</a></h6>
                                                 </div>
                                             </div>
                                             <span class="mdtxt abs-area d-center position-absolute end-0">5</span>
@@ -1769,25 +1799,31 @@
                                         <div class="profile-area d-center justify-content-between">
                                             <div class="avatar-item d-flex gap-3 align-items-center">
                                                 <div class="avatar-item">
-                                                    <img class="avatar-img max-un" src="{{ asset('assets/images/avatar-7.png') }}" alt="avatar">
+                                                    <img class="avatar-img max-un"
+                                                        src="{{ asset('assets/images/avatar-7.png') }}" alt="avatar">
                                                 </div>
                                                 <div class="info-area">
-                                                    <h6 class="m-0"><a href="public-profile-post.html" class="mdtxt">Floyd Miles</a></h6>
+                                                    <h6 class="m-0"><a href="public-profile-post.html"
+                                                            class="mdtxt">Floyd Miles</a></h6>
                                                 </div>
                                             </div>
                                             <div class="btn-group cus-dropdown dropend">
-                                                <button type="button" class="dropdown-btn" data-bs-toggle="dropdown" aria-expanded="false">
+                                                <button type="button" class="dropdown-btn" data-bs-toggle="dropdown"
+                                                    aria-expanded="false">
                                                     <i class="material-symbols-outlined fs-xxl m-0"> more_horiz </i>
                                                 </button>
                                                 <ul class="dropdown-menu p-4 pt-2">
                                                     <li>
-                                                        <a class="droplist d-flex align-items-center gap-2" href="#">
-                                                            <i class="material-symbols-outlined mat-icon"> person_remove </i>
+                                                        <a class="droplist d-flex align-items-center gap-2"
+                                                            href="#">
+                                                            <i class="material-symbols-outlined mat-icon"> person_remove
+                                                            </i>
                                                             <span>Unfollow</span>
                                                         </a>
                                                     </li>
                                                     <li>
-                                                        <a class="droplist d-flex align-items-center gap-2" href="#">
+                                                        <a class="droplist d-flex align-items-center gap-2"
+                                                            href="#">
                                                             <i class="material-symbols-outlined mat-icon"> hide_source </i>
                                                             <span>Hide Contact</span>
                                                         </a>
@@ -1798,25 +1834,31 @@
                                         <div class="profile-area d-center justify-content-between">
                                             <div class="avatar-item d-flex gap-3 align-items-center">
                                                 <div class="avatar-item">
-                                                    <img class="avatar-img max-un" src="{{ asset('assets/images/avatar-8.png') }}" alt="avatar">
+                                                    <img class="avatar-img max-un"
+                                                        src="{{ asset('assets/images/avatar-8.png') }}" alt="avatar">
                                                 </div>
                                                 <div class="info-area">
-                                                    <h6 class="m-0"><a href="public-profile-post.html" class="mdtxt">Darrell Steward</a></h6>
+                                                    <h6 class="m-0"><a href="public-profile-post.html"
+                                                            class="mdtxt">Darrell Steward</a></h6>
                                                 </div>
                                             </div>
                                             <div class="btn-group cus-dropdown dropend">
-                                                <button type="button" class="dropdown-btn" data-bs-toggle="dropdown" aria-expanded="false">
+                                                <button type="button" class="dropdown-btn" data-bs-toggle="dropdown"
+                                                    aria-expanded="false">
                                                     <i class="material-symbols-outlined fs-xxl m-0"> more_horiz </i>
                                                 </button>
                                                 <ul class="dropdown-menu p-4 pt-2">
                                                     <li>
-                                                        <a class="droplist d-flex align-items-center gap-2" href="#">
-                                                            <i class="material-symbols-outlined mat-icon"> person_remove </i>
+                                                        <a class="droplist d-flex align-items-center gap-2"
+                                                            href="#">
+                                                            <i class="material-symbols-outlined mat-icon"> person_remove
+                                                            </i>
                                                             <span>Unfollow</span>
                                                         </a>
                                                     </li>
                                                     <li>
-                                                        <a class="droplist d-flex align-items-center gap-2" href="#">
+                                                        <a class="droplist d-flex align-items-center gap-2"
+                                                            href="#">
                                                             <i class="material-symbols-outlined mat-icon"> hide_source </i>
                                                             <span>Hide Contact</span>
                                                         </a>
@@ -1827,25 +1869,31 @@
                                         <div class="profile-area d-center justify-content-between">
                                             <div class="avatar-item d-flex gap-3 align-items-center">
                                                 <div class="avatar-item">
-                                                    <img class="avatar-img max-un" src="{{ asset('assets/images/avatar-2.png') }}" alt="avatar">
+                                                    <img class="avatar-img max-un"
+                                                        src="{{ asset('assets/images/avatar-2.png') }}" alt="avatar">
                                                 </div>
                                                 <div class="info-area">
-                                                    <h6 class="m-0"><a href="public-profile-post.html" class="mdtxt">Kristin Watson</a></h6>
+                                                    <h6 class="m-0"><a href="public-profile-post.html"
+                                                            class="mdtxt">Kristin Watson</a></h6>
                                                 </div>
                                             </div>
                                             <div class="btn-group cus-dropdown dropend">
-                                                <button type="button" class="dropdown-btn" data-bs-toggle="dropdown" aria-expanded="false">
+                                                <button type="button" class="dropdown-btn" data-bs-toggle="dropdown"
+                                                    aria-expanded="false">
                                                     <i class="material-symbols-outlined fs-xxl m-0"> more_horiz </i>
                                                 </button>
                                                 <ul class="dropdown-menu p-4 pt-2">
                                                     <li>
-                                                        <a class="droplist d-flex align-items-center gap-2" href="#">
-                                                            <i class="material-symbols-outlined mat-icon"> person_remove </i>
+                                                        <a class="droplist d-flex align-items-center gap-2"
+                                                            href="#">
+                                                            <i class="material-symbols-outlined mat-icon"> person_remove
+                                                            </i>
                                                             <span>Unfollow</span>
                                                         </a>
                                                     </li>
                                                     <li>
-                                                        <a class="droplist d-flex align-items-center gap-2" href="#">
+                                                        <a class="droplist d-flex align-items-center gap-2"
+                                                            href="#">
                                                             <i class="material-symbols-outlined mat-icon"> hide_source </i>
                                                             <span>Hide Contact</span>
                                                         </a>
@@ -1856,26 +1904,33 @@
                                         <div class="profile-area d-center justify-content-between">
                                             <div class="avatar-item d-flex gap-3 align-items-center">
                                                 <div class="avatar-item">
-                                                    <img class="avatar-img max-un" src="{{ asset('assets/images/avatar-3.png') }}" alt="avatar">
+                                                    <img class="avatar-img max-un"
+                                                        src="{{ asset('assets/images/avatar-3.png') }}" alt="avatar">
                                                 </div>
                                                 <div class="info-area">
-                                                    <h6 class="m-0"><a href="public-profile-post.html" class="mdtxt">Jane Cooper</a></h6>
+                                                    <h6 class="m-0"><a href="public-profile-post.html"
+                                                            class="mdtxt">Jane Cooper</a></h6>
                                                 </div>
                                             </div>
                                             <div class="btn-group cus-dropdown dropend">
-                                                <button type="button" class="dropdown-btn" data-bs-toggle="dropdown" aria-expanded="false">
+                                                <button type="button" class="dropdown-btn" data-bs-toggle="dropdown"
+                                                    aria-expanded="false">
                                                     <i class="material-symbols-outlined fs-xxl m-0"> more_horiz </i>
                                                 </button>
                                                 <ul class="dropdown-menu p-4 pt-2">
                                                     <li>
-                                                        <a class="droplist d-flex align-items-center gap-2" href="#">
-                                                            <i class="material-symbols-outlined mat-icon"> person_remove </i>
+                                                        <a class="droplist d-flex align-items-center gap-2"
+                                                            href="#">
+                                                            <i class="material-symbols-outlined mat-icon"> person_remove
+                                                            </i>
                                                             <span>Unfollow</span>
                                                         </a>
                                                     </li>
                                                     <li>
-                                                        <a class="droplist d-flex align-items-center gap-2" href="#">
-                                                            <i class="material-symbols-outlined mat-icon"> hide_source </i>
+                                                        <a class="droplist d-flex align-items-center gap-2"
+                                                            href="#">
+                                                            <i class="material-symbols-outlined mat-icon"> hide_source
+                                                            </i>
                                                             <span>Hide Contact</span>
                                                         </a>
                                                     </li>
@@ -1885,26 +1940,33 @@
                                         <div class="profile-area d-center justify-content-between">
                                             <div class="avatar-item d-flex gap-3 align-items-center">
                                                 <div class="avatar-item">
-                                                    <img class="avatar-img max-un" src="{{ asset('assets/images/avatar-4.png') }}" alt="avatar">
+                                                    <img class="avatar-img max-un"
+                                                        src="{{ asset('assets/images/avatar-4.png') }}" alt="avatar">
                                                 </div>
                                                 <div class="info-area">
-                                                    <h6 class="m-0"><a href="public-profile-post.html" class="mdtxt">Devon Lane</a></h6>
+                                                    <h6 class="m-0"><a href="public-profile-post.html"
+                                                            class="mdtxt">Devon Lane</a></h6>
                                                 </div>
                                             </div>
                                             <div class="btn-group cus-dropdown dropend">
-                                                <button type="button" class="dropdown-btn" data-bs-toggle="dropdown" aria-expanded="false">
+                                                <button type="button" class="dropdown-btn" data-bs-toggle="dropdown"
+                                                    aria-expanded="false">
                                                     <i class="material-symbols-outlined fs-xxl m-0"> more_horiz </i>
                                                 </button>
                                                 <ul class="dropdown-menu p-4 pt-2">
                                                     <li>
-                                                        <a class="droplist d-flex align-items-center gap-2" href="#">
-                                                            <i class="material-symbols-outlined mat-icon"> person_remove </i>
+                                                        <a class="droplist d-flex align-items-center gap-2"
+                                                            href="#">
+                                                            <i class="material-symbols-outlined mat-icon"> person_remove
+                                                            </i>
                                                             <span>Unfollow</span>
                                                         </a>
                                                     </li>
                                                     <li>
-                                                        <a class="droplist d-flex align-items-center gap-2" href="#">
-                                                            <i class="material-symbols-outlined mat-icon"> hide_source </i>
+                                                        <a class="droplist d-flex align-items-center gap-2"
+                                                            href="#">
+                                                            <i class="material-symbols-outlined mat-icon"> hide_source
+                                                            </i>
                                                             <span>Hide Contact</span>
                                                         </a>
                                                     </li>
@@ -1914,26 +1976,33 @@
                                         <div class="profile-area d-center justify-content-between">
                                             <div class="avatar-item d-flex gap-3 align-items-center">
                                                 <div class="avatar-item">
-                                                    <img class="avatar-img max-un" src="{{ asset('assets/images/avatar-9.png') }}" alt="avatar">
+                                                    <img class="avatar-img max-un"
+                                                        src="{{ asset('assets/images/avatar-9.png') }}" alt="avatar">
                                                 </div>
                                                 <div class="info-area">
-                                                    <h6 class="m-0"><a href="public-profile-post.html" class="mdtxt">Annette Black</a></h6>
+                                                    <h6 class="m-0"><a href="public-profile-post.html"
+                                                            class="mdtxt">Annette Black</a></h6>
                                                 </div>
                                             </div>
                                             <div class="btn-group cus-dropdown dropend">
-                                                <button type="button" class="dropdown-btn" data-bs-toggle="dropdown" aria-expanded="false">
+                                                <button type="button" class="dropdown-btn" data-bs-toggle="dropdown"
+                                                    aria-expanded="false">
                                                     <i class="material-symbols-outlined fs-xxl m-0"> more_horiz </i>
                                                 </button>
                                                 <ul class="dropdown-menu p-4 pt-2">
                                                     <li>
-                                                        <a class="droplist d-flex align-items-center gap-2" href="#">
-                                                            <i class="material-symbols-outlined mat-icon"> person_remove </i>
+                                                        <a class="droplist d-flex align-items-center gap-2"
+                                                            href="#">
+                                                            <i class="material-symbols-outlined mat-icon"> person_remove
+                                                            </i>
                                                             <span>Unfollow</span>
                                                         </a>
                                                     </li>
                                                     <li>
-                                                        <a class="droplist d-flex align-items-center gap-2" href="#">
-                                                            <i class="material-symbols-outlined mat-icon"> hide_source </i>
+                                                        <a class="droplist d-flex align-items-center gap-2"
+                                                            href="#">
+                                                            <i class="material-symbols-outlined mat-icon"> hide_source
+                                                            </i>
                                                             <span>Hide Contact</span>
                                                         </a>
                                                     </li>
@@ -1943,26 +2012,34 @@
                                         <div class="profile-area d-center justify-content-between">
                                             <div class="avatar-item d-flex gap-3 align-items-center">
                                                 <div class="avatar-item">
-                                                    <img class="avatar-img max-un" src="{{ asset('assets/images/avatar-10.png') }}" alt="avatar">
+                                                    <img class="avatar-img max-un"
+                                                        src="{{ asset('assets/images/avatar-10.png') }}"
+                                                        alt="avatar">
                                                 </div>
                                                 <div class="info-area">
-                                                    <h6 class="m-0"><a href="public-profile-post.html" class="mdtxt">Jerome Bell</a></h6>
+                                                    <h6 class="m-0"><a href="public-profile-post.html"
+                                                            class="mdtxt">Jerome Bell</a></h6>
                                                 </div>
                                             </div>
                                             <div class="btn-group cus-dropdown dropend">
-                                                <button type="button" class="dropdown-btn" data-bs-toggle="dropdown" aria-expanded="false">
+                                                <button type="button" class="dropdown-btn" data-bs-toggle="dropdown"
+                                                    aria-expanded="false">
                                                     <i class="material-symbols-outlined fs-xxl m-0"> more_horiz </i>
                                                 </button>
                                                 <ul class="dropdown-menu p-4 pt-2">
                                                     <li>
-                                                        <a class="droplist d-flex align-items-center gap-2" href="#">
-                                                            <i class="material-symbols-outlined mat-icon"> person_remove </i>
+                                                        <a class="droplist d-flex align-items-center gap-2"
+                                                            href="#">
+                                                            <i class="material-symbols-outlined mat-icon"> person_remove
+                                                            </i>
                                                             <span>Unfollow</span>
                                                         </a>
                                                     </li>
                                                     <li>
-                                                        <a class="droplist d-flex align-items-center gap-2" href="#">
-                                                            <i class="material-symbols-outlined mat-icon"> hide_source </i>
+                                                        <a class="droplist d-flex align-items-center gap-2"
+                                                            href="#">
+                                                            <i class="material-symbols-outlined mat-icon"> hide_source
+                                                            </i>
                                                             <span>Hide Contact</span>
                                                         </a>
                                                     </li>
@@ -1972,26 +2049,34 @@
                                         <div class="profile-area d-center justify-content-between">
                                             <div class="avatar-item d-flex gap-3 align-items-center">
                                                 <div class="avatar-item">
-                                                    <img class="avatar-img max-un" src="{{ asset('assets/images/avatar-11.png') }}" alt="avatar">
+                                                    <img class="avatar-img max-un"
+                                                        src="{{ asset('assets/images/avatar-11.png') }}"
+                                                        alt="avatar">
                                                 </div>
                                                 <div class="info-area">
-                                                    <h6 class="m-0"><a href="public-profile-post.html" class="mdtxt">Guy Hawkins</a></h6>
+                                                    <h6 class="m-0"><a href="public-profile-post.html"
+                                                            class="mdtxt">Guy Hawkins</a></h6>
                                                 </div>
                                             </div>
                                             <div class="btn-group cus-dropdown dropend">
-                                                <button type="button" class="dropdown-btn" data-bs-toggle="dropdown" aria-expanded="false">
+                                                <button type="button" class="dropdown-btn" data-bs-toggle="dropdown"
+                                                    aria-expanded="false">
                                                     <i class="material-symbols-outlined fs-xxl m-0"> more_horiz </i>
                                                 </button>
                                                 <ul class="dropdown-menu p-4 pt-2">
                                                     <li>
-                                                        <a class="droplist d-flex align-items-center gap-2" href="#">
-                                                            <i class="material-symbols-outlined mat-icon"> person_remove </i>
+                                                        <a class="droplist d-flex align-items-center gap-2"
+                                                            href="#">
+                                                            <i class="material-symbols-outlined mat-icon"> person_remove
+                                                            </i>
                                                             <span>Unfollow</span>
                                                         </a>
                                                     </li>
                                                     <li>
-                                                        <a class="droplist d-flex align-items-center gap-2" href="#">
-                                                            <i class="material-symbols-outlined mat-icon"> hide_source </i>
+                                                        <a class="droplist d-flex align-items-center gap-2"
+                                                            href="#">
+                                                            <i class="material-symbols-outlined mat-icon"> hide_source
+                                                            </i>
                                                             <span>Hide Contact</span>
                                                         </a>
                                                     </li>
@@ -2004,191 +2089,13 @@
                         </div>
                     </div>
                 </div>
+            </div>
+        </div>
+        <div class="story-modal" id="storyModal">
+            <div class="modal-content">
+                <span class="close-modal">&times;</span>
+                <div id="modalContent"></div>
             </div>
         </div>
     </main>
-    <!-- Main Content end -->
-
-    <!-- Go Live Popup start -->
-    <div class="go-live-popup">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8">
-                    <div class="modal cmn-modal fade" id="goLiveMod">
-                        <div class="modal-dialog modal-dialog-centered">
-                            <div class="modal-content p-5">
-                                <div class="modal-header justify-content-center">
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
-                                        <i class="material-symbols-outlined mat-icon xxltxt"> close </i>
-                                    </button>
-                                </div>
-                                <div class="top-content pb-5">
-                                    <h5>Go Live</h5>
-                                </div>
-                                <div class="mid-area">
-                                    <div class="d-flex mb-5 gap-3">
-                                        <div class="profile-box">
-                                            <a href="#"><img src="{{ asset('assets/images/add-post-avatar.png') }}" class="max-un" alt="icon"></a>
-                                        </div>
-                                        <textarea cols="10" rows="2" placeholder="Write something to Lerio.."></textarea>
-                                    </div>
-                                    <div class="file-upload">
-                                        <label>Upload attachment</label>
-                                        <label class="file mt-1">
-                                            <input type="file">
-                                            <span class="file-custom pt-8 pb-8 d-grid text-center">
-                                                <i class="material-symbols-outlined mat-icon"> perm_media </i>
-                                                <span>Drag here or click to upload photo.</span>
-                                            </span>
-                                        </label>
-                                    </div>
-                                </div>
-                                <div class="footer-area pt-5">
-                                    <div class="btn-area d-flex justify-content-end gap-2">
-                                        <button type="button" class="cmn-btn alt" data-bs-dismiss="modal" aria-label="Close">Cancel</button>
-                                        <button class="cmn-btn">Go Live</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Go Live Popup end -->
-
-    <!-- video popup start -->
-    <div class="go-live-popup video-popup">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8">
-                    <div class="modal cmn-modal fade" id="photoVideoMod">
-                        <div class="modal-dialog modal-dialog-centered">
-                            <div class="modal-content p-5">
-                                <div class="modal-header justify-content-center">
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
-                                        <i class="material-symbols-outlined mat-icon xxltxt"> close </i>
-                                    </button>
-                                </div>
-                                <div class="top-content pb-5">
-                                    <h5>Add post photo/video</h5>
-                                </div>
-                                <div class="mid-area">
-                                    <div class="d-flex mb-5 gap-3">
-                                        <div class="profile-box">
-                                            <a href="#"><img src="{{ asset('assets/images/add-post-avatar.png') }}" class="max-un" alt="icon"></a>
-                                        </div>
-                                        <textarea cols="10" rows="2" placeholder="Write something to Lerio.."></textarea>
-                                    </div>
-                                    <div class="file-upload">
-                                        <label>Upload attachment</label>
-                                        <label class="file mt-1">
-                                            <input type="file">
-                                            <span class="file-custom pt-8 pb-8 d-grid text-center">
-                                                <i class="material-symbols-outlined mat-icon"> perm_media </i>
-                                                <span>Drag here or click to upload photo.</span>
-                                            </span>
-                                        </label>
-                                    </div>
-                                </div>
-                                <div class="footer-area pt-5">
-                                    <div class="btn-area d-flex justify-content-end gap-2">
-                                        <button type="button" class="cmn-btn alt" data-bs-dismiss="modal" aria-label="Close">Cancel</button>
-                                        <button class="cmn-btn">Post</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- video popup end -->
-
-    <!-- Go Live Popup start -->
-    <div class="go-live-popup">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8">
-                    <div class="modal cmn-modal fade" id="activityMod">
-                        <div class="modal-dialog modal-dialog-centered">
-                            <div class="modal-content p-5">
-                                <div class="modal-header justify-content-center">
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
-                                        <i class="material-symbols-outlined mat-icon xxltxt"> close </i>
-                                    </button>
-                                </div>
-                                <div class="top-content pb-5">
-                                    <h5>Create post</h5>
-                                </div>
-                                <div class="mid-area">
-                                    <div class="d-flex mb-5 gap-3">
-                                        <div class="profile-box">
-                                            <a href="#"><img src="{{ asset('assets/images/add-post-avatar.png') }}" class="max-un" alt="icon"></a>
-                                        </div>
-                                        <textarea cols="10" rows="2" placeholder="Write something to Lerio.."></textarea>
-                                    </div>
-                                    <div class="file-upload">
-                                        <label>Upload attachment</label>
-                                        <label class="file mt-1">
-                                            <input type="file">
-                                            <span class="file-custom pt-8 pb-8 d-grid text-center">
-                                                <i class="material-symbols-outlined mat-icon"> perm_media </i>
-                                                <span>Drag here or click to upload photo.</span>
-                                            </span>
-                                        </label>
-                                    </div>
-                                    <div class="tooltips-area d-flex mt-3 gap-2">
-                                        <button type="button" class="btn d-center" data-bs-toggle="tooltip" data-bs-placement="top" title="Fallings/Activity">
-                                            <i class="material-symbols-outlined mat-icon"> mood </i>
-                                        </button>
-                                        <button type="button" class="btn d-center" data-bs-toggle="tooltip" data-bs-placement="top" title="Video">
-                                            <i class="material-symbols-outlined mat-icon"> movie </i>
-                                        </button>
-                                        <button type="button" class="btn d-center" data-bs-toggle="tooltip" data-bs-placement="top" title="Maps">
-                                            <i class="material-symbols-outlined mat-icon"> location_on </i>
-                                        </button>
-                                        <button type="button" class="btn d-center" data-bs-toggle="tooltip" data-bs-placement="top" title="Tag">
-                                            <i class="material-symbols-outlined mat-icon"> sell </i>
-                                        </button>
-                                    </div>
-                                </div>
-                                <div class="footer-area d-flex justify-content-between pt-5">
-                                    <div class="left-area">
-                                        <select>
-                                            <option value="1">Public</option>
-                                            <option value="2">Only Me</option>
-                                            <option value="3">Friends</option>
-                                            <option value="4">Custom</option>
-                                        </select>
-                                    </div>
-                                    <div class="btn-area d-flex justify-content-end gap-2">
-                                        <button type="button" class="cmn-btn alt" data-bs-dismiss="modal" aria-label="Close">Cancel</button>
-                                        <button class="cmn-btn">Post</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Go Live Popup end -->
-
-    <!--==================================================================-->
-    <script src="{{ asset('assets/js/plugins/jquery.min.js') }}"></script>
-    <script src="{{ asset('assets/js/bootstrap.bundle.min.js') }}"></script>
-    <script src="{{ asset('assets/js/plugins/slick.js') }}"></script>
-    <script src="{{ asset('assets/js/plugins/jquery.nice-select.min.js') }}"></script>
-    <script src="{{ asset('assets/js/plugins/plyr.js') }}"></script>
-    <script src="{{ asset('assets/js/plugins/apexcharts.js') }}"></script>
-    <script src="{{ asset('assets/js/plugins/wow.min.js') }}"></script>
-    <script src="{{ asset('assets/js/plugins/plugin.js') }}"></script>
-    <script src="{{ asset('assets/js/main.js') }}"></script>
-
-</body>
-
-</html>
+@endsection

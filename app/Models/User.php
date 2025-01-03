@@ -30,7 +30,8 @@ class User extends Authenticatable
         'is_verified',
         'password',
         'is_active',
-        'last_active_at'
+        'last_active_at',
+        'google_id'
     ];
 
     /**
