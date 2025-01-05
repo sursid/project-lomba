@@ -6,6 +6,9 @@ use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\GoogleController;
 use App\Http\Controllers\Sosmed\IndexController;
+use App\Http\Controllers\Sosmed\StoryController;
+use App\Http\Controllers\Sosmed\PostController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -29,7 +32,10 @@ Route::middleware('guest')->group(function () {
 Route::middleware(['auth', 'member'])->group(function () {
     Route::prefix('sosmed')->group(function () {
         Route::get('/', [IndexController::class, 'index']);
-        Route::post('/api/story/view', [StoryController::class, 'recordView']);
-Route::get('/api/story/{story}/viewers', [StoryController::class, 'getViewers']);
+        Route::post('/post', [PostController::class, 'store'])->name('post.store');
+        Route::post('/posts/toggle-like', [PostController::class, 'toggleLike'])->name('posts.toggle-like');
     });
+    Route::post('/api/story/view', [StoryController::class, 'recordView']);
+    Route::get('/api/story/{story}/viewers', [StoryController::class, 'getViewers']);
+    Route::post('/logout', [IndexController::class, 'logout'])->name('logout');
 });

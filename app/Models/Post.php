@@ -42,4 +42,11 @@ class Post extends Model
     {
         return $this->belongsTo(Group::class);
     }
+
+    public function likedUsers()
+    {
+        return $this->belongsToMany(User::class, 'likes', 'likeable_id', 'user_id')
+            ->where('likeable_type', self::class)
+            ->withPivot('created_at');
+    }
 }

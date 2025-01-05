@@ -19,6 +19,7 @@
     <meta property="og:image" content="{{ asset('assets/favicon.png') }}">
     <meta property="og:url" content="{{ url()->current() }}">
     <meta name="csrf-token" content="{{ csrf_token() }}">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
  </head>
 
 <body>
@@ -266,11 +267,14 @@
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="/sosmed/" class="mdtxt">
+                                        <a href="#" class="mdtxt" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
                                             <i class="material-symbols-outlined mat-icon"> power_settings_new </i>
                                             Sign Out
                                         </a>
-                                    </li>
+                                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                            @csrf
+                                        </form>
+                                    </li>                                                       
                                 </ul>
                                 <div class="switch-wrapper mt-4 d-flex gap-1 align-items-center">
                                     <i class="mat-icon material-symbols-outlined sun icon"> light_mode </i>
@@ -499,11 +503,14 @@
                             </a>
                         </li>
                         <li>
-                            <a href="/sosmed/" class="mdtxt">
-                                <i class="material-symbols-outlined mat-icon"> power_settings_new </i>
-                                Sign Out
-                            </a>
-                        </li>
+                            <form action="{{ route('logout') }}" method="POST" style="display: inline;">
+                                @csrf
+                                <button type="submit" class="mdtxt" style="background: none; border: none; cursor: pointer; color: inherit;">
+                                    <i class="material-symbols-outlined mat-icon"> power_settings_new </i>
+                                    Sign Out
+                                </button>
+                            </form>
+                        </li>                                               
                     </ul>
                     <div class="switch-wrapper mt-4 d-flex gap-1 align-items-center">
                         <i class="mat-icon material-symbols-outlined sun icon"> light_mode </i>
@@ -566,7 +573,7 @@
         </div>
     </div>
     @yield('content')
-    <div class="go-live-popup video-popup">
+    {{-- <div class="go-live-popup video-popup">
         <div class="container">
             <div class="row">
                 <div class="col-lg-8">
@@ -584,9 +591,9 @@
                                 <div class="mid-area">
                                     <div class="d-flex mb-5 gap-3">
                                         <div class="profile-box">
-                                            <a href="/sosmed/"><img src="{{ asset('assets/images/add-post-avatar.png') }}" class="max-un" alt="icon"></a>
+                                            <a href="/sosmed/"><img src="{{ $user->avatar }}" class="max-un" alt="icon"></a>
                                         </div>
-                                        <textarea cols="10" rows="2" placeholder="Write something to Lerio.."></textarea>
+                                        <textarea cols="10" rows="2" placeholder="Apa yang kamu pikirkan, {{ explode(' ', $user->name)[0] }}?"></textarea>
                                     </div>
                                     <div class="file-upload">
                                         <label>Upload attachment</label>
@@ -611,75 +618,301 @@
                 </div>
             </div>
         </div>
-    </div>
-    <div class="go-live-popup">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8">
-                    <div class="modal cmn-modal fade" id="activityMod">
-                        <div class="modal-dialog modal-dialog-centered">
-                            <div class="modal-content p-5">
-                                <div class="modal-header justify-content-center">
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
-                                        <i class="material-symbols-outlined mat-icon xxltxt"> close </i>
-                                    </button>
-                                </div>
+    </div> --}}
+   <!-- Modal Content -->
+<div class="go-live-popup video-popup">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8">
+                <div class="modal cmn-modal fade" id="photoVideoMod">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content p-5">
+                            <div class="modal-header justify-content-center">
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                                    <i class="material-symbols-outlined mat-icon xxltxt"> close </i>
+                                </button>
+                            </div>
+                            <form action="/sosmed/post" method="POST" enctype="multipart/form-data" id="postForm">
+                                @csrf
                                 <div class="top-content pb-5">
-                                    <h5>Create post</h5>
+                                    <h5>Add post photo/video</h5>
                                 </div>
                                 <div class="mid-area">
                                     <div class="d-flex mb-5 gap-3">
                                         <div class="profile-box">
-                                            <a href="/sosmed/"><img src="{{ asset('assets/images/add-post-avatar.png') }}" class="max-un" alt="icon"></a>
+                                            <a href="/sosmed/"><img src="{{ $user->avatar }}" class="max-un" alt="icon"></a>
                                         </div>
-                                        <textarea cols="10" rows="2" placeholder="Write something to Lerio.."></textarea>
+                                        <textarea name="content" cols="10" rows="2" placeholder="Apa yang kamu pikirkan, {{ explode(' ', $user->name)[0] }}?"></textarea>
                                     </div>
                                     <div class="file-upload">
                                         <label>Upload attachment</label>
                                         <label class="file mt-1">
-                                            <input type="file">
-                                            <span class="file-custom pt-8 pb-8 d-grid text-center">
+                                            <input type="file" id="imageInput" name="images[]" multiple accept="image/*">
+                                            <span class="file-custom pt-8 pb-8 d-grid text-center" id="dropArea">
                                                 <i class="material-symbols-outlined mat-icon"> perm_media </i>
                                                 <span>Drag here or click to upload photo.</span>
                                             </span>
                                         </label>
-                                    </div>
-                                    <div class="tooltips-area d-flex mt-3 gap-2">
-                                        <button type="button" class="btn d-center" data-bs-toggle="tooltip" data-bs-placement="top" title="Fallings/Activity">
-                                            <i class="material-symbols-outlined mat-icon"> mood </i>
-                                        </button>
-                                        <button type="button" class="btn d-center" data-bs-toggle="tooltip" data-bs-placement="top" title="Video">
-                                            <i class="material-symbols-outlined mat-icon"> movie </i>
-                                        </button>
-                                        <button type="button" class="btn d-center" data-bs-toggle="tooltip" data-bs-placement="top" title="Maps">
-                                            <i class="material-symbols-outlined mat-icon"> location_on </i>
-                                        </button>
-                                        <button type="button" class="btn d-center" data-bs-toggle="tooltip" data-bs-placement="top" title="Tag">
-                                            <i class="material-symbols-outlined mat-icon"> sell </i>
-                                        </button>
+                                        <!-- Preview Container - Hidden by default -->
+                                        <div id="imagePreviewContainer" class="image-preview-container mt-3" style="display: none;">
+                                            <div class="preview-grid">
+                                                <!-- Preview images will be added here -->
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="footer-area d-flex justify-content-between pt-5">
-                                    <div class="left-area">
-                                        <select>
-                                            <option value="1">Public</option>
-                                            <option value="2">Only Me</option>
-                                            <option value="3">Friends</option>
-                                            <option value="4">Custom</option>
-                                        </select>
-                                    </div>
+                                <div class="footer-area pt-5">
                                     <div class="btn-area d-flex justify-content-end gap-2">
                                         <button type="button" class="cmn-btn alt" data-bs-dismiss="modal" aria-label="Close">Cancel</button>
-                                        <button class="cmn-btn">Post</button>
+                                        <button type="submit" class="cmn-btn">Post</button>
                                     </div>
                                 </div>
-                            </div>
+                            </form>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+</div>
+
+<!-- CSS Styles -->
+<style>
+.image-preview-container {
+    max-height: 300px;
+    overflow-y: auto;
+    padding: 10px;
+    background: #f8f9fa;
+    border-radius: 10px;
+}
+
+.preview-grid {
+    display: grid;
+    gap: 10px;
+    width: 100%;
+}
+
+/* Mobile: 2 columns */
+@media screen and (max-width: 768px) {
+    .preview-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .preview-image-wrapper {
+        height: 120px; /* Slightly bigger for mobile 2-column */
+    }
+}
+
+/* Desktop: 3 columns */
+@media screen and (min-width: 769px) {
+    .preview-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .preview-image-wrapper {
+        height: 100px;
+    }
+}
+
+.preview-image-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+.preview-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.remove-image {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background: #ff4444;
+    color: white;
+    border-radius: 50%;
+    width: 22px;
+    height: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 14px;
+    border: 2px solid white;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    transition: all 0.2s ease;
+}
+
+.remove-image:hover {
+    background: #ff0000;
+    transform: scale(1.1);
+}
+
+.drag-over {
+    background-color: rgba(0, 0, 0, 0.05);
+    border: 2px dashed #666;
+}
+
+/* Animation for adding new images */
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.9); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+.preview-image-wrapper {
+    animation: fadeIn 0.3s ease;
+}
+</style>
+
+<!-- JavaScript -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const imageInput = document.getElementById('imageInput');
+    const previewContainer = document.getElementById('imagePreviewContainer');
+    const previewGrid = previewContainer.querySelector('.preview-grid');
+    const dropArea = document.getElementById('dropArea');
+    const form = document.getElementById('postForm');
+    
+    // Handle file input change
+    imageInput.addEventListener('change', handleFiles);
+    
+    // Prevent default drag behaviors
+    ['dragenter', 'dragover', 'dragleave', 'drop'].forEach(eventName => {
+        dropArea.addEventListener(eventName, preventDefaults, false);
+        document.body.addEventListener(eventName, preventDefaults, false);
+    });
+
+    // Handle drag enter and leave
+    ['dragenter', 'dragover'].forEach(eventName => {
+        dropArea.addEventListener(eventName, highlight, false);
+    });
+
+    ['dragleave', 'drop'].forEach(eventName => {
+        dropArea.addEventListener(eventName, unhighlight, false);
+    });
+
+    // Handle drop
+    dropArea.addEventListener('drop', handleDrop, false);
+
+    function preventDefaults(e) {
+        e.preventDefault();
+        e.stopPropagation();
+    }
+
+    function highlight(e) {
+        dropArea.classList.add('drag-over');
+    }
+
+    function unhighlight(e) {
+        dropArea.classList.remove('drag-over');
+    }
+
+    function handleDrop(e) {
+        const dt = e.dataTransfer;
+        const files = dt.files;
+        handleFiles({ target: { files } });
+    }
+    
+    function handleFiles(e) {
+        const files = Array.from(e.target.files);
+        
+        if (files.length > 0) {
+            // Show preview container when files are selected
+            previewContainer.style.display = 'block';
+            
+            files.forEach(file => {
+                if (!file.type.startsWith('image/')) {
+                    alert('Please upload only image files.');
+                    return;
+                }
+                
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    const wrapper = document.createElement('div');
+                    wrapper.className = 'preview-image-wrapper';
+                    
+                    const img = document.createElement('img');
+                    img.src = e.target.result;
+                    img.className = 'preview-image';
+                    
+                    const removeBtn = document.createElement('div');
+                    removeBtn.className = 'remove-image';
+                    removeBtn.innerHTML = '×';
+                    removeBtn.onclick = function() {
+                        wrapper.remove();
+                        updateFileInput(file);
+                        // Hide preview container if no images left
+                        if (previewGrid.children.length === 0) {
+                            previewContainer.style.display = 'none';
+                        }
+                    };
+                    
+                    wrapper.appendChild(img);
+                    wrapper.appendChild(removeBtn);
+                    previewGrid.appendChild(wrapper);
+                };
+                
+                reader.readAsDataURL(file);
+            });
+        } else {
+            // Hide preview container if no files selected
+            previewContainer.style.display = 'none';
+        }
+    }
+
+    function updateFileInput(fileToRemove) {
+        const dt = new DataTransfer();
+        const input = document.getElementById('imageInput');
+        const { files } = input;
+        
+        for (let i = 0; i < files.length; i++) {
+            const file = files[i];
+            if (file !== fileToRemove) {
+                dt.items.add(file);
+            }
+        }
+        
+        input.files = dt.files;
+    }
+
+    // Form submission handler
+    form.addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    const formData = new FormData(this);
+    
+    fetch('/sosmed/post', {
+        method: 'POST',
+        body: formData,
+        headers: {
+            'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]').content
+        }
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.success) {
+            // Close modal and reset form
+            const modal = bootstrap.Modal.getInstance(document.getElementById('photoVideoMod'));
+            modal.hide();
+            form.reset();
+            previewGrid.innerHTML = '';
+            previewContainer.style.display = 'none'; // Hide preview container after reset
+            // Optional: refresh halaman atau update timeline
+            window.location.reload();
+        } else {
+            alert(data.message || 'Error posting content. Please try again.');
+        }
+    })
+    .catch(error => {
+        console.error('Error:', error);
+        alert('Error posting content. Please try again.');
+    });
+});
+});
+</script>
     <!--==================================================================-->
     <script src="{{ asset('assets/js/plugins/jquery.min.js') }}"></script>
     <script src="{{ asset('assets/js/bootstrap.bundle.min.js') }}"></script>
