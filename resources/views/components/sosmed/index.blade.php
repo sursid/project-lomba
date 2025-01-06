@@ -452,7 +452,6 @@
                         });
                     </script>
                     <div class="post-item d-flex flex-column gap-5 gap-md-7" id="news-feed">
-                        {{-- resources/views/components/sosmed/partials/posts.blade.php --}}
                         @foreach ($posts as $post)
                             <div class="post-single-box p-3 p-sm-5">
                                 <div class="top-area pb-5">
@@ -471,36 +470,36 @@
                                         <div class="btn-group cus-dropdown">
                                             <button type="button" class="dropdown-btn" data-bs-toggle="dropdown"
                                                 aria-expanded="false">
-                                                <i class="material-symbols-outlined fs-xxl m-0"> more_horiz </i>
+                                                <i class="material-symbols-outlined fs-xxl m-0">more_horiz</i>
                                             </button>
                                             <ul class="dropdown-menu p-4 pt-2">
                                                 <li>
                                                     <a class="droplist d-flex align-items-center gap-2" href="#">
-                                                        <i class="material-symbols-outlined mat-icon"> bookmark_add </i>
+                                                        <i class="material-symbols-outlined mat-icon">bookmark_add</i>
                                                         <span>Saved Post</span>
                                                     </a>
                                                 </li>
                                                 <li>
                                                     <a class="droplist d-flex align-items-center gap-2" href="#">
-                                                        <i class="material-symbols-outlined mat-icon"> person_remove </i>
+                                                        <i class="material-symbols-outlined mat-icon">person_remove</i>
                                                         <span>Unfollow</span>
                                                     </a>
                                                 </li>
                                                 <li>
                                                     <a class="droplist d-flex align-items-center gap-2" href="#">
-                                                        <i class="material-symbols-outlined mat-icon"> hide_source </i>
+                                                        <i class="material-symbols-outlined mat-icon">hide_source</i>
                                                         <span>Hide Post</span>
                                                     </a>
                                                 </li>
                                                 <li>
                                                     <a class="droplist d-flex align-items-center gap-2" href="#">
-                                                        <i class="material-symbols-outlined mat-icon"> lock </i>
+                                                        <i class="material-symbols-outlined mat-icon">lock</i>
                                                         <span>Block</span>
                                                     </a>
                                                 </li>
                                                 <li>
                                                     <a class="droplist d-flex align-items-center gap-2" href="#">
-                                                        <i class="material-symbols-outlined mat-icon"> flag </i>
+                                                        <i class="material-symbols-outlined mat-icon">flag</i>
                                                         <span>Report Post</span>
                                                     </a>
                                                 </li>
@@ -513,44 +512,12 @@
                                         <p class="description">{{ $post->caption }}</p>
                                     </div>
 
-                                    {{-- Media Section --}}
-                                    {{-- @if ($post->media->count() > 0)
-                                        @if ($post->media->count() == 1)
-                                            <div class="post-img">
-                                                <img src="{{ asset($post->media->first()->file_path) }}" alt="image">
-                                            </div>
-                                        @elseif($post->media->count() <= 4)
-                                            <div class="post-img-grid">
-                                                @foreach ($post->media as $media)
-                                                    <div class="grid-item">
-                                                        <img src="{{ asset($media->file_path) }}" alt="image">
-                                                    </div>
-                                                @endforeach
-                                            </div>
-                                        @else
-                                            <div class="post-img-grid">
-                                                @foreach ($post->media->take(4) as $index => $media)
-                                                    <div class="grid-item {{ $index === 3 ? 'position-relative' : '' }}">
-                                                        <img src="{{ asset($media->file_path) }}" alt="image">
-                                                        @if ($index === 3)
-                                                            <div class="more-images-overlay showModal"
-                                                                data-post-id="{{ $post->id }}">
-                                                                <span>+{{ $post->media->count() - 4 }}</span>
-                                                            </div>
-                                                        @endif
-                                                    </div>
-                                                @endforeach
-                                            </div>
-                                        @endif
-                                    @endif --}}
+                                    {{-- Post Media --}}
                                     @if ($post->media->count() > 0)
-                                        {{-- Jika hanya 1 gambar --}}
                                         @if ($post->media->count() == 1)
                                             <div class="post-img">
                                                 <img src="{{ asset($post->media->first()->file_path) }}" alt="image">
                                             </div>
-
-                                            {{-- Jika 2 gambar --}}
                                         @elseif($post->media->count() == 2)
                                             <div class="post-img-grid two-images">
                                                 @foreach ($post->media as $media)
@@ -559,18 +526,14 @@
                                                     </div>
                                                 @endforeach
                                             </div>
-
-                                            {{-- Jika 3 gambar --}}
                                         @elseif($post->media->count() == 3)
                                             <div class="post-img-grid three-images">
-                                                @foreach ($post->media as $index => $media)
+                                                @foreach ($post->media as $media)
                                                     <div class="grid-item">
                                                         <img src="{{ asset($media->file_path) }}" alt="image">
                                                     </div>
                                                 @endforeach
                                             </div>
-
-                                            {{-- Jika 4 gambar --}}
                                         @elseif($post->media->count() == 4)
                                             <div class="post-img-grid four-images">
                                                 @foreach ($post->media as $media)
@@ -579,14 +542,11 @@
                                                     </div>
                                                 @endforeach
                                             </div>
-
-                                            {{-- Jika lebih dari 4 gambar --}}
                                         @else
                                             <div class="post-img-grid four-images">
                                                 @foreach ($post->media->take(4) as $index => $media)
                                                     <div class="grid-item {{ $index === 3 ? 'position-relative' : '' }}">
                                                         <img src="{{ asset($media->file_path) }}" alt="image">
-                                                        {{-- Overlay untuk sisa gambar --}}
                                                         @if ($index === 3)
                                                             <div class="more-images-overlay showModal"
                                                                 data-post-id="{{ $post->id }}">
@@ -598,22 +558,18 @@
                                             </div>
                                         @endif
                                     @endif
-
-
-
                                 </div>
 
                                 {{-- Post Stats --}}
                                 <div class="total-react-share pb-4 d-center gap-2 flex-wrap justify-content-between">
                                     <div class="friends-list d-flex gap-3 align-items-center text-center">
                                         <ul class="d-flex align-items-center justify-content-center">
-                                            @foreach ($post->likedUsers as $likedUser)
+                                            @foreach ($post->likedUsers()->latest('likes.created_at')->take(3)->get() as $user)
                                                 <li>
-                                                    <img src="{{ $likedUser->avatar }}"
-                                                        alt="{{ $likedUser->name }}'s avatar">
+                                                    <img src="{{ $user->avatar }}" alt="{{ $user->name }}'s avatar"
+                                                        class="user-avatar">
                                                 </li>
                                             @endforeach
-
                                             @if ($post->likes_count > count($post->likedUsers))
                                                 <li>
                                                     <span
@@ -623,15 +579,16 @@
                                         </ul>
                                     </div>
                                     <div class="react-list d-flex flex-wrap gap-6 align-items-center text-center">
-                                        <button class="mdtxt">{{ $post->comments_count }} Comments</button>
-                                        <button class="mdtxt">1 Shares</button>
+                                        <button class="mdtxt">{{ $post->comments->count() }} Comments</button>
+                                        <button class="mdtxt">1 Share</button>
                                     </div>
                                 </div>
 
                                 {{-- Action Buttons --}}
                                 <div
                                     class="like-comment-share py-5 d-center flex-wrap gap-3 gap-md-0 justify-content-between">
-                                    <button class="d-center gap-1 gap-sm-2 mdtxt {{ $post->is_liked ? 'liked' : '' }}"
+                                    <button
+                                        class="d-center gap-1 gap-sm-2 mdtxt like-btn {{ $post->is_liked ? 'liked' : '' }}"
                                         data-post-id="{{ $post->id }}">
                                         <span class="like-icon-container">
                                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
@@ -655,57 +612,180 @@
                                         </span>
                                         Like
                                     </button>
-                                    <button class="d-center gap-1 gap-sm-2 mdtxt">
-                                        <i class="material-symbols-outlined mat-icon"> chat </i>
+                                    <button class="d-center gap-1 gap-sm-2 mdtxt comment-btn">
+                                        <i class="material-symbols-outlined mat-icon">chat</i>
                                         Comment
                                     </button>
-                                    <button class="d-center gap-1 gap-sm-2 mdtxt">
-                                        <i class="material-symbols-outlined mat-icon"> share </i>
+                                    <button class="d-center gap-1 gap-sm-2 mdtxt share-btn">
+                                        <i class="material-symbols-outlined mat-icon">share</i>
                                         Share
                                     </button>
                                 </div>
 
-                                {{-- Comment Form --}}
-                                <form action="#">
+                                {{-- Main Comment Form --}}
+                                <form class="comment-form" id="main-comment-form-{{ $post->id }}"
+                                    data-post-id="{{ $post->id }}">
                                     <div class="d-flex mt-5 gap-3">
                                         <div class="profile-box d-none d-xxl-block">
-                                            <a href="#"><img src="{{ Auth::user()->avatar }}" class="max-un"
-                                                    alt="icon"></a>
+                                            <img src="{{ Auth::user()->avatar }}" class="max-un" alt="icon">
                                         </div>
                                         <div class="form-content input-area py-1 d-flex gap-2 align-items-center w-100">
-                                            <input placeholder="Write a comment..">
-                                            <div class="file-input d-flex gap-1 gap-md-2">
-                                                <div class="file-upload">
-                                                    <label class="file">
-                                                        <input type="file">
-                                                        <span class="file-custom border-0 d-grid text-center">
-                                                            <span class="material-symbols-outlined mat-icon m-0 xxltxt">
-                                                                gif_box </span>
-                                                        </span>
-                                                    </label>
+                                            <input type="text" name="content" class="comment-input"
+                                                placeholder="Write a comment.." required>
+                                                <div class="file-input d-flex gap-1 gap-md-2">
+                                                    <div class="file-upload" data-post-id="1">
+                                                        <div class="file-upload-wrapper position-relative">
+                                                            <input type="file" 
+                                                                   id="file-input-1" 
+                                                                   name="image" 
+                                                                   class="file-input-hidden" 
+                                                                   accept="image/*">
+                                                            <label for="file-input-1" 
+                                                                   class="file-upload-label d-block">
+                                                                <span class="file-upload-icon d-grid text-center">
+                                                                    <span class="material-symbols-outlined mat-icon m-0 xxltxt">
+                                                                        perm_media
+                                                                    </span>
+                                                                </span>
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                    <div id="image-preview-modal-1" 
+                                                         class="preview-container d-none mt-2">
+                                                        <img id="preview-img-modal-1" src="" 
+                                                             alt="Preview" class="img-fluid">
+                                                        <button type="button" class="remove-preview" 
+                                                                onclick="removePreview('modal-1')">×</button>
+                                                    </div>
                                                 </div>
-                                                <div class="file-upload">
-                                                    <label class="file">
-                                                        <input type="file">
-                                                        <span class="file-custom border-0 d-grid text-center">
-                                                            <span class="material-symbols-outlined mat-icon m-0 xxltxt">
-                                                                perm_media </span>
-                                                        </span>
-                                                    </label>
-                                                </div>
-                                                <span class="mood-area">
-                                                    <span class="material-symbols-outlined mat-icon m-0 xxltxt"> mood
-                                                    </span>
-                                                </span>
-                                            </div>
                                         </div>
                                         <div class="btn-area d-flex">
-                                            <button class="cmn-btn px-2 px-sm-5 px-lg-6">
-                                                <i class="material-symbols-outlined mat-icon m-0 fs-xxl"> near_me </i>
+                                            <button type="submit" class="cmn-btn px-2 px-sm-5 px-lg-6">
+                                                <i class="material-symbols-outlined mat-icon m-0 fs-xxl">near_me</i>
                                             </button>
                                         </div>
                                     </div>
+                                    <div id="image-preview-{{ $post->id }}" class="preview-container d-none mt-2">
+                                        <img id="preview-img-{{ $post->id }}" src="" alt="Preview"
+                                            class="img-fluid">
+                                        <button type="button" class="remove-preview"
+                                            onclick="removePreview({{ $post->id }})">×</button>
+                                    </div>
                                 </form>
+
+                                {{-- Comments Section --}}
+                                <div class="comments-area mt-5" id="comments-area-{{ $post->id }}">
+                                    @php
+                                        // Get preview comment - prioritize highest likes or latest
+                                        $previewComment = $post->comments
+                                            ->whereNull('parent_id')
+                                            ->sortByDesc(function ($comment) {
+                                                return [$comment->likes_count, $comment->created_at];
+                                            })
+                                            ->first();
+
+                                        $totalComments = $post->comments->whereNull('parent_id')->count();
+                                    @endphp
+
+                                    {{-- Show total comments count if any --}}
+                                    @if ($totalComments > 0)
+                                        <div class="total-comments mb-3">
+                                            <a href="#" class="comment-btn open-modal"
+                                                data-post-id="{{ $post->id }}">
+                                                View all {{ $totalComments }} comments
+                                            </a>
+                                        </div>
+                                    @endif
+
+                                    {{-- Show preview comment if exists --}}
+                                    @if ($previewComment)
+                                        <div class="parent-comment d-flex gap-2 gap-sm-4"
+                                            id="comment-{{ $previewComment->id }}">
+                                            <div class="avatar-item d-center align-items-baseline">
+                                                <img class="avatar-img max-un"
+                                                    src="{{ $previewComment->user->avatar ?? asset('assets/images/avatar-default.png') }}"
+                                                    alt="avatar">
+                                            </div>
+                                            <div class="info-item active">
+                                                <div
+                                                    class="top-area px-4 py-3 d-flex gap-3 align-items-start justify-content-between">
+                                                    <div class="title-area">
+                                                        <h6 class="m-0 mb-2">
+                                                            <a href="#">{{ $previewComment->user->name }}</a>
+                                                        </h6>
+                                                        <p class="mdtxt">{{ $previewComment->content }}</p>
+                                                        @if ($previewComment->image)
+                                                            <div class="comment-image-container mt-2">
+                                                                <img src="{{ asset($previewComment->image) }}"
+                                                                    alt="Comment Image" class="comment-image">
+                                                            </div>
+                                                        @endif
+                                                    </div>
+                                                    <div class="btn-group dropend cus-dropdown">
+                                                        <button type="button" class="dropdown-btn"
+                                                            data-bs-toggle="dropdown" aria-expanded="false">
+                                                            <i class="material-symbols-outlined fs-xxl m-0">more_horiz</i>
+                                                        </button>
+                                                        <ul class="dropdown-menu p-4 pt-2">
+                                                            @if (Auth::id() === $previewComment->user_id)
+                                                                <li>
+                                                                    <form
+                                                                        action="{{ route('sosmed.comments.destroy', $previewComment->id) }}"
+                                                                        method="POST" class="d-inline">
+                                                                        @csrf
+                                                                        @method('DELETE')
+                                                                        <button type="submit"
+                                                                            class="droplist d-flex align-items-center gap-2">
+                                                                            <i
+                                                                                class="material-symbols-outlined mat-icon">delete</i>
+                                                                            <span>Delete Comment</span>
+                                                                        </button>
+                                                                    </form>
+                                                                </li>
+                                                            @endif
+                                                            <li>
+                                                                <a class="droplist d-flex align-items-center gap-2"
+                                                                    href="#">
+                                                                    <i
+                                                                        class="material-symbols-outlined mat-icon">hide_source</i>
+                                                                    <span>Hide Comment</span>
+                                                                </a>
+                                                            </li>
+                                                            <li>
+                                                                <a class="droplist d-flex align-items-center gap-2"
+                                                                    href="#">
+                                                                    <i class="material-symbols-outlined mat-icon">flag</i>
+                                                                    <span>Report Comment</span>
+                                                                </a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+
+                                                <ul class="like-share d-flex gap-6 mt-2">
+                                                    <li class="d-center">
+                                                        <button
+                                                            class="mdtxt like-comment-btn {{ $previewComment->is_liked ? 'liked' : '' }}"
+                                                            data-comment-id="{{ $previewComment->id }}">
+                                                            Like <span
+                                                                class="likes-count">({{ $previewComment->likes_count }})</span>
+                                                        </button>
+                                                    </li>
+                                                    <li class="d-center">
+                                                        <button class="mdtxt reply-btn"
+                                                            data-comment-id="{{ $previewComment->id }}">
+                                                            Reply
+                                                        </button>
+                                                    </li>
+                                                    <li class="d-center">
+                                                        <span
+                                                            class="mdtxt">{{ $previewComment->created_at->diffForHumans() }}</span>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    @endif
+                                </div>
                             </div>
 
                             {{-- Image Modal --}}
@@ -727,7 +807,7 @@
                                                             class="mdtxt status">{{ $post->created_at->diffForHumans() }}</span>
                                                     </div>
                                                 </div>
-                                                <button type="button" class="modal-close">
+                                                <button type="button" id="modal-close-detail" class="modal-close">
                                                     <i class="material-symbols-outlined mat-icon xxltxt">close</i>
                                                 </button>
                                             </div>
@@ -736,14 +816,12 @@
                                             <div class="py-4">
                                                 <p class="description">{{ $post->caption }}</p>
                                             </div>
-
-                                            <!-- Grid Layout Gambar -->
                                             <div
                                                 class="post-img-grid mb-4 
-    @if (count($post->media) == 1) single-image 
-    @elseif (count($post->media) == 3) three-images-custom-modal 
-    @elseif (count($post->media) == 2) two-images 
-    @elseif (count($post->media) == 4) four-images @endif">
+                    @if (count($post->media) == 1) single-image 
+                    @elseif (count($post->media) == 3) three-images-custom-modal 
+                    @elseif (count($post->media) == 2) two-images 
+                    @elseif (count($post->media) == 4) four-images @endif">
                                                 @foreach ($post->media as $media)
                                                     <div class="grid-item">
                                                         <img src="{{ asset($media->file_path) }}" alt="image">
@@ -751,18 +829,15 @@
                                                 @endforeach
                                             </div>
 
-
-
-
-                                            {{-- Modal Post Stats --}}
                                             <div
                                                 class="total-react-share pb-4 d-center gap-2 flex-wrap justify-content-between">
                                                 <div class="friends-list d-flex gap-3 align-items-center text-center">
                                                     <ul class="d-flex align-items-center justify-content-center">
-                                                        @foreach ($post->likedUsers as $likedUser)
+                                                        @foreach ($post->likedUsers()->latest('likes.created_at')->take(3)->get() as $user)
                                                             <li>
-                                                                <img src="{{ $likedUser->avatar }}"
-                                                                    alt="{{ $likedUser->name }}'s avatar">
+                                                                <img src="{{ $user->avatar }}"
+                                                                    alt="{{ $user->name }}'s avatar"
+                                                                    class="user-avatar">
                                                             </li>
                                                         @endforeach
                                                         @if ($post->likes_count > count($post->likedUsers))
@@ -775,8 +850,9 @@
                                                 </div>
                                                 <div
                                                     class="react-list d-flex flex-wrap gap-6 align-items-center text-center">
-                                                    <button class="mdtxt">{{ $post->comments_count }} Comments</button>
-                                                    <button class="mdtxt">1 Shares</button>
+                                                    <button class="mdtxt">{{ $post->comments->count() }}
+                                                        Comments</button>
+                                                    <button class="mdtxt">1 Share</button>
                                                 </div>
                                             </div>
 
@@ -784,7 +860,7 @@
                                             <div
                                                 class="like-comment-share py-5 d-center flex-wrap gap-3 gap-md-0 justify-content-between">
                                                 <button
-                                                    class="d-center gap-1 gap-sm-2 mdtxt {{ $post->is_liked ? 'liked' : '' }}"
+                                                    class="d-center gap-1 gap-sm-2 mdtxt like-btn {{ $post->is_liked ? 'liked' : '' }}"
                                                     data-post-id="{{ $post->id }}">
                                                     <span class="like-icon-container">
                                                         <svg xmlns="http://www.w3.org/2000/svg" width="24"
@@ -808,65 +884,434 @@
                                                     </span>
                                                     Like
                                                 </button>
-                                                <button class="d-center gap-1 gap-sm-2 mdtxt">
+                                                <button class="d-center gap-1 gap-sm-2 mdtxt comment-btn">
                                                     <i class="material-symbols-outlined mat-icon">chat</i>
                                                     Comment
                                                 </button>
-                                                <button class="d-center gap-1 gap-sm-2 mdtxt">
+                                                <button class="d-center gap-1 gap-sm-2 mdtxt share-btn">
                                                     <i class="material-symbols-outlined mat-icon">share</i>
                                                     Share
                                                 </button>
                                             </div>
 
                                             {{-- Modal Comment Form --}}
-                                            <form action="#">
+                                            <form class="comment-form" id="modal-comment-form-{{ $post->id }}"
+                                                data-post-id="{{ $post->id }}">
                                                 <div class="d-flex mt-5 gap-3">
                                                     <div class="profile-box d-none d-xxl-block">
-                                                        <a href="#"><img src="{{ Auth::user()->avatar }}"
-                                                                class="max-un" alt="icon"></a>
+                                                        <img src="{{ Auth::user()->avatar }}" class="max-un"
+                                                            alt="icon">
                                                     </div>
                                                     <div
                                                         class="form-content input-area py-1 d-flex gap-2 align-items-center w-100">
-                                                        <input placeholder="Write a comment..">
+                                                        <input type="text" name="content" class="comment-input"
+                                                            placeholder="Write a comment.." required>
                                                         <div class="file-input d-flex gap-1 gap-md-2">
-                                                            <div class="file-upload">
-                                                                <label class="file">
-                                                                    <input type="file">
-                                                                    <span class="file-custom border-0 d-grid text-center">
-                                                                        <span
-                                                                            class="material-symbols-outlined mat-icon m-0 xxltxt">gif_box</span>
-                                                                    </span>
-                                                                </label>
+                                                            <div class="file-upload" data-post-id="{{ $post->id }}">
+                                                                <div class="file-upload-wrapper position-relative">
+                                                                    <input type="file"
+                                                                        id="file-input-{{ $post->id }}"
+                                                                        name="image" class="file-input-hidden"
+                                                                        accept="image/*">
+                                                                    <label for="file-input-{{ $post->id }}"
+                                                                        class="file-upload-label d-block"
+                                                                        style="cursor: pointer;">
+                                                                        <span class="file-upload-icon d-grid text-center">
+                                                                            <span
+                                                                                class="material-symbols-outlined mat-icon m-0 xxltxt"
+                                                                                style="cursor: pointer;">perm_media</span>
+                                                                        </span>
+                                                                    </label>
+                                                                </div>
                                                             </div>
-                                                            <div class="file-upload">
-                                                                <label class="file">
-                                                                    <input type="file">
-                                                                    <span class="file-custom border-0 d-grid text-center">
-                                                                        <span
-                                                                            class="material-symbols-outlined mat-icon m-0 xxltxt">perm_media</span>
-                                                                    </span>
-                                                                </label>
+                                                            <div id="image-preview-modal-{{ $post->id }}"
+                                                                class="preview-container d-none mt-2">
+                                                                <img id="preview-img-modal-{{ $post->id }}"
+                                                                    src="" alt="Preview" class="img-fluid">
+                                                                <button type="button" class="remove-preview"
+                                                                    onclick="removePreview('modal-{{ $post->id }}')">×</button>
                                                             </div>
-                                                            <span class="mood-area">
-                                                                <span
-                                                                    class="material-symbols-outlined mat-icon m-0 xxltxt">mood</span>
-                                                            </span>
                                                         </div>
+
+                                                        <style>
+                                                            .file-input-hidden {
+                                                                display: none;
+                                                            }
+
+                                                            .file-upload-label {
+                                                                cursor: pointer;
+                                                            }
+
+                                                            .file-upload-icon {
+                                                                pointer-events: none;
+                                                                /* Hapus ini karena menghalangi event click */
+                                                            }
+                                                        </style>
+
+                                                        <script>
+                                                            document.addEventListener('DOMContentLoaded', function() {
+    // Image Preview Functionality
+    function setupFileUpload(postId) {
+        // Get all necessary elements
+        const fileInput = document.getElementById(`file-input-${postId}`);
+        const previewContainer = document.getElementById(`image-preview-modal-${postId}`);
+        const previewImg = document.getElementById(`preview-img-modal-${postId}`);
+        const fileUploadLabel = document.querySelector(`label[for="file-input-${postId}"]`);
+        const mediaIcon = document.querySelector(`label[for="file-input-${postId}"] .material-symbols-outlined`);
+
+        // Only proceed if all elements exist
+        if (!fileInput || !previewContainer || !previewImg) {
+            console.warn(`One or more elements not found for post ID: ${postId}`);
+            return;
+        }
+
+        // Handle click on label
+        if (fileUploadLabel) {
+            fileUploadLabel.addEventListener('click', function(e) {
+                e.preventDefault();
+                e.stopPropagation();
+                fileInput.click();
+            });
+        }
+
+        // Handle click on media icon
+        if (mediaIcon) {
+            mediaIcon.addEventListener('click', function(e) {
+                e.preventDefault();
+                e.stopPropagation();
+                fileInput.click();
+            });
+        }
+
+        // File change handler
+        fileInput.addEventListener('change', function(event) {
+            const file = event.target.files[0];
+
+            if (!file) return;
+
+            // Validate file size (2MB limit)
+            if (file.size > 2 * 1024 * 1024) {
+                alert('File is too large. Maximum file size is 2MB.');
+                event.target.value = ''; // Clear the input
+                return;
+            }
+
+            // Validate file type
+            const validTypes = ['image/jpeg', 'image/png', 'image/gif', 'image/webp'];
+            if (!validTypes.includes(file.type)) {
+                alert('Invalid file type. Please upload an image (JPEG, PNG, GIF, or WebP).');
+                event.target.value = ''; // Clear the input
+                return;
+            }
+
+            // Clear any existing preview
+            previewImg.src = '';
+            previewContainer.classList.add('d-none');
+
+            // Read and preview the file
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                previewImg.src = e.target.result;
+                previewContainer.classList.remove('d-none');
+
+                // Hide media icon if needed
+                if (mediaIcon) {
+                    mediaIcon.style.display = 'none';
+                }
+            };
+
+            reader.onerror = function(e) {
+                console.error('FileReader error:', e);
+                alert('Error reading file. Please try again.');
+                event.target.value = '';
+            };
+
+            reader.readAsDataURL(file);
+        });
+    }
+
+    // Remove Image Preview with improved error handling
+    window.removePreview = function(modalId) {
+        try {
+            const fileInput = document.querySelector(`#file-input-${modalId.replace('modal-', '')}`);
+            const previewContainer = document.getElementById(`image-preview-modal-${modalId.replace('modal-', '')}`);
+            const previewImg = document.getElementById(`preview-img-modal-${modalId.replace('modal-', '')}`);
+            const mediaIcon = document.querySelector(`label[for="file-input-${modalId.replace('modal-', '')}"] .material-symbols-outlined`);
+
+            // Reset file input
+            if (fileInput) {
+                fileInput.value = '';
+            }
+
+            // Hide preview container
+            if (previewContainer) {
+                previewContainer.classList.add('d-none');
+            }
+
+            // Clear preview image
+            if (previewImg) {
+                previewImg.src = '';
+            }
+
+            // Show media icon again
+            if (mediaIcon) {
+                mediaIcon.style.display = '';
+            }
+        } catch (error) {
+            console.error('Error removing preview:', error);
+        }
+    };
+
+    // Initialize file uploads
+    function initializeFileUploads() {
+        try {
+            const fileUploads = document.querySelectorAll('.file-upload');
+            fileUploads.forEach(fileUpload => {
+                const postId = fileUpload.dataset.postId;
+                if (postId) {
+                    setupFileUpload(postId);
+                } else {
+                    console.warn('No post ID found for file upload element', fileUpload);
+                }
+            });
+        } catch (error) {
+            console.error('Error initializing file uploads:', error);
+        }
+    }
+
+    // Initialize CSS Styles
+    function initializeStyles() {
+        const style = document.createElement('style');
+        style.textContent = `
+            .file-input-hidden {
+                display: none;
+            }
+            .file-upload-label {
+                cursor: pointer;
+            }
+            .file-upload-icon {
+                cursor: pointer;
+                pointer-events: auto !important;
+            }
+            .preview-container {
+                position: relative;
+                margin-top: 10px;
+            }
+            .preview-container img {
+                max-width: 100%;
+                height: auto;
+                border-radius: 4px;
+            }
+            .remove-preview {
+                position: absolute;
+                top: -10px;
+                right: -10px;
+                background: #ff4444;
+                color: white;
+                border: none;
+                border-radius: 50%;
+                width: 24px;
+                height: 24px;
+                line-height: 24px;
+                text-align: center;
+                cursor: pointer;
+                padding: 0;
+                font-size: 16px;
+            }
+        `;
+        document.head.appendChild(style);
+    }
+
+    // Run initialization
+    try {
+        initializeStyles();
+        initializeFileUploads();
+    } catch (error) {
+        console.error('Error during initialization:', error);
+    }
+});
+                                                        </script>
                                                     </div>
                                                     <div class="btn-area d-flex">
-                                                        <button class="cmn-btn px-2 px-sm-5 px-lg-6">
+                                                        <button type="submit" class="cmn-btn px-2 px-sm-5 px-lg-6">
                                                             <i
                                                                 class="material-symbols-outlined mat-icon m-0 fs-xxl">near_me</i>
                                                         </button>
                                                     </div>
                                                 </div>
+                                                <div id="image-preview-modal-{{ $post->id }}"
+                                                    class="preview-container d-none mt-2">
+                                                    <img id="preview-img-modal-{{ $post->id }}" src=""
+                                                        alt="Preview" class="img-fluid">
+                                                    <button type="button" class="remove-preview"
+                                                        onclick="removePreview('modal-{{ $post->id }}')">×</button>
+                                                </div>
                                             </form>
+
+                                            {{-- Modal Comments Section --}}
+                                            <div class="comments-area mt-5" id="modal-comments-area-{{ $post->id }}">
+                                                @php
+                                                    $mainComments = $post->comments
+                                                        ->whereNull('parent_id')
+                                                        ->sortByDesc('created_at');
+                                                @endphp
+
+                                                @foreach ($mainComments as $comment)
+                                                    <div class="parent-comment d-flex gap-2 gap-sm-4"
+                                                        id="comment-{{ $comment->id }}">
+                                                        <div class="avatar-item d-center align-items-baseline">
+                                                            <img class="avatar-img max-un"
+                                                                src="{{ $comment->user->avatar ?? asset('assets/images/avatar-default.png') }}"
+                                                                alt="avatar">
+                                                        </div>
+                                                        <div class="info-item active">
+                                                            <div
+                                                                class="top-area px-4 py-3 d-flex gap-3 align-items-start justify-content-between">
+                                                                <div class="title-area">
+                                                                    <h6 class="m-0 mb-2">
+                                                                        <a href="#">{{ $comment->user->name }}</a>
+                                                                    </h6>
+                                                                    <p class="mdtxt">{{ $comment->content }}</p>
+                                                                    @if ($comment->image)
+                                                                        <div class="comment-image-container mt-2">
+                                                                            <img src="{{ asset($comment->image) }}"
+                                                                                alt="Comment Image" class="comment-image">
+                                                                        </div>
+                                                                    @endif
+                                                                </div>
+                                                                <div class="btn-group dropend cus-dropdown">
+                                                                    <button type="button" class="dropdown-btn"
+                                                                        data-bs-toggle="dropdown" aria-expanded="false">
+                                                                        <i
+                                                                            class="material-symbols-outlined fs-xxl m-0">more_horiz</i>
+                                                                    </button>
+                                                                    <ul class="dropdown-menu p-4 pt-2">
+                                                                        @if (Auth::id() === $comment->user_id)
+                                                                            <li>
+                                                                                <button
+                                                                                    class="droplist d-flex align-items-center gap-2 delete-comment-btn"
+                                                                                    data-comment-id="{{ $comment->id }}">
+                                                                                    <i
+                                                                                        class="material-symbols-outlined mat-icon">delete</i>
+                                                                                    <span>Delete Comment</span>
+                                                                                </button>
+                                                                            </li>
+                                                                        @endif
+                                                                        <li>
+                                                                            <a class="droplist d-flex align-items-center gap-2"
+                                                                                href="#">
+                                                                                <i
+                                                                                    class="material-symbols-outlined mat-icon">hide_source</i>
+                                                                                <span>Hide Comment</span>
+                                                                            </a>
+                                                                        </li>
+                                                                        <li>
+                                                                            <a class="droplist d-flex align-items-center gap-2"
+                                                                                href="#">
+                                                                                <i
+                                                                                    class="material-symbols-outlined mat-icon">flag</i>
+                                                                                <span>Report Comment</span>
+                                                                            </a>
+                                                                        </li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+
+                                                            <ul class="like-share d-flex gap-6 mt-2">
+                                                                <li class="d-center">
+                                                                    <button
+                                                                        class="mdtxt like-comment-btn {{ $comment->is_liked ? 'liked' : '' }}"
+                                                                        data-comment-id="{{ $comment->id }}">
+                                                                        Like <span
+                                                                            class="likes-count">({{ $comment->likes_count }})</span>
+                                                                    </button>
+                                                                </li>
+                                                                <li class="d-center">
+                                                                    <button class="mdtxt reply-btn"
+                                                                        data-comment-id="{{ $comment->id }}">
+                                                                        Reply
+                                                                    </button>
+                                                                </li>
+                                                                <li class="d-center">
+                                                                    <span
+                                                                        class="mdtxt">{{ $comment->created_at->diffForHumans() }}</span>
+                                                                </li>
+                                                            </ul>
+
+                                                            {{-- Reply Form --}}
+                                                            <form action="#" class="comment-form"
+                                                                id="reply-form-{{ $comment->id }}"
+                                                                data-parent-comment-id="{{ $comment->id }}"
+                                                                style="display: none;">
+                                                                <div class="d-flex gap-3">
+                                                                    <input type="text" name="reply_content"
+                                                                        placeholder="Write a reply.."
+                                                                        class="form-control py-3" required>
+                                                                    <button type="submit"
+                                                                        class="cmn-btn px-2 px-sm-5 px-lg-6">
+                                                                        <i
+                                                                            class="material-symbols-outlined mat-icon m-0 fs-xxl">near_me</i>
+                                                                    </button>
+                                                                </div>
+                                                            </form><br>
+
+                                                            {{-- Replies --}}
+                                                            @if ($comment->replies->count() > 0)
+                                                                <div class="replies-container ml-4 mt-3">
+                                                                    @foreach ($comment->replies->sortBy('created_at') as $reply)
+                                                                        <div
+                                                                            class="reply-comment d-flex gap-2 gap-sm-4 mt-3">
+                                                                            <div
+                                                                                class="avatar-item d-center align-items-baseline">
+                                                                                <img class="avatar-img max-un"
+                                                                                    src="{{ $reply->user->avatar ?? asset('assets/images/avatar-default.png') }}"
+                                                                                    alt="avatar">
+                                                                            </div>
+                                                                            <div class="info-item">
+                                                                                <div class="top-area px-4 py-3">
+                                                                                    <h6 class="m-0 mb-2">
+                                                                                        <a
+                                                                                            href="#">{{ $reply->user->name }}</a>
+                                                                                    </h6>
+                                                                                    <p class="mdtxt">
+                                                                                        {{ $reply->content }}</p>
+                                                                                </div>
+                                                                                <ul class="like-share d-flex gap-6 mt-2">
+                                                                                    <li class="d-center">
+                                                                                        <button
+                                                                                            class="mdtxt like-reply-btn {{ $reply->is_liked ? 'liked' : '' }}"
+                                                                                            data-reply-id="{{ $reply->id }}">
+                                                                                            Like <span
+                                                                                                class="likes-count">({{ $reply->likes_count }})</span>
+                                                                                        </button>
+                                                                                    </li>
+                                                                                    <li class="d-center">
+                                                                                        <span
+                                                                                            class="mdtxt">{{ $reply->created_at->diffForHumans() }}</span>
+                                                                                    </li>
+                                                                                    @if (Auth::id() === $reply->user_id)
+                                                                                        <li class="d-center">
+                                                                                            <button
+                                                                                                class="mdtxt delete-reply-btn"
+                                                                                                data-reply-id="{{ $reply->id }}">
+                                                                                                Delete
+                                                                                            </button>
+                                                                                        </li>
+                                                                                    @endif
+                                                                                </ul><br>
+                                                                            </div>
+                                                                        </div>
+                                                                    @endforeach
+                                                                </div>
+                                                            @endif
+                                                        </div>
+                                                    </div>
+                                                @endforeach
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-
-
                         @endforeach
 
                         @if ($posts->hasMorePages())
@@ -875,6 +1320,32 @@
                             </div>
                         @endif
                         <style>
+                            /* Styling untuk preview image */
+                            .preview-container {
+                                position: relative;
+                                width: 100%;
+                                max-width: 200px;
+                                /* Ukuran maksimal gambar preview */
+                                margin-top: 10px;
+                                display: none;
+                                /* Secara default, preview tersembunyi */
+                                border-radius: 8px;
+                                overflow: hidden;
+                            }
+
+                            .preview-container img {
+                                width: 100%;
+                                height: auto;
+                                object-fit: cover;
+                                border-radius: 8px;
+                                box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+                            }
+
+                            /* Menampilkan preview saat ada gambar */
+                            .preview-container.d-block {
+                                display: block;
+                            }
+
                             .more-images-overlay {
                                 position: absolute;
                                 top: 0;
@@ -983,8 +1454,10 @@
                             /* Gambar dalam grid */
                             .grid-item img {
                                 width: 100%;
+                                /* Gambar mengikuti lebar container */
                                 height: 100%;
                                 object-fit: cover;
+                                /* Agar gambar tetap proporsional */
                                 border-radius: 8px;
                             }
 
@@ -999,27 +1472,86 @@
                                 z-index: 2147483647;
                                 background: rgba(0, 0, 0, 0.7);
                                 /* Transparansi latar belakang */
+                                overflow: hidden;
+                                /* Pastikan tidak ada overflow pada modal */
                             }
+
+                            /* Tombol close modal - perbaikan */
+.custom-modal .modal-close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: rgba(0, 0, 0, 0.5);
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    color: white;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2147483649; /* Pastikan ini paling atas */
+    padding: 0;
+    transition: all 0.3s ease;
+}
+
+/* Hover effect untuk tombol close */
+.custom-modal .modal-close:hover {
+    background: rgba(0, 0, 0, 0.7);
+    transform: scale(1.1);
+}
+
+/* Icon di dalam tombol close */
+.custom-modal .modal-close i {
+    font-size: 24px;
+    pointer-events: none; /* Pastikan icon tidak menghalangi click */
+}
+
+/* Pastikan modal overlay tidak menghalangi */
+.custom-modal .modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 2147483646;
+}
+
+/* Pastikan modal content tidak menghalangi */
+.custom-modal .modal-content {
+    z-index: 2147483647;
+}
+
 
                             /* Konten modal */
                             .custom-modal .modal-content {
-                                position: fixed;
+                                position: absolute;
+                                /* Gunakan absolute agar modal konten selalu di tengah */
                                 top: 50%;
                                 left: 50%;
                                 transform: translate(-50%, -50%);
-                                width: 90%;
-                                max-width: 1200px;
+                                width: 80%;
+                                /* Modal dan konten modal memiliki lebar yang sama */
+                                max-width: 800px;
                                 /* Maksimal lebar modal */
-                                max-height: 90vh;
+                                height: auto;
+                                /* Tinggi otomatis sesuai konten */
+                                max-height: 90%;
+                                /* Maksimal tinggi modal 90% dari viewport */
                                 overflow-y: auto;
+                                /* Aktifkan scroll vertikal jika konten melebihi tinggi */
                                 border-radius: 10px;
-                                /* Tambahan untuk memastikan konten selalu terpusat */
-                                display: flex;
-                                flex-direction: column;
-                                align-items: center;
-                                justify-content: center;
+                                /* Rounded corner untuk modal */
+                                background: #212f48;
+                                /* Background solid */
                                 box-sizing: border-box;
-                                /* Pastikan padding dan border termasuk dalam ukuran */
+                                /* Padding termasuk dalam lebar */
+                                padding: 20px;
+                                /* Beri padding agar konten tidak menempel */
+                                z-index: 999999999999;
+                                /* Pastikan modal berada di atas */
                             }
 
                             /* Tombol close modal */
@@ -1030,54 +1562,51 @@
                                 background: none;
                                 border: none;
                                 font-size: 24px;
+                                color: white;
                                 cursor: pointer;
                                 z-index: 2147483648;
                             }
 
-                            /* Responsif untuk semua grid */
+                            /* Scrollbar untuk modal content */
+                            .custom-modal .modal-content::-webkit-scrollbar {
+                                width: 8px;
+                            }
+
+                            .custom-modal .modal-content::-webkit-scrollbar-thumb {
+                                background: rgba(255, 255, 255, 0.3);
+                                border-radius: 4px;
+                            }
+
+                            .custom-modal .modal-content::-webkit-scrollbar-thumb:hover {
+                                background: rgba(255, 255, 255, 0.5);
+                            }
+
+                            /* Responsif untuk layar kecil */
                             @media (max-width: 768px) {
-
-                                .post-img-grid,
-                                .custom-modal .post-img-grid {
-                                    grid-template-columns: 1fr 1fr;
-                                    /* Dua kolom pada mobile */
-                                }
-
-                                /* Jika jumlah gambar ganjil, gambar terakhir full width */
-                                .post-img-grid .grid-item:last-child:nth-child(odd),
-                                .custom-modal .post-img-grid .grid-item:last-child:nth-child(odd) {
-                                    grid-column: 1 / -1;
-                                    /* Full width */
+                                .custom-modal .modal-content {
+                                    width: 90%;
+                                    /* Lebar modal pada perangkat kecil */
+                                    max-width: 100%;
+                                    /* Maksimal 100% lebar */
+                                    max-height: 90%;
+                                    /* Maksimal tinggi modal */
                                 }
 
                                 .grid-item img {
                                     height: auto;
-                                    /* Sesuaikan tinggi pada perangkat kecil */
+                                    /* Sesuaikan tinggi gambar pada perangkat kecil */
                                 }
                             }
                         </style>
-
-
-
-
-
-
                         <script>
                             document.addEventListener('DOMContentLoaded', function() {
                                 // Function to manage z-index of elements behind modal
                                 function manageModalLayering() {
                                     // Select elements to adjust z-index
                                     const elementsToAdjust = [
-                                        // Specific column selector
                                         ...document.querySelectorAll('.col-xxl-3.col-xl-3.col-lg-4.col-6.cus-z2'),
-
-                                        // All headers
                                         ...document.querySelectorAll('header'),
-
-                                        // All navbars
                                         ...document.querySelectorAll('nav'),
-
-                                        // Additional selectors if needed
                                         ...document.querySelectorAll('.header-section'),
                                         ...document.querySelectorAll('.header-menu'),
                                         ...document.querySelectorAll('.header-fixed')
@@ -1086,19 +1615,15 @@
                                     // Find all potential modal triggers
                                     function findModalTriggers() {
                                         const triggers = [];
-
-                                        // Collect all potential triggers across different sections
                                         const postSingleBoxes = document.querySelectorAll('.post-single-box');
 
                                         postSingleBoxes.forEach(postBox => {
-                                            // Triggers from action buttons
+                                            // Action buttons (comment, like, etc)
                                             const actionButtons = postBox.querySelectorAll('.like-comment-share button');
                                             actionButtons.forEach(button => {
-                                                // Check if button contains chat icon
                                                 const hasChatIcon = button.querySelector(
                                                         '.material-symbols-outlined.mat-icon')?.textContent.trim() ===
                                                     'chat';
-
                                                 if (hasChatIcon) {
                                                     const postId = postBox.querySelector('[data-post-id]')
                                                         ?.getAttribute('data-post-id');
@@ -1109,10 +1634,9 @@
                                                 }
                                             });
 
-                                            // Triggers from comment section
+                                            // Comment section triggers
                                             const commentSection = postBox.querySelector('.form-content');
                                             if (commentSection) {
-                                                // Add triggers for file uploads and mood area
                                                 const fileUploads = commentSection.querySelectorAll('.file-upload');
                                                 const moodArea = commentSection.querySelector('.mood-area');
                                                 const commentInput = commentSection.querySelector('input');
@@ -1129,7 +1653,17 @@
                                                 });
                                             }
 
-                                            // Existing showModal triggers
+                                            // View all comments triggers
+                                            const viewAllCommentsLinks = postBox.querySelectorAll(
+                                                '.total-comments .comment-btn');
+                                            viewAllCommentsLinks.forEach(link => {
+                                                const postId = link.getAttribute('data-post-id');
+                                                if (postId) {
+                                                    triggers.push(link);
+                                                }
+                                            });
+
+                                            // Existing modal triggers
                                             const showModalTriggers = postBox.querySelectorAll('.showModal');
                                             showModalTriggers.forEach(trigger => {
                                                 triggers.push(trigger);
@@ -1139,84 +1673,112 @@
                                         return triggers;
                                     }
 
-                                    // Function to lower z-index when modal opens
+                                    // Modal z-index management
                                     function onModalOpen() {
                                         elementsToAdjust.forEach(element => {
-                                            // Store original z-index before changing
                                             element.setAttribute('data-original-zindex', element.style.zIndex || '');
                                             element.style.zIndex = '-1';
                                         });
 
-                                        // Ensure navbar is at the bottom
                                         const navbars = document.querySelectorAll('nav');
                                         navbars.forEach(nav => {
                                             nav.style.zIndex = '-1';
                                         });
                                     }
 
-                                    // Function to restore z-index when modal closes
                                     function onModalClose() {
                                         elementsToAdjust.forEach(element => {
-                                            // Restore original z-index or default to '1'
                                             const originalZIndex = element.getAttribute('data-original-zindex');
                                             element.style.zIndex = originalZIndex || '1';
                                             element.removeAttribute('data-original-zindex');
                                         });
 
-                                        // Restore navbar to front
                                         const navbars = document.querySelectorAll('nav');
                                         navbars.forEach(nav => {
-                                            nav.style.zIndex = '1000'; // High z-index to ensure it's in front
+                                            nav.style.zIndex = '1000';
                                         });
                                     }
 
-                                    // Show modal function
+                                    // Show/Hide Modal Functions
                                     function showModal(triggerElement) {
-                                        // Try to find post ID
                                         const postId = triggerElement.getAttribute('data-post-id');
-
                                         if (postId) {
                                             const modal = document.getElementById('imageModal' + postId);
                                             if (modal) {
-                                                // Delay to ensure proper rendering
                                                 setTimeout(() => {
                                                     modal.style.display = 'block';
-                                                    document.body.style.overflow = 'hidden'; // Prevent scrolling
-                                                    onModalOpen(); // Adjust z-index
+                                                    document.body.style.overflow = 'hidden';
+                                                    onModalOpen();
                                                 }, 50);
                                             }
                                         }
                                     }
 
-                                    // Attach event listeners to modal triggers
+                                    function closeModal(modalElement) {
+                                        modalElement.style.display = 'none';
+                                        document.body.style.overflow = '';
+                                        onModalClose();
+                                    }
+
+                                    // Reply Form Functions
+                                    function showReplyForm(commentId) {
+                                        // Close any open reply forms first
+                                        document.querySelectorAll('.reply-form-container').forEach(container => {
+                                            if (!container.classList.contains('d-none') && container.id !==
+                                                `reply-form-${commentId}`) {
+                                                container.classList.add('d-none');
+                                            }
+                                        });
+
+                                        // Toggle the clicked reply form
+                                        const replyForm = document.getElementById(`reply-form-${commentId}`);
+                                        if (replyForm) {
+                                            replyForm.classList.toggle('d-none');
+                                            // Focus on input when shown
+                                            if (!replyForm.classList.contains('d-none')) {
+                                                const input = replyForm.querySelector('input');
+                                                if (input) input.focus();
+                                            }
+                                        }
+
+                                        // If in modal, find and toggle the modal reply form too
+                                        const modalReplyForm = document.getElementById(`modal-reply-form-${commentId}`);
+                                        if (modalReplyForm) {
+                                            modalReplyForm.classList.toggle('d-none');
+                                            if (!modalReplyForm.classList.contains('d-none')) {
+                                                const input = modalReplyForm.querySelector('input');
+                                                if (input) input.focus();
+                                            }
+                                        }
+                                    }
+
+                                    // Event Listeners
                                     function attachModalTriggers() {
                                         const modalTriggers = findModalTriggers();
-
                                         modalTriggers.forEach(trigger => {
                                             trigger.addEventListener('click', function(e) {
+                                                e.preventDefault();
                                                 showModal(this);
                                             });
                                         });
                                     }
 
-                                    // Close modal function
-                                    function closeModal(modalElement) {
-                                        modalElement.style.display = 'none';
-                                        document.body.style.overflow = ''; // Enable scrolling
-                                        onModalClose(); // Restore z-index
+                                    function attachReplyTriggers() {
+                                        document.addEventListener('click', function(e) {
+                                            if (e.target.closest('.reply-btn')) {
+                                                e.preventDefault();
+                                                const commentId = e.target.closest('.reply-btn').getAttribute('onclick')?.match(
+                                                    /\d+/)?.[0];
+                                                if (commentId) {
+                                                    showReplyForm(commentId);
+                                                }
+                                            }
+                                        });
                                     }
 
-                                    // Attach close modal event listeners
                                     function attachCloseModalListeners() {
-                                        // Close on close button click
-                                        document.querySelectorAll('.modal-close').forEach(closeBtn => {
-                                            closeBtn.addEventListener('click', function() {
-                                                const modal = this.closest('.custom-modal');
-                                                closeModal(modal);
-                                            });
-                                        });
 
-                                        // Close on overlay click
+                                        // Overlay click
                                         document.querySelectorAll('.modal-overlay').forEach(overlay => {
                                             overlay.addEventListener('click', function() {
                                                 const modal = this.closest('.custom-modal');
@@ -1224,7 +1786,7 @@
                                             });
                                         });
 
-                                        // Close on ESC key
+                                        // ESC key
                                         document.addEventListener('keydown', function(e) {
                                             if (e.key === 'Escape') {
                                                 const openModals = document.querySelectorAll(
@@ -1236,7 +1798,6 @@
                                         });
                                     }
 
-                                    // Prevent modal content from closing when clicked
                                     function preventModalContentClose() {
                                         document.querySelectorAll('.custom-modal .modal-content').forEach(modalContent => {
                                             modalContent.addEventListener('click', function(e) {
@@ -1245,18 +1806,22 @@
                                         });
                                     }
 
-                                    // Initialize all modal interactions
-                                    function initializeModalInteractions() {
+                                    // Initialize everything
+                                    function initializeAllInteractions() {
                                         attachModalTriggers();
+                                        attachReplyTriggers();
                                         attachCloseModalListeners();
                                         preventModalContentClose();
                                     }
 
+                                    // Make functions globally available
+                                    window.showReplyForm = showReplyForm;
+
                                     // Run initialization
-                                    initializeModalInteractions();
+                                    initializeAllInteractions();
                                 }
 
-                                // Run modal layering management
+                                // Start the system
                                 manageModalLayering();
                             });
                         </script>
@@ -1958,6 +2523,919 @@
                     });
                 });
             });
+        </script>
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                // Show Toast Notification
+                function showToast(message, type = 'info') {
+                    let toastContainer = document.getElementById('toast-container');
+                    if (!toastContainer) {
+                        toastContainer = document.createElement('div');
+                        toastContainer.id = 'toast-container';
+                        toastContainer.className = 'fixed top-5 right-5 z-50';
+                        document.body.appendChild(toastContainer);
+                    }
+
+                    const toast = document.createElement('div');
+                    toast.className = `mb-4 p-4 rounded-lg shadow-lg text-white 
+            ${type === 'success' ? 'bg-green-500' : 'bg-red-500'}
+            animate-slide-in-right`;
+                    toast.textContent = message;
+
+                    toastContainer.appendChild(toast);
+                    setTimeout(() => {
+                        toast.classList.add('animate-fade-out');
+                        setTimeout(() => toast.remove(), 500);
+                    }, 3000);
+                }
+
+                // Handle main comment submission
+                function initializeCommentForms() {
+                    document.querySelectorAll('.comment-form').forEach(form => {
+                        form.addEventListener('submit', async function(e) {
+                            e.preventDefault();
+
+                            const postId = this.dataset.postId;
+                            const contentInput = this.querySelector('input[name="content"]');
+                            const imageInput = this.querySelector('input[name="image"]');
+                            const submitButton = this.querySelector('button[type="submit"]');
+
+                            if (!contentInput || !contentInput.value.trim()) {
+                                showToast('Please enter a comment', 'error');
+                                return;
+                            }
+
+                            // Create FormData and append fields
+                            const formData = new FormData();
+                            formData.append('content', contentInput.value.trim());
+                            formData.append('post_id', postId);
+
+                            // Add image if present
+                            if (imageInput && imageInput.files[0]) {
+                                formData.append('image', imageInput.files[0]);
+                            }
+
+                            try {
+                                submitButton.disabled = true;
+                                const response = await fetch('/sosmed/comment', {
+                                    method: 'POST',
+                                    body: formData,
+                                    headers: {
+                                        'X-CSRF-TOKEN': document.querySelector(
+                                            'meta[name="csrf-token"]').getAttribute(
+                                            'content')
+                                    }
+                                });
+
+                                const data = await response.json();
+
+                                if (data.success) {
+                                    // Clear inputs
+                                    form.reset();
+
+                                    // Clear image preview if exists
+                                    const previewContainer = document.getElementById(
+                                        `image-preview-modal-${postId}`);
+                                    if (previewContainer) {
+                                        previewContainer.classList.add('d-none');
+                                        const previewImg = previewContainer.querySelector('img');
+                                        if (previewImg) previewImg.src = '';
+                                    }
+
+                                    // Add new comment to DOM
+                                    const commentsArea = document.querySelector(
+                                        `#modal-comments-area-${postId}`);
+                                    if (commentsArea) {
+                                        const commentHtml = createCommentHTML(data.comment);
+                                        commentsArea.insertAdjacentHTML('afterbegin', commentHtml);
+                                    }
+
+                                    showToast('Comment posted successfully!', 'success');
+                                } else {
+                                    showToast(data.message || 'Failed to post comment', 'error');
+                                }
+                            } catch (error) {
+                                console.error('Error:', error);
+                                showToast('An error occurred while posting the comment', 'error');
+                            } finally {
+                                submitButton.disabled = false;
+                            }
+                        });
+                    });
+                }
+
+                // Create comment HTML
+                function createCommentHTML(comment) {
+                    return `
+            <div class="parent-comment d-flex gap-2 gap-sm-4" id="comment-${comment.id}">
+                <div class="avatar-item d-center align-items-baseline">
+                    <img class="avatar-img max-un" 
+                         src="${comment.user.avatar || '/assets/images/avatar-default.png'}" 
+                         alt="avatar">
+                </div>
+                <div class="info-item active">
+                    <div class="top-area px-4 py-3 d-flex gap-3 align-items-start justify-content-between">
+                        <div class="title-area">
+                            <h6 class="m-0 mb-2">
+                                <a href="#">${comment.user.name}</a>
+                            </h6>
+                            <p class="mdtxt">${comment.content}</p>
+                            ${comment.image ? `
+                                                <div class="mt-2">
+                                                    <img src="${comment.image}" alt="Comment Image" class="img-fluid rounded">
+                                                </div>
+                                            ` : ''}
+                        </div>
+                        <div class="btn-group dropend cus-dropdown">
+                            <button type="button" class="dropdown-btn" data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class="material-symbols-outlined fs-xxl m-0">more_horiz</i>
+                            </button>
+                            <ul class="dropdown-menu p-4 pt-2">
+                                <li>
+                                    <button class="droplist d-flex align-items-center gap-2 delete-comment-btn" 
+                                            data-comment-id="${comment.id}">
+                                        <i class="material-symbols-outlined mat-icon">delete</i>
+                                        <span>Delete Comment</span>
+                                    </button>
+                                </li>
+                                <li>
+                                    <a class="droplist d-flex align-items-center gap-2" href="#">
+                                        <i class="material-symbols-outlined mat-icon">hide_source</i>
+                                        <span>Hide Comment</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="droplist d-flex align-items-center gap-2" href="#">
+                                        <i class="material-symbols-outlined mat-icon">flag</i>
+                                        <span>Report Comment</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <ul class="like-share d-flex gap-6 mt-2">
+                        <li class="d-center">
+                            <button class="mdtxt like-comment-btn" data-comment-id="${comment.id}">
+                                Like <span class="likes-count">(0)</span>
+                            </button>
+                        </li>
+                        <li class="d-center">
+                            <button class="mdtxt reply-btn" data-comment-id="${comment.id}">
+                                Reply
+                            </button>
+                        </li>
+                        <li class="d-center">
+                            <span class="mdtxt">Just now</span>
+                        </li>
+                    </ul>
+                    <form action="#" class="comment-form" id="reply-form-${comment.id}" data-parent-comment-id="${comment.id}" style="display: none;">
+                        <div class="d-flex gap-3">
+                            <input type="text" name="reply_content" placeholder="Write a reply.." class="form-control py-3" required autocomplete="off">
+                            <button type="submit" class="cmn-btn px-2 px-sm-5 px-lg-6">
+                                <i class="material-symbols-outlined mat-icon m-0 fs-xxl">near_me</i>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        `;
+                }
+
+                // Handle reply button clicks
+                function initializeReplyButtons() {
+                    document.addEventListener('click', function(e) {
+                        if (e.target.classList.contains('reply-btn')) {
+                            const commentId = e.target.dataset.commentId;
+                            const replyForm = document.getElementById(`reply-form-${commentId}`);
+                            if (replyForm) {
+                                replyForm.style.display = replyForm.style.display === 'none' ? 'block' : 'none';
+                            }
+                        }
+                    });
+                }
+
+                // Handle reply form submissions
+                function initializeReplyForms() {
+                    document.addEventListener('submit', function(e) {
+                        const form = e.target;
+                        if (form.classList.contains('comment-form') && form.id.startsWith('reply-form-')) {
+                            e.preventDefault();
+                            const commentId = form.dataset.parentCommentId;
+                            const contentInput = form.querySelector('input[name="reply_content"]');
+                            const submitButton = form.querySelector('button[type="submit"]');
+
+                            if (!contentInput || !contentInput.value.trim()) {
+                                showToast('Please enter a reply', 'error');
+                                return;
+                            }
+
+                            submitButton.disabled = true;
+                            const formData = new FormData();
+                            formData.append('content', contentInput.value.trim());
+
+                            fetch(`/sosmed/comments/${commentId}/reply`, {
+                                    method: 'POST',
+                                    body: formData,
+                                    headers: {
+                                        'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]')
+                                            .getAttribute('content')
+                                    }
+                                })
+                                .then(response => response.json())
+                                .then(data => {
+                                    if (data.success) {
+                                        form.reset();
+                                        form.style.display = 'none';
+
+                                        const parentComment = document.getElementById(
+                                            `comment-${commentId}`);
+                                        if (parentComment) {
+                                            const replyHtml = createReplyHTML(data.reply);
+                                            parentComment.insertAdjacentHTML('afterend', replyHtml);
+                                        }
+
+                                        showToast('Reply posted successfully!', 'success');
+                                    } else {
+                                        showToast(data.message || 'Failed to post reply', 'error');
+                                    }
+                                })
+                                .catch(error => {
+                                    console.error('Error:', error);
+                                    showToast('An error occurred while posting the reply', 'error');
+                                })
+                                .finally(() => {
+                                    submitButton.disabled = false;
+                                });
+                        }
+                    });
+                }
+
+                // Create reply HTML
+                function createReplyHTML(reply, commentId) {
+                    return `
+        <div class="child-comment d-flex gap-2 gap-sm-4 ms-5 mt-5" id="comment-${reply.id}">
+            <div class="avatar-item d-center align-items-baseline">
+                <img class="avatar-img max-un" 
+                     src="${reply.user.avatar || '/assets/images/avatar-default.png'}" 
+                     alt="avatar">
+            </div>
+            <div class="info-item active">
+                <div class="top-area px-4 py-3 d-flex gap-3 align-items-start justify-content-between">
+                    <div class="title-area">
+                        <h6 class="m-0 mb-2">
+                            <a href="#">${reply.user.name}</a>
+                        </h6>
+                        <p class="mdtxt">${reply.content}</p>
+                        ${reply.image ? `
+                                            <div class="mt-2">
+                                                <img src="${reply.image}" alt="Reply Image" class="img-fluid rounded">
+                                            </div>
+                                        ` : ''}
+                    </div>
+                    <div class="btn-group dropend cus-dropdown">
+                        <button type="button" class="dropdown-btn" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="material-symbols-outlined fs-xxl m-0">more_horiz</i>
+                        </button>
+                        <ul class="dropdown-menu p-4 pt-2">
+                            <li>
+                                <button class="droplist d-flex align-items-center gap-2 delete-comment-btn" 
+                                        data-comment-id="${reply.id}">
+                                    <i class="material-symbols-outlined mat-icon">delete</i>
+                                    <span>Delete Reply</span>
+                                </button>
+                            </li>
+                            <li>
+                                <a class="droplist d-flex align-items-center gap-2" href="#">
+                                    <i class="material-symbols-outlined mat-icon">hide_source</i>
+                                    <span>Hide Reply</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="droplist d-flex align-items-center gap-2" href="#">
+                                    <i class="material-symbols-outlined mat-icon">flag</i>
+                                    <span>Report Reply</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <ul class="like-share d-flex gap-6 mt-2">
+                    <li class="d-center">
+                        <button class="mdtxt like-comment-btn" data-comment-id="${reply.id}">
+                            Like <span class="likes-count">(${reply.likes_count || 0})</span>
+                        </button>
+                    </li>
+                    <li class="d-center">
+                        <span class="mdtxt">${reply.created_at}</span>
+                    </li>
+                </ul>
+                <br>
+            </div>
+        </div>
+    `;
+                }
+
+                // Handle comment/reply likes
+                function initializeLikeButtons() {
+                    document.addEventListener('click', async function(e) {
+                        if (e.target.classList.contains('like-comment-btn')) {
+                            const commentId = e.target.dataset.commentId;
+                            try {
+                                const response = await fetch(
+                                    `/sosmed/comments/${commentId}/toggle-comment-like`, {
+                                        method: 'POST',
+                                        headers: {
+                                            'X-CSRF-TOKEN': document.querySelector(
+                                                'meta[name="csrf-token"]').content,
+                                            'Accept': 'application/json'
+                                        }
+                                    });
+
+                                const data = await response.json();
+                                if (data.success) {
+                                    const allLikeButtons = document.querySelectorAll(
+                                        `.like-comment-btn[data-comment-id="${commentId}"]`);
+                                    allLikeButtons.forEach(button => {
+                                        const likesCount = button.querySelector('.likes-count');
+                                        likesCount.textContent = `(${data.likesCount})`;
+                                        if (data.isLiked) {
+                                            button.classList.add('liked');
+                                        } else {
+                                            button.classList.remove('liked');
+                                        }
+                                    });
+                                }
+                            } catch (error) {
+                                console.error('Error:', error);
+                                showToast('Failed to update like status', 'error');
+                            }
+                        }
+                    });
+                }
+
+                // Handle comment/reply deletion
+                function initializeDeleteButtons() {
+                    document.addEventListener('click', async function(e) {
+                        const deleteButton = e.target.closest('.delete-comment-btn');
+                        if (deleteButton) {
+                            const commentId = deleteButton.dataset.commentId;
+                            if (!confirm('Are you sure you want to delete this comment?')) return;
+
+                            try {
+                                const response = await fetch(`/sosmed/comments/${commentId}`, {
+                                    method: 'DELETE',
+                                    headers: {
+                                        'X-CSRF-TOKEN': document.querySelector(
+                                            'meta[name="csrf-token"]').content,
+                                        'Accept': 'application/json'
+                                    }
+                                });
+
+                                const data = await response.json();
+                                if (data.success) {
+                                    const commentElement = document.getElementById(`comment-${commentId}`);
+                                    if (commentElement) {
+                                        commentElement.remove();
+                                        showToast('Comment deleted successfully', 'success');
+                                    }
+                                } else {
+                                    showToast(data.message || 'Failed to delete comment', 'error');
+                                }
+                            } catch (error) {
+                                console.error('Error:', error);
+                                showToast('An error occurred while deleting the comment', 'error');
+                            }
+                        }
+                    });
+                }
+
+                // Image Preview Functionality
+                function initializeImagePreview() {
+                    // Make both label and icon clickable
+                    document.querySelectorAll('.file-upload-label, .material-symbols-outlined.mat-icon').forEach(
+                        element => {
+                            element.addEventListener('click', function(e) {
+                                e.preventDefault();
+                                e.stopPropagation();
+
+                                // Find the closest file input
+                                const fileUpload = this.closest('.file-upload');
+                                if (!fileUpload) return;
+
+                                const fileInput = fileUpload.querySelector('input[type="file"]');
+                                if (fileInput) {
+                                    fileInput.click();
+                                }
+                            });
+                        });
+
+                    // Handle file input change
+                    document.querySelectorAll('input[type="file"][name="image"]').forEach(input => {
+                        input.addEventListener('change', function(event) {
+                            const fileUpload = this.closest('.file-upload');
+                            if (!fileUpload) return;
+
+                            const postId = fileUpload.dataset.postId;
+                            const previewContainer = document.getElementById(
+                                `image-preview-modal-${postId}`);
+                            const previewImg = document.getElementById(`preview-img-modal-${postId}`);
+                            const permMediaSpan = fileUpload.querySelector(
+                                '.material-symbols-outlined.mat-icon');
+
+                            if (this.files && this.files[0]) {
+                                // Validate file size (2MB limit)
+                                if (this.files[0].size > 2 * 1024 * 1024) {
+                                    showToast('File is too large. Maximum file size is 2MB.', 'error');
+                                    this.value = '';
+                                    return;
+                                }
+
+                                // Validate file type
+                                const validTypes = ['image/jpeg', 'image/png', 'image/gif',
+                                    'image/webp'
+                                ];
+                                if (!validTypes.includes(this.files[0].type)) {
+                                    showToast(
+                                        'Invalid file type. Please upload an image (JPEG, PNG, GIF, or WebP).',
+                                        'error');
+                                    this.value = '';
+                                    return;
+                                }
+
+                                const reader = new FileReader();
+                                reader.onload = function(e) {
+                                    if (previewContainer && previewImg) {
+                                        previewImg.src = e.target.result;
+                                        previewContainer.classList.remove('d-none');
+                                    }
+                                    if (permMediaSpan) {
+                                        permMediaSpan.style.display = 'none';
+                                    }
+                                };
+                                reader.readAsDataURL(this.files[0]);
+                            }
+                        });
+                    });
+                }
+
+                // Remove Image Preview
+                window.removePreview = function(modalId) {
+                    const previewContainer = document.getElementById(`image-preview-modal-${modalId}`);
+                    const fileInput = document.querySelector(`input[name="image"][data-post-id="${modalId}"]`) ||
+                        document.querySelector(`input[name="image"].comment-image`);
+                    const permMediaSpan = document.querySelector(
+                        '.file-upload .material-symbols-outlined.mat-icon');
+
+                    if (previewContainer) {
+                        previewContainer.classList.add('d-none');
+                        const previewImg = previewContainer.querySelector('img');
+                        if (previewImg) previewImg.src = '';
+                    }
+                    if (fileInput) {
+                        fileInput.value = '';
+                    }
+                    if (permMediaSpan) {
+                        permMediaSpan.style.display = '';
+                    }
+                };
+
+                // Add custom styles for animations
+                const style = document.createElement('style');
+                style.textContent = `
+        @keyframes slide-in-right {
+            from { transform: translateX(100%); opacity: 0; }
+            to { transform: translateX(0); opacity: 1; }
+        }
+        @keyframes fade-out {
+            from { opacity: 1; }
+            to { opacity: 0; }
+        }
+        .animate-slide-in-right {
+            animation: slide-in-right 0.5s ease-out;
+        }
+        .animate-fade-out {
+            animation: fade-out 0.5s ease-out;
+        }
+    `;
+                document.head.appendChild(style);
+
+                // Initialize all functionality
+                function initializeAll() {
+                    initializeCommentForms();
+                    initializeReplyButtons();
+                    initializeReplyForms();
+                    initializeLikeButtons();
+                    initializeDeleteButtons();
+                    initializeImagePreview();
+                }
+
+                // Run initialization
+                initializeAll();
+            });
+        </script>
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                let replyFormCounter = 0;
+
+                // Function untuk membuat form reply dengan ID unik
+                function createReplyForm(commentId) {
+                    replyFormCounter++;
+                    return `
+            <form action="#" class="comment-form" id="reply-form-${replyFormCounter}" data-comment-id="${commentId}">
+    <div class="d-flex gap-3">
+        <input placeholder="Write a comment.." class="py-3">
+        <button class="cmn-btn px-2 px-sm-5 px-lg-6">
+            <i class="material-symbols-outlined mat-icon m-0 fs-xxl">near_me</i>
+        </button>
+    </div>
+</form>
+        `;
+                }
+
+                // Function untuk handle reply button
+                function attachReplyTriggers() {
+                    document.addEventListener('click', function(e) {
+                        const replyBtn = e.target.closest('.reply-btn');
+                        if (replyBtn) {
+                            e.preventDefault();
+                            const commentId = replyBtn.getAttribute('data-comment-id');
+                            const infoItem = replyBtn.closest('.info-item');
+                            if (infoItem) {
+                                let replyForm = infoItem.querySelector('.comment-form');
+
+                                if (!replyForm) {
+                                    const likeShare = infoItem.querySelector('.like-share');
+                                    if (likeShare) {
+                                        likeShare.insertAdjacentHTML('afterend', createReplyForm(commentId));
+                                        replyForm = infoItem.querySelector('.comment-form');
+                                    }
+                                }
+
+                                if (replyForm) {
+                                    replyForm.style.display = 'block';
+                                    const input = replyForm.querySelector('input');
+                                    if (input) input.focus();
+                                }
+                            }
+                        }
+                    });
+                }
+
+                // Function untuk handle form submission
+                function attachFormSubmitListeners() {
+                    document.addEventListener('submit', function(e) {
+                        const form = e.target.closest('.comment-form');
+                        if (form) {
+                            e.preventDefault();
+                            const input = form.querySelector('input');
+                            const content = input?.value?.trim();
+                            const commentId = form.getAttribute('data-comment-id');
+
+                            if (content && commentId) {
+                                // Submit reply to server
+                                fetch(`/sosmed/comments/${commentId}/reply`, {
+                                        method: 'POST',
+                                        headers: {
+                                            'Content-Type': 'application/json',
+                                            'X-CSRF-TOKEN': document.querySelector(
+                                                'meta[name="csrf-token"]').content
+                                        },
+                                        body: JSON.stringify({
+                                            content: content
+                                        })
+                                    })
+                                    .then(response => response.json())
+                                    .then(data => {
+                                        if (data.success) {
+                                            // Create reply HTML
+                                            const replyHtml = `
+                                <div class="reply-comment d-flex gap-2 gap-sm-4 mt-3">
+                                    <div class="avatar-item d-center align-items-baseline">
+                                        <img class="avatar-img max-un" src="${data.reply.user.avatar}" alt="avatar">
+                                    </div>
+                                    <div class="info-item">
+                                        <div class="top-area px-4 py-3">
+                                            <h6 class="m-0 mb-2">
+                                                <a href="#">${data.reply.user.name}</a>
+                                            </h6>
+                                            <p class="mdtxt">${data.reply.content}</p>
+                                        </div>
+                                        <ul class="like-share d-flex gap-6 mt-2">
+                                            <li class="d-center">
+                                                <button class="mdtxt like-comment-btn" data-comment-id="${data.reply.id}">
+                                                    Like <span class="likes-count">(0)</span>
+                                                </button>
+                                            </li>
+                                            <li class="d-center">
+                                                <span class="mdtxt">${data.reply.created_at}</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            `;
+
+                                            let repliesContainer = document.querySelector(
+                                                `#comment-${commentId} .replies-container`);
+                                            if (!repliesContainer) {
+                                                repliesContainer = document.createElement('div');
+                                                repliesContainer.className = 'replies-container ml-4 mt-3';
+                                                form.closest('.info-item').appendChild(repliesContainer);
+                                            }
+
+                                            repliesContainer.insertAdjacentHTML('beforeend', replyHtml);
+
+                                            input.value = '';
+                                            form.reset();
+                                        }
+                                    })
+                                    .catch(error => {
+                                        console.error('Error:', error);
+                                    });
+                            }
+                        }
+                    });
+                }
+
+                attachReplyTriggers();
+                attachFormSubmitListeners();
+            });
+        </script>
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                // Show Toast Notification
+                function showToast(message, type = 'info') {
+                    let toastContainer = document.getElementById('toast-container');
+                    if (!toastContainer) {
+                        toastContainer = document.createElement('div');
+                        toastContainer.id = 'toast-container';
+                        toastContainer.className = 'fixed top-5 right-5 z-50';
+                        document.body.appendChild(toastContainer);
+                    }
+
+                    const toast = document.createElement('div');
+                    toast.className = `
+            mb-4 p-4 rounded-lg shadow-lg text-white 
+            ${type === 'success' ? 'bg-green-500' : 'bg-red-500'}
+            animate-slide-in-right
+        `;
+                    toast.textContent = message;
+
+                    toastContainer.appendChild(toast);
+                    setTimeout(() => {
+                        toast.classList.add('animate-fade-out');
+                        setTimeout(() => {
+                            toast.remove();
+                        }, 500);
+                    }, 3000);
+                }
+
+                // Global function to handle comment deletion
+                function handleCommentDeletion(commentId) {
+                    const commentElement = document.getElementById(`comment-${commentId}`);
+                    if (!commentElement) return;
+
+                    const confirmDelete = confirm('Are you sure you want to delete this comment?');
+                    if (!confirmDelete) return;
+
+                    fetch(`/sosmed/comment/${commentId}`, {
+                            method: 'DELETE',
+                            headers: {
+                                'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]').getAttribute(
+                                    'content'),
+                                'Accept': 'application/json'
+                            }
+                        })
+                        .then(response => response.json())
+                        .then(data => {
+                            if (data.success) {
+                                commentElement.remove();
+                                showToast('Comment deleted successfully!', 'success');
+                            } else {
+                                showToast(data.message || 'Failed to delete comment', 'error');
+                            }
+                        })
+                        .catch(error => {
+                            console.error('Error:', error);
+                            showToast('An error occurred while deleting the comment', 'error');
+                        });
+                }
+
+                // Attach delete event listeners
+                function attachCommentDeleteListeners() {
+                    document.addEventListener('click', function(event) {
+                        const deleteButton = event.target.closest('.delete-comment-btn');
+                        if (deleteButton) {
+                            event.preventDefault();
+                            const commentId = deleteButton.dataset.commentId;
+                            handleCommentDeletion(commentId);
+                        }
+                    });
+                }
+
+                // Reply button click handler
+                function handleReplyClick(commentId) {
+                    const commentElement = document.getElementById(`comment-${commentId}`);
+                    if (!commentElement) return;
+
+                    const replyForm = commentElement.querySelector('.comment-form');
+                    if (replyForm) {
+                        replyForm.style.display = replyForm.style.display === 'none' ? 'block' : 'none';
+                    }
+                }
+
+                // Create reply element
+                function createReplyElement(reply) {
+                    const replyDiv = document.createElement('div');
+                    replyDiv.className = 'child-comment d-flex gap-2 gap-sm-4 ms-5 mt-5';
+                    replyDiv.id = `comment-${reply.id}`;
+
+                    replyDiv.innerHTML = `
+            <div class="avatar-item d-center align-items-baseline">
+                <img class="avatar-img max-un" 
+                     src="${reply.user.avatar || '/assets/images/avatar-default.png'}" 
+                     alt="avatar">
+            </div>
+            <div class="info-item active">
+                <div class="top-area px-4 py-3 d-flex gap-3 align-items-start justify-content-between">
+                    <div class="title-area">
+                        <h6 class="m-0 mb-2">
+                            <a href="#">${reply.user.name}</a>
+                        </h6>
+                        <p class="mdtxt">${reply.content}</p>
+                        ${reply.image ? `
+                                                    <div class="mt-2">
+                                                        <img src="${reply.image}" alt="Reply Image" class="reply-image max-w-full rounded">
+                                                    </div>
+                                                ` : ''}
+                    </div>
+                    <div class="btn-group dropend cus-dropdown">
+                        <button type="button" class="dropdown-btn" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="material-symbols-outlined fs-xxl m-0">more_horiz</i>
+                        </button>
+                        <ul class="dropdown-menu p-4 pt-2">
+                            <li>
+                                <button class="droplist d-flex align-items-center gap-2 delete-comment-btn" 
+                                        data-comment-id="${reply.id}">
+                                    <i class="material-symbols-outlined mat-icon">delete</i>
+                                    <span>Delete Reply</span>
+                                </button>
+                            </li>
+                            <li>
+                                <a class="droplist d-flex align-items-center gap-2" href="#">
+                                    <i class="material-symbols-outlined mat-icon">hide_source</i>
+                                    <span>Hide Reply</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="droplist d-flex align-items-center gap-2" href="#">
+                                    <i class="material-symbols-outlined mat-icon">flag</i>
+                                    <span>Report Reply</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <ul class="like-share d-flex gap-6 mt-2">
+                    <li class="d-center">
+                        <button class="mdtxt like-comment-btn" data-comment-id="${reply.id}">
+                            Like <span class="likes-count">(${reply.likes_count || 0})</span>
+                        </button>
+                    </li>
+                    <li class="d-center">
+                        <span class="mdtxt">${reply.created_at}</span>
+                    </li>
+                </ul>
+                <br>
+            </div>
+        `;
+                    return replyDiv;
+                }
+
+                // Submit reply function
+                function submitReply(form, commentId) {
+                    const formData = new FormData(form);
+                    const submitButton = form.querySelector('button[type="submit"]');
+                    const contentInput = form.querySelector('input[name="reply_content"]');
+
+                    if (!contentInput || !contentInput.value.trim()) {
+                        showToast('Please enter a reply', 'error');
+                        return;
+                    }
+
+                    // Add the content to formData with the correct name
+                    formData.append('content', contentInput.value.trim());
+
+                    submitButton.disabled = true;
+                    submitButton.classList.add('opacity-50');
+
+                    fetch(`/sosmed/comments/${commentId}/reply`, {
+                            method: 'POST',
+                            body: formData,
+                            headers: {
+                                'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]').getAttribute(
+                                    'content')
+                            }
+                        })
+                        .then(response => response.json())
+                        .then(data => {
+                            if (data.success) {
+                                // Clear form
+                                form.reset();
+                                form.style.display = 'none';
+
+                                // Add reply to DOM
+                                const parentComment = document.getElementById(`comment-${commentId}`);
+                                if (parentComment) {
+                                    const replyElement = createReplyElement(data.reply);
+                                    parentComment.after(replyElement);
+                                }
+
+                                showToast('Reply submitted successfully!', 'success');
+                            } else {
+                                showToast(data.message || 'Failed to submit reply', 'error');
+                            }
+                        })
+                        .catch(error => {
+                            console.error('Error:', error);
+                            showToast('An error occurred while submitting the reply', 'error');
+                        })
+                        .finally(() => {
+                            submitButton.disabled = false;
+                            submitButton.classList.remove('opacity-50');
+                        });
+                }
+
+                // Initialize event listeners
+                function initializeEventListeners() {
+                    // Reply button clicks
+                    document.addEventListener('click', function(event) {
+                        if (event.target.classList.contains('reply-btn')) {
+                            const commentId = event.target.dataset.commentId;
+                            handleReplyClick(commentId);
+                        }
+                    });
+
+                    // Reply form submissions
+                    document.addEventListener('submit', function(event) {
+                        const form = event.target;
+                        if (form.classList.contains('comment-form')) {
+                            event.preventDefault();
+                            const commentId = form.dataset.parentCommentId;
+                            if (commentId) {
+                                submitReply(form, commentId);
+                            }
+                        }
+                    });
+                }
+
+                // Initial setup
+                attachCommentDeleteListeners();
+                initializeEventListeners();
+
+                // Add custom styles for animations
+                const style = document.createElement('style');
+                style.textContent = `
+        @keyframes slide-in-right {
+            from { transform: translateX(100%); opacity: 0; }
+            to { transform: translateX(0); opacity: 1; }
+        }
+        @keyframes fade-out {
+            from { opacity: 1; }
+            to { opacity: 0; }
+        }
+        .animate-slide-in-right {
+            animation: slide-in-right 0.5s ease-out;
+        }
+        .animate-fade-out {
+            animation: fade-out 0.5s ease-out;
+        }
+    `;
+                document.head.appendChild(style);
+            });
+        </script>
+        <script>
+      document.addEventListener('DOMContentLoaded', () => {
+    document.addEventListener('click', (e) => {
+        const closeBtn = e.target.closest('.modal-close');
+        if (closeBtn) {
+            console.log('Tombol close diklik!');
+            
+            // Cek apakah bisa menemukan modal yang terbuka
+            const modalOpen = document.querySelector('.custom-modal[style="display: block;"]');
+            console.log('Modal yang terbuka:', modalOpen);
+            
+            if (modalOpen) {
+                console.log('Mencoba menutup modal');
+                modalOpen.style.display = 'none';
+                console.log('Style modal sekarang:', modalOpen.style.display);
+            }
+            
+            // Alternatif cara mencari modal
+            // const modalId = closeBtn.closest('.custom-modal').id;
+            // console.log('ID Modal:', modalId);
+        }
+    });
+});
         </script>
     </main>
 @endsection

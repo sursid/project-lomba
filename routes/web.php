@@ -20,6 +20,7 @@ use App\Http\Controllers\Sosmed\PostController;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
+
 Route::middleware('guest')->group(function () {
     Route::get('/register', [RegisterController::class, 'create'])->name('register');
     Route::post('/register', [RegisterController::class, 'store']);
@@ -34,6 +35,12 @@ Route::middleware(['auth', 'member'])->group(function () {
         Route::get('/', [IndexController::class, 'index']);
         Route::post('/post', [PostController::class, 'store'])->name('post.store');
         Route::post('/posts/toggle-like', [PostController::class, 'toggleLike'])->name('posts.toggle-like');
+        Route::post('/comment', [IndexController::class, 'storeComment'])->name('comment.store');
+        Route::post('/comments/{comment}/toggle-comment-like', [IndexController::class, 'toggleCommentLike'])->name('comments.toggle-like');
+        Route::post('/comments/{comment}/reply', [IndexController::class, 'reply'])->name('comments.reply');
+        Route::post('/replies/{replyId}/toggle-reply-like', [IndexController::class, 'toggleReplyLike'])->name('sosmed.replies.toggleLike');
+        Route::delete('/comments/{comment}', [IndexController::class, 'destroyComment'])->name('sosmed.comments.destroy');
+        Route::delete('/replies/{reply}', [IndexController::class, 'destroyReply'])->name('sosmed.replies.destroy');
     });
     Route::post('/api/story/view', [StoryController::class, 'recordView']);
     Route::get('/api/story/{story}/viewers', [StoryController::class, 'getViewers']);
