@@ -2387,7 +2387,7 @@ a.text-white {
 
 /*------------ footer ---------------- */
 .footer {
-  background-color: var(--Primary);
+  background-color: rgb(6, 59, 8);
   padding-top: 123px;
   margin-top: 20px;
   position: relative;
@@ -2410,8 +2410,8 @@ a.text-white {
 }
 .footer .footer-top .footer-center p {
   color: var(--White);
-  font-size: 35px;
-  line-height: 35px;
+  font-size: 64px;
+  line-height: 64px;
 }
 .footer .footer-top .footer-right {
   position: relative;

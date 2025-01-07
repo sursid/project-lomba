@@ -344,38 +344,7 @@
                                             </ul>
                                         </li>
                                         <li class="item has-child">
-                                            <a href="javascript:void(0)">Portfolio</a>
-                                            <ul class="sub-nav">
-
-                                                <li>
-                                                    <a href="portfolio-style-1">
-                                                        <span>
-                                                            Portfolio Style 1
-                                                        </span>
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a href="portfolio-style-2">
-                                                        <span>
-                                                            Portfolio Style 2
-                                                        </span>
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a href="portfolio-style-3">
-                                                        <span>
-                                                            Portfolio Style 3
-                                                        </span>
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a href="portfolio-details">
-                                                        <span>
-                                                            Portfolio Details
-                                                        </span>
-                                                    </a>
-                                                </li>
-                                            </ul>
+                                            <a href="portfolio-style-1">Portfolio</a>
                                         </li>
                                         <li class="item has-child current-menu">
                                             <a href="javascript:void(0)">Shop</a>
@@ -1839,7 +1808,7 @@
                             <div class="footer-left">
                                 <div class="logo">
                                     <a href="/">
-                                        <img src="./images/logo/logo-2.png" alt="">
+                                        <img src="./images/logo/Nusatani.png" alt="">
                                     </a>
                                 </div>
                             </div>

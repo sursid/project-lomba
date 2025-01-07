@@ -224,7 +224,7 @@
                                     <a href="#" class="icon style-circle">
                                         <i class="icon-heart111"></i>
                                     </a>
-                                    <a href="shop-products" class="icon style-circle wg-bag">
+                                    <a href="#" class="icon style-circle wg-bag">
                                         <i class="icon-basket"></i>
                                     </a>
 
@@ -356,51 +356,20 @@
                                             </ul>
                                         </li>
                                         <li class="item has-child">
-                                            <a href="javascript:void(0)">Portfolio</a>
-                                            <ul class="sub-nav">
-
-                                                <li>
-                                                    <a href="portfolio-style-1">
-                                                        <span>
-                                                            Portfolio Style 1
-                                                        </span>
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a href="portfolio-style-2">
-                                                        <span>
-                                                            Portfolio Style 2
-                                                        </span>
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a href="portfolio-style-3">
-                                                        <span>
-                                                            Portfolio Style 3
-                                                        </span>
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a href="portfolio-details">
-                                                        <span>
-                                                            Portfolio Details
-                                                        </span>
-                                                    </a>
-                                                </li>
-                                            </ul>
+                                            <a href="portfolio-style-1">Portfolio</a>
                                         </li>
                                         <li class="item has-child current-menu">
                                             <a href="javascript:void(0)">Shop</a>
                                             <ul class="sub-nav">
 
-                                                <li>
+                                                <li class="current-item">
                                                     <a href="shop-products">
                                                         <span>
                                                             Shop Products
                                                         </span>
                                                     </a>
                                                 </li>
-                                                <li class="current-item">
+                                                <li>
                                                     <a href="shop-details">
                                                         <span>
                                                             Shop Details
@@ -409,7 +378,7 @@
                                                 </li>
                                             </ul>
                                         </li>
-                                        <li class="item has-child ">
+                                        <li class="item has-child">
                                             <a href="javascript:void(0)">Services</a>
                                             <ul class="sub-nav">
                                                 <li>
@@ -474,6 +443,7 @@
                     </div>
                 </div>
             </div>
+
             <div class="fixed-header style-absolute">
                 <div class="tf-container w-1780">
                     <div class="row">
@@ -629,14 +599,14 @@
                                                 <a href="javascript:void(0)">Shop</a>
                                                 <ul class="sub-nav">
 
-                                                    <li>
+                                                    <li class="current-item">
                                                         <a href="shop-products">
                                                             <span>
                                                                 Shop Products
                                                             </span>
                                                         </a>
                                                     </li>
-                                                    <li class="current-item">
+                                                    <li>
                                                         <a href="shop-details">
                                                             <span>
                                                                 Shop Details
