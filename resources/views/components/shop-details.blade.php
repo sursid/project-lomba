@@ -79,97 +79,6 @@
             </div>
         </div><!-- /.Preloader -->
 
-        <!-- Top-bar -->
-        <div class="tf-topbar-shop">
-            <div class="tf-container w-1620">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="topbar-inner">
-                            <div class="topbar-left">
-                                <div class="icon style-circle">
-                                    <i class="fa-solid fa-bell"></i>
-                                </div>
-                                <p>
-                                    15% off when you buy online and pick up in store!
-                                </p>
-                            </div>
-                            <div class="topbar-right">
-                                <ul>
-                                    <li class="item">
-                                        <div class="icon">
-                                            <i class="fa-solid fa-location-dot"></i>
-                                        </div>
-                                        <a href="#">
-                                            Find a Store
-                                        </a>
-                                    </li>
-                                    <li class="item">
-                                        <div class="icon">
-                                            <i class="fa-solid fa-truck"></i>
-                                        </div>
-                                        <a href="#">
-                                            Order Tracking
-                                        </a>
-                                    </li>
-                                    <li class="item">
-                                        <div class="icon">
-                                            <i class="fa-solid fa-money-bill"></i>
-                                        </div>
-                                        <div class="tf-dropdown-sort tf-currencies" data-bs-toggle="dropdown"
-                                            aria-expanded="false" role="button">
-                                            <div class="btn-select">
-                                                <span class="text-sort-value">VND</span>
-                                                <div class="icon">
-                                                    <i class="fa-solid fa-chevron-down"></i>
-                                                </div>
-                                            </div>
-
-                                            <div class="dropdown-menu">
-                                                <div class="select-item">
-                                                    <span class="text-value-item active">VND</span>
-                                                </div>
-                                                <div class="select-item">
-                                                    <span class="text-value-item">USD</span>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                    </li>
-                                    <li class="item">
-                                        <div class="icon">
-                                            <i class="fa-solid fa-globe"></i>
-
-                                        </div>
-
-                                        <div class="tf-dropdown-sort tf-languages" data-bs-toggle="dropdown"
-                                            aria-expanded="false" role="button">
-                                            <div class="btn-select">
-                                                <span class="text-sort-value">English</span>
-                                                <div class="icon">
-                                                    <i class="fa-solid fa-chevron-down"></i>
-                                                </div>
-                                            </div>
-                                            <div class="dropdown-menu">
-                                                <div class="select-item">
-                                                    <span class="text-value-item active">English</span>
-                                                </div>
-                                                <div class="select-item">
-                                                    <span class="text-value-item">Spain</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="s-img-item item-1">
-                <img src="./images/item/page-title-top.png" alt="">
-            </div>
-        </div><!-- /Top-bar -->
-
         <!-- Header  -->
         <header class="tf-header-shop header style-4" id="header-main">
             <div class="tf-container w-1620">
@@ -254,24 +163,7 @@
                                 <div class="main-nav">
                                     <ul class="nav-list">
                                         <li class="item has-child ">
-                                            <a href="javascript:void(0)">Home</a>
-                                            <ul class="sub-nav">
-                                                <li class="">
-                                                    <a href="/">
-                                                        <span>
-                                                            Home 1
-                                                        </span>
-                                                    </a>
-                                                </li>
-                                                <li><a href="home-2"><span>
-                                                            Home 2
-                                                        </span>
-                                                    </a></li>
-                                                <li><a href="home-3"><span>
-                                                            Home 3
-                                                        </span>
-                                                    </a></li>
-                                            </ul>
+                                            <a href="/">Home</a>
                                         </li>
                                         <li class="item has-child">
                                             <a href="javascript:void(0)">Page</a>
@@ -460,24 +352,7 @@
                                     <div class="main-nav">
                                         <ul class="nav-list">
                                             <li class="item has-child ">
-                                                <a href="javascript:void(0)">Home</a>
-                                                <ul class="sub-nav">
-                                                    <li class="">
-                                                        <a href="/">
-                                                            <span>
-                                                                Home 1
-                                                            </span>
-                                                        </a>
-                                                    </li>
-                                                    <li><a href="home-2"><span>
-                                                                Home 2
-                                                            </span>
-                                                        </a></li>
-                                                    <li><a href="home-3"><span>
-                                                                Home 3
-                                                            </span>
-                                                        </a></li>
-                                                </ul>
+                                                <a href="/">Home</a>
                                             </li>
                                             <li class="item has-child">
                                                 <a href="javascript:void(0)">Page</a>
@@ -562,38 +437,7 @@
                                                 </ul>
                                             </li>
                                             <li class="item has-child">
-                                                <a href="javascript:void(0)">Portfolio</a>
-                                                <ul class="sub-nav">
-
-                                                    <li>
-                                                        <a href="portfolio-style-1">
-                                                            <span>
-                                                                Portfolio Style 1
-                                                            </span>
-                                                        </a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="portfolio-style-2">
-                                                            <span>
-                                                                Portfolio Style 2
-                                                            </span>
-                                                        </a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="portfolio-style-3">
-                                                            <span>
-                                                                Portfolio Style 3
-                                                            </span>
-                                                        </a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="portfolio-details">
-                                                            <span>
-                                                                Portfolio Details
-                                                            </span>
-                                                        </a>
-                                                    </li>
-                                                </ul>
+                                                <a href="portfolio-style-1">Portfolio</a>      
                                             </li>
                                             <li class="item has-child current-menu">
                                                 <a href="javascript:void(0)">Shop</a>

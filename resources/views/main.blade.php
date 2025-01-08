@@ -50,71 +50,6 @@
     <!-- Wrapper -->
     <div id="wrapper">
 
-        <!-- Top-bar -->
-        <div class="tf-topbar">
-            <div class="tf-container w-1780">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="topbar-inner">
-                            <div class="topbar-left">
-                                <span class="fs-14 font-nunito">Welcome to DonalFarm</span>
-                                <span class="fs-14 font-nunito">Agriculture & Organic Farms</span>
-                            </div>
-                            <div class="topbar-right">
-                                <ul class="contact-list">
-                                    <li class="item">
-                                        <a href="#" class="icon">
-                                            <i class="fa-solid fa-phone"></i>
-                                        </a>
-                                        <a href="#"> +1 987 654 3210 </a>
-                                    </li>
-                                    <li class="item">
-                                        <a href="#" class="icon">
-                                            <img src="./icons/mailbox.png" alt="" />
-                                        </a>
-                                        <a href="#">
-                                            Donalfarms@gmail.com
-                                        </a>
-                                    </li>
-                                    <li class="item">
-                                        <a href="#" class="icon">
-                                            <i class="fa-solid fa-location-dot"></i>
-                                        </a>
-                                        <a href="#">
-                                            Prinsengracht 250, Amsterdam
-                                            Netherlands
-                                        </a>
-                                    </li>
-                                </ul>
-                                <ul class="social-list">
-                                    <li class="item">
-                                        <a href="#">
-                                            <i class="icon-twitter"></i>
-                                        </a>
-                                    </li>
-                                    <li class="item">
-                                        <a href="#">
-                                            <i class="icon-facebook"></i>
-                                        </a>
-                                    </li>
-                                    <li class="item">
-                                        <a href="#">
-                                            <i class="icon-pinterest"></i>
-                                        </a>
-                                    </li>
-                                    <li class="item">
-                                        <a href="#">
-                                            <i class="icon-instagram2"></i>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div><!-- /.Top-bar -->
-
         <!-- Welcome -->
         <div class="box-welcome">
             <div class="tf-overlay"></div>
@@ -200,28 +135,7 @@
                                 <div class="main-nav">
                                     <ul class="nav-list">
                                         <li class="item has-child current-menu">
-                                            <a href="javascript:void(0)">Home</a>
-                                            <ul class="sub-nav">
-                                                <li class="current-item">
-                                                    <a href="index">
-                                                        <span>
-                                                            Home 1
-                                                        </span>
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a href="home-2"><span>
-                                                            Home 2
-                                                        </span>
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a href="home-3"><span>
-                                                            Home 3
-                                                        </span>
-                                                    </a>
-                                                </li>
-                                            </ul>
+                                            <a href="/">Home</a>
                                         </li>
                                         <li class="item has-child">
                                             <a href="javascript:void(0)">Page</a>
@@ -306,42 +220,7 @@
                                             </ul>
                                         </li>
                                         <li class="item has-child">
-                                            <a href="javascript:void(0)">Portfolio</a>
-                                            <ul class="sub-nav">
-
-                                                <li>
-                                                    <a href="portfolio-style-1">
-                                                        <span>
-                                                            Portfolio Style
-                                                            1
-                                                        </span>
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a href="portfolio-style-2">
-                                                        <span>
-                                                            Portfolio Style
-                                                            2
-                                                        </span>
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a href="portfolio-style-3">
-                                                        <span>
-                                                            Portfolio Style
-                                                            3
-                                                        </span>
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a href="portfolio-details">
-                                                        <span>
-                                                            Portfolio
-                                                            Details
-                                                        </span>
-                                                    </a>
-                                                </li>
-                                            </ul>
+                                            <a href="portfolio-style-1">Portfolio</a>
                                         </li>
                                         <li class="item has-child">
                                             <a href="javascript:void(0)">Shop</a>
@@ -455,21 +334,10 @@
                                     <nav id="mobile-main-nav" class="mobile-main-nav">
                                         <ul id="menu-mobile-menu" class="menu">
                                             <li class="menu-item menu-item-has-children-mobile current-nav">
-                                                <a class="item-menu-mobile current" href="javascript:void(0)">
+                                                <a class="item-menu-mobile current" href="/)">
                                                     Home
                                                     <i class="icon-arrow_down"></i>
                                                 </a>
-                                                <ul class="sub-menu-mobile">
-                                                    <li class="menu-item current">
-                                                        <a href="index">Home 1</a>
-                                                    </li>
-                                                    <li class="menu-item">
-                                                        <a href="home-2">Home 2</a>
-                                                    </li>
-                                                    <li class="menu-item">
-                                                        <a href="home-3">Home 3</a>
-                                                    </li>
-                                                </ul>
                                             </li>
                                             <li class="menu-item menu-item-has-children-mobile">
                                                 <a class="item-menu-mobile" href="javascript:void(0)">
@@ -513,27 +381,10 @@
                                                 </ul>
                                             </li>
                                             <li class="menu-item menu-item-has-children-mobile">
-                                                <a class="item-menu-mobile" href="javascript:void(0)">
+                                                <a class="item-menu-mobile" href="portfolio-style-1">
                                                     Portfolio
                                                     <i class="icon-arrow_down"></i>
                                                 </a>
-                                                <ul class="sub-menu-mobile">
-                                                    <li class="menu-item">
-                                                        <a href="portfolio-style-1">Portfolio Style
-                                                            1</a>
-                                                    </li>
-                                                    <li class="menu-item">
-                                                        <a href="portfolio-style-2">Portfolio Style
-                                                            2</a>
-                                                    </li>
-                                                    <li class="menu-item">
-                                                        <a href="portfolio-style-3">Portfolio Style
-                                                            3</a>
-                                                    </li>
-                                                    <li class="menu-item">
-                                                        <a href="portfolio-details">Portfolio Detail</a>
-                                                    </li>
-                                                </ul>
                                             </li>
                                             <li class="menu-item menu-item-has-children-mobile">
                                                 <a class="item-menu-mobile" href="javascript:void(0)">
@@ -662,28 +513,7 @@
                                     <div class="main-nav">
                                         <ul class="nav-list">
                                             <li class="item has-child current-menu">
-                                                <a href="javascript:void(0)">Home</a>
-                                                <ul class="sub-nav">
-                                                    <li class="current-item">
-                                                        <a href="index">
-                                                            <span>
-                                                                Home 1
-                                                            </span>
-                                                        </a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="home-2"><span>
-                                                                Home 2
-                                                            </span>
-                                                        </a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="home-3"><span>
-                                                                Home 3
-                                                            </span>
-                                                        </a>
-                                                    </li>
-                                                </ul>
+                                                <a href="/">Home</a>
                                             </li>
                                             <li class="item has-child">
                                                 <a href="javascript:void(0)">Page</a>
@@ -768,42 +598,7 @@
                                                 </ul>
                                             </li>
                                             <li class="item has-child">
-                                                <a href="javascript:void(0)">Portfolio</a>
-                                                <ul class="sub-nav">
-
-                                                    <li>
-                                                        <a href="portfolio-style-1">
-                                                            <span>
-                                                                Portfolio Style
-                                                                1
-                                                            </span>
-                                                        </a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="portfolio-style-2">
-                                                            <span>
-                                                                Portfolio Style
-                                                                2
-                                                            </span>
-                                                        </a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="portfolio-style-3">
-                                                            <span>
-                                                                Portfolio Style
-                                                                3
-                                                            </span>
-                                                        </a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="portfolio-details">
-                                                            <span>
-                                                                Portfolio
-                                                                Details
-                                                            </span>
-                                                        </a>
-                                                    </li>
-                                                </ul>
+                                                <a href="portfolio-style-1">Portfolio</a>
                                             </li>
                                             <li class="item has-child">
                                                 <a href="javascript:void(0)">Shop</a>
