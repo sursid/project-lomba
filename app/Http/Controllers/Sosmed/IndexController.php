@@ -14,6 +14,10 @@ use App\Models\PostMedia;
 use App\Models\Comment;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Log;
+use App\Models\Block;
+use App\Models\SavedPost;
+use App\Models\PostReport;
+use Illuminate\Support\Str;
 
 class IndexController extends Controller
 {
@@ -32,8 +36,20 @@ class IndexController extends Controller
                 return redirect()->route('login');
             }
 
-            // Query posts dengan relasi yang sudah diperbaiki
+            // Get IDs of users who are blocked by or have blocked the current user  
+            $blockedUserIds = Block::where(function ($query) use ($user) {
+                $query->where('user_id', $user->id)  // Users that the current user has blocked
+                    ->orWhere('blocked_user_id', $user->id);  // Users that have blocked the current user
+            })
+                ->get()
+                ->map(function ($block) use ($user) {
+                    return $block->user_id == $user->id ? $block->blocked_user_id : $block->user_id;
+                })
+                ->unique();
+
+            // Query posts excluding those from blocked users  
             $posts = Post::whereNull('deleted_at')
+                ->whereNotIn('user_id', $blockedUserIds)
                 ->where(function ($query) use ($user) {
                     $query->whereNull('group_id')
                         ->orWhereIn('group_id', function ($subquery) use ($user) {
@@ -43,33 +59,38 @@ class IndexController extends Controller
                         });
                 })
                 ->withCount(['comments' => function ($query) {
-                    $query->whereNull('deleted_at');  // Soft delete untuk comments
+                    $query->whereNull('deleted_at');
                 }])
-                ->withCount('likes')  // Tidak perlu soft delete untuk likes
+                ->withCount('likes')
                 ->with([
                     'user',
                     'media' => function ($query) {
                         $query->orderBy('order', 'asc');
                     },
                     'likedUsers' => function ($query) {
-                        $query->limit(3);  // Hapus soft delete untuk likes
+                        $query->limit(3);
                     },
                     'comments' => function ($query) {
-                        $query->whereNull('deleted_at')  // Soft delete untuk comments
+                        $query->whereNull('deleted_at')
                             ->with([
                                 'user',
-                                'likes.user'  // Simplified relation untuk likes
+                                'likes.user'
                             ])
-                            ->withCount('likes')  // Tidak perlu soft delete untuk likes count
+                            ->withCount('likes')
                             ->orderBy('created_at', 'desc');
                     }
                 ])
                 ->orderBy('created_at', 'desc')
                 ->paginate(10);
 
-            // Transform untuk like status
+            // Transform for like status  
+            // Transform for like status  
             $posts->through(function ($post) use ($user) {
                 $post->is_liked = $post->likes()
+                    ->where('user_id', $user->id)
+                    ->exists();
+
+                $post->is_saved = $post->saves()  // Tambah ini untuk cek status saved
                     ->where('user_id', $user->id)
                     ->exists();
 
@@ -86,20 +107,21 @@ class IndexController extends Controller
                 return $post;
             });
 
-            // Query stories tetap sama...
+            // Query stories excluding those from blocked users  
             $stories = Story::select([
                 'stories.*',
                 DB::raw(
-                    'EXISTS (
-                SELECT 1 
-                FROM story_views 
-                WHERE story_views.story_id = stories.id 
-                AND story_views.viewer_id = ?) as is_viewed'
+                    'EXISTS (  
+                    SELECT 1   
+                    FROM story_views   
+                    WHERE story_views.story_id = stories.id   
+                    AND story_views.viewer_id = ?) as is_viewed'
                 )
             ])
                 ->addBinding($user->id, 'select')
                 ->where('stories.is_active', 1)
-                ->where('stories.user_id', '!=', $user->id)
+                // Hapus baris ini: ->where('stories.user_id', '!=', $user->id)
+                ->whereNotIn('stories.user_id', $blockedUserIds)
                 ->where(function ($query) {
                     $query->whereNull('stories.expires_at')
                         ->orWhere('stories.expires_at', '>', now());
@@ -109,7 +131,7 @@ class IndexController extends Controller
                 ->with(['user'])
                 ->get();
 
-            // Handle story views
+            // Handle story views  
             if ($request->has('story_id')) {
                 $storyId = $request->input('story_id');
 
@@ -137,6 +159,7 @@ class IndexController extends Controller
             }
         }
     }
+
 
     public function storeComment(Request $request)
     {
@@ -375,6 +398,272 @@ class IndexController extends Controller
             return response()->json([
                 'success' => false,
                 'message' => 'Failed to delete reply'
+            ], 500);
+        }
+    }
+    public function blockUser(Request $request, $userId)
+    {
+        if (Auth::check()) {
+            $user = Auth::user();
+            $blockedUser = User::findOrFail($userId);
+
+            // Check if already blocked using Block model directly
+            $isBlocked = Block::where('user_id', $user->id)
+                ->where('blocked_user_id', $blockedUser->id)
+                ->exists();
+
+            if ($isBlocked) {
+                return response()->json([
+                    'code' => 400,
+                    'message' => 'User already blocked.',
+                    'status' => false
+                ]);
+            }
+
+            // Create block record
+            Block::create([
+                'user_id' => $user->id,
+                'blocked_user_id' => $blockedUser->id,
+                'reason' => $request->input('reason')
+            ]);
+
+            return response()->json([
+                'code' => 200,
+                'message' => 'User blocked successfully.',
+                'status' => true
+            ]);
+        }
+
+        return response()->json([
+            'code' => 401,
+            'message' => 'Unauthorized.',
+            'status' => false
+        ]);
+    }
+
+    public function unblockUser($userId)
+    {
+        if (Auth::check()) {
+            $user = Auth::user();
+            $blockedUser = User::findOrFail($userId);
+
+            // Check and delete block record
+            $block = Block::where('user_id', $user->id)
+                ->where('blocked_user_id', $blockedUser->id)
+                ->first();
+
+            if (!$block) {
+                return response()->json([
+                    'code' => 400,
+                    'message' => 'User not blocked previously.',
+                    'status' => false
+                ]);
+            }
+
+            $block->delete();
+
+            return response()->json([
+                'code' => 200,
+                'message' => 'User unblocked successfully.',
+                'status' => true
+            ]);
+        }
+
+        return response()->json([
+            'code' => 401,
+            'message' => 'Unauthorized.',
+            'status' => false
+        ]);
+    }
+
+    public function toggleSavePost(Post $post, Request $request)
+    {
+        try {
+            $user = Auth::user();
+            $action = $request->input('action'); // 'save' or 'unsave'
+
+            if (!in_array($action, ['save', 'unsave'])) {
+                return response()->json([
+                    'status' => false,
+                    'message' => 'Invalid action specified'
+                ], 400);
+            }
+
+            $existingSave = SavedPost::where('user_id', $user->id)
+                ->where('post_id', $post->id)
+                ->first();
+
+            if ($action === 'save') {
+                if ($existingSave) {
+                    return response()->json([
+                        'status' => false,
+                        'message' => 'Post already saved'
+                    ]);
+                }
+
+                SavedPost::create([
+                    'user_id' => $user->id,
+                    'post_id' => $post->id
+                ]);
+
+                return response()->json([
+                    'status' => true,
+                    'message' => 'Post saved successfully'
+                ]);
+            } else { // unsave
+                if (!$existingSave) {
+                    return response()->json([
+                        'status' => false,
+                        'message' => 'Post was not saved'
+                    ]);
+                }
+
+                $existingSave->delete();
+
+                return response()->json([
+                    'status' => true,
+                    'message' => 'Post unsaved successfully'
+                ]);
+            }
+        } catch (\Exception $e) {
+            Log::error('Error toggling post save status:', [
+                'message' => $e->getMessage(),
+                'trace' => $e->getTraceAsString()
+            ]);
+
+            return response()->json([
+                'status' => false,
+                'message' => 'Error processing request'
+            ], 500);
+        }
+    }
+    public function reportPost(Post $post, Request $request)
+    {
+        try {
+            $user = Auth::user();
+
+            // Check if already reported
+            $existingReport = PostReport::where('user_id', $user->id)
+                ->where('post_id', $post->id)
+                ->first();
+
+            if ($existingReport) {
+                return response()->json([
+                    'status' => false,
+                    'message' => 'You have already reported this post'
+                ]);
+            }
+
+            // Create report
+            PostReport::create([
+                'user_id' => $user->id,
+                'post_id' => $post->id,
+                'reason' => $request->input('reason'),
+                'additional_info' => $request->input('additional_info'),
+                'status' => 'pending'
+            ]);
+
+            return response()->json([
+                'status' => true,
+                'message' => 'Post reported successfully'
+            ]);
+        } catch (\Exception $e) {
+            Log::error('Error reporting post:', [
+                'message' => $e->getMessage(),
+                'trace' => $e->getTraceAsString()
+            ]);
+
+            return response()->json([
+                'status' => false,
+                'message' => 'Error reporting post'
+            ], 500);
+        }
+    }
+
+    public function destroyPost(Request $request, $postId)
+    {
+        try {
+            $post = Post::findOrFail($postId);
+
+            // Check if the authenticated user is the owner of the post
+            if ($post->user_id !== Auth::id()) {
+                return response()->json([
+                    'success' => false,
+                    'message' => 'Unauthorized to delete this post'
+                ], 403);
+            }
+
+            // Delete related media files
+            foreach ($post->media as $media) {
+                // Remove file from filesystem if needed
+                if (file_exists(public_path($media->file_path))) {
+                    unlink(public_path($media->file_path));
+                }
+                // Delete media record
+                $media->delete();
+            }
+
+            // Delete post likes
+            $post->likes()->delete();
+
+            // Delete post comments
+            $post->comments()->delete();
+
+            // Delete the post
+            $post->delete();
+
+            return response()->json([
+                'success' => true,
+                'message' => 'Post deleted successfully',
+                'post_id' => $postId
+            ]);
+        } catch (\Exception $e) {
+            Log::error('Error deleting post:', [
+                'message' => $e->getMessage(),
+                'trace' => $e->getTraceAsString()
+            ]);
+
+            return response()->json([
+                'success' => false,
+                'message' => 'Failed to delete post'
+            ], 500);
+        }
+    }
+    public function uploadStory(Request $request)
+    {
+        try {
+            $request->validate([
+                'media' => 'required|file|mimes:jpg,jpeg,png,mp4|max:20480',
+                'caption' => 'nullable|string|max:500',
+            ]);
+
+            $user = Auth::user();
+
+            $story = new Story();
+            $story->user_id = $user->id;
+            $story->type = $request->file('media')->getClientOriginalExtension() == 'mp4' ? 'video' : 'image';
+
+            $filename = time() . '_' . Str::random(10) . '.' . $request->file('media')->getClientOriginalExtension();
+            $request->file('media')->move(public_path('assets/stories'), $filename);
+            $story->media_path = '/assets/stories/' . $filename;
+
+            $story->caption = $request->input('caption');
+            $story->is_active = true;
+            $story->save();
+
+            return response()->json([
+                'success' => true,
+                'message' => 'Story uploaded successfully'
+            ]);
+        } catch (\Exception $e) {
+            Log::error('Error uploading story:', [
+                'message' => $e->getMessage(),
+                'trace' => $e->getTraceAsString()
+            ]);
+
+            return response()->json([
+                'success' => false,
+                'message' => 'Failed to upload story'
             ], 500);
         }
     }

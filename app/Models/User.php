@@ -140,4 +140,15 @@ class User extends Authenticatable
     {
         return $this->role === 'admin';
     }
+
+    public function blockedUsers()
+    {
+        return $this->belongsToMany(User::class, 'blocks', 'user_id', 'blocked_user_id')
+            ->withPivot('reason');
+    }
+
+    public function savedPosts()
+    {
+        return $this->hasMany(SavedPost::class);
+    }
 }

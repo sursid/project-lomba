@@ -53,17 +53,17 @@ class Post extends Model
     public function comments()
     {
         return $this->hasMany(Comment::class)
-                    ->whereNull('deleted_at')
-                    ->whereRaw('parent_id IS NULL')  // Mengambil parent comments saja
-                    ->orderBy('created_at', 'desc')
-                    ->with(['user', 'replies.user', 'likes']); // Pre-load relasi yang diperlukan
+            ->whereNull('deleted_at')
+            ->whereRaw('parent_id IS NULL')  // Mengambil parent comments saja
+            ->orderBy('created_at', 'desc')
+            ->with(['user', 'replies.user', 'likes']); // Pre-load relasi yang diperlukan
     }
 
     // Relasi untuk semua comments termasuk replies
     public function allComments()
     {
         return $this->hasMany(Comment::class)
-                    ->whereNull('deleted_at');
+            ->whereNull('deleted_at');
     }
 
     // Relasi likes (polymorphic)
@@ -80,17 +80,17 @@ class Post extends Model
     public function likedUsers()
     {
         return $this->belongsToMany(User::class, 'likes', 'likeable_id', 'user_id')
-                    ->where('likeable_type', self::class)
-                    ->withPivot('created_at');
+            ->where('likeable_type', self::class)
+            ->withPivot('created_at');
     }
 
     // Query scope untuk post dengan comments dan likes count
     public function scopeWithCommentsAndLikes($query)
     {
-        return $query->withCount(['comments' => function($query) {
-                    $query->whereNull('deleted_at');
-                }])
-                ->withCount('likes');
+        return $query->withCount(['comments' => function ($query) {
+            $query->whereNull('deleted_at');
+        }])
+            ->withCount('likes');
     }
 
     // Query scope untuk post aktif
@@ -103,8 +103,8 @@ class Post extends Model
     public function isLikedBy($userId)
     {
         return $this->likes()
-                    ->where('user_id', $userId)
-                    ->exists();
+            ->where('user_id', $userId)
+            ->exists();
     }
 
     // Helper method untuk get likes count
@@ -117,5 +117,10 @@ class Post extends Model
     public function getCommentsCountAttribute()
     {
         return $this->allComments()->count();
+    }
+    // Di model Post
+    public function saves()
+    {
+        return $this->hasMany(SavedPost::class);
     }
 }

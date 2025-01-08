@@ -104,8 +104,8 @@ class PostController extends Controller
         }
 
         $request->validate([
-            'content' => 'required|string', // Hapus max:1000, hanya required dan string
-            'images.*' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048' // Masih ada limit untuk ukuran gambar
+            'content' => 'required|string',
+            'files.*' => 'nullable|file|mimes:jpeg,png,jpg,gif,mp4,mkv,avi|max:102400' // 100MB limit
         ]);
 
         try {
@@ -119,23 +119,35 @@ class PostController extends Controller
                 'comments_count' => 0
             ]);
 
-            // Handle multiple images
-            if ($request->hasFile('images')) {
-                foreach ($request->file('images') as $index => $image) {
-                    // Get file extension
-                    $extension = $image->getClientOriginalExtension();
+            // Handle files (images and videos)
+            if ($request->hasFile('files')) {
+                foreach ($request->file('files') as $index => $file) {
+                    // Get file extension and mime type
+                    $extension = $file->getClientOriginalExtension();
+                    $mimeType = $file->getMimeType();
+
+                    // Determine file type
+                    $type = str_starts_with($mimeType, 'video/') ? 'video' : 'image';
 
                     // Generate unique filename
-                    $filename = 'post_' . time() . '_' . ($index + 1) . '.' . $extension;
+                    $filename = $type . '_' . time() . '_' . ($index + 1) . '.' . $extension;
+
+                    // Set appropriate storage path based on type
+                    $storagePath = $type === 'video' ? 'assets/videos/post' : 'assets/images/post';
+
+                    // Create directory if it doesn't exist
+                    if (!file_exists(public_path($storagePath))) {
+                        mkdir(public_path($storagePath), 0755, true);
+                    }
 
                     // Move file to storage
-                    $image->move(public_path('/assets/images/post'), $filename);
+                    $file->move(public_path($storagePath), $filename);
 
                     // Create post media record
                     PostMedia::create([
                         'post_id' => $post->id,
-                        'type' => 'image',
-                        'file_path' => 'assets/images/post/' . $filename,
+                        'type' => $type,
+                        'file_path' => $storagePath . '/' . $filename,
                         'order' => $index
                     ]);
                 }
@@ -150,6 +162,16 @@ class PostController extends Controller
             ]);
         } catch (\Exception $e) {
             DB::rollback();
+
+            // Delete any uploaded files if error occurs
+            if ($request->hasFile('files')) {
+                foreach ($request->file('files') as $file) {
+                    $path = public_path($file->getFilename());
+                    if (file_exists($path)) {
+                        unlink($path);
+                    }
+                }
+            }
 
             return response()->json([
                 'success' => false,
