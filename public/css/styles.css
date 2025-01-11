@@ -817,6 +817,7 @@ a.text-white {
 .tf-container.w-1780 {
   width: 100%;
   max-width: 1810px;
+
 }
 .tf-container.w-1290 {
   width: 100%;
@@ -1313,6 +1314,7 @@ a.text-white {
   bottom: -5px;
   width: 100%;
   z-index: 3;
+  background-color: black;
 }
 .header.has-item-bot .header-item img {
   width: 100%;

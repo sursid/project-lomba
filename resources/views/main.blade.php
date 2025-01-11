@@ -129,7 +129,7 @@
                             <div class="header-left">
                                 <div class="logo-site">
                                     <a href="index">
-                                        <img src="./images/logo/logo.png" alt="" />
+                                        <img src="./images/logo/Nusatani.png" alt="" />
                                     </a>
                                 </div>
                                 <div class="main-nav">

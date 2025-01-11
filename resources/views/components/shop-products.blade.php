@@ -65,7 +65,7 @@
                         <div class="loader">
                         </div>
                         <div class="icon">
-                            <img src="./images/logo/logo3x.png" alt="">
+                            <img src="./images/logo/Nusatani.png" alt="">
                         </div>
                     </div>
                 </div>
@@ -81,7 +81,7 @@
                             <div class="header-left">
                                 <div class="logo-site">
                                     <a href="/">
-                                        <img src="./images/logo/logo.png" alt="">
+                                        <img src="./images/logo/Nusatani.png" alt="">
                                     </a>
                                 </div>
                             </div>
@@ -820,6 +820,10 @@
                                     <a href="shop-details" class="name-product font-worksans hover-text-4">
                                         Häagen-Dazs Salted
                                     </a>
+                                    <div class="text">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M12 11.5A2.5 2.5 0 0 1 9.5 9A2.5 2.5 0 0 1 12 6.5A2.5 2.5 0 0 1 14.5 9a2.5 2.5 0 0 1-2.5 2.5M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7"/></svg>
+                                    <p>Jakarta Selatan</p>
+                                    </div> 
                                     <div class="pricing-star">
                                         <div class="price-wrap">
 
@@ -886,6 +890,10 @@
                                     <a href="shop-details" class="name-product font-worksans hover-text-4">
                                         Vimto Squash Remix
                                     </a>
+                                    <div class="text">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M12 11.5A2.5 2.5 0 0 1 9.5 9A2.5 2.5 0 0 1 12 6.5A2.5 2.5 0 0 1 14.5 9a2.5 2.5 0 0 1-2.5 2.5M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7"/></svg>
+                                    <p>Jakarta Selatan</p>
+                                    </div> 
                                     <div class="pricing-star">
                                         <div class="price-wrap">
                                             <span class=" price-1">$3.44 </span>
@@ -954,6 +962,10 @@
                                     <a href="shop-details" class="name-product font-worksans hover-text-4">
                                         Bag Of Succulent Oranges
                                     </a>
+                                    <div class="text">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M12 11.5A2.5 2.5 0 0 1 9.5 9A2.5 2.5 0 0 1 12 6.5A2.5 2.5 0 0 1 14.5 9a2.5 2.5 0 0 1-2.5 2.5M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7"/></svg>
+                                    <p>Depok</p>
+                                    </div> 
                                     <div class="pricing-star">
                                         <div class="price-wrap">
 
@@ -1028,7 +1040,7 @@
                                     </a>
                                     <div class="text">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M12 11.5A2.5 2.5 0 0 1 9.5 9A2.5 2.5 0 0 1 12 6.5A2.5 2.5 0 0 1 14.5 9a2.5 2.5 0 0 1-2.5 2.5M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7"/></svg>
-                                    <p>kab.bogor</p>
+                                    <p>Bogor</p>
                                     </div> 
                                     <div class="pricing-star">
                                         <div class="price-wrap">
@@ -1092,6 +1104,10 @@
                                     <a href="shop-details" class="name-product font-worksans hover-text-4">
                                         Extreme Budweiser
                                     </a>
+                                    <div class="text">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M12 11.5A2.5 2.5 0 0 1 9.5 9A2.5 2.5 0 0 1 12 6.5A2.5 2.5 0 0 1 14.5 9a2.5 2.5 0 0 1-2.5 2.5M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7"/></svg>
+                                    <p>Bekasi</p>
+                                    </div> 
                                     <div class="pricing-star">
                                         <div class="price-wrap">
                                             <span class=" price-2">$2.87</span>
@@ -1161,6 +1177,10 @@
                                     <a href="shop-details" class="name-product font-worksans hover-text-4">
                                         Sitema BakeIT Plastic Box
                                     </a>
+                                    <div class="text">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M12 11.5A2.5 2.5 0 0 1 9.5 9A2.5 2.5 0 0 1 12 6.5A2.5 2.5 0 0 1 14.5 9a2.5 2.5 0 0 1-2.5 2.5M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7"/></svg>
+                                    <p>Tanggerang</p>
+                                    </div> 
                                     <div class="pricing-star">
                                         <div class="price-wrap">
                                             <span class=" price-2">$3.00</span>
@@ -1222,6 +1242,10 @@
                                     <a href="shop-details" class="name-product font-worksans hover-text-4">
                                         Handmade And Created
                                     </a>
+                                    <div class="text">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M12 11.5A2.5 2.5 0 0 1 9.5 9A2.5 2.5 0 0 1 12 6.5A2.5 2.5 0 0 1 14.5 9a2.5 2.5 0 0 1-2.5 2.5M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7"/></svg>
+                                    <p>Bogor</p>
+                                    </div> 
                                     <div class="pricing-star">
                                         <div class="price-wrap">
                                             <span class=" price-2">$5.00</span>
@@ -1283,6 +1307,10 @@
                                     <a href="shop-details" class="name-product font-worksans hover-text-4">
                                         Avocado The Most Nutrient
                                     </a>
+                                    <div class="text">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M12 11.5A2.5 2.5 0 0 1 9.5 9A2.5 2.5 0 0 1 12 6.5A2.5 2.5 0 0 1 14.5 9a2.5 2.5 0 0 1-2.5 2.5M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7"/></svg>
+                                    <p>Bandung</p>
+                                    </div> 
                                     <div class="pricing-star">
                                         <div class="price-wrap">
                                             <span class=" price-2">$2.87</span>
@@ -1344,6 +1372,10 @@
                                     <a href="shop-details" class="name-product font-worksans hover-text-4">
                                         Golden Curcuma Flavored
                                     </a>
+                                    <div class="text">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M12 11.5A2.5 2.5 0 0 1 9.5 9A2.5 2.5 0 0 1 12 6.5A2.5 2.5 0 0 1 14.5 9a2.5 2.5 0 0 1-2.5 2.5M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7"/></svg>
+                                    <p>Jakarta Barat</p>
+                                    </div>
                                     <div class="pricing-star">
                                         <div class="price-wrap">
                                             <span class=" price-2">$3.00</span>
@@ -1411,6 +1443,10 @@
                                     <a href="shop-details" class="name-product font-worksans hover-text-4">
                                         Dense Superfood Available
                                     </a>
+                                    <div class="text">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M12 11.5A2.5 2.5 0 0 1 9.5 9A2.5 2.5 0 0 1 12 6.5A2.5 2.5 0 0 1 14.5 9a2.5 2.5 0 0 1-2.5 2.5M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7"/></svg>
+                                    <p>Jakarta Timur</p>
+                                    </div> 
                                     <div class="pricing-star">
                                         <div class="price-wrap">
                                             <span class=" price-2">$3.00</span>
@@ -1478,6 +1514,10 @@
                                     <a href="shop-details" class="name-product font-worksans hover-text-4">
                                         Organic Beef Box 1kg
                                     </a>
+                                    <div class="text">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M12 11.5A2.5 2.5 0 0 1 9.5 9A2.5 2.5 0 0 1 12 6.5A2.5 2.5 0 0 1 14.5 9a2.5 2.5 0 0 1-2.5 2.5M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7"/></svg>
+                                    <p>Bandung</p>
+                                    </div> 
                                     <div class="pricing-star">
                                         <div class="price-wrap">
                                             <span class=" price-2">$3.00</span>
@@ -1545,6 +1585,10 @@
                                     <a href="shop-details" class="name-product font-worksans hover-text-4">
                                         Orange Juice From Fruits
                                     </a>
+                                    <div class="text">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M12 11.5A2.5 2.5 0 0 1 9.5 9A2.5 2.5 0 0 1 12 6.5A2.5 2.5 0 0 1 14.5 9a2.5 2.5 0 0 1-2.5 2.5M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7"/></svg>
+                                    <p>Tanggerang</p>
+                                    </div> 
                                     <div class="pricing-star">
                                         <div class="price-wrap">
                                             <span class=" price-2">$3.00</span>
