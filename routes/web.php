@@ -8,6 +8,11 @@ use App\Http\Controllers\Auth\GoogleController;
 use App\Http\Controllers\Sosmed\IndexController;
 use App\Http\Controllers\Sosmed\StoryController;
 use App\Http\Controllers\Sosmed\PostController;
+use App\Http\Controllers\Sosmed\FriendRequestController;
+use App\Http\Controllers\Sosmed\SuggestionsController;
+use App\Http\Controllers\Sosmed\AllFriendController;
+use App\Http\Controllers\Sosmed\BlockListController;
+
 
 Route::middleware('guest')->group(function () {
     Route::get('/register', [RegisterController::class, 'create'])->name('register');
@@ -38,6 +43,14 @@ Route::middleware(['auth', 'member'])->group(function () {
         Route::delete('/comments/{comment}', [IndexController::class, 'destroyComment'])->name('sosmed.comments.destroy');
         Route::delete('/replies/{reply}', [IndexController::class, 'destroyReply'])->name('sosmed.replies.destroy');
         Route::delete('/posts/{postId}/delete', [IndexController::class, 'destroyPost']);
+
+
+        Route::get('/friend-request', [FriendRequestController::class, 'index']);
+        Route::post('/friend-request/{friendshipId}/respond', [FriendRequestController::class, 'respondToRequest'])->name('friend-request.respond');
+        
+        Route::get('/suggestions', [SuggestionsController::class, 'index']);
+        Route::get('/all-friend', [AllFriendController::class, 'index']);
+        Route::get('/block-list', [BlockListController::class, 'index']);
     });
 
     Route::post('/api/story/view', [StoryController::class, 'recordView']);

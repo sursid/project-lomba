@@ -30,7 +30,7 @@
         <nav class="navbar navbar-expand-lg p-0">
             <div class="container">
                 <nav class="navbar w-100 navbar-expand-lg justify-content-betweenm">
-                    <a href="/sosmed/sosmed" class="navbar-brand">
+                    <a href="/sosmed/" class="navbar-brand">
                         <img src="{{ asset('assets/favicon.png') }}" class="logo"
                             style="width: 40px; object-fit: contain;" alt="logo">
                     </a>
@@ -67,100 +67,75 @@
                             <div class="messages-btn cmn-head">
                                 <div class="icon-area d-center position-relative">
                                     <i class="material-symbols-outlined mat-icon">mail</i>
-                                    <span class="abs-area position-absolute d-center mdtxt">4</span>
+                                    @php
+                                    $totalUnreadMessages = App\Models\Message::where('is_read', false)
+                                        ->whereHas('conversation', function ($query) {
+                                            $query->where('user1_id', Auth::id())
+                                                ->orWhere('user2_id', Auth::id());
+                                        })
+                                        ->where('sender_id', '!=', Auth::id())
+                                        ->count();
+                                    @endphp
+                                    @if($totalUnreadMessages > 0)
+                                    <span class="abs-area position-absolute d-center mdtxt">{{ $totalUnreadMessages }}</span>
+                                    @endif
                                 </div>
                             </div>
                             <div class="main-area p-5 messages-content">
                                 <h5 class="mb-8">Messages</h5>
-                                <div class="single-box p-0 mb-7">
-                                    <a href="/sosmed/profile-chat" class="d-flex gap-2 align-items-center">
-                                        <div class="avatar">
-                                            <img class="avatar-img max-un"
-                                                src="{{ asset('assets/images/avatar-7.png') }}" alt="avatar">
-                                        </div>
-                                        <div class="text-area">
-                                            <div class="title-area position-relative d-inline-flex align-items-center">
-                                                <h6 class="m-0 d-inline-flex">Piter Maio</h6>
-                                                <span class="abs-area position-absolute d-center mdtxt">3</span>
+                                @php
+                                $conversations = App\Models\Conversation::where(function ($query) {
+                                    $query->where('user1_id', Auth::id())
+                                        ->orWhere('user2_id', Auth::id());
+                                })
+                                ->with(['user1', 'user2', 'messages' => function ($query) {
+                                    $query->orderBy('created_at', 'desc');
+                                }])
+                                ->get();
+                        
+                                // Group messages by sender and accumulate unread count
+                                $groupedMessages = [];
+                                foreach($conversations as $conversation) {
+                                    $otherUser = $conversation->user1_id == Auth::id() ? $conversation->user2 : $conversation->user1;
+                                    $senderId = $otherUser->id;
+                                    
+                                    if (!isset($groupedMessages[$senderId])) {
+                                        $groupedMessages[$senderId] = [
+                                            'user' => $otherUser,
+                                            'latest_message' => $conversation->messages->first(),
+                                            'unread_count' => 0
+                                        ];
+                                    }
+                                    
+                                    // Add unread count from this conversation
+                                    $unreadCount = $conversation->messages
+                                        ->where('is_read', false)
+                                        ->where('sender_id', '!=', Auth::id())
+                                        ->count();
+                                    $groupedMessages[$senderId]['unread_count'] += $unreadCount;
+                                }
+                                @endphp
+                        
+                                @foreach($groupedMessages as $senderId => $messageData)
+                                    <div class="single-box p-0 mb-7">
+                                        <a href="" class="d-flex gap-2 align-items-center">
+                                            <div class="avatar">
+                                                <img class="avatar-img max-un" src="{{ $messageData['user']->avatar }}" alt="avatar">
                                             </div>
-                                            <p class="mdtxt sms">Amet minim mollit non....</p>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="single-box p-0 mb-7">
-                                    <a href="/sosmed/profile-chat" class="d-flex gap-2 align-items-center">
-                                        <div class="avatar">
-                                            <img class="avatar-img max-un"
-                                                src="{{ asset('assets/images/avatar-1.png') }}" alt="avatar">
-                                        </div>
-                                        <div class="text-area">
-                                            <h6 class="m-0 mb-1">Annette Black</h6>
-                                            <p class="mdtxt">You: consequat sunt</p>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="single-box p-0 mb-7">
-                                    <a href="/sosmed/profile-chat" class="d-flex gap-2 align-items-center">
-                                        <div class="avatar">
-                                            <img class="avatar-img max-un"
-                                                src="{{ asset('assets/images/avatar-2.png') }}" alt="avatar">
-                                        </div>
-                                        <div class="text-area">
-                                            <h6 class="m-0 mb-1">Ralph Edwards</h6>
-                                            <p class="mdtxt sms">Amet minim mollit non....</p>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="single-box p-0 mb-7">
-                                    <a href="/sosmed/profile-chat" class="d-flex gap-2 align-items-center">
-                                        <div class="avatar">
-                                            <img class="avatar-img max-un"
-                                                src="{{ asset('assets/images/avatar-3.png') }}" alt="avatar">
-                                        </div>
-                                        <div class="text-area">
-                                            <h6 class="m-0 mb-1">Darrell Steward</h6>
-                                            <p class="mdtxt">You: consequat sunt</p>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="single-box p-0 mb-7">
-                                    <a href="/sosmed/profile-chat" class="d-flex gap-2 align-items-center">
-                                        <div class="avatar">
-                                            <img class="avatar-img max-un"
-                                                src="{{ asset('assets/images/avatar-4.png') }}" alt="avatar">
-                                        </div>
-                                        <div class="text-area">
-                                            <h6 class="m-0 mb-1">Wade Warren</h6>
-                                            <p class="mdtxt">You: consequat sunt</p>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="single-box p-0 mb-7">
-                                    <a href="/sosmed/profile-chat" class="d-flex gap-2 align-items-center">
-                                        <div class="avatar">
-                                            <img class="avatar-img max-un"
-                                                src="{{ asset('assets/images/avatar-5.png') }}" alt="avatar">
-                                        </div>
-                                        <div class="text-area">
-                                            <h6 class="m-0 mb-1">Kathryn Murphy</h6>
-                                            <p class="mdtxt">You: consequat sunt</p>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="single-box p-0 mb-7">
-                                    <a href="/sosmed/profile-chat" class="d-flex gap-2 align-items-center">
-                                        <div class="avatar">
-                                            <img class="avatar-img max-un"
-                                                src="{{ asset('assets/images/avatar-6.png') }}" alt="avatar">
-                                        </div>
-                                        <div class="text-area">
-                                            <h6 class="m-0 mb-1">Jacob Jones</h6>
-                                            <p class="mdtxt">You: consequat sunt</p>
-                                        </div>
-                                    </a>
-                                </div>
+                                            <div class="text-area">
+                                                <div class="title-area position-relative d-inline-flex align-items-center">
+                                                    <h6 class="m-0 d-inline-flex">{{ $messageData['user']->name }}</h6>
+                                                    @if($messageData['unread_count'] > 0)
+                                                        <span class="notification-badge">{{ $messageData['unread_count'] }}</span>
+                                                    @endif
+                                                </div>
+                                                <p class="mdtxt sms">{{ $messageData['latest_message']->content }}</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                @endforeach
+                                
                                 <div class="btn-area">
-                                    <a href="/sosmed/profile-chat">See all inbox</a>
                                 </div>
                             </div>
                         </div>
@@ -168,99 +143,88 @@
                             <div class="notification-btn cmn-head position-relative">
                                 <div class="icon-area d-center position-relative">
                                     <i class="material-symbols-outlined mat-icon">notifications</i>
-                                    <span class="abs-area position-absolute d-center mdtxt">3</span>
+                                    @php
+                                        $unreadNotificationsCount = DB::table('notifications')
+                                            ->where('user_id', Auth::id())
+                                            ->where('is_read', 0)
+                                            ->count();
+                                    @endphp
+                                    @if($unreadNotificationsCount > 0)
+                                    <span class="abs-area position-absolute d-center mdtxt">{{ $unreadNotificationsCount }}</span>
+                                    @endif      
                                 </div>
                             </div>
                             <div class="main-area p-5 notification-content">
                                 <h5 class="mb-8">Notification</h5>
-                                <div class="single-box p-0 mb-7">
-                                    <a href="/sosmed/profile-notification"
-                                        class="d-flex justify-content-between align-items-center">
-                                        <div class="left-item position-relative d-inline-flex gap-3">
-                                            <div class="avatar position-relative d-inline-flex">
-                                                <img class="avatar-img max-un"
-                                                    src="{{ asset('assets/images/avatar-1.png') }}" alt="avatar">
-                                                <img class="abs-item position-absolute max-un"
-                                                    src="{{ asset('assets/images/icon/speech-bubble.png') }}"
-                                                    alt="icon">
+                                @forelse($notifications as $notification)
+                                    <div class="single-box p-0 mb-7">
+                                        <a href="/sosmed/profile-notification" class="d-flex justify-content-between align-items-center">
+                                            <div class="left-item position-relative d-inline-flex gap-3">
+                                                <div class="ym-avatar-wrapper">
+                                                    <img class="avatar-img max-un" 
+                                                         src="{{ $notification->from_user_avatar ?? asset('assets/images/avatar-default.png') }}" 
+                                                         alt="avatar">
+                                                    @if($notification->type == 'friend_request')
+                                                        <img class="ym-notification-icon" 
+                                                             src="{{ asset('assets/images/icon/emoji-love.png') }}" 
+                                                             alt="icon">
+                                                    @elseif($notification->type == 'post_like')
+                                                        <img class="ym-notification-icon" 
+                                                             src="{{ asset('assets/images/icon/emoji-love.png') }}" 
+                                                             alt="icon">
+                                                    @else
+                                                        <img class="ym-notification-icon" 
+                                                             src="{{ asset('assets/images/icon/speech-bubble.png') }}" 
+                                                             alt="icon">
+                                                    @endif
+                                                </div>
+                                                <div class="text-area">
+                                                    <h6 class="m-0 mb-1">{{ $notification->from_user_name }}</h6>
+                                                    <p class="mdtxt">
+                                                        @if($notification->type == 'post_like')
+                                                            Like your photo
+                                                        @elseif($notification->type == 'friend_request') 
+                                                            Sent you a request
+                                                        @elseif($notification->type == 'post_comment')
+                                                            Comment on your post
+                                                        @elseif($notification->type == 'post_share')
+                                                            Share your post
+                                                        @else
+                                                            {{ $notification->message }}
+                                                        @endif
+                                                    </p>
+                                                </div>
                                             </div>
-                                            <div class="text-area">
-                                                <h6 class="m-0 mb-1">Piter Maio</h6>
-                                                <p class="mdtxt">Comment on your post</p>
-                                            </div>
-                                        </div>
-                                        <div class="time-remaining">
-                                            <p class="mdtxt">Just now</p>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="single-box p-0 mb-7">
-                                    <a href="/sosmed/profile-notification"
-                                        class="d-flex justify-content-between align-items-center">
-                                        <div class="left-item position-relative d-inline-flex gap-3">
-                                            <div class="avatar position-relative d-inline-flex">
-                                                <img class="avatar-img max-un"
-                                                    src="{{ asset('assets/images/avatar-2.png') }}" alt="avatar">
-                                                <img class="abs-item position-absolute max-un"
-                                                    src="{{ asset('assets/images/icon/emoji-love.png') }}"
-                                                    alt="icon">
-                                            </div>
-                                            <div class="text-area">
-                                                <h6 class="m-0 mb-1">Kathryn Murphy</h6>
-                                                <p class="mdtxt">Like your photo</p>
-                                            </div>
-                                        </div>
-                                        <div class="time-remaining">
-                                            <p class="mdtxt">2min</p>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="single-box p-0 mb-7">
-                                    <a href="/sosmed/profile-notification"
-                                        class="d-flex justify-content-between align-items-center">
-                                        <div class="left-item position-relative d-inline-flex gap-3">
-                                            <div class="avatar position-relative d-inline-flex">
-                                                <img class="avatar-img max-un"
-                                                    src="{{ asset('assets/images/avatar-3.png') }}" alt="avatar">
-                                                <img class="abs-item position-absolute max-un"
-                                                    src="{{ asset('assets/images/icon/emoji-love.png') }}"
-                                                    alt="icon">
-                                            </div>
-                                            <div class="text-area">
-                                                <h6 class="m-0 mb-1">Jacob Jones</h6>
-                                                <p class="mdtxt">Sent you a request</p>
-                                            </div>
-                                        </div>
-                                        <div class="time-remaining">
-                                            <p class="mdtxt">1hr</p>
-                                        </div>
-                                    </a>
-                                    <div class="d-flex gap-3 mt-4">
-                                        <button class="cmn-btn">Accept</button>
-                                        <button class="cmn-btn alt">Delete</button>
+                                            @php
+                                                $time = \Carbon\Carbon::parse($notification->created_at);
+                                                $now = \Carbon\Carbon::now();
+                                                
+                                                // Format waktu yang lebih singkat
+                                                if ($time->diffInMinutes($now) < 60) {
+                                                    $timeAgo = $time->diffInMinutes($now) . 'min';
+                                                } elseif ($time->diffInHours($now) < 24) {
+                                                    $timeAgo = $time->diffInHours($now) . 'hr';
+                                                } else {
+                                                    $timeAgo = $time->diffInDays($now) . 'd';
+                                                }
+                                            @endphp
+                                                <div class="time-remaining">
+                                                    <p class="mdtxt">{{ $timeAgo }}</p>
+                                                </div>
+                                            </a>
+                                                                                    
+                                            @if($notification->type == 'friend_request')
+                                                <div class="d-flex gap-3 mt-4">
+                                                    <button class="nt-notification-btn">Accept</button>
+                                                    <button class="nt-notification-btn alt">Delete</button>
+                                                </div>
+                                            @endif
                                     </div>
-                                </div>
-                                <div class="single-box p-0 mb-7">
-                                    <a href="/sosmed/profile-notification"
-                                        class="d-flex justify-content-between align-items-center">
-                                        <div class="left-item position-relative d-inline-flex gap-3">
-                                            <div class="avatar position-relative d-inline-flex">
-                                                <img class="avatar-img max-un"
-                                                    src="{{ asset('assets/images/avatar-4.png') }}" alt="avatar">
-                                                <img class="abs-item position-absolute max-un"
-                                                    src="{{ asset('assets/images/icon/emoji-love.png') }}"
-                                                    alt="icon">
-                                            </div>
-                                            <div class="text-area">
-                                                <h6 class="m-0 mb-1">Kathryn Murphy</h6>
-                                                <p class="mdtxt">officia consequat duis enim...</p>
-                                            </div>
-                                        </div>
-                                        <div class="time-remaining">
-                                            <p class="mdtxt">2hr</p>
-                                        </div>
-                                    </a>
-                                </div>
+                                @empty
+                                    <div class="text-center p-4">
+                                        <p>No notifications yet</p>
+                                    </div>
+                                @endforelse
                                 <div class="btn-area">
                                     <a href="/sosmed/profile-notification">See all notification</a>
                                 </div>
@@ -269,7 +233,7 @@
                         <div class="single-item d-none d-lg-block profile-area position-relative">
                             <div class="profile-pic d-flex align-items-center">
                                 <span class="avatar cmn-head active-status">
-                                    <img class="avatar-img max-un" src="{{ asset('assets/images/avatar-1.png') }}"
+                                    <img class="avatar-img max-un" src="{{ $user->avatar }}"
                                         alt="avatar">
                                 </span>
                             </div>
@@ -278,11 +242,11 @@
                                     <div class="d-flex gap-3 align-items-center">
                                         <div class="avatar-item">
                                             <img class="avatar-img max-un"
-                                                src="{{ asset('assets/images/avatar-1.png') }}" alt="avatar">
+                                                src="{{ $user->avatar }}" alt="avatar">
                                         </div>
                                         <div class="text-area">
-                                            <h6 class="m-0 mb-1">Lori Ferguson</h6>
-                                            <p class="mdtxt">Web Developer</p>
+                                            <h6 class="m-0 mb-1">{{ $user->name }}</h6>
+                                            <p class="mdtxt">{{ $user->bio }}</p>
                                         </div>
                                     </div>
                                 </div>
@@ -325,261 +289,6 @@
             </div>
         </nav>
     </header>
-    <div class="header-menu py-3 header-menu d-block d-lg-none position-fixed bottom-0 w-100 cus-z">
-        <div class="right-area position-relative d-flex justify-content-around gap-3 gap-xxl-6 align-items-center">
-            <div class="single-item messages-area">
-                <div class="messages-btn cmn-head">
-                    <div class="icon-area d-center position-relative">
-                        <i class="material-symbols-outlined mat-icon">mail</i>
-                        <span class="abs-area position-absolute d-center mdtxt">4</span>
-                    </div>
-                </div>
-                <div class="main-area p-5 messages-content">
-                    <h5 class="mb-8">Messages</h5>
-                    <div class="single-box p-0 mb-7">
-                        <a href="/sosmed/profile-chat" class="d-flex gap-2 align-items-center">
-                            <div class="avatar">
-                                <img class="avatar-img max-un" src="{{ asset('assets/images/avatar-7.png') }}"
-                                    alt="avatar">
-                            </div>
-                            <div class="text-area">
-                                <div class="title-area position-relative d-inline-flex align-items-center">
-                                    <h6 class="m-0 d-inline-flex">Piter Maio</h6>
-                                    <span class="abs-area position-absolute d-center mdtxt">3</span>
-                                </div>
-                                <p class="mdtxt sms">Amet minim mollit non....</p>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="single-box p-0 mb-7">
-                        <a href="/sosmed/profile-chat" class="d-flex gap-2 align-items-center">
-                            <div class="avatar">
-                                <img class="avatar-img max-un" src="{{ asset('assets/images/avatar-1.png') }}"
-                                    alt="avatar">
-                            </div>
-                            <div class="text-area">
-                                <h6 class="m-0 mb-1">Annette Black</h6>
-                                <p class="mdtxt">You: consequat sunt</p>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="single-box p-0 mb-7">
-                        <a href="/sosmed/profile-chat" class="d-flex gap-2 align-items-center">
-                            <div class="avatar">
-                                <img class="avatar-img max-un" src="{{ asset('assets/images/avatar-2.png') }}"
-                                    alt="avatar">
-                            </div>
-                            <div class="text-area">
-                                <h6 class="m-0 mb-1">Ralph Edwards</h6>
-                                <p class="mdtxt sms">Amet minim mollit non....</p>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="single-box p-0 mb-7">
-                        <a href="/sosmed/profile-chat" class="d-flex gap-2 align-items-center">
-                            <div class="avatar">
-                                <img class="avatar-img max-un" src="{{ asset('assets/images/avatar-3.png') }}"
-                                    alt="avatar">
-                            </div>
-                            <div class="text-area">
-                                <h6 class="m-0 mb-1">Darrell Steward</h6>
-                                <p class="mdtxt">You: consequat sunt</p>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="single-box p-0 mb-7">
-                        <a href="/sosmed/profile-chat" class="d-flex gap-2 align-items-center">
-                            <div class="avatar">
-                                <img class="avatar-img max-un" src="{{ asset('assets/images/avatar-4.png') }}"
-                                    alt="avatar">
-                            </div>
-                            <div class="text-area">
-                                <h6 class="m-0 mb-1">Wade Warren</h6>
-                                <p class="mdtxt">You: consequat sunt</p>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="single-box p-0 mb-7">
-                        <a href="/sosmed/profile-chat" class="d-flex gap-2 align-items-center">
-                            <div class="avatar">
-                                <img class="avatar-img max-un" src="{{ asset('assets/images/avatar-5.png') }}"
-                                    alt="avatar">
-                            </div>
-                            <div class="text-area">
-                                <h6 class="m-0 mb-1">Kathryn Murphy</h6>
-                                <p class="mdtxt">You: consequat sunt</p>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="single-box p-0 mb-7">
-                        <a href="/sosmed/profile-chat" class="d-flex gap-2 align-items-center">
-                            <div class="avatar">
-                                <img class="avatar-img max-un" src="{{ asset('assets/images/avatar-6.png') }}"
-                                    alt="avatar">
-                            </div>
-                            <div class="text-area">
-                                <h6 class="m-0 mb-1">Jacob Jones</h6>
-                                <p class="mdtxt">You: consequat sunt</p>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="btn-area">
-                        <a href="/sosmed/profile-chat">See all inbox</a>
-                    </div>
-                </div>
-            </div>
-            <div class="single-item messages-area notification-area">
-                <div class="notification-btn cmn-head position-relative">
-                    <div class="icon-area d-center position-relative">
-                        <i class="material-symbols-outlined mat-icon">notifications</i>
-                        <span class="abs-area position-absolute d-center mdtxt">3</span>
-                    </div>
-                </div>
-                <div class="main-area p-5 notification-content">
-                    <h5 class="mb-8">Notification</h5>
-                    <div class="single-box p-0 mb-7">
-                        <a href="/sosmed/profile-notification"
-                            class="d-flex justify-content-between align-items-center">
-                            <div class="left-item position-relative d-inline-flex gap-3">
-                                <div class="avatar position-relative d-inline-flex">
-                                    <img class="avatar-img max-un" src="{{ asset('assets/images/avatar-1.png') }}"
-                                        alt="avatar">
-                                    <img class="abs-item position-absolute max-un"
-                                        src="{{ asset('assets/images/icon/speech-bubble.png') }}" alt="icon">
-                                </div>
-                                <div class="text-area">
-                                    <h6 class="m-0 mb-1">Piter Maio</h6>
-                                    <p class="mdtxt">Comment on your post</p>
-                                </div>
-                            </div>
-                            <div class="time-remaining">
-                                <p class="mdtxt">Just now</p>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="single-box p-0 mb-7">
-                        <a href="/sosmed/profile-notification"
-                            class="d-flex justify-content-between align-items-center">
-                            <div class="left-item position-relative d-inline-flex gap-3">
-                                <div class="avatar position-relative d-inline-flex">
-                                    <img class="avatar-img max-un" src="{{ asset('assets/images/avatar-2.png') }}"
-                                        alt="avatar">
-                                    <img class="abs-item position-absolute max-un"
-                                        src="{{ asset('assets/images/icon/emoji-love.png') }}" alt="icon">
-                                </div>
-                                <div class="text-area">
-                                    <h6 class="m-0 mb-1">Kathryn Murphy</h6>
-                                    <p class="mdtxt">Like your photo</p>
-                                </div>
-                            </div>
-                            <div class="time-remaining">
-                                <p class="mdtxt">2min</p>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="single-box p-0 mb-7">
-                        <a href="/sosmed/profile-notification"
-                            class="d-flex justify-content-between align-items-center">
-                            <div class="left-item position-relative d-inline-flex gap-3">
-                                <div class="avatar position-relative d-inline-flex">
-                                    <img class="avatar-img max-un" src="{{ asset('assets/images/avatar-3.png') }}"
-                                        alt="avatar">
-                                    <img class="abs-item position-absolute max-un"
-                                        src="{{ asset('assets/images/icon/emoji-love.png') }}" alt="icon">
-                                </div>
-                                <div class="text-area">
-                                    <h6 class="m-0 mb-1">Jacob Jones</h6>
-                                    <p class="mdtxt">Sent you a request</p>
-                                </div>
-                            </div>
-                            <div class="time-remaining">
-                                <p class="mdtxt">1hr</p>
-                            </div>
-                        </a>
-                        <div class="d-flex gap-3 mt-4">
-                            <button class="cmn-btn">Accept</button>
-                            <button class="cmn-btn alt">Delete</button>
-                        </div>
-                    </div>
-                    <div class="single-box p-0 mb-7">
-                        <a href="/sosmed/profile-notification"
-                            class="d-flex justify-content-between align-items-center">
-                            <div class="left-item position-relative d-inline-flex gap-3">
-                                <div class="avatar position-relative d-inline-flex">
-                                    <img class="avatar-img max-un" src="{{ asset('assets/images/avatar-4.png') }}"
-                                        alt="avatar">
-                                    <img class="abs-item position-absolute max-un"
-                                        src="{{ asset('assets/images/icon/emoji-love.png') }}" alt="icon">
-                                </div>
-                                <div class="text-area">
-                                    <h6 class="m-0 mb-1">Kathryn Murphy</h6>
-                                    <p class="mdtxt">officia consequat duis enim...</p>
-                                </div>
-                            </div>
-                            <div class="time-remaining">
-                                <p class="mdtxt">2hr</p>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="btn-area">
-                        <a href="/sosmed/profile-notification">See all notification</a>
-                    </div>
-                </div>
-            </div>
-            <div class="single-item profile-area position-relative">
-                <div class="profile-pic d-flex align-items-center">
-                    <span class="avatar cmn-head active-status">
-                        <img class="avatar-img max-un" src="{{ asset('assets/images/avatar-1.png') }}"
-                            alt="avatar">
-                    </span>
-                </div>
-                <div class="main-area p-5 profile-content">
-                    <div class="head-area">
-                        <div class="d-flex gap-3 align-items-center">
-                            <div class="avatar-item">
-                                <img class="avatar-img max-un" src="{{ asset('assets/images/avatar-1.png') }}"
-                                    alt="avatar">
-                            </div>
-                            <div class="text-area">
-                                <h6 class="m-0 mb-1">Lori Ferguson</h6>
-                                <p class="mdtxt">Web Developer</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="view-profile my-2">
-                        <a href="/sosmed/profile-post" class="mdtxt w-100 text-center py-2">View profile</a>
-                    </div>
-                    <ul>
-                        <li>
-                            <a href="/sosmed/profile-edit" class="mdtxt">
-                                <i class="material-symbols-outlined mat-icon"> settings </i>
-                                Settings & Privacy
-                            </a>
-                        </li>
-                        <li>
-                            <form action="{{ route('logout') }}" method="POST" style="display: inline;">
-                                @csrf
-                                <button type="submit" class="mdtxt"
-                                    style="background: none; border: none; cursor: pointer; color: inherit;">
-                                    <i class="material-symbols-outlined mat-icon"> power_settings_new </i>
-                                    Sign Out
-                                </button>
-                            </form>
-                        </li>
-                    </ul>
-                    <div class="switch-wrapper mt-4 d-flex gap-1 align-items-center">
-                        <i class="mat-icon material-symbols-outlined sun icon"> light_mode </i>
-                        <label class="switch">
-                            <input type="checkbox" class="checkbox">
-                            <span class="slider"></span>
-                        </label>
-                        <i class="mat-icon material-symbols-outlined moon icon"> dark_mode </i>
-                        <span class="mdtxt ms-2">Dark mode</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
 
     <div class="go-live-popup">
         <div class="container">

@@ -44,7 +44,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="friend-request.html" class="d-flex gap-4">
+                                <a href="/sosmed/friend-request" class="d-flex gap-4">
                                     <i class="material-symbols-outlined mat-icon"> person </i>
                                     <span>People</span>
                                 </a>
@@ -92,35 +92,6 @@
                                 </a>
                             </li>
                         </ul>
-                        <div class="your-shortcuts">
-                            <h6>Your shortcuts</h6>
-                            <ul>
-                                <li>
-                                    <a href="public-profile-post.html" class="d-flex align-items-center gap-3">
-                                        <img src="{{ asset('assets/images/shortcuts-1.png') }}" alt="icon">
-                                        <span>Game Community</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="public-profile-post.html" class="d-flex align-items-center gap-3">
-                                        <img src="{{ asset('assets/images/shortcuts-2.png') }}" alt="icon">
-                                        <span>Pixel Think (Member)</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="public-profile-post.html" class="d-flex align-items-center gap-3">
-                                        <img src="{{ asset('assets/images/shortcuts-3.png') }}" alt="icon">
-                                        <span>8 Ball Pool</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="public-profile-post.html" class="d-flex align-items-center gap-3">
-                                        <img src="{{ asset('assets/images/shortcuts-4.png') }}" alt="icon">
-                                        <span>Gembio</span>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
                     </div>
                 </div>
 
@@ -1088,10 +1059,8 @@
                             </div>
                         @endif
                         <script>
-                            document.addEventListener('DOMContentLoaded', function() {
-                                // Function to manage z-index of elements behind modal
+                            document.addEventListener('DOMContentLoaded', function () {
                                 function manageModalLayering() {
-                                    // Select elements to adjust z-index
                                     const elementsToAdjust = [
                                         ...document.querySelectorAll('.col-xxl-3.col-xl-3.col-lg-4.col-6.cus-z2'),
                                         ...document.querySelectorAll('header'),
@@ -1100,95 +1069,33 @@
                                         ...document.querySelectorAll('.header-menu'),
                                         ...document.querySelectorAll('.header-fixed')
                                     ];
-
-                                    // Find all potential modal triggers
-                                    function findModalTriggers() {
-                                        const triggers = [];
-                                        const postSingleBoxes = document.querySelectorAll('.post-single-box');
-
-                                        postSingleBoxes.forEach(postBox => {
-                                            // Action buttons (comment, like, etc)
-                                            const actionButtons = postBox.querySelectorAll('.like-comment-share button');
-                                            actionButtons.forEach(button => {
-                                                const hasChatIcon = button.querySelector(
-                                                        '.material-symbols-outlined.mat-icon')?.textContent.trim() ===
-                                                    'chat';
-                                                if (hasChatIcon) {
-                                                    const postId = postBox.querySelector('[data-post-id]')
-                                                        ?.getAttribute('data-post-id');
-                                                    if (postId) {
-                                                        button.setAttribute('data-post-id', postId);
-                                                        triggers.push(button);
-                                                    }
-                                                }
-                                            });
-
-                                            // Comment section triggers
-                                            const commentSection = postBox.querySelector('.form-content');
-                                            if (commentSection) {
-                                                const fileUploads = commentSection.querySelectorAll('.file-upload');
-                                                const moodArea = commentSection.querySelector('.mood-area');
-                                                const commentInput = commentSection.querySelector('input');
-
-                                                [...fileUploads, moodArea, commentInput].forEach(element => {
-                                                    if (element) {
-                                                        const postId = postBox.querySelector('[data-post-id]')
-                                                            ?.getAttribute('data-post-id');
-                                                        if (postId) {
-                                                            element.setAttribute('data-post-id', postId);
-                                                            triggers.push(element);
-                                                        }
-                                                    }
-                                                });
-                                            }
-
-                                            // View all comments triggers
-                                            const viewAllCommentsLinks = postBox.querySelectorAll(
-                                                '.total-comments .comment-btn');
-                                            viewAllCommentsLinks.forEach(link => {
-                                                const postId = link.getAttribute('data-post-id');
-                                                if (postId) {
-                                                    triggers.push(link);
-                                                }
-                                            });
-
-                                            // Existing modal triggers
-                                            const showModalTriggers = postBox.querySelectorAll('.showModal');
-                                            showModalTriggers.forEach(trigger => {
-                                                triggers.push(trigger);
-                                            });
-                                        });
-
-                                        return triggers;
-                                    }
-
-                                    // Modal z-index management
+                            
+                                    // Simpan nilai asli z-index
+                                    const originalZIndexes = new Map();
+                            
+                                    // Fungsi saat modal dibuka
                                     function onModalOpen() {
                                         elementsToAdjust.forEach(element => {
-                                            element.setAttribute('data-original-zindex', element.style.zIndex || '');
-                                            element.style.zIndex = '-1';
-                                        });
-
-                                        const navbars = document.querySelectorAll('nav');
-                                        navbars.forEach(nav => {
-                                            nav.style.zIndex = '-1';
+                                            if (!originalZIndexes.has(element)) {
+                                                originalZIndexes.set(element, element.style.zIndex || getComputedStyle(element).zIndex);
+                                            }
+                                            // Turunkan z-index elemen saat modal dibuka
+                                            element.style.zIndex = '0';
                                         });
                                     }
-
+                            
+                                    // Fungsi saat modal ditutup
                                     function onModalClose() {
                                         elementsToAdjust.forEach(element => {
-                                            const originalZIndex = element.getAttribute('data-original-zindex');
-                                            element.style.zIndex = originalZIndex || '1';
-                                            element.removeAttribute('data-original-zindex');
+                                            // Tetapkan z-index ke nilai tetap
+                                            element.style.zIndex = '9999999999999999';
                                         });
-
-                                        const navbars = document.querySelectorAll('nav');
-                                        navbars.forEach(nav => {
-                                            nav.style.zIndex = '1000';
-                                        });
+                            
+                                        // Kosongkan data lama
+                                        originalZIndexes.clear();
                                     }
-
-                                    // Show/Hide Modal Functions
+                            
+                                    // Tampilkan modal
                                     function showModal(triggerElement) {
                                         const postId = triggerElement.getAttribute('data-post-id');
                                         if (postId) {
@@ -1198,122 +1105,145 @@
                                                     modal.style.display = 'block';
                                                     document.body.style.overflow = 'hidden';
                                                     onModalOpen();
+                                                    console.log('Modal dibuka:', modal);
                                                 }, 50);
                                             }
                                         }
                                     }
-
+                            
+                                    // Tutup modal
                                     function closeModal(modalElement) {
-                                        modalElement.style.display = 'none';
-                                        document.body.style.overflow = '';
+                                        if (modalElement) {
+                                            modalElement.style.display = 'none'; // Sembunyikan modal
+                                            console.log('Modal ditutup:', modalElement);
+                                        }
+                                        document.body.style.overflow = ''; // Aktifkan scroll kembali
+                            
+                                        // Kembalikan z-index elemen
                                         onModalClose();
+                                        console.log('z-index telah diperbarui ke 9999999999999999');
                                     }
-
-                                    // Reply Form Functions
-                                    function showReplyForm(commentId) {
-                                        // Close any open reply forms first
-                                        document.querySelectorAll('.reply-form-container').forEach(container => {
-                                            if (!container.classList.contains('d-none') && container.id !==
-                                                `reply-form-${commentId}`) {
-                                                container.classList.add('d-none');
+                            
+                                    // Ekspor closeModal ke global agar dapat diakses dari HTML
+                                    window.closeModal = closeModal;
+                            
+                                    // Cari elemen pemicu modal
+                                    function findModalTriggers() {
+                                        const triggers = [];
+                                        const postSingleBoxes = document.querySelectorAll('.post-single-box');
+                            
+                                        postSingleBoxes.forEach(postBox => {
+                                            // Action buttons (comment, like, etc)
+                                            const actionButtons = postBox.querySelectorAll('.like-comment-share button');
+                                            actionButtons.forEach(button => {
+                                                const hasChatIcon = button.querySelector('.material-symbols-outlined.mat-icon')?.textContent.trim() === 'chat';
+                                                if (hasChatIcon) {
+                                                    const postId = postBox.querySelector('[data-post-id]')?.getAttribute('data-post-id');
+                                                    if (postId) {
+                                                        button.setAttribute('data-post-id', postId);
+                                                        triggers.push(button);
+                                                    }
+                                                }
+                                            });
+                            
+                                            // Comment section triggers
+                                            const commentSection = postBox.querySelector('.form-content');
+                                            if (commentSection) {
+                                                const fileUploads = commentSection.querySelectorAll('.file-upload');
+                                                const moodArea = commentSection.querySelector('.mood-area');
+                                                const commentInput = commentSection.querySelector('input');
+                                                [...fileUploads, moodArea, commentInput].forEach(element => {
+                                                    const postId = postBox.querySelector('[data-post-id]')?.getAttribute('data-post-id');
+                                                    if (postId && element) {
+                                                        element.setAttribute('data-post-id', postId);
+                                                        triggers.push(element);
+                                                    }
+                                                });
                                             }
+                            
+                                            // View all comments triggers
+                                            const viewAllCommentsLinks = postBox.querySelectorAll('.total-comments .comment-btn');
+                                            viewAllCommentsLinks.forEach(link => {
+                                                const postId = link.getAttribute('data-post-id');
+                                                if (postId) {
+                                                    triggers.push(link);
+                                                }
+                                            });
+                            
+                                            // Existing modal triggers
+                                            const showModalTriggers = postBox.querySelectorAll('.showModal');
+                                            showModalTriggers.forEach(trigger => {
+                                                triggers.push(trigger);
+                                            });
                                         });
-
-                                        // Toggle the clicked reply form
-                                        const replyForm = document.getElementById(`reply-form-${commentId}`);
-                                        if (replyForm) {
-                                            replyForm.classList.toggle('d-none');
-                                            // Focus on input when shown
-                                            if (!replyForm.classList.contains('d-none')) {
-                                                const input = replyForm.querySelector('input');
-                                                if (input) input.focus();
-                                            }
-                                        }
-
-                                        // If in modal, find and toggle the modal reply form too
-                                        const modalReplyForm = document.getElementById(`modal-reply-form-${commentId}`);
-                                        if (modalReplyForm) {
-                                            modalReplyForm.classList.toggle('d-none');
-                                            if (!modalReplyForm.classList.contains('d-none')) {
-                                                const input = modalReplyForm.querySelector('input');
-                                                if (input) input.focus();
-                                            }
-                                        }
+                            
+                                        return triggers;
                                     }
-
-                                    // Event Listeners
+                            
+                                    // Tambahkan event listener untuk membuka modal
                                     function attachModalTriggers() {
                                         const modalTriggers = findModalTriggers();
                                         modalTriggers.forEach(trigger => {
-                                            trigger.addEventListener('click', function(e) {
+                                            trigger.addEventListener('click', function (e) {
                                                 e.preventDefault();
                                                 showModal(this);
                                             });
                                         });
                                     }
-
-                                    function attachReplyTriggers() {
-                                        document.addEventListener('click', function(e) {
-                                            if (e.target.closest('.reply-btn')) {
-                                                e.preventDefault();
-                                                const commentId = e.target.closest('.reply-btn').getAttribute('onclick')?.match(
-                                                    /\d+/)?.[0];
-                                                if (commentId) {
-                                                    showReplyForm(commentId);
-                                                }
-                                            }
-                                        });
-                                    }
-
+                            
+                                    // Tambahkan event listener untuk menutup modal
                                     function attachCloseModalListeners() {
-
-                                        // Overlay click
+                                        // Tutup modal via overlay
                                         document.querySelectorAll('.modal-overlay').forEach(overlay => {
-                                            overlay.addEventListener('click', function() {
+                                            overlay.addEventListener('click', function () {
                                                 const modal = this.closest('.custom-modal');
                                                 closeModal(modal);
                                             });
                                         });
-
-                                        // ESC key
-                                        document.addEventListener('keydown', function(e) {
+                            
+                                        // Tutup modal via tombol Escape
+                                        document.addEventListener('keydown', function (e) {
                                             if (e.key === 'Escape') {
-                                                const openModals = document.querySelectorAll(
-                                                    '.custom-modal[style*="display: block"]');
+                                                const openModals = document.querySelectorAll('.custom-modal[style*="display: block"]');
                                                 openModals.forEach(modal => {
                                                     closeModal(modal);
                                                 });
                                             }
                                         });
+                            
+                                        // Tutup modal via tombol close-detail
+                                        // Semua tombol dengan kelas '.modal-close' akan diproses
+                                        document.querySelectorAll('.modal-close').forEach(closeBtn => {
+                                            closeBtn.addEventListener('click', function () {
+                                                const modal = this.closest('.custom-modal');
+                                                closeModal(modal);
+                                            });
+                                        });
                                     }
-
+                            
+                                    // Cegah modal konten menutup modal saat diklik
                                     function preventModalContentClose() {
                                         document.querySelectorAll('.custom-modal .modal-content').forEach(modalContent => {
-                                            modalContent.addEventListener('click', function(e) {
+                                            modalContent.addEventListener('click', function (e) {
                                                 e.stopPropagation();
                                             });
                                         });
                                     }
-
-                                    // Initialize everything
+                            
+                                    // Inisialisasi semua event listener
                                     function initializeAllInteractions() {
                                         attachModalTriggers();
-                                        attachReplyTriggers();
                                         attachCloseModalListeners();
                                         preventModalContentClose();
                                     }
-
-                                    // Make functions globally available
-                                    window.showReplyForm = showReplyForm;
-
-                                    // Run initialization
+                            
+                                    // Jalankan semua inisialisasi
                                     initializeAllInteractions();
                                 }
-
-                                // Start the system
+                            
                                 manageModalLayering();
                             });
-                        </script>
+                            </script>                                                                                           
                     </div>
                 </div>
                 <div class="col-xxl-3 col-xl-4 col-lg-4 col-6 mt-5 mt-xl-0">
@@ -1329,377 +1259,149 @@
                         <div class="cus-scrollbar side-wrapper">
                             <div class="sidebar-wrapper d-flex flex-column gap-6">
                                 <div class="sidebar-area p-5">
-                                    <div class=" mb-4">
+                                    @php
+                                        $pendingRequests = App\Models\Friendship::where('friend_id', Auth::id())
+                                            ->where('status', 'pending')
+                                            ->with('user')
+                                            ->get();
+                                        
+                                        $requestCount = $pendingRequests->count();
+                                    @endphp
+                                    
+                                    <div class="mb-4">
                                         <h6 class="d-inline-flex position-relative">
                                             Request
-                                            <span class="mdtxt abs-area d-center position-absolute">2</span>
+                                            @if($requestCount > 0)
+                                                <span class="notification-badge">{{ $requestCount }}</span>
+                                            @endif
                                         </h6>
                                     </div>
                                     <div class="d-grid gap-6">
-                                        <div class="single-single">
-                                            <div class="profile-pic d-flex gap-3 align-items-center">
-                                                <div class="avatar">
-                                                    <img class="avatar-img max-un"
-                                                        src="{{ asset('assets/images/avatar-4.png') }}" alt="avatar">
-                                                </div>
-                                                <div class="text-area">
-                                                    <a href="public-profile-post.html">
-                                                        <h6 class="m-0">Lerio Mao</h6>
-                                                    </a>
-                                                    <div class="friends-list d-flex gap-3 align-items-center text-center">
-                                                        <ul class="d-flex align-items-center justify-content-center">
-                                                            <li><img src="{{ asset('assets/images/avatar-2.png') }}"
-                                                                    alt="image"></li>
-                                                            <li><img src="{{ asset('assets/images/avatar-3.png') }}"
-                                                                    alt="image"></li>
-                                                            <li><img src="{{ asset('assets/images/avatar-4.png') }}"
-                                                                    alt="image"></li>
-                                                        </ul>
-                                                        <span class="mdtxt d-center">10 mutual friends</span>
+                                        @foreach($pendingRequests as $request)
+                                            @php
+                                                $mutualFriends = App\Models\Friendship::where('status', 'accepted')
+                                                    ->where(function($query) use ($request) {
+                                                        $query->where(function($q) use ($request) {
+                                                            $q->where('user_id', Auth::id())
+                                                                ->orWhere('friend_id', Auth::id());
+                                                        })
+                                                        ->whereIn('friend_id', function($subquery) use ($request) {
+                                                            $subquery->select('friend_id')
+                                                                    ->from('friendships')
+                                                                    ->where('user_id', $request->user_id)
+                                                                    ->where('status', 'accepted');
+                                                        })
+                                                        ->orWhereIn('user_id', function($subquery) use ($request) {
+                                                            $subquery->select('user_id')
+                                                                    ->from('friendships')
+                                                                    ->where('friend_id', $request->user_id)
+                                                                    ->where('status', 'accepted');
+                                                        });
+                                                    })
+                                                    ->with('friend')
+                                                    ->take(3)
+                                                    ->get();
+                                                
+                                                $mutualFriendsCount = $mutualFriends->count();
+                                            @endphp
+                                            <div class="single-single">
+                                                <div class="profile-pic d-flex gap-3 align-items-center">
+                                                    <div class="avatar">
+                                                        <img class="avatar-img max-un" src="{{ $request->user->avatar }}" alt="avatar">
+                                                    </div>
+                                                    <div class="text-area">
+                                                        <a href="public-profile-post.html">
+                                                            <h6 class="m-0">{{ $request->user->name }}</h6>
+                                                        </a>
+                                                        @if($mutualFriendsCount > 0)
+                                                        <div class="friends-list d-flex gap-3 align-items-center text-center">
+                                                            <ul class="d-flex align-items-center justify-content-center">
+                                                                @foreach($mutualFriends as $mutualFriend)
+                                                                    <li>
+                                                                        <img src="{{ $mutualFriend->friend->avatar }}" alt="image">
+                                                                    </li>
+                                                                @endforeach
+                                                            </ul>
+                                                            <span class="mdtxt d-center">{{ $mutualFriendsCount }} mutual friends</span>
+                                                        </div>
+                                                        @endif
                                                     </div>
                                                 </div>
-                                            </div>
-                                            <div class="d-flex gap-3 mt-4">
-                                                <button class="cmn-btn">Confirm</button>
-                                                <button class="cmn-btn alt">Delete</button>
-                                            </div>
-                                        </div>
-                                        <div class="single-single">
-                                            <div class="profile-pic d-flex gap-3 align-items-center">
-                                                <div class="avatar">
-                                                    <img class="avatar-img max-un"
-                                                        src="{{ asset('assets/images/avatar-5.png') }}" alt="avatar">
-                                                </div>
-                                                <div class="text-area">
-                                                    <h6 class="m-0"><a href="public-profile-post.html">Marinez</a></h6>
-                                                    <div class="friends-list d-flex gap-3 align-items-center text-center">
-                                                        <ul class="d-flex align-items-center justify-content-center">
-                                                            <li><img src="{{ asset('assets/images/avatar-2.png') }}"
-                                                                    alt="image"></li>
-                                                            <li><img src="{{ asset('assets/images/avatar-3.png') }}"
-                                                                    alt="image"></li>
-                                                            <li><img src="{{ asset('assets/images/avatar-4.png') }}"
-                                                                    alt="image"></li>
-                                                        </ul>
-                                                        <span class="mdtxt d-center">10 mutual friends</span>
-                                                    </div>
+                                                <div class="d-flex gap-3 mt-4">
+                                                    <form action="friendships/{{ $request->id }}" method="POST">
+                                                        @csrf
+                                                        @method('PATCH')
+                                                        <input type="hidden" name="status" value="accepted">
+                                                        <button class="cmn-btn">Confirm</button>
+                                                    </form>
+                                                    
+                                                    <form action="friendships/{{ $request->id }}" method="POST">
+                                                        @csrf
+                                                        @method('PATCH')
+                                                        <input type="hidden" name="status" value="rejected">
+                                                        <button class="cmn-btn alt">Delete</button>
+                                                    </form>
                                                 </div>
                                             </div>
-                                            <div class="d-flex gap-3 mt-4">
-                                                <button class="cmn-btn">Confirm</button>
-                                                <button class="cmn-btn alt">Delete</button>
-                                            </div>
-                                        </div>
+                                        @endforeach
                                     </div>
                                 </div>
                                 <div class="sidebar-area p-5">
+                                    @php
+                                        $friendships = App\Models\Friendship::where('status', 'accepted')
+                                            ->where(function($query) {
+                                                $query->where('user_id', Auth::id())
+                                                    ->orWhere('friend_id', Auth::id());
+                                            })
+                                            ->with(['user', 'friend'])
+                                            ->get();
+                                    @endphp
+                                    
                                     <div class="mb-4">
-                                        <h6 class="d-inline-flex">
-                                            Contact
-                                        </h6>
+                                        <h6 class="d-inline-flex">Contact</h6>
                                     </div>
-                                    <div class="d-flex flex-column gap-6">
-                                        <div
-                                            class="profile-area d-center position-relative align-items-center justify-content-between">
-                                            <div class="avatar-item d-flex gap-3 align-items-center">
-                                                <div class="avatar-item">
-                                                    <img class="avatar-img max-un"
-                                                        src="{{ asset('assets/images/avatar-6.png') }}" alt="avatar">
+                                    <div class="d-flex flex-column gap-6" id="contacts-container">
+                                        @foreach($friendships as $friendship)
+                                            @php
+                                                $contact = $friendship->user_id == Auth::id() ? $friendship->friend : $friendship->user;
+                                            @endphp
+                                            <div class="profile-area d-center justify-content-between contact-item">
+                                                <div class="avatar-item d-flex gap-3 align-items-center">
+                                                    <div class="avatar-item">
+                                                        <img class="avatar-img max-un" src="{{ $contact->avatar }}" alt="avatar">
+                                                    </div>
+                                                    <div class="info-area">
+                                                        <h6 class="m-0"><a href="public-profile-post.html" class="mdtxt">{{ $contact->name }}</a></h6>
+                                                    </div>
                                                 </div>
-                                                <div class="info-area">
-                                                    <h6 class="m-0"><a href="public-profile-post.html"
-                                                            class="mdtxt">Piter Maio</a></h6>
-                                                </div>
-                                            </div>
-                                            <span class="mdtxt abs-area d-center position-absolute end-0">5</span>
-                                        </div>
-                                        <div class="profile-area d-center justify-content-between">
-                                            <div class="avatar-item d-flex gap-3 align-items-center">
-                                                <div class="avatar-item">
-                                                    <img class="avatar-img max-un"
-                                                        src="{{ asset('assets/images/avatar-7.png') }}" alt="avatar">
-                                                </div>
-                                                <div class="info-area">
-                                                    <h6 class="m-0"><a href="public-profile-post.html"
-                                                            class="mdtxt">Floyd Miles</a></h6>
-                                                </div>
-                                            </div>
-                                            <div class="btn-group cus-dropdown dropend">
-                                                <button type="button" class="dropdown-btn" data-bs-toggle="dropdown"
-                                                    aria-expanded="false">
-                                                    <i class="material-symbols-outlined fs-xxl m-0"> more_horiz </i>
-                                                </button>
-                                                <ul class="dropdown-menu p-4 pt-2">
-                                                    <li>
-                                                        <a class="droplist d-flex align-items-center gap-2"
-                                                            href="#">
-                                                            <i class="material-symbols-outlined mat-icon"> person_remove
-                                                            </i>
-                                                            <span>Unfollow</span>
-                                                        </a>
-                                                    </li>
-                                                    <li>
-                                                        <a class="droplist d-flex align-items-center gap-2"
-                                                            href="#">
-                                                            <i class="material-symbols-outlined mat-icon"> hide_source </i>
-                                                            <span>Hide Contact</span>
-                                                        </a>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                        <div class="profile-area d-center justify-content-between">
-                                            <div class="avatar-item d-flex gap-3 align-items-center">
-                                                <div class="avatar-item">
-                                                    <img class="avatar-img max-un"
-                                                        src="{{ asset('assets/images/avatar-8.png') }}" alt="avatar">
-                                                </div>
-                                                <div class="info-area">
-                                                    <h6 class="m-0"><a href="public-profile-post.html"
-                                                            class="mdtxt">Darrell Steward</a></h6>
+                                                <div class="btn-group cus-dropdown dropend">
+                                                    <button type="button" class="dropdown-btn" data-bs-toggle="dropdown" aria-expanded="false">
+                                                        <i class="material-symbols-outlined fs-xxl m-0">more_horiz</i>
+                                                    </button>
+                                                    <ul class="dropdown-menu p-4 pt-2">
+                                                        <li>
+                                                            <a class="droplist d-flex align-items-center gap-2 hide-contact">
+                                                                <i class="material-symbols-outlined mat-icon">hide_source</i>
+                                                                <span>Hide Contact</span>
+                                                            </a>
+                                                        </li>
+                                                    </ul>
                                                 </div>
                                             </div>
-                                            <div class="btn-group cus-dropdown dropend">
-                                                <button type="button" class="dropdown-btn" data-bs-toggle="dropdown"
-                                                    aria-expanded="false">
-                                                    <i class="material-symbols-outlined fs-xxl m-0"> more_horiz </i>
-                                                </button>
-                                                <ul class="dropdown-menu p-4 pt-2">
-                                                    <li>
-                                                        <a class="droplist d-flex align-items-center gap-2"
-                                                            href="#">
-                                                            <i class="material-symbols-outlined mat-icon"> person_remove
-                                                            </i>
-                                                            <span>Unfollow</span>
-                                                        </a>
-                                                    </li>
-                                                    <li>
-                                                        <a class="droplist d-flex align-items-center gap-2"
-                                                            href="#">
-                                                            <i class="material-symbols-outlined mat-icon"> hide_source </i>
-                                                            <span>Hide Contact</span>
-                                                        </a>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                        <div class="profile-area d-center justify-content-between">
-                                            <div class="avatar-item d-flex gap-3 align-items-center">
-                                                <div class="avatar-item">
-                                                    <img class="avatar-img max-un"
-                                                        src="{{ asset('assets/images/avatar-2.png') }}" alt="avatar">
-                                                </div>
-                                                <div class="info-area">
-                                                    <h6 class="m-0"><a href="public-profile-post.html"
-                                                            class="mdtxt">Kristin Watson</a></h6>
-                                                </div>
-                                            </div>
-                                            <div class="btn-group cus-dropdown dropend">
-                                                <button type="button" class="dropdown-btn" data-bs-toggle="dropdown"
-                                                    aria-expanded="false">
-                                                    <i class="material-symbols-outlined fs-xxl m-0"> more_horiz </i>
-                                                </button>
-                                                <ul class="dropdown-menu p-4 pt-2">
-                                                    <li>
-                                                        <a class="droplist d-flex align-items-center gap-2"
-                                                            href="#">
-                                                            <i class="material-symbols-outlined mat-icon"> person_remove
-                                                            </i>
-                                                            <span>Unfollow</span>
-                                                        </a>
-                                                    </li>
-                                                    <li>
-                                                        <a class="droplist d-flex align-items-center gap-2"
-                                                            href="#">
-                                                            <i class="material-symbols-outlined mat-icon"> hide_source </i>
-                                                            <span>Hide Contact</span>
-                                                        </a>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                        <div class="profile-area d-center justify-content-between">
-                                            <div class="avatar-item d-flex gap-3 align-items-center">
-                                                <div class="avatar-item">
-                                                    <img class="avatar-img max-un"
-                                                        src="{{ asset('assets/images/avatar-3.png') }}" alt="avatar">
-                                                </div>
-                                                <div class="info-area">
-                                                    <h6 class="m-0"><a href="public-profile-post.html"
-                                                            class="mdtxt">Jane Cooper</a></h6>
-                                                </div>
-                                            </div>
-                                            <div class="btn-group cus-dropdown dropend">
-                                                <button type="button" class="dropdown-btn" data-bs-toggle="dropdown"
-                                                    aria-expanded="false">
-                                                    <i class="material-symbols-outlined fs-xxl m-0"> more_horiz </i>
-                                                </button>
-                                                <ul class="dropdown-menu p-4 pt-2">
-                                                    <li>
-                                                        <a class="droplist d-flex align-items-center gap-2"
-                                                            href="#">
-                                                            <i class="material-symbols-outlined mat-icon"> person_remove
-                                                            </i>
-                                                            <span>Unfollow</span>
-                                                        </a>
-                                                    </li>
-                                                    <li>
-                                                        <a class="droplist d-flex align-items-center gap-2"
-                                                            href="#">
-                                                            <i class="material-symbols-outlined mat-icon"> hide_source
-                                                            </i>
-                                                            <span>Hide Contact</span>
-                                                        </a>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                        <div class="profile-area d-center justify-content-between">
-                                            <div class="avatar-item d-flex gap-3 align-items-center">
-                                                <div class="avatar-item">
-                                                    <img class="avatar-img max-un"
-                                                        src="{{ asset('assets/images/avatar-4.png') }}" alt="avatar">
-                                                </div>
-                                                <div class="info-area">
-                                                    <h6 class="m-0"><a href="public-profile-post.html"
-                                                            class="mdtxt">Devon Lane</a></h6>
-                                                </div>
-                                            </div>
-                                            <div class="btn-group cus-dropdown dropend">
-                                                <button type="button" class="dropdown-btn" data-bs-toggle="dropdown"
-                                                    aria-expanded="false">
-                                                    <i class="material-symbols-outlined fs-xxl m-0"> more_horiz </i>
-                                                </button>
-                                                <ul class="dropdown-menu p-4 pt-2">
-                                                    <li>
-                                                        <a class="droplist d-flex align-items-center gap-2"
-                                                            href="#">
-                                                            <i class="material-symbols-outlined mat-icon"> person_remove
-                                                            </i>
-                                                            <span>Unfollow</span>
-                                                        </a>
-                                                    </li>
-                                                    <li>
-                                                        <a class="droplist d-flex align-items-center gap-2"
-                                                            href="#">
-                                                            <i class="material-symbols-outlined mat-icon"> hide_source
-                                                            </i>
-                                                            <span>Hide Contact</span>
-                                                        </a>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                        <div class="profile-area d-center justify-content-between">
-                                            <div class="avatar-item d-flex gap-3 align-items-center">
-                                                <div class="avatar-item">
-                                                    <img class="avatar-img max-un"
-                                                        src="{{ asset('assets/images/avatar-9.png') }}" alt="avatar">
-                                                </div>
-                                                <div class="info-area">
-                                                    <h6 class="m-0"><a href="public-profile-post.html"
-                                                            class="mdtxt">Annette Black</a></h6>
-                                                </div>
-                                            </div>
-                                            <div class="btn-group cus-dropdown dropend">
-                                                <button type="button" class="dropdown-btn" data-bs-toggle="dropdown"
-                                                    aria-expanded="false">
-                                                    <i class="material-symbols-outlined fs-xxl m-0"> more_horiz </i>
-                                                </button>
-                                                <ul class="dropdown-menu p-4 pt-2">
-                                                    <li>
-                                                        <a class="droplist d-flex align-items-center gap-2"
-                                                            href="#">
-                                                            <i class="material-symbols-outlined mat-icon"> person_remove
-                                                            </i>
-                                                            <span>Unfollow</span>
-                                                        </a>
-                                                    </li>
-                                                    <li>
-                                                        <a class="droplist d-flex align-items-center gap-2"
-                                                            href="#">
-                                                            <i class="material-symbols-outlined mat-icon"> hide_source
-                                                            </i>
-                                                            <span>Hide Contact</span>
-                                                        </a>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                        <div class="profile-area d-center justify-content-between">
-                                            <div class="avatar-item d-flex gap-3 align-items-center">
-                                                <div class="avatar-item">
-                                                    <img class="avatar-img max-un"
-                                                        src="{{ asset('assets/images/avatar-10.png') }}" alt="avatar">
-                                                </div>
-                                                <div class="info-area">
-                                                    <h6 class="m-0"><a href="public-profile-post.html"
-                                                            class="mdtxt">Jerome Bell</a></h6>
-                                                </div>
-                                            </div>
-                                            <div class="btn-group cus-dropdown dropend">
-                                                <button type="button" class="dropdown-btn" data-bs-toggle="dropdown"
-                                                    aria-expanded="false">
-                                                    <i class="material-symbols-outlined fs-xxl m-0"> more_horiz </i>
-                                                </button>
-                                                <ul class="dropdown-menu p-4 pt-2">
-                                                    <li>
-                                                        <a class="droplist d-flex align-items-center gap-2"
-                                                            href="#">
-                                                            <i class="material-symbols-outlined mat-icon"> person_remove
-                                                            </i>
-                                                            <span>Unfollow</span>
-                                                        </a>
-                                                    </li>
-                                                    <li>
-                                                        <a class="droplist d-flex align-items-center gap-2"
-                                                            href="#">
-                                                            <i class="material-symbols-outlined mat-icon"> hide_source
-                                                            </i>
-                                                            <span>Hide Contact</span>
-                                                        </a>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                        <div class="profile-area d-center justify-content-between">
-                                            <div class="avatar-item d-flex gap-3 align-items-center">
-                                                <div class="avatar-item">
-                                                    <img class="avatar-img max-un"
-                                                        src="{{ asset('assets/images/avatar-11.png') }}" alt="avatar">
-                                                </div>
-                                                <div class="info-area">
-                                                    <h6 class="m-0"><a href="public-profile-post.html"
-                                                            class="mdtxt">Guy Hawkins</a></h6>
-                                                </div>
-                                            </div>
-                                            <div class="btn-group cus-dropdown dropend">
-                                                <button type="button" class="dropdown-btn" data-bs-toggle="dropdown"
-                                                    aria-expanded="false">
-                                                    <i class="material-symbols-outlined fs-xxl m-0"> more_horiz </i>
-                                                </button>
-                                                <ul class="dropdown-menu p-4 pt-2">
-                                                    <li>
-                                                        <a class="droplist d-flex align-items-center gap-2"
-                                                            href="#">
-                                                            <i class="material-symbols-outlined mat-icon"> person_remove
-                                                            </i>
-                                                            <span>Unfollow</span>
-                                                        </a>
-                                                    </li>
-                                                    <li>
-                                                        <a class="droplist d-flex align-items-center gap-2"
-                                                            href="#">
-                                                            <i class="material-symbols-outlined mat-icon"> hide_source
-                                                            </i>
-                                                            <span>Hide Contact</span>
-                                                        </a>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </div>
+                                        @endforeach
                                     </div>
                                 </div>
+                                <script>
+                                    document.addEventListener('click', function(e) {
+                                        if(e.target.closest('.hide-contact')) {
+                                            const contactItem = e.target.closest('.contact-item');
+                                            contactItem.style.opacity = '0';
+                                            setTimeout(() => {
+                                                contactItem.remove();
+                                            }, 300);
+                                        }
+                                    });
+                                    </script>
                             </div>
                         </div>
                     </div>

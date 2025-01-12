@@ -151,4 +151,15 @@ class User extends Authenticatable
     {
         return $this->hasMany(SavedPost::class);
     }
+
+    // User.php
+    public function friendships()
+    {
+        return $this->hasMany(Friendship::class, 'user_id');
+    }
+
+    public function friendRequests()
+    {
+        return $this->hasMany(Friendship::class, 'friend_id');
+    }
 }

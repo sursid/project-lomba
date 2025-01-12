@@ -90,7 +90,7 @@ class GoogleController extends Controller
 
             // Generate nama file unik
             $filename = Str::uuid() . '.jpg';
-            $fullPath = public_path('assets/avatars/' . $filename);
+            $fullPath = public_path('/assets/avatars/' . $filename);
 
             // Pastikan direktori tersedia
             if (!file_exists(dirname($fullPath))) {
@@ -103,7 +103,7 @@ class GoogleController extends Controller
             // Simpan gambar
             file_put_contents($fullPath, $imageContent);
 
-            return 'assets/avatars/' . $filename;
+            return '/assets/avatars/' . $filename;
         } catch (Exception $e) {
             Log::error('Avatar Download Error: ' . $e->getMessage());
             return null;

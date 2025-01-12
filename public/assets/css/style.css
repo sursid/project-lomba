@@ -4579,6 +4579,7 @@ li {
   background-color: #e74c3c;
   color: #fff;
 }
+
 .post-video {
   width: 100%;
   height: 100%;
@@ -4595,53 +4596,137 @@ li {
 
 @media (max-width: 768px) {
   .post-video {
-      max-height: 400px;
+    max-height: 400px;
   }
-  
+
   .grid-item video {
-      max-height: 200px;
+    max-height: 200px;
   }
 }
+
 .story-upload-modal {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0,0,0,0.8);
-    z-index: 9999;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .story-upload-modal .modal-content {
-    background: var(--section-1st-color);
-    width: 90%;
-    max-width: 500px;
-    padding: 2rem;
-    border-radius: 12px;
-    position: relative;
+  background: var(--section-1st-color);
+  width: 90%;
+  max-width: 500px;
+  padding: 2rem;
+  border-radius: 12px;
+  position: relative;
 }
 
 .story-upload-modal .close-modal {
-    position: absolute;
-    right: 15px;
-    top: 15px;
-    cursor: pointer;
-    font-size: 24px;
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  cursor: pointer;
+  font-size: 24px;
 }
 
 .upload-area {
-    cursor: pointer;
-    transition: all 0.3s ease;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
 
 .upload-area:hover {
-    background: rgba(0,0,0,0.05);
+  background: rgba(0, 0, 0, 0.05);
 }
 
 .dragover {
-    background: rgba(0,0,0,0.05);
-    border-color: var(--primary-color) !important;
+  background: rgba(0, 0, 0, 0.05);
+  border-color: var(--primary-color) !important;
+}
+.notification-badge {
+  position: flex;
+  margin-left: 10px;
+  top: -8px;
+  right: -8px;
+  min-width: 20px;
+  height: 20px;
+  background-color: #FF4949;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 2px;
+}
+
+.name-wrapper {
+  position: relative;
+  display: inline-block;
+}
+.count-badge {
+  background: #ff4949;
+  color: white;
+  border-radius: 15px;
+  padding: 0px 8px;
+  font-size: 15px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 5px;
+  min-width: 22px;
+  height: 22px;
+  font-weight: 500;
+}
+.ym-notification-icon {
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  bottom: -2px;
+  right: -2px;
+  border-radius: 50%;
+  border: 2px solid #1e2837;
+}
+
+/* Container untuk posisi relative */
+.ym-avatar-wrapper {
+  position: relative;
+  display: inline-flex;
+}
+/* Notifikasi icon */
+.nt-notification-icon {
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  bottom: -2px;
+  right: -2px;
+  border-radius: 50%;
+  border: 2px solid #1e2837;
+}
+
+/* Avatar wrapper */
+.nt-avatar-wrapper {
+  position: relative;
+  display: inline-flex;
+}
+
+/* Tombol notifikasi yang lebih kecil */
+.nt-notification-btn {
+  padding: 4px 12px;
+  font-size: 13px;
+  border-radius: 6px;
+  background: var(--primary-color);
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.nt-notification-btn.alt {
+  background: transparent;
+  color: var(--primary-color);
+  border: 1px solid var(--primary-color);
 }
