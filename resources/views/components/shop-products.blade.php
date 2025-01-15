@@ -56,7 +56,7 @@
 
 <body>
     <!-- Wrapper -->
-    < id="wrapper">
+    <div id="wrapper">
         <!-- Preloader -->
         <div id="loading">
             <div id="loading-center">
@@ -1713,7 +1713,7 @@
             </div>
         </footer><!-- /Footer -->
 
-    </><!-- /#Wapper -->
+    </div><!-- /#Wapper -->
 
     <!-- Open-search -->
     <div class="offcanvas offcanvas-top offcanvas-search" id="canvasSearch">
