@@ -88,7 +88,7 @@
                             <div class="header-left">
                                 <div class="logo-site">
                                     <a href="/">
-                                        <img src="./images/logo/logo.png" alt="">
+                                        <img src="./images/logo/Nusatani.png" alt="">
                                     </a>
                                 </div>
                             </div>
@@ -437,7 +437,7 @@
                                                 </ul>
                                             </li>
                                             <li class="item has-child">
-                                                <a href="portfolio-style-1">Portfolio</a>      
+                                                <a href="portfolio-style-1">Portfolio</a>
                                             </li>
                                             <li class="item has-child current-menu">
                                                 <a href="javascript:void(0)">Shop</a>
