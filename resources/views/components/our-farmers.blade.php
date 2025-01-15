@@ -330,5 +330,53 @@
         </div><!-- /.Main-content -->
 
         <!-- Footer -->
+        <footer class="footer" id="footer-main">
+            <div class="tf-container w-1290">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="footer-top">
+                            <div class="footer-left">
+                                <div class="logo">
+                                    <a href="/">
+                                        <img src="./images/logo/logo-2.png" alt="">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="footer-center">
+                                <p class="font-snowfall">
+                                    Farm of laughter and happiness!
+                                </p>
+                            </div>
+                            <div class="footer-right">
+                                <div class="wg-social">
+                                    <ul class="list">
+                                        <li class="item">
+                                            <a href="#"><i class="icon-facebook1"></i></a>
+                                        </li>
+                                        <li class="item">
+                                            <a href="#"><i class="icon-twitter"></i></a>
+                                        </li>
+                                        <li class="item">
+                                            <a href="#"><i class="icon-instagram2"></i></a>
+                                        </li>
+                                        <li class="item">
+                                            <a href="#"><i class="icon-pinterest"></i></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+            <center><p class="no-copy font-nunito">
+                Copyright © 2025 NusaTani by
+                <span><a href="https://themeforest.net/user/themesflat/portfolio" target="_blank">NusaPHP</a>.</span>
+                All Rights Reserved.
+            </p></center>
+            </div>
+        </footer><!-- /Footer -->
         
 @endsection

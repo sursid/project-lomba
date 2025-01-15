@@ -11,10 +11,10 @@
                         <div class="col-lg-12">
                             <div class="content">
                                 <p class="sub-title">
-                                    Nurturing the Earth, Feeding the World
+                                    Kami Mendukung Kemajuan Pertanian melalui Teknologi
                                 </p>
                                 <h1 class="title">
-                                    About the Farm
+                                    Tentang kami
                                 </h1>
                                 <div class="icon-img">
                                     <img src="./images/item/line-throw-title.png" alt="">
@@ -24,11 +24,11 @@
                                     <div class="icon">
                                         <i class="icon-arrow-right1"></i>
                                     </div>
-                                    <a href="javascript:void(0)">About Us </a>
+                                    <a href="javascript:void(0)">Tentang Kami </a>
                                     <div class="icon">
                                         <i class="icon-arrow-right1"></i>
                                     </div>
-                                    <a href="javascript:void(0)">About The Farm</a>
+                                    <a href="javascript:void(0)">Tentang Komunitas Kami</a>
                                 </div>
                             </div>
                         </div>
@@ -51,11 +51,10 @@
                             <div class="col-lg-6">
                                 <div class="wrap">
                                     <p class="text font-snowfall fs-30">
-                                        We are confident that we are the leading farm in providing
-                                        agricultural products that ensure <span>
+                                    Kami yakin bahwa dengan adanya web digital NusaTani, komunitas pertanian di Indonesia akan <span>
                                             <a href="#" class="hover-text-4">
 
-                                                food hygiene and safety
+                                            semakin terhubung, berkembang, dan berdaya saing, menciptakan kolaborasi yang lebih kuat untuk masa depan pertanian yang lebih baik. 
                                             </a>
 
                                         </span>
@@ -69,10 +68,10 @@
                                     </div>
                                     <div class="counter-item">
                                         <p class="title font-worksans fw-5 fs-18">
-                                            Completed Projects
+                                            Kepuasan Dari Pengguna
                                         </p>
                                         <div class="counter">
-                                            <div id="odometer" class="odometer style-5">1000</div>
+                                            <div id="odometer" class="odometer style-5">10,200</div>
                                             <span class="sub-odo color-secondary">+</span>
                                         </div>
                                     </div>
@@ -86,10 +85,10 @@
                                     </div>
                                     <div class="counter-item">
                                         <p class="title font-worksans fw-5 fs-18">
-                                            Trust By Clients
+                                            Kepercayaan Pengguna
                                         </p>
                                         <div class="counter">
-                                            <div class="odometer style-5-2">10000</div>
+                                            <div class="odometer style-5-2">12,980</div>
                                             <span class="sub-odo color-secondary">+</span>
                                         </div>
                                     </div>
@@ -112,12 +111,10 @@
                                             <img class="tf-animate-1" src="./images/item/rice-plant-2.png" alt="">
                                         </div>
                                         <p class="sub-title">
-                                            Welcome to DonalFarm Agriculture &amp; Organic Farms
+                                            Selamat datang di NusaTani pertanian &amp; komunitas pertanian
                                         </p>
                                         <p class="title wow fadeInUp" data-wow-delay="0s">
-                                            Providing The Finest
-                                            Products To The Best
-                                            Feed Suppliers.
+                                            Solusi Digital untuk Memajukan Komunitas Pertanian Indonesia
                                         </p>
                                     </div>
                                 </div>
@@ -125,17 +122,10 @@
                             <div class="col-lg-7">
                                 <div class="text-wrap">
                                     <p class="text-1 wow fadeInUp" data-wow-delay="0s">
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacus odio,
-                                        egestas vitae augue sed, vulputate viverra velit. Quisque fringilla viverra
-                                        turpis, at condimentum arcu convallis sit amet. Class aptent taciti sociosqu ad
-                                        litora torquent per conubia nostra, per inceptos himenaeos. Fusce laoreet lectus
-                                        in velit euismod.
+                                        NusaTani hadir dengan komitmen penuh untuk menjadi solusi digital terpercaya bagi komunitas pertanian di Indonesia. Kami memahami bahwa komunitas pertanian di Indonesia memiliki potensi besar untuk berkembang di era digital. 
                                     </p>
                                     <p class="text-2 wow fadeInUp" data-wow-delay="0s">
-                                        Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos
-                                        himenaeos. Fusce laoreet lectus in velit euismod. Praesent fermentum dignissim
-                                        sapien ornare sagittis. Cras erat lorem, vulputate non magna ac, molestie
-                                        bibendum felis.
+                                        Oleh karena itu, kami berkomitmen untuk menyediakan platform yang tidak hanya membantu petani menjual hasil tani mereka dengan lebih mudah, tetapi juga menghubungkan mereka dengan komunitas lain yang memiliki visi yang sama. Bersama NusaTani, komunitas pertanian akan semakin terintegrasi, kuat, dan siap menghadapi tantangan global dengan solusi yang inovatif dan berkelanjutan.
                                     </p>
                                 </div>
                             </div>
@@ -203,24 +193,20 @@
                             <div class="col-md-6">
                                 <div class="box-text wow fadeInUp" data-wow-delay="0s">
                                     <p class="title font-worksans fw-7">
-                                        Our Mission
+                                        Misi Kami
                                     </p>
                                     <p class="text font-snowfall">
-                                        Our mission is to contribute to the promotion of agricultural products in
-                                        Vietnam with a commitment to produce sustainable values that meet international
-                                        standards and thereby create a fair and competitive market
+                                        Menyediakan solusi digital inovatif untuk mempermudah pemasaran hasil tani, memperkuat integrasi komunitas pertanian, serta mendorong kolaborasi dan keberlanjutan guna meningkatkan daya saing sektor pertanian Indonesia di era global.
                                     </p>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="box-text wow fadeInUp" data-wow-delay="0.1s">
                                     <p class="title font-worksans fw-7">
-                                        Our Vision
+                                        Visi Kami
                                     </p>
                                     <p class="text font-snowfall">
-                                        Our mission is to contribute to the promotion of agricultural products in
-                                        Vietnam with a commitment to produce sustainable values that meet international
-                                        standards and thereby create a fair and competitive market
+                                        Menjadi platform digital terkemuka yang tidak hanya membantu komunitas pertanian Indonesia meningkatkan produktivitas dan efisiensi, tetapi juga mendorong transformasi sektor pertanian menuju keberlanjutan, kolaborasi, dan daya saing global di era digital.
                                     </p>
                                 </div>
                             </div>
@@ -256,26 +242,21 @@
                                                 <img class="tf-animate-1" src="./images/item/rice-plant-2.png" alt="">
                                             </div>
                                             <p class="sub-title">
-                                                Our Agriculture Skill
+                                                Ketrampilan Pertanian Kami
 
                                             </p>
                                         </div>
 
                                         <p class="title text-anime-style-1">
-                                            We Believe In Bringing
-                                            Customers The Best Products
+                                            Kami percaya dalam memberikan kepuasan pada pengguna yang terbaik
                                         </p>
                                     </div>
                                     <p class="text mb-20">
-                                        Mauris quam tellus, pellentesque ut faucibus pretium, aliquet vitae est. Nullam
-                                        non
-                                        lorem
-                                        metus. Nulla pretium dui a diam faucibus. vehicula efficitur enim maximus. Proin
-                                        sollicitudin erat eu auctor egestas.
+                                        Kami berkomitmen untuk selalu mengutamakan kepuasan pengguna dengan menghadirkan layanan yang terbaik dan inovatif.
                                     </p>
                                     <div class="wg-progress mb-29">
                                         <div class="top">
-                                            <span>Organic Solutions</span>
+                                            <span>Solusi Terbaik</span>
                                             <span>76%</span>
                                         </div>
                                         <div class="progress tf-animate-1" role="progressbar" aria-label="Basic example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
@@ -284,7 +265,7 @@
                                     </div>
                                     <div class="wg-progress">
                                         <div class="top">
-                                            <span>Quality Agriculture</span>
+                                            <span>Pertanian Berkualitas</span>
                                             <span>95%</span>
                                         </div>
                                         <div class="progress tf-animate-1" role="progressbar" aria-label="Basic example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
@@ -313,11 +294,12 @@
                             <img src="./icons/tomato.png" alt="">
                         </div>
                         <a href="our-commitments" class="caption fw-6 mb-17 font-worksans hover-text-secondary">
-                            100% Organic Products
+                            Inovatif
+
                         </a>
                         <p class="text font-nunito">
-                            Ultrices sagittis orci a scelerisque <br> purus semper eget duis at. <br>
-                            Sollictudin nibh sit amet.
+                            Kami menghadirkan solusi yang terus berkembang dengan inovasi terbaru untuk memenuhi kebutuhan pengguna secara efektif.
+
                         </p>
                     </div>
                     <div class="box-icon ic-hover wow fadeInUp" data-wow-delay="0.1s">
@@ -325,11 +307,12 @@
                             <i class="fa-solid fa-tractor"></i>
                         </div>
                         <a href="our-commitments" class="caption fw-6 mb-17 font-worksans hover-text-secondary">
-                            Absolute Quality
+                            Mudah Digunakan
+
                         </a>
                         <p class="text font-nunito">
-                            Ultrices sagittis orci a scelerisque <br> purus semper eget duis at. <br>
-                            Sollictudin nibh sit amet.
+                            Platform kami dirancang agar ramah pengguna, sehingga memudahkan siapa saja untuk mengakses dan memanfaatkan layanan dengan cepat dan nyaman.
+
                         </p>
                     </div>
                     <div class="box-icon ic-hover wow fadeInUp" data-wow-delay="0.2s">
@@ -337,11 +320,11 @@
                             <i class="fa-solid fa-leaf"></i>
                         </div>
                         <a href="our-commitments" class="caption fw-6 mb-17 font-worksans hover-text-secondary">
-                            Environmentally Friendly
+                            Handal dan Terpercaya
+
                         </a>
                         <p class="text font-nunito">
-                            Ultrices sagittis orci a scelerisque <br> purus semper eget duis at. <br>
-                            Sollictudin nibh sit amet.
+                            Kami memastikan layanan kami selalu dapat diandalkan dan memberikan kepercayaan penuh kepada pengguna dalam setiap interaksi.
                         </p>
                     </div>
                     <div class="box-icon ic-hover wow fadeInUp" data-wow-delay="0.3s">
@@ -349,11 +332,12 @@
                             <img src="./icons/dollar-circle.png" alt="">
                         </div>
                         <a href="our-commitments" class="caption fw-6 mb-17 font-worksans hover-text-secondary">
-                            Reasonable Price
+                            Terintegrasi
+
                         </a>
                         <p class="text font-nunito">
-                            Ultrices sagittis orci a scelerisque <br> purus semper eget duis at. <br>
-                            Sollictudin nibh sit amet.
+                            Sistem kami memungkinkan integrasi yang lancar antara berbagai layanan dan mitra, menciptakan ekosistem yang efisien dan mendukung kolaborasi.
+
                         </p>
                     </div>
                 </div>
@@ -371,11 +355,11 @@
                                 </div>
                                 <div class="clip-color-text font-snowfall text-center">
                                     <p class="clip-text-bg-vertical">
-                                        Committed to Freshness!
+                                        Berkomitmen Pada Pertumbuhan!
                                     </p>
                                 </div>
                                 <p class="sub font-snowfall fs-30 text-anime-style-1">
-                                    We believe that to have good health, clean and healthy food sources are the key
+                                Kami percaya bahwa berkomitmen pada pertumbuhan yang berkelanjutan adalah kunci untuk mencapai kesuksesan jangka panjang bagi komunitas dan pengguna kami.
                                 </p>
                                 <div class="swiper-container slider-box-icon">
                                     <div class="swiper-wrapper">
@@ -387,7 +371,7 @@
                                                             <i class="icon-chemical"></i>
                                                         </div>
                                                         <a href="our-commitments" class="caption fw-6 font-worksans hover-text-4">
-                                                            Minimal Chemicals Used
+                                                            Bahan kimia yang aman
                                                         </a>
                                                     </div>
                                                 </li>
@@ -397,7 +381,7 @@
                                                             <i class="icon-worm"></i>
                                                         </div>
                                                         <a href="our-commitments" class="caption fw-6 font-worksans hover-text-4">
-                                                            Minimal Chemicals Used
+                                                            Keseimbangan ekosistem
                                                         </a>
                                                     </div>
                                                 </li>
@@ -407,7 +391,7 @@
                                                             <i class="icon-disposal"></i>
                                                         </div>
                                                         <a href="our-commitments" class="caption fw-6 font-worksans hover-text-4">
-                                                            All Organic Waste Reused
+                                                            Ramah lingkungan
                                                         </a>
                                                     </div>
                                                 </li>
@@ -417,8 +401,7 @@
                                                             <i class="icon-light-bulb"></i>
                                                         </div>
                                                         <a href="our-commitments" class="caption fw-6 font-worksans hover-text-4">
-                                                            Do Not Use Artificial
-                                                            Light
+                                                            Hasil yang optimal
                                                         </a>
                                                     </div>
                                                 </li>
@@ -428,7 +411,7 @@
                                                             <i class="icon-water-drops"></i>
                                                         </div>
                                                         <a href="our-commitments" class="caption fw-6 font-worksans hover-text-4">
-                                                            Borehole Sourced Water
+                                                            sumber daya alam terjaga
                                                         </a>
                                                     </div>
                                                 </li>
@@ -441,7 +424,7 @@
 
                                     <a href="our-commitments" class="tf-btn scale-50">
                                         <span class="text-style ">
-                                            See More Our Commitment
+                                            Lihat Komitmen Kami Selengkapnya
                                         </span>
                                         <div class="icon">
                                             <i class="icon-arrow_right"></i>
@@ -469,32 +452,29 @@
                                             <img class="tf-animate-1" src="./images/item/rice-plant-2.png" alt="">
                                         </div>
                                         <p class="sub-title">
-                                            Our History
+                                            Sejarah Kami
                                         </p>
                                     </div>
                                     <p class="title text-anime-style-1">
-                                        Important Historical <br>
-                                        Milestones Of Our Farm
+                                        Sejarah NusaTani <br>
+                                        dalam Memberdayakan Petani Indonesia
 
                                     </p>
                                     <p class="text">
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacus odio,
-                                        egestas vitae augue sed, vulputate viverra velit. Quisque fringilla viverra
-                                        turpis, at condimentum arcu convallis sit amet. Proin quis rhoncus nibh.
-                                        Pellentesque consectetur nunc ac nunc convallis placerat.
+                                        NusaTani lahir dari kesadaran akan tantangan yang dihadapi petani Indonesia, seperti keterbatasan akses pasar, harga yang tidak stabil, dan kurangnya teknologi untuk meningkatkan produktivitas. Kami terinspirasi untuk menciptakan solusi digital yang menghubungkan petani langsung dengan pasar, mengurangi perantara, serta memberikan akses ke layanan logistik, pembiayaan, pelatihan berbasis teknologi, dan membangun komunitas pertanian yang saling mendukung. Dengan visi untuk memberdayakan petani dan meningkatkan kesejahteraan mereka, NusaTani hadir sebagai platform yang mengoptimalkan potensi sektor pertanian Indonesia melalui inovasi, digitalisasi, dan kolaborasi dalam komunitas.
                                     </p>
                                     <a href="our-history" class="tf-btn bg-white wow fadeInUp" data-wow-delay="0s">
                                         <span class="text-style cl-primary">
-                                            Read More
+                                            Baca Selengkapnya
                                         </span>
                                         <div class="icon">
                                             <i class="icon-arrow_right"></i>
                                         </div>
                                     </a>
                                     <div class="wg-exprerience text-center z-5 tf-rotate-back-and-forth">
-                                        <p class="year">65</p>
+                                        <p class="year">1</p>
                                         <p class="text">
-                                            Years Of <br> Experience
+                                            Bulan kami <br> berinovasi
                                         </p>
                                     </div>
                                 </div>
@@ -529,19 +509,15 @@
                                 </div>
                                 <div class="content">
                                     <a href="event-detail" class="title fw-7 fs-30 font-worksans hover-text-secondary">
-                                        We Are Dedicated Farmers!
+                                        Belajar dari pengalaman petani senior
                                     </a>
                                     <p class="text">
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec <br> sodales
-                                        faucibus
-                                        commodo.
-                                        Proin vehicula massa id congue <br>
-                                        rutrum, ex libero sodales ex, cursus euismod.
+                                    Tanya jawab bersama petani senior memberikan wawasan berharga tentang pengalaman dan tantangan dalam dunia pertanian. <br>
+                                        
                                     </p>
                                     <div class="flex justify-center">
                                         <a href="our-farmers" class="tf-btn-read text-white hover-text-secondary">
-                                            View All The
-                                            Farmers</a>
+                                            Lihat Semua Petani</a>
                                     </div>
                                 </div>
                             </div>
@@ -553,20 +529,16 @@
                                 </div>
                                 <div class="content">
                                     <a href="event-detail" class="title fw-7 fs-30 font-worksans hover-text-secondary">
-                                        Explore Our Farm Tours
+                                        Jelajahi pertanian kami
 
                                     </a>
                                     <p class="text">
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec <br> sodales
-                                        faucibus
-                                        commodo.
-                                        Proin vehicula massa id congue <br>
-                                        rutrum, ex libero sodales ex, cursus euismod.
+                                    Jelajahi pertanian kami untuk menemukan berbagai inovasi dan solusi yang mendukung kemajuan serta kesejahteraan petani di Indonesia. <br>
+                                    
                                     </p>
                                     <div class="flex justify-center">
                                         <a href="our-farmers" class="tf-btn-read text-white hover-text-secondary">
-                                            Discovey Farm
-                                            Tours</a>
+                                            Lihat Pertanian</a>
                                     </div>
                                 </div>
                             </div>
@@ -786,5 +758,53 @@
         </div><!-- /.Main-content -->
 
         <!-- Footer -->
+        <footer class="footer" id="footer-main">
+            <div class="tf-container w-1290">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="footer-top">
+                            <div class="footer-left">
+                                <div class="logo">
+                                    <a href="/">
+                                        <img src="./images/logo/logoo.jpg" alt="">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="footer-center">
+                                <p class="font-snowfall">
+                                    Kemakmuran Pertanian Indonesia!
+                                </p>
+                            </div>
+                            <div class="footer-right">
+                                <div class="wg-social">
+                                    <ul class="list">
+                                        <li class="item">
+                                            <a href="#"><i class="icon-facebook1"></i></a>
+                                        </li>
+                                        <li class="item">
+                                            <a href="#"><i class="icon-twitter"></i></a>
+                                        </li>
+                                        <li class="item">
+                                            <a href="#"><i class="icon-instagram2"></i></a>
+                                        </li>
+                                        <li class="item">
+                                            <a href="#"><i class="icon-pinterest"></i></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+            <center><p class="no-copy font-nunito">
+                Copyright © 2025 NusaTani by
+                <span><a href="https://themeforest.net/user/themesflat/portfolio" target="_blank">NusaPHP</a>.</span>
+                All Rights Reserved.
+            </p></center>
+            </div>
+        </footer><!-- /Footer -->
         
 @endsection

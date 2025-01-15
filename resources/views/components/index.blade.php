@@ -264,7 +264,7 @@
                                 </div>
                             </a>
                             <div class="image hover-item">
-                                <img src="./images/section/s-about.jpg" data-src="./images/section/s-about.jpg"
+                                <img src="./images/section/sayaaa.jpg" data-src="./images/section/sayaaa.jpg"
                                     alt="" class="lazyload tf-animate-2" />
                             </div>
                         </div>
