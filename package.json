@@ -5,8 +5,18 @@
         "build": "vite build"
     },
     "devDependencies": {
+        "@babel/preset-react": "^7.26.3",
+        "@vitejs/plugin-react": "^4.3.4",
         "axios": "^1.1.2",
+        "babel-plugin-react-compiler": "^19.0.0-beta-63e3235-20250105",
         "laravel-vite-plugin": "^0.7.2",
         "vite": "^4.0.0"
+    },
+    "dependencies": {
+        "@inertiajs/inertia": "^0.11.1",
+        "@inertiajs/react": "^2.0.0",
+        "react": "^19.0.0",
+        "react-dom": "^19.0.0",
+        "react-hot-toast": "^2.5.1"
     }
 }

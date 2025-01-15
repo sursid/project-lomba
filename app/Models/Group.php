@@ -16,6 +16,7 @@ class Group extends Model
         'cover_image',
         'creator_id',
         'privacy',
+        'type',
         'post_approval_needed'
     ];
 

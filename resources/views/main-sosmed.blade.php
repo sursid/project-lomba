@@ -19,8 +19,8 @@
     <meta property="og:url" content="{{ url()->current() }}">
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
 </head>
-
 <body>
     <div class="preloader align-items-center justify-content-center">
         <span class="loader"></span>
@@ -233,7 +233,7 @@
                         <div class="single-item d-none d-lg-block profile-area position-relative">
                             <div class="profile-pic d-flex align-items-center">
                                 <span class="avatar cmn-head active-status">
-                                    <img class="avatar-img max-un" src="{{ $user->avatar }}"
+                                    <img class="avatar-img max-un" src="{{ Auth::user()->avatar }}"
                                         alt="avatar">
                                 </span>
                             </div>
@@ -242,11 +242,11 @@
                                     <div class="d-flex gap-3 align-items-center">
                                         <div class="avatar-item">
                                             <img class="avatar-img max-un"
-                                                src="{{ $user->avatar }}" alt="avatar">
+                                                src="{{ Auth::user()->avatar }}" alt="avatar">
                                         </div>
                                         <div class="text-area">
-                                            <h6 class="m-0 mb-1">{{ $user->name }}</h6>
-                                            <p class="mdtxt">{{ $user->bio }}</p>
+                                            <h6 class="m-0 mb-1">{{ Auth::user()->name }}</h6>
+                                            <p class="mdtxt">{{ Auth::user()->bio }}</p>
                                         </div>
                                     </div>
                                 </div>
@@ -341,6 +341,7 @@
         </div>
     </div>
     @yield('content')
+    @stack('scripts')
     <!--==================================================================-->
     <script src="{{ asset('assets/js/plugins/jquery.min.js') }}"></script>
     <script src="{{ asset('assets/js/bootstrap.bundle.min.js') }}"></script>
@@ -365,7 +366,7 @@
     <script src="{{ asset('assets/js/comment.js') }}" defer></script>
     <script src="{{ asset('assets/js/reply-comment.js') }}" defer></script>
     <script src="{{ asset('assets/js/upload.js') }}" defer></script>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
 </body>
 
 </html>

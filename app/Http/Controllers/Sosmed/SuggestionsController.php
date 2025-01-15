@@ -13,6 +13,7 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Log;
 use App\Models\Friendship;
 use App\Models\Conversation;
+use App\Models\Notification;
 
 class SuggestionsController extends Controller
 {
@@ -27,8 +28,8 @@ class SuggestionsController extends Controller
 
             // Get IDs of blocked users
             $blockedUserIds = Block::where(function ($query) use ($user) {
-                $query->where('user_id', $user->id)  
-                    ->orWhere('blocked_user_id', $user->id);  
+                $query->where('user_id', $user->id)
+                    ->orWhere('blocked_user_id', $user->id);
             })
                 ->get()
                 ->map(function ($block) use ($user) {
@@ -41,10 +42,10 @@ class SuggestionsController extends Controller
                 $query->where('user_id', $user->id)
                     ->orWhere('friend_id', $user->id);
             })->where('status', 'accepted')
-              ->get()
-              ->map(function ($friendship) use ($user) {
-                  return $friendship->user_id == $user->id ? $friendship->friend_id : $friendship->user_id;
-              });
+                ->get()
+                ->map(function ($friendship) use ($user) {
+                    return $friendship->user_id == $user->id ? $friendship->friend_id : $friendship->user_id;
+                });
 
             // Query stories excluding those from blocked users  
             $stories = Story::select([
@@ -125,6 +126,82 @@ class SuggestionsController extends Controller
                     'error' => 'Terjadi kesalahan saat memuat data'
                 ], 500);
             }
+        }
+    }
+
+    public function sendFriendRequest(Request $request)
+    {
+        try {
+            // Validate the request
+            $validatedData = $request->validate([
+                'suggested_user_id' => 'required|exists:users,id'
+            ]);
+
+            $currentUser = Auth::user();
+            $suggestedUserId = $validatedData['suggested_user_id'];
+
+            // Check if a friendship already exists
+            $existingFriendship = Friendship::where(function ($query) use ($currentUser, $suggestedUserId) {
+                $query->where(function ($q) use ($currentUser, $suggestedUserId) {
+                    $q->where('user_id', $currentUser->id)
+                        ->where('friend_id', $suggestedUserId);
+                })->orWhere(function ($q) use ($currentUser, $suggestedUserId) {
+                    $q->where('user_id', $suggestedUserId)
+                        ->where('friend_id', $currentUser->id);
+                });
+            })->first();
+
+            // If friendship exists and is not rejected, return error
+            if ($existingFriendship) {
+                if ($existingFriendship->status === 'accepted') {
+                    return response()->json([
+                        'message' => 'You are already friends.',
+                        'status' => 'error'
+                    ], 400);
+                }
+
+                if ($existingFriendship->status === 'pending') {
+                    return response()->json([
+                        'message' => 'Friend request already sent.',
+                        'status' => 'error'
+                    ], 400);
+                }
+            }
+
+            // Create new friendship request
+            $friendship = new Friendship();
+            $friendship->user_id = $currentUser->id;
+            $friendship->friend_id = $suggestedUserId;
+            $friendship->status = 'pending';
+            $friendship->save();
+
+            // Create notification for the suggested user
+            DB::table('notifications')->insert([
+                'user_id' => $suggestedUserId,
+                'from_user_id' => $currentUser->id,
+                'type' => 'friend_request',
+                'notifiable_type' => User::class,
+                'notifiable_id' => $suggestedUserId,
+                'message' => $currentUser->name . ' sent you a friend request',
+                'is_read' => 0,
+                'created_at' => now(),
+                'updated_at' => now()
+            ]);
+
+            return response()->json([
+                'message' => 'Friend request sent successfully.',
+                'status' => 'success'
+            ]);
+        } catch (\Exception $e) {
+            Log::error('Error sending friend request:', [
+                'message' => $e->getMessage(),
+                'trace' => $e->getTraceAsString()
+            ]);
+
+            return response()->json([
+                'message' => 'An error occurred while sending friend request.',
+                'status' => 'error'
+            ], 500);
         }
     }
 }

@@ -25,20 +25,20 @@
                         </div>
                         <div class="profile-pic d-flex gap-2 align-items-center">
                             <div class="avatar position-relative">
-                                <img class="profile-nusatani avatar-img max-un" src="{{ $user->avatar }}" alt="avatar">
+                                <img class="profile-nusatani avatar-img max-un" src="{{ Auth::user()->avatar }}" alt="avatar">
                             </div>
                             <div class="text-area">
-                                <h6 class="m-0 mb-1"><a href="profile-post.html">
+                                <h6 class="m-0 mb-1"><a href="profile-post">
                                         @if (isset($user))
-                                            {{ $user->name }}
+                                            {{ Auth::user()->name }}
                                         @endif
                                     </a></h6>
-                                <p class="mdtxt"><span>@</span>{{ $user->username }} </p>
+                                <p class="mdtxt"><span>@</span>{{ Auth::user()->username }} </p>
                             </div>
                         </div>
                         <ul class="profile-link mt-7 mb-7 pb-7">
                             <li>
-                                <a href="/sosmed" class="d-flex gap-4 active">
+                                <a href="/sosmed/" class="d-flex gap-4 active">
                                     <i class="material-symbols-outlined mat-icon"> home </i>
                                     <span>Home</span>
                                 </a>
@@ -50,43 +50,37 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="event.html" class="d-flex gap-4">
+                                <a href="/sosmed/event" class="d-flex gap-4">
                                     <i class="material-symbols-outlined mat-icon"> workspace_premium </i>
                                     <span>Event</span>
                                 </a>
                             </li>
                             <li>
-                                <a href="pages.html" class="d-flex gap-4">
-                                    <i class="material-symbols-outlined mat-icon"> perm_media </i>
-                                    <span>Pages</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="group.html" class="d-flex gap-4">
+                                <a href="/sosmed/group" class="d-flex gap-4">
                                     <i class="material-symbols-outlined mat-icon"> workspaces </i>
                                     <span>Group</span>
                                 </a>
                             </li>
                             <li>
-                                <a href="marketplace.html" class="d-flex gap-4">
+                                <a href="/sosmed/marketplace" class="d-flex gap-4">
                                     <i class="material-symbols-outlined mat-icon"> store </i>
                                     <span>Marketplace</span>
                                 </a>
                             </li>
                             <li>
-                                <a href="saved-post.html" class="d-flex gap-4">
+                                <a href="/sosmed/saved-post" class="d-flex gap-4">
                                     <i class="material-symbols-outlined mat-icon"> sync_saved_locally </i>
                                     <span>Saved</span>
                                 </a>
                             </li>
                             <li>
-                                <a href="favorites.html" class="d-flex gap-4">
+                                <a href="/sosmed/favorites" class="d-flex gap-4">
                                     <i class="material-symbols-outlined mat-icon"> bookmark_add </i>
                                     <span>Favorites</span>
                                 </a>
                             </li>
                             <li>
-                                <a href="setting.html" class="d-flex gap-4">
+                                <a href="/sosmed/setting" class="d-flex gap-4">
                                     <i class="material-symbols-outlined mat-icon"> settings </i>
                                     <span>Settings</span>
                                 </a>
@@ -101,7 +95,7 @@
                         <div class="single-item">
                             <div class="single-slide">
                                 <a href="#" class="position-relative d-center add-story-btn" id="addStoryButton">
-                                    <img class="bg-img" src="{{ $user->avatar }}" alt="icon">
+                                    <img class="bg-img" src="{{ Auth::user()->avatar }}" alt="icon">
                                     <div class="abs-area d-grid p-3 position-absolute bottom-0">
                                         <div class="icon-box m-auto d-center mb-3" id="addStoryIcon">
                                             <i class="material-symbols-outlined text-center mat-icon"> add </i>
@@ -158,7 +152,7 @@
                     </div>
                     <div class="share-post d-flex gap-3 gap-sm-5 p-3 p-sm-5">
                         <div class="profile-box">
-                            <img src="{{ $user->avatar }}" class="max-un" alt="icon">
+                            <img src="{{ Auth::user()->avatar }}" class="max-un" alt="icon">
                         </div>
                         <form action="#" class="w-100 position-relative">
                             <textarea cols="10" rows="2" placeholder="Apa yang kamu pikirkan, {{ explode(' ', $user->name)[0] }}?"
@@ -448,7 +442,7 @@
                                         <ul class="d-flex align-items-center justify-content-center">
                                             @foreach ($post->likedUsers()->latest('likes.created_at')->take(3)->get() as $user)
                                                 <li>
-                                                    <img src="{{ $user->avatar }}" alt="{{ $user->name }}'s avatar"
+                                                    <img src="{{ Auth::user()->avatar }}" alt="{{ Auth::user()->name }}'s avatar"
                                                         class="user-avatar">
                                                 </li>
                                             @endforeach
@@ -791,8 +785,8 @@
                                                     <ul class="d-flex align-items-center justify-content-center">
                                                         @foreach ($post->likedUsers()->latest('likes.created_at')->take(3)->get() as $user)
                                                             <li>
-                                                                <img src="{{ $user->avatar }}"
-                                                                    alt="{{ $user->name }}'s avatar"
+                                                                <img src="{{ Auth::user()->avatar }}"
+                                                                    alt="{{ Auth::user()->name }}'s avatar"
                                                                     class="user-avatar">
                                                             </li>
                                                         @endforeach
@@ -1310,7 +1304,7 @@
                                                         <img class="avatar-img max-un" src="{{ $request->user->avatar }}" alt="avatar">
                                                     </div>
                                                     <div class="text-area">
-                                                        <a href="public-profile-post.html">
+                                                        <a href="public-profile-post">
                                                             <h6 class="m-0">{{ $request->user->name }}</h6>
                                                         </a>
                                                         @if($mutualFriendsCount > 0)
@@ -1371,7 +1365,7 @@
                                                         <img class="avatar-img max-un" src="{{ $contact->avatar }}" alt="avatar">
                                                     </div>
                                                     <div class="info-area">
-                                                        <h6 class="m-0"><a href="public-profile-post.html" class="mdtxt">{{ $contact->name }}</a></h6>
+                                                        <h6 class="m-0"><a href="public-profile-post" class="mdtxt">{{ $contact->name }}</a></h6>
                                                     </div>
                                                 </div>
                                                 <div class="btn-group cus-dropdown dropend">

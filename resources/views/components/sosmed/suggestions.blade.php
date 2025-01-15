@@ -27,25 +27,25 @@
                         </div>
                         <ul class="profile-link mt-7 mb-7 pb-7">
                             <li>
-                                <a href="friend-request" class="d-flex gap-4">
+                                <a href="/sosmed/friend-request" class="d-flex gap-4">
                                     <i class="material-symbols-outlined mat-icon"> person </i>
                                     <span>Friend Request</span>
                                 </a>
                             </li>
                             <li>
-                                <a href="suggestions" class="d-flex gap-4 active">
+                                <a href="/sosmed/suggestions" class="d-flex gap-4 active">
                                     <i class="material-symbols-outlined mat-icon"> person_add </i>
                                     <span>Suggestions</span>
                                 </a>
                             </li>
                             <li>
-                                <a href="all-friend" class="d-flex gap-4">
+                                <a href="/sosmed/all-friend" class="d-flex gap-4">
                                     <i class="material-symbols-outlined mat-icon"> person </i>
                                     <span>All Friend</span>
                                 </a>
                             </li>
                             <li>
-                                <a href="block-list" class="d-flex gap-4">
+                                <a href="/sosmed/block-list" class="d-flex gap-4">
                                     <i class="material-symbols-outlined mat-icon"> lock </i>
                                     <span>Block List</span>
                                 </a>
@@ -55,94 +55,87 @@
                 </div>
                 <div class="col-xl-9 col-lg-8">
                     <div class="row cus-mar friend-request">
-                            @php
-                                $suggestions = $suggestions->filter(function ($suggestion) {
-                                    $existingFriendship = DB::table('friendships')
-                                        ->where(function ($query) use ($suggestion) {
-                                            $query
-                                                ->where(function ($q) use ($suggestion) {
-                                                    $q->where('user_id', auth()->id())->where(
-                                                        'friend_id',
-                                                        $suggestion->id,
-                                                    );
-                                                })
-                                                ->orWhere(function ($q) use ($suggestion) {
-                                                    $q->where('user_id', $suggestion->id)->where(
-                                                        'friend_id',
-                                                        auth()->id(),
-                                                    );
-                                                });
-                                        })
-                                        ->whereIn('status', ['pending', 'accepted'])
-                                        ->exists();
+                        @php
+                            $suggestions = $suggestions->filter(function ($suggestion) {
+                                $existingFriendship = DB::table('friendships')
+                                    ->where(function ($query) use ($suggestion) {
+                                        $query
+                                            // Check if current user sent request to suggestion
+                                            ->where(function ($q) use ($suggestion) {
+                                                $q->where('user_id', auth()->id())->where('friend_id', $suggestion->id);
+                                            })
+                                            // Check if suggestion sent request to current user
+                                            ->orWhere(function ($q) use ($suggestion) {
+                                                $q->where('user_id', $suggestion->id)->where('friend_id', auth()->id());
+                                            });
+                                    })
+                                    ->whereIn('status', ['pending', 'accepted'])
+                                    ->exists();
 
-                                    return !$existingFriendship;
-                                });
+                                return !$existingFriendship;
+                            });
+                        @endphp
+
+                        @foreach ($suggestions as $suggestion)
+                            @php
+                                $mutualFriends = DB::table('friendships as f1')
+                                    ->join('friendships as f2', function ($join) use ($suggestion) {
+                                        $join->on(function ($query) use ($suggestion) {
+                                            $query
+                                                ->where('f1.user_id', $suggestion->id)
+                                                ->where('f2.user_id', auth()->id())
+                                                ->orWhere('f1.friend_id', $suggestion->id)
+                                                ->where('f2.friend_id', auth()->id());
+                                        });
+                                    })
+                                    ->where('f1.status', 'accepted')
+                                    ->where('f2.status', 'accepted')
+                                    ->join(
+                                        'users',
+                                        'users.id',
+                                        '=',
+                                        DB::raw(
+                                            'CASE WHEN f1.user_id = ' .
+                                                $suggestion->id .
+                                                ' THEN f1.friend_id ELSE f1.user_id END',
+                                        ),
+                                    )
+                                    ->select('users.id', 'users.avatar')
+                                    ->distinct()
+                                    ->limit(3)
+                                    ->get();
                             @endphp
 
-                            @foreach ($suggestions as $suggestion)
-                                @php
-                                    $mutualFriends = DB::table('friendships as f1')
-                                        ->join('friendships as f2', function ($join) use ($suggestion) {
-                                            $join->on(function ($query) use ($suggestion) {
-                                                $query
-                                                    ->where('f1.user_id', $suggestion->id)
-                                                    ->where('f2.user_id', auth()->id())
-                                                    ->orWhere('f1.friend_id', $suggestion->id)
-                                                    ->where('f2.friend_id', auth()->id());
-                                            });
-                                        })
-                                        ->where('f1.status', 'accepted')
-                                        ->where('f2.status', 'accepted')
-                                        ->join(
-                                            'users',
-                                            'users.id',
-                                            '=',
-                                            DB::raw(
-                                                'CASE WHEN f1.user_id = ' .
-                                                    $suggestion->id .
-                                                    ' THEN f1.friend_id ELSE f1.user_id END',
-                                            ),
-                                        )
-                                        ->select('users.id', 'users.avatar')
-                                        ->distinct()
-                                        ->limit(3)
-                                        ->get();
-                                @endphp
-
-                                <div class="col-xl-4 col-sm-6 col-8">
-                                    <div class="single-box p-5">
-                                        <div class="avatar-friend">
-                                            <img class="aavatar-friend-img w-100" src="{{ $suggestion->avatar }}"
-                                                alt="avatar">
-                                        </div>
-                                        <a href="">
-                                            <h6 class="m-0 mb-2 mt-3">{{ $suggestion->name }}</h6>
-                                            <h10 class="m-0 mb-2 mt-3">{{ $suggestion->bio }}</h10>
-                                        </a>
-                                        <div class="friends-list d-center gap-1 text-center">
-                                            @if ($mutualFriends->count() > 0)
-                                                <ul class="d-center">
-                                                    @foreach ($mutualFriends as $friend)
-                                                        <li><img src="{{ $friend->avatar }}" alt="mutual friend"></li>
-                                                    @endforeach
-                                                </ul>
-                                                <span class="smtxt m-0">{{ $mutualFriends->count() }} mutual
-                                                    friends</span>
-                                            @endif
-                                        </div>
-                                        <div class="d-center gap-2 mt-4">
-                                            <form method="POST" action="" class="d-inline">
-                                                @csrf
-                                                @method('POST')
-                                                <button type="submit" class="cmn-btn">
-                                                    <span>Request</span>
-                                                </button>
-                                            </form>
-                                        </div>
+                            <div class="col-xl-4 col-sm-6 col-8">
+                                <div class="single-box p-5">
+                                    <div class="avatar-friend">
+                                        <img class="aavatar-friend-img w-100" src="{{ $suggestion->avatar }}"
+                                            alt="avatar">
+                                    </div>
+                                    <a href="">
+                                        <h6 class="m-0 mb-2 mt-3">{{ $suggestion->name }}</h6>
+                                        <h10 class="m-0 mb-2 mt-3">{{ $suggestion->bio }}</h10>
+                                    </a>
+                                    <div class="friends-list d-center gap-1 text-center">
+                                        @if ($mutualFriends->count() > 0)
+                                            <ul class="d-center">
+                                                @foreach ($mutualFriends as $friend)
+                                                    <li><img src="{{ $friend->avatar }}" alt="mutual friend"></li>
+                                                @endforeach
+                                            </ul>
+                                            <span class="smtxt m-0">{{ $mutualFriends->count() }} mutual
+                                                friends</span>
+                                        @endif
+                                    </div>
+                                    <div class="d-center gap-2 mt-4">
+                                        <button type="button" class="cmn-btn send-friend-request"
+                                            data-user-id="{{ $suggestion->id }}" onclick="sendFriendRequest(this)">
+                                            <span>Request</span>
+                                        </button>
                                     </div>
                                 </div>
-                            @endforeach
+                            </div>
+                        @endforeach
                     </div>
                 </div>
                 <style>
@@ -164,5 +157,6 @@
                 </style>
             </div>
         </div>
+        <script src="{{ asset('assets/js/suggestions.js') }}"></script>
     </main>
 @endsection

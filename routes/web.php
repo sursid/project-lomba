@@ -12,6 +12,9 @@ use App\Http\Controllers\Sosmed\FriendRequestController;
 use App\Http\Controllers\Sosmed\SuggestionsController;
 use App\Http\Controllers\Sosmed\AllFriendController;
 use App\Http\Controllers\Sosmed\BlockListController;
+use App\Http\Controllers\Sosmed\EventController;
+use App\Http\Controllers\Sosmed\GroupController;
+use App\Http\Controllers\Sosmed\MarketplaceController;
 
 
 Route::middleware('guest')->group(function () {
@@ -47,10 +50,31 @@ Route::middleware(['auth', 'member'])->group(function () {
 
         Route::get('/friend-request', [FriendRequestController::class, 'index']);
         Route::post('/friend-request/{friendshipId}/respond', [FriendRequestController::class, 'respondToRequest'])->name('friend-request.respond');
-        
+
         Route::get('/suggestions', [SuggestionsController::class, 'index']);
+        Route::post('/send-friend-request', [SuggestionsController::class, 'sendFriendRequest'])->name('sosmed.send-friend-request');
+
         Route::get('/all-friend', [AllFriendController::class, 'index']);
+
         Route::get('/block-list', [BlockListController::class, 'index']);
+        Route::post('/block/{userId}/remove', [BlockListController::class, 'remove'])->name('block.remove');
+
+
+
+        //Event
+        Route::get('/event', [EventController::class, 'index'])->name('sosmed.event');
+        Route::post('/event/register', [EventController::class, 'registerForEvent']);
+        Route::get('/event/{event_id}', [EventController::class, 'show'])->name('event.show');
+
+        //Group
+        Route::get('/group', [GroupController::class, 'index']);
+        Route::post('/group/join', [GroupController::class, 'join'])->name('group.join'); // Bergabung dengan grup
+        Route::get('/group/{id}', [GroupController::class, 'show'])->name('sosmed.group.show');
+
+        //Marketplace
+        Route::get('/marketplace', [MarketplaceController::class, 'index'])->name('marketplace.index');
+        Route::get('/marketplace/{id}', [MarketplaceController::class, 'detail'])->name('marketplace.detail');
+        Route::post('/add-to-cart', [MarketplaceController::class, 'addToCart'])->name('addToCart');
     });
 
     Route::post('/api/story/view', [StoryController::class, 'recordView']);

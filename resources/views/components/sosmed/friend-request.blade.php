@@ -2,34 +2,8 @@
 
 
 @section('content')
-<link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.1.4/toastr.min.css" rel="stylesheet">
-    
-    <!-- Load Toastr JS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.1.4/toastr.min.js"></script>
-    
-    <!-- Initialize Toastr -->
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            toastr.options = {
-                closeButton: true,
-                debug: false,
-                newestOnTop: false,
-                progressBar: true,
-                positionClass: "toast-top-right",
-                preventDuplicates: false,
-                showDuration: "300",
-                hideDuration: "1000",
-                timeOut: "5000",
-                extendedTimeOut: "1000",
-                showEasing: "swing",
-                hideEasing: "linear",
-                showMethod: "fadeIn",
-                hideMethod: "fadeOut"
-            };
-        });
-    </script>
-
-    <!-- Load your main JS file -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
     <script src="{{ asset('assets/js/request-friend.js') }}"></script>
     <main class="main-content">
         <div class="container">
@@ -49,34 +23,34 @@
                         </div>
                         <div class="profile-pic d-flex gap-2 align-items-center">
                             <div class="avatar position-relative">
-                                <img class="avatar-img max-un" src="{{ $user->avatar }}" alt="avatar">
+                                <img class="avatar-img max-un" src="{{ Auth::user()->avatar }}" alt="avatar">
                             </div>
                             <div class="text-area">
-                                <h6 class="m-0 mb-1"><a href="profile-post">{{ $user->name }}</a></h6>
-                                <p class="mdtxt">@ {{ $user->username }}</p>
+                                <h6 class="m-0 mb-1"><a href="profile-post">{{ Auth::user()->name }}</a></h6>
+                                <p class="mdtxt"><span>@</span>{{ Auth::user()->username }} </p>
                             </div>
                         </div>
                         <ul class="profile-link mt-7 mb-7 pb-7">
                             <li>
-                                <a href="friend-request" class="d-flex gap-4 active">
+                                <a href="/sosmed/friend-request" class="d-flex gap-4 active">
                                     <i class="material-symbols-outlined mat-icon"> person </i>
                                     <span>Friend Request</span>
                                 </a>
                             </li>
                             <li>
-                                <a href="suggestions" class="d-flex gap-4">
+                                <a href="/sosmed/suggestions" class="d-flex gap-4">
                                     <i class="material-symbols-outlined mat-icon"> person_add </i>
                                     <span>Suggestions</span>
                                 </a>
                             </li>
                             <li>
-                                <a href="all-friend" class="d-flex gap-4">
+                                <a href="/sosmed/all-friend" class="d-flex gap-4">
                                     <i class="material-symbols-outlined mat-icon"> person </i>
                                     <span>All Friend</span>
                                 </a>
                             </li>
                             <li>
-                                <a href="block-list" class="d-flex gap-4">
+                                <a href="/sosmed/block-list" class="d-flex gap-4">
                                     <i class="material-symbols-outlined mat-icon"> lock </i>
                                     <span>Block List</span>
                                 </a>
@@ -165,6 +139,5 @@
                 </style>
             </div>
         </div>
-        <script src="{{ asset('assets/js/request-friend.js') }}" defer></script>
     </main>
 @endsection

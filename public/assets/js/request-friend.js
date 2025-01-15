@@ -1,55 +1,56 @@
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     const friendRequestButtons = document.querySelectorAll('.confirm-friend-request, .delete-friend-request');
-    
+
     friendRequestButtons.forEach(button => {
-        button.addEventListener('click', function(e) {
+        button.addEventListener('click', async function (e) {
             const friendshipId = this.getAttribute('data-friendship-id');
             const action = this.classList.contains('confirm-friend-request') ? 'accept' : 'reject';
-            
+
             // Disable button during processing
             this.disabled = true;
             const originalText = this.textContent;
             this.textContent = 'Processing...';
 
-            // Create FormData
-            const formData = new FormData();
-            formData.append('action', action);
-            formData.append('_token', document.querySelector('meta[name="csrf-token"]').getAttribute('content'));
+            try {
+                const response = await fetch(`/sosmed/friend-request/${friendshipId}/respond`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]').getAttribute('content')
+                    },
+                    body: JSON.stringify({ action })
+                });
 
-            // Make the request
-            fetch(`/sosmed/friend-request/${friendshipId}/respond`, {
-                method: 'POST',
-                body: formData
-            })
-            .then(response => response.json())
-            .then(data => {
+                if (!response.ok) {
+                    throw new Error('Server responded with an error');
+                }
+
+                const data = await response.json();
+
                 if (data.status === 'success') {
-                    // Show success toast
-                    toastr.success(data.message);
-                    
+                    toastr.success(data.message || 'Request processed successfully');
+
                     // Remove the friend request card
                     const requestCard = this.closest('.single-box').parentElement;
                     requestCard.remove();
-                    
+
                     // Check if no more friend requests
                     const remainingRequests = document.querySelectorAll('.friend-request .single-box');
                     if (remainingRequests.length === 0) {
-                        document.querySelector('.friend-request').innerHTML = 
+                        document.querySelector('.friend-request').innerHTML =
                             '<div class="col-12 text-center py-4"><p>No pending friend requests</p></div>';
                     }
                 } else {
-                    toastr.error('Unexpected response');
+                    toastr.error(data.message || 'Unexpected response');
                 }
-            })
-            .catch(error => {
-                console.error('Error:', error);
-                toastr.error('An error occurred');
-            })
-            .finally(() => {
+            } catch (error) {
+                console.error('Request Error:', error);
+                toastr.error('An error occurred while processing your request');
+            } finally {
                 // Re-enable button
                 this.disabled = false;
                 this.textContent = originalText;
-            });
+            }
         });
     });
 });

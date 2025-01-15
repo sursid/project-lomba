@@ -93,4 +93,40 @@ class BlockListController extends Controller
             }
         }
     }
+
+    public function remove(Request $request, $blockedUserId)
+    {
+        try {
+            $user = Auth::user();
+
+            // Find and delete the block record
+            $deleted = Block::where('user_id', $user->id)
+                ->where('blocked_user_id', $blockedUserId)
+                ->delete();
+
+            // Check if deletion was successful
+            if ($deleted) {
+                return response()->json([
+                    'status' => 'success',
+                    'message' => 'Blocked user removed successfully'
+                ]);
+            }
+
+            // Block record not found
+            return response()->json([
+                'status' => 'error',
+                'message' => 'Block record not found'
+            ], 404);
+        } catch (\Exception $e) {
+            Log::error('Error in remove method:', [
+                'message' => $e->getMessage(),
+                'trace' => $e->getTraceAsString()
+            ]);
+
+            return response()->json([
+                'status' => 'error',
+                'message' => 'An error occurred while removing the blocked user'
+            ], 500);
+        }
+    }
 }

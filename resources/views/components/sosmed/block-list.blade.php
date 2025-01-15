@@ -1,5 +1,8 @@
 @extends('main-sosmed')
+
 @section('content')
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
     <main class="main-content">
         <div class="container">
             <div class="row">
@@ -18,307 +21,39 @@
                         </div>
                         <div class="profile-pic d-flex gap-2 align-items-center">
                             <div class="avatar position-relative">
-                                <img class="avatar-img max-un" src="{{ asset('assets/images/avatar-1.png') }}" alt="avatar">
+                                <img class="avatar-img max-un" src="{{ Auth::user()->avatar }}" alt="avatar">
                             </div>
                             <div class="text-area">
-                                <h6 class="m-0 mb-1"><a href="profile-post.html">Lerio Mao</a></h6>
-                                <p class="mdtxt">@maolio</p>
+                                <h6 class="m-0 mb-1"><a href="profile-post">{{ Auth::user()->name }}</a></h6>
+                                <p class="mdtxt"><span>@</span>{{ Auth::user()->username }} </p>
                             </div>
                         </div>
                         <ul class="profile-link mt-7 mb-7 pb-7">
                             <li>
-                                <a href="friend-request.html" class="d-flex gap-4">
+                                <a href="/sosmed/friend-request" class="d-flex gap-4">
                                     <i class="material-symbols-outlined mat-icon"> person </i>
                                     <span>Friend Request</span>
                                 </a>
                             </li>
                             <li>
-                                <a href="suggestions.html" class="d-flex gap-4">
+                                <a href="/sosmed/suggestions" class="d-flex gap-4">
                                     <i class="material-symbols-outlined mat-icon"> person_add </i>
                                     <span>Suggestions</span>
                                 </a>
                             </li>
                             <li>
-                                <a href="all-friend.html" class="d-flex gap-4">
+                                <a href="/sosmed/all-friend" class="d-flex gap-4">
                                     <i class="material-symbols-outlined mat-icon"> person </i>
                                     <span>All Friend</span>
                                 </a>
                             </li>
                             <li>
-                                <a href="block-list.html" class="d-flex gap-4 active">
+                                <a href="/sosmed/block-list" class="d-flex gap-4 active">
                                     <i class="material-symbols-outlined mat-icon"> lock </i>
                                     <span>Block List</span>
                                 </a>
                             </li>
                         </ul>
-                        <div class="mb-4">
-                            <h6 class="d-inline-flex">
-                                Contact
-                            </h6>
-                        </div>
-                        <div class="d-flex flex-column gap-6">
-                            <div class="profile-area d-center justify-content-between">
-                                <div class="avatar-item d-flex gap-3 align-items-center">
-                                    <div class="avatar-item">
-                                        <img class="avatar-img max-un" src="{{ asset('assets/images/avatar-9.png') }}" alt="avatar">
-                                    </div>
-                                    <div class="info-area">
-                                        <h6 class="m-0"><a href="public-profile-post.html" class="mdtxt">Piter Maio</a></h6>
-                                    </div>
-                                </div>
-                                <div class="btn-group cus-dropdown dropend">
-                                    <button type="button" class="dropdown-btn" data-bs-toggle="dropdown" aria-expanded="false">
-                                        <i class="material-symbols-outlined fs-xxl m-0"> more_horiz </i>
-                                    </button>
-                                    <ul class="dropdown-menu p-4 pt-2">
-                                        <li>
-                                            <a class="droplist d-flex align-items-center gap-2" href="#">
-                                                <i class="material-symbols-outlined mat-icon"> person_remove </i>
-                                                <span>Unfollow</span>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a class="droplist d-flex align-items-center gap-2" href="#">
-                                                <i class="material-symbols-outlined mat-icon"> hide_source </i>
-                                                <span>Hide Contact</span>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="profile-area d-center justify-content-between">
-                                <div class="avatar-item d-flex gap-3 align-items-center">
-                                    <div class="avatar-item">
-                                        <img class="avatar-img max-un" src="{{ asset('assets/images/avatar-7.png') }}" alt="avatar">
-                                    </div>
-                                    <div class="info-area">
-                                        <h6 class="m-0"><a href="public-profile-post.html" class="mdtxt">Floyd Miles</a></h6>
-                                    </div>
-                                </div>
-                                <div class="btn-group cus-dropdown dropend">
-                                    <button type="button" class="dropdown-btn" data-bs-toggle="dropdown" aria-expanded="false">
-                                        <i class="material-symbols-outlined fs-xxl m-0"> more_horiz </i>
-                                    </button>
-                                    <ul class="dropdown-menu p-4 pt-2">
-                                        <li>
-                                            <a class="droplist d-flex align-items-center gap-2" href="#">
-                                                <i class="material-symbols-outlined mat-icon"> person_remove </i>
-                                                <span>Unfollow</span>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a class="droplist d-flex align-items-center gap-2" href="#">
-                                                <i class="material-symbols-outlined mat-icon"> hide_source </i>
-                                                <span>Hide Contact</span>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="profile-area d-center justify-content-between">
-                                <div class="avatar-item d-flex gap-3 align-items-center">
-                                    <div class="avatar-item">
-                                        <img class="avatar-img max-un" src="{{ asset('assets/images/avatar-8.png') }}" alt="avatar">
-                                    </div>
-                                    <div class="info-area">
-                                        <h6 class="m-0"><a href="public-profile-post.html" class="mdtxt">Darrell Steward</a></h6>
-                                    </div>
-                                </div>
-                                <div class="btn-group cus-dropdown dropend">
-                                    <button type="button" class="dropdown-btn" data-bs-toggle="dropdown" aria-expanded="false">
-                                        <i class="material-symbols-outlined fs-xxl m-0"> more_horiz </i>
-                                    </button>
-                                    <ul class="dropdown-menu p-4 pt-2">
-                                        <li>
-                                            <a class="droplist d-flex align-items-center gap-2" href="#">
-                                                <i class="material-symbols-outlined mat-icon"> person_remove </i>
-                                                <span>Unfollow</span>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a class="droplist d-flex align-items-center gap-2" href="#">
-                                                <i class="material-symbols-outlined mat-icon"> hide_source </i>
-                                                <span>Hide Contact</span>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="profile-area d-center justify-content-between">
-                                <div class="avatar-item d-flex gap-3 align-items-center">
-                                    <div class="avatar-item">
-                                        <img class="avatar-img max-un" src="{{ asset('assets/images/avatar-2.png') }}" alt="avatar">
-                                    </div>
-                                    <div class="info-area">
-                                        <h6 class="m-0"><a href="public-profile-post.html" class="mdtxt">Kristin Watson</a></h6>
-                                    </div>
-                                </div>
-                                <div class="btn-group cus-dropdown dropend">
-                                    <button type="button" class="dropdown-btn" data-bs-toggle="dropdown" aria-expanded="false">
-                                        <i class="material-symbols-outlined fs-xxl m-0"> more_horiz </i>
-                                    </button>
-                                    <ul class="dropdown-menu p-4 pt-2">
-                                        <li>
-                                            <a class="droplist d-flex align-items-center gap-2" href="#">
-                                                <i class="material-symbols-outlined mat-icon"> person_remove </i>
-                                                <span>Unfollow</span>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a class="droplist d-flex align-items-center gap-2" href="#">
-                                                <i class="material-symbols-outlined mat-icon"> hide_source </i>
-                                                <span>Hide Contact</span>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="profile-area d-center justify-content-between">
-                                <div class="avatar-item d-flex gap-3 align-items-center">
-                                    <div class="avatar-item">
-                                        <img class="avatar-img max-un" src="{{ asset('assets/images/avatar-3.png') }}" alt="avatar">
-                                    </div>
-                                    <div class="info-area">
-                                        <h6 class="m-0"><a href="public-profile-post.html" class="mdtxt">Jane Cooper</a></h6>
-                                    </div>
-                                </div>
-                                <div class="btn-group cus-dropdown dropend">
-                                    <button type="button" class="dropdown-btn" data-bs-toggle="dropdown" aria-expanded="false">
-                                        <i class="material-symbols-outlined fs-xxl m-0"> more_horiz </i>
-                                    </button>
-                                    <ul class="dropdown-menu p-4 pt-2">
-                                        <li>
-                                            <a class="droplist d-flex align-items-center gap-2" href="#">
-                                                <i class="material-symbols-outlined mat-icon"> person_remove </i>
-                                                <span>Unfollow</span>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a class="droplist d-flex align-items-center gap-2" href="#">
-                                                <i class="material-symbols-outlined mat-icon"> hide_source </i>
-                                                <span>Hide Contact</span>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="profile-area d-center justify-content-between">
-                                <div class="avatar-item d-flex gap-3 align-items-center">
-                                    <div class="avatar-item">
-                                        <img class="avatar-img max-un" src="{{ asset('assets/images/avatar-4.png') }}" alt="avatar">
-                                    </div>
-                                    <div class="info-area">
-                                        <h6 class="m-0"><a href="public-profile-post.html" class="mdtxt">Devon Lane</a></h6>
-                                    </div>
-                                </div>
-                                <div class="btn-group cus-dropdown dropend">
-                                    <button type="button" class="dropdown-btn" data-bs-toggle="dropdown" aria-expanded="false">
-                                        <i class="material-symbols-outlined fs-xxl m-0"> more_horiz </i>
-                                    </button>
-                                    <ul class="dropdown-menu p-4 pt-2">
-                                        <li>
-                                            <a class="droplist d-flex align-items-center gap-2" href="#">
-                                                <i class="material-symbols-outlined mat-icon"> person_remove </i>
-                                                <span>Unfollow</span>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a class="droplist d-flex align-items-center gap-2" href="#">
-                                                <i class="material-symbols-outlined mat-icon"> hide_source </i>
-                                                <span>Hide Contact</span>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="profile-area d-center justify-content-between">
-                                <div class="avatar-item d-flex gap-3 align-items-center">
-                                    <div class="avatar-item">
-                                        <img class="avatar-img max-un" src="{{ asset('assets/images/avatar-9.png') }}" alt="avatar">
-                                    </div>
-                                    <div class="info-area">
-                                        <h6 class="m-0"><a href="public-profile-post.html" class="mdtxt">Annette Black</a></h6>
-                                    </div>
-                                </div>
-                                <div class="btn-group cus-dropdown dropend">
-                                    <button type="button" class="dropdown-btn" data-bs-toggle="dropdown" aria-expanded="false">
-                                        <i class="material-symbols-outlined fs-xxl m-0"> more_horiz </i>
-                                    </button>
-                                    <ul class="dropdown-menu p-4 pt-2">
-                                        <li>
-                                            <a class="droplist d-flex align-items-center gap-2" href="#">
-                                                <i class="material-symbols-outlined mat-icon"> person_remove </i>
-                                                <span>Unfollow</span>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a class="droplist d-flex align-items-center gap-2" href="#">
-                                                <i class="material-symbols-outlined mat-icon"> hide_source </i>
-                                                <span>Hide Contact</span>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="profile-area d-center justify-content-between">
-                                <div class="avatar-item d-flex gap-3 align-items-center">
-                                    <div class="avatar-item">
-                                        <img class="avatar-img max-un" src="{{ asset('assets/images/avatar-10.png') }}" alt="avatar">
-                                    </div>
-                                    <div class="info-area">
-                                        <h6 class="m-0"><a href="public-profile-post.html" class="mdtxt">Jerome Bell</a></h6>
-                                    </div>
-                                </div>
-                                <div class="btn-group cus-dropdown dropend">
-                                    <button type="button" class="dropdown-btn" data-bs-toggle="dropdown" aria-expanded="false">
-                                        <i class="material-symbols-outlined fs-xxl m-0"> more_horiz </i>
-                                    </button>
-                                    <ul class="dropdown-menu p-4 pt-2">
-                                        <li>
-                                            <a class="droplist d-flex align-items-center gap-2" href="#">
-                                                <i class="material-symbols-outlined mat-icon"> person_remove </i>
-                                                <span>Unfollow</span>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a class="droplist d-flex align-items-center gap-2" href="#">
-                                                <i class="material-symbols-outlined mat-icon"> hide_source </i>
-                                                <span>Hide Contact</span>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="profile-area d-center justify-content-between">
-                                <div class="avatar-item d-flex gap-3 align-items-center">
-                                    <div class="avatar-item">
-                                        <img class="avatar-img max-un" src="{{ asset('assets/images/avatar-11.png') }}" alt="avatar">
-                                    </div>
-                                    <div class="info-area">
-                                        <h6 class="m-0"><a href="public-profile-post.html">Guy Hawkins</a></h6>
-                                    </div>
-                                </div>
-                                <div class="btn-group cus-dropdown dropend">
-                                    <button type="button" class="dropdown-btn" data-bs-toggle="dropdown" aria-expanded="false">
-                                        <i class="material-symbols-outlined fs-xxl m-0"> more_horiz </i>
-                                    </button>
-                                    <ul class="dropdown-menu p-4 pt-2">
-                                        <li>
-                                            <a class="droplist d-flex align-items-center gap-2" href="#">
-                                                <i class="material-symbols-outlined mat-icon"> person_remove </i>
-                                                <span>Unfollow</span>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a class="droplist d-flex align-items-center gap-2" href="#">
-                                                <i class="material-symbols-outlined mat-icon"> hide_source </i>
-                                                <span>Hide Contact</span>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
                     </div>
                 </div>
                 <div class="col-xl-9 col-lg-8">
@@ -329,94 +64,62 @@
                                     <div class="title-area mb-3">
                                         <h6>Blocked Member</h6>
                                     </div>
+                                    @php
+                                        $blockedUsers = DB::table('blocks')
+                                            ->join('users', 'blocks.blocked_user_id', '=', 'users.id')
+                                            ->where('blocks.user_id', auth()->id())
+                                            ->select(
+                                                'blocks.id as block_id',
+                                                'users.*',
+                                                'blocks.created_at as blocked_at',
+                                            )
+                                            ->get();
+                                    @endphp
+
                                     <table class="table m-0">
                                         <tbody>
-                                            <tr>
-                                                <th scope="row">
-                                                    <div class="d-flex gap-3 align-items-center">
-                                                        <div class="avatar-item">
-                                                            <img class="avatar-img max-un" src="{{ asset('assets/images/avatar-1.png') }}" alt="avatar">
+                                            @foreach ($blockedUsers as $blockedUser)
+                                                <tr>
+                                                    <th scope="row">
+                                                        <div class="d-flex gap-3 align-items-center">
+                                                            <div class="avatar-item">
+                                                                <img class="avatar-img max-un"
+                                                                    src="{{ $blockedUser->avatar }}" alt="avatar">
+                                                            </div>
+                                                            <a href=""
+                                                                class="text-area">
+                                                                <p class="m-0">{{ $blockedUser->name }}</p>
+                                                            </a>
                                                         </div>
-                                                        <a href="public-profile-post.html" class="text-area">
-                                                            <p class="m-0">Jerome Bell</p>
-                                                        </a>
-                                                    </div>
-                                                </th>
-                                                <td><p class="blocked">Blocked 27/08/2022</p></td>
-                                                <td>
-                                                    <div class="btn-area d-flex justify-content-end gap-3">
-                                                        <button class="cmn-btn">Unblock</button>
-                                                        <button class="d-center cmn-btn alt px-2">
-                                                            <i class="material-symbols-outlined"> delete </i>
-                                                        </button>
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <th scope="row">
-                                                    <div class="d-flex gap-3 align-items-center">
-                                                        <div class="avatar-item">
-                                                            <img class="avatar-img max-un" src="{{ asset('assets/images/avatar-2.png') }}" alt="avatar">
+                                                    </th>
+                                                    <td>
+                                                        <p class="blocked">
+                                                            Blocked
+                                                            {{ \Carbon\Carbon::parse($blockedUser->blocked_at)->format('d/m/Y') }}
+                                                        </p>
+                                                    </td>
+                                                    <td>
+                                                        <div class="btn-area d-flex justify-content-end gap-3">
+                                                            <button 
+    type="button" 
+    class="cmn-btn unblock-user" 
+    data-user-id="{{ $blockedUser->id }}"
+    onclick="removeBlockedUser(this)"
+>
+    Unblock
+</button>
                                                         </div>
-                                                        <a href="public-profile-post.html" class="text-area">
-                                                            <p class="m-0">Piter Maio</p>
-                                                        </a>
-                                                    </div>
-                                                </th>
-                                                <td><p class="blocked">Blocked 26/08/2022</p></td>
-                                                <td>
-                                                    <div class="btn-area d-flex justify-content-end gap-3">
-                                                        <button class="cmn-btn">Unblock</button>
-                                                        <button class="d-center cmn-btn alt px-2">
-                                                            <i class="material-symbols-outlined"> delete </i>
-                                                        </button>
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <th scope="row">
-                                                    <div class="d-flex gap-3 align-items-center">
-                                                        <div class="avatar-item">
-                                                            <img class="avatar-img max-un" src="{{ asset('assets/images/avatar-3.png') }}" alt="avatar">
-                                                        </div>
-                                                        <a href="public-profile-post.html" class="text-area">
-                                                            <p class="m-0">Floyd Miles</p>
-                                                        </a>
-                                                    </div>
-                                                </th>
-                                                <td><p class="blocked">Blocked 26/08/2022</p></td>
-                                                <td>
-                                                    <div class="btn-area d-flex justify-content-end gap-3">
-                                                        <button class="cmn-btn">Unblock</button>
-                                                        <button class="d-center cmn-btn alt px-2">
-                                                            <i class="material-symbols-outlined"> delete </i>
-                                                        </button>
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <th scope="row">
-                                                    <div class="d-flex gap-3 align-items-center">
-                                                        <div class="avatar-item">
-                                                            <img class="avatar-img max-un" src="{{ asset('assets/images/avatar-4.png') }}" alt="avatar">
-                                                        </div>
-                                                        <a href="public-profile-post.html" class="text-area">
-                                                            <p class="m-0">Devon Lane</p>
-                                                        </a>
-                                                    </div>
-                                                </th>
-                                                <td><p class="blocked">Blocked 26/08/2022</p></td>
-                                                <td>
-                                                    <div class="btn-area d-flex justify-content-end gap-3">
-                                                        <button class="cmn-btn">Unblock</button>
-                                                        <button class="d-center cmn-btn alt px-2">
-                                                            <i class="material-symbols-outlined"> delete </i>
-                                                        </button>
-                                                    </div>
-                                                </td>
-                                            </tr>
+                                                    </td>
+                                                </tr>
+                                            @endforeach
                                         </tbody>
                                     </table>
+
+                                    @if ($blockedUsers->isEmpty())
+                                        <div class="text-center py-4">
+                                            <p>No blocked users found.</p>
+                                        </div>
+                                    @endif
                                 </div>
                             </div>
                         </div>
@@ -424,5 +127,6 @@
                 </div>
             </div>
         </div>
+        <script src="{{ asset('assets/js/block-page.js') }}"></script>
     </main>
-    @endsection
+@endsection

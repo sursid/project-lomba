@@ -19,6 +19,7 @@ use App\Models\SavedPost;
 use App\Models\PostReport;
 use Illuminate\Support\Str;
 use App\Models\Friendship;
+use App\Models\Notification;
 use App\Models\Conversation;
 
 class FriendRequestController extends Controller
@@ -200,6 +201,8 @@ class FriendRequestController extends Controller
     public function respondToRequest(Request $request, $friendshipId)
     {
         try {
+            $action = $request->input('action');
+
             $request->validate([
                 'action' => 'required|in:accept,reject'
             ]);
@@ -211,48 +214,32 @@ class FriendRequestController extends Controller
                 ->where('status', 'pending')
                 ->firstOrFail();
 
-            if ($request->action === 'accept') {
-                DB::beginTransaction();
-
-                // Update status to accepted
-                $friendship->status = 'accepted';
-                $friendship->save();
-
-                // Create a new friendship record in the opposite direction
-                Friendship::create([
-                    'user_id' => $friendship->friend_id,
-                    'friend_id' => $friendship->user_id,
+            if ($action === 'accept') {
+                // Langsung update status existing friendship
+                $friendship->update([
                     'status' => 'accepted'
                 ]);
 
-                // Update or create notification
-                DB::table('notifications')
-                    ->updateOrInsert(
-                        [
-                            'user_id' => $friendship->user_id,
-                            'from_user_id' => $user->id,
-                            'type' => 'friend_accepted'
-                        ],
-                        [
-                            'message' => $user->name . ' accepted your friend request',
-                            'notifiable_type' => 'App\Models\User',
-                            'notifiable_id' => $friendship->user_id,
-                            'is_read' => false,
-                            'updated_at' => now(),
-                            'created_at' => now()
-                        ]
-                    );
-
-                DB::commit();
+                // Buat notification dengan notifiable_type dan notifiable_id
+                Notification::create([
+                    'user_id' => $friendship->user_id, // Pengirim request awal
+                    'from_user_id' => $user->id, // User yang menerima request
+                    'type' => 'friend_accepted',
+                    'message' => $user->name . ' accepted your friend request',
+                    'notifiable_type' => User::class, // Tambahkan ini
+                    'notifiable_id' => $friendship->user_id, // Tambahkan ini
+                    'is_read' => false // Tambahkan ini jika diperlukan
+                ]);
 
                 return response()->json([
                     'status' => 'success',
                     'message' => 'Friend request accepted successfully'
                 ]);
             } else {
-                // Reject action
-                $friendship->status = 'rejected';
-                $friendship->save();
+                // Update status menjadi rejected
+                $friendship->update([
+                    'status' => 'rejected'
+                ]);
 
                 return response()->json([
                     'status' => 'success',
@@ -260,11 +247,7 @@ class FriendRequestController extends Controller
                 ]);
             }
         } catch (\Exception $e) {
-            if (isset($DB) && $request->action === 'accept') {
-                DB::rollBack();
-            }
-
-            Log::error('Error in respondToRequest method:', [
+            Log::error('Friend request error', [
                 'message' => $e->getMessage(),
                 'trace' => $e->getTraceAsString()
             ]);

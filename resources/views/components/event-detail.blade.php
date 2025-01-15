@@ -1,5 +1,4 @@
 @extends('main')
-
 @section('content')
 <div class="page-title page-event-detail">
             <div class="rellax" data-rellax-speed="5">
