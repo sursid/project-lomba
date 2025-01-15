@@ -817,6 +817,7 @@ a.text-white {
 .tf-container.w-1780 {
   width: 100%;
   max-width: 1810px;
+
 }
 .tf-container.w-1290 {
   width: 100%;
@@ -1313,6 +1314,7 @@ a.text-white {
   bottom: -5px;
   width: 100%;
   z-index: 3;
+  background-color: black;
 }
 .header.has-item-bot .header-item img {
   width: 100%;
@@ -2387,7 +2389,7 @@ a.text-white {
 
 /*------------ footer ---------------- */
 .footer {
-  background-color: var(--Primary);
+  background-color: rgb(6, 59, 8);
   padding-top: 123px;
   margin-top: 20px;
   position: relative;
@@ -2410,8 +2412,8 @@ a.text-white {
 }
 .footer .footer-top .footer-center p {
   color: var(--White);
-  font-size: 35px;
-  line-height: 35px;
+  font-size: 64px;
+  line-height: 64px;
 }
 .footer .footer-top .footer-right {
   position: relative;

@@ -766,13 +766,21 @@
                             <div class="footer-left">
                                 <div class="logo">
                                     <a href="/">
+<<<<<<< HEAD
                                         <img src="./images/logo/logoo.jpg" alt="">
+=======
+                                        <img src="./images/logo/logo-2.png" alt="">
+>>>>>>> 5fa6ecc75c4bf70765e35e94f68166d27be9ffe2
                                     </a>
                                 </div>
                             </div>
                             <div class="footer-center">
                                 <p class="font-snowfall">
+<<<<<<< HEAD
                                     Kemakmuran Pertanian Indonesia!
+=======
+                                    Farm of laughter and happiness!
+>>>>>>> 5fa6ecc75c4bf70765e35e94f68166d27be9ffe2
                                 </p>
                             </div>
                             <div class="footer-right">

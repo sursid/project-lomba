@@ -14,7 +14,7 @@
                                     See Outstanding Projects We Have Implemented
                                 </p>
                                 <h1 class="title">
-                                    portfolio style 1
+                                    portfolio
                                 </h1>
                                 <div class="icon-img">
                                     <img src="./images/item/line-throw-title.png" alt="">
@@ -24,7 +24,7 @@
                                     <div class="icon">
                                         <i class="icon-arrow-right1"></i>
                                     </div>
-                                    <a href="javascript:void(0)"> Portfolio Style 1</a>
+                                    <a href="javascript:void(0)"> Portfolio</a>
                                 </div>
                             </div>
                         </div>

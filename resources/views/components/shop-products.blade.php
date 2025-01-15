@@ -65,98 +65,12 @@
                         <div class="loader">
                         </div>
                         <div class="icon">
-                            <img src="./images/logo/logo3x.png" alt="">
+                            <img src="./images/logo/Nusatani.png" alt="">
                         </div>
                     </div>
                 </div>
             </div>
         </div><!-- /.Preloader -->
-
-        <!-- Top-bar -->
-        <div class="tf-topbar-shop">
-            <div class="tf-container w-1620">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="topbar-inner">
-                            <div class="topbar-left">
-                                <div class="icon style-circle">
-                                    <i class="fa-solid fa-bell"></i>
-                                </div>
-                                <p>
-                                    15% off when you buy online and pick up in store!
-                                </p>
-                            </div>
-                            <div class="topbar-right">
-                                <ul>
-                                    <li class="item">
-                                        <div class="icon">
-                                            <i class="fa-solid fa-location-dot"></i>
-                                        </div>
-                                        <a href="#">
-                                            Find a Store
-                                        </a>
-                                    </li>
-                                    <li class="item">
-                                        <div class="icon">
-                                            <i class="fa-solid fa-truck"></i>
-                                        </div>
-                                        <a href="#">
-                                            Order Tracking
-                                        </a>
-                                    </li>
-                                    <li class="item">
-                                        <div class="icon"><i class="fa-solid fa-money-bill"></i></div>
-                                        <div class="tf-dropdown-sort tf-currencies" data-bs-toggle="dropdown"
-                                            aria-expanded="false" role="button">
-                                            <div class="btn-select">
-                                                <span class="text-sort-value">VND</span>
-                                                <div class="icon">
-                                                    <i class="fa-solid fa-chevron-down"></i>
-                                                </div>
-                                            </div>
-
-                                            <div class="dropdown-menu">
-                                                <div class="select-item">
-                                                    <span class="text-value-item active">VND</span>
-                                                </div>
-                                                <div class="select-item">
-                                                    <span class="text-value-item">USD</span>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                    </li>
-                                    <li class="item">
-                                        <div class="icon"><i class="fa-solid fa-globe"></i></div>
-
-                                        <div class="tf-dropdown-sort tf-languages" data-bs-toggle="dropdown"
-                                            aria-expanded="false" role="button">
-                                            <div class="btn-select">
-                                                <span class="text-sort-value">English</span>
-                                                <div class="icon">
-                                                    <i class="fa-solid fa-chevron-down"></i>
-                                                </div>
-                                            </div>
-                                            <div class="dropdown-menu">
-                                                <div class="select-item">
-                                                    <span class="text-value-item active">English</span>
-                                                </div>
-                                                <div class="select-item">
-                                                    <span class="text-value-item">Spain</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="s-img-item item-1">
-                <img src="./images/item/page-title-top.png" alt="">
-            </div>
-        </div><!-- /Top-bar -->
 
         <!-- Header  -->
         <header class="tf-header-shop header style-4" id="header-main">
@@ -167,7 +81,7 @@
                             <div class="header-left">
                                 <div class="logo-site">
                                     <a href="/">
-                                        <img src="./images/logo/logo.png" alt="">
+                                        <img src="./images/logo/Nusatani.png" alt="">
                                     </a>
                                 </div>
                             </div>
@@ -242,24 +156,7 @@
                                 <div class="main-nav">
                                     <ul class="nav-list">
                                         <li class="item has-child ">
-                                            <a href="javascript:void(0)">Home</a>
-                                            <ul class="sub-nav">
-                                                <li class="">
-                                                    <a href="/">
-                                                        <span>
-                                                            Home 1
-                                                        </span>
-                                                    </a>
-                                                </li>
-                                                <li><a href="home-2"><span>
-                                                            Home 2
-                                                        </span>
-                                                    </a></li>
-                                                <li><a href="home-3"><span>
-                                                            Home 3
-                                                        </span>
-                                                    </a></li>
-                                            </ul>
+                                            <a href="/">Home</a>
                                         </li>
                                         <li class="item has-child">
                                             <a href="javascript:void(0)">Page</a>
@@ -344,38 +241,7 @@
                                             </ul>
                                         </li>
                                         <li class="item has-child">
-                                            <a href="javascript:void(0)">Portfolio</a>
-                                            <ul class="sub-nav">
-
-                                                <li>
-                                                    <a href="portfolio-style-1">
-                                                        <span>
-                                                            Portfolio Style 1
-                                                        </span>
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a href="portfolio-style-2">
-                                                        <span>
-                                                            Portfolio Style 2
-                                                        </span>
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a href="portfolio-style-3">
-                                                        <span>
-                                                            Portfolio Style 3
-                                                        </span>
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a href="portfolio-details">
-                                                        <span>
-                                                            Portfolio Details
-                                                        </span>
-                                                    </a>
-                                                </li>
-                                            </ul>
+                                            <a href="portfolio-style-1">Portfolio</a>
                                         </li>
                                         <li class="item has-child current-menu">
                                             <a href="javascript:void(0)">Shop</a>
@@ -479,24 +345,7 @@
                                     <div class="main-nav">
                                         <ul class="nav-list">
                                             <li class="item has-child ">
-                                                <a href="javascript:void(0)">Home</a>
-                                                <ul class="sub-nav">
-                                                    <li class="">
-                                                        <a href="/">
-                                                            <span>
-                                                                Home 1
-                                                            </span>
-                                                        </a>
-                                                    </li>
-                                                    <li><a href="home-2"><span>
-                                                                Home 2
-                                                            </span>
-                                                        </a></li>
-                                                    <li><a href="home-3"><span>
-                                                                Home 3
-                                                            </span>
-                                                        </a></li>
-                                                </ul>
+                                                <a href="/">Home</a>
                                             </li>
                                             <li class="item has-child">
                                                 <a href="javascript:void(0)">Page</a>
@@ -581,38 +430,7 @@
                                                 </ul>
                                             </li>
                                             <li class="item has-child">
-                                                <a href="javascript:void(0)">Portfolio</a>
-                                                <ul class="sub-nav">
-
-                                                    <li>
-                                                        <a href="portfolio-style-1">
-                                                            <span>
-                                                                Portfolio Style 1
-                                                            </span>
-                                                        </a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="portfolio-style-2">
-                                                            <span>
-                                                                Portfolio Style 2
-                                                            </span>
-                                                        </a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="portfolio-style-3">
-                                                            <span>
-                                                                Portfolio Style 3
-                                                            </span>
-                                                        </a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="portfolio-details">
-                                                            <span>
-                                                                Portfolio Details
-                                                            </span>
-                                                        </a>
-                                                    </li>
-                                                </ul>
+                                                <a href="portfolio-style-1">Portfolio</a>
                                             </li>
                                             <li class="item has-child current-menu">
                                                 <a href="javascript:void(0)">Shop</a>
@@ -748,21 +566,10 @@
                     <nav id="mobile-main-nav" class="mobile-main-nav">
                         <ul id="menu-mobile-menu" class="menu">
                             <li class="menu-item menu-item-has-children-mobile ">
-                                <a class="item-menu-mobile " href="javascript:void(0)">
+                                <a class="item-menu-mobile " href="/">
                                     Home
                                     <i class="icon-arrow_down"></i>
                                 </a>
-                                <ul class="sub-menu-mobile">
-                                    <li class="menu-item ">
-                                        <a href="/">Home 1</a>
-                                    </li>
-                                    <li class="menu-item">
-                                        <a href="home-2">Home 2</a>
-                                    </li>
-                                    <li class="menu-item">
-                                        <a href="home-3">Home 3</a>
-                                    </li>
-                                </ul>
                             </li>
                             <li class="menu-item menu-item-has-children-mobile">
                                 <a class="item-menu-mobile" href="javascript:void(0)">
@@ -806,28 +613,10 @@
                                 </ul>
                             </li>
                             <li class="menu-item menu-item-has-children-mobile">
-                                <a class="item-menu-mobile" href="javascript:void(0)">
+                                <a class="item-menu-mobile" href="portfolio-style-1.blade.php">
                                     Portfolio
                                     <i class="icon-arrow_down"></i>
                                 </a>
-                                <ul class="sub-menu-mobile">
-
-                                    <li class="menu-item">
-                                        <a href="#">Portfolio Style
-                                            1</a>
-                                    </li>
-                                    <li class="menu-item">
-                                        <a href="#">Portfolio Style
-                                            2</a>
-                                    </li>
-                                    <li class="menu-item">
-                                        <a href="#">Portfolio Style
-                                            3</a>
-                                    </li>
-                                    <li class="menu-item">
-                                        <a href="/">Portfolio Detail</a>
-                                    </li>
-                                </ul>
                             </li>
                             <li class="menu-item menu-item-has-children-mobile">
                                 <a class="item-menu-mobile current" href="javascript:void(0)">
@@ -1031,6 +820,10 @@
                                     <a href="shop-details" class="name-product font-worksans hover-text-4">
                                         Häagen-Dazs Salted
                                     </a>
+                                    <div class="text">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M12 11.5A2.5 2.5 0 0 1 9.5 9A2.5 2.5 0 0 1 12 6.5A2.5 2.5 0 0 1 14.5 9a2.5 2.5 0 0 1-2.5 2.5M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7"/></svg>
+                                    <p>Jakarta Selatan</p>
+                                    </div> 
                                     <div class="pricing-star">
                                         <div class="price-wrap">
 
@@ -1097,6 +890,10 @@
                                     <a href="shop-details" class="name-product font-worksans hover-text-4">
                                         Vimto Squash Remix
                                     </a>
+                                    <div class="text">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M12 11.5A2.5 2.5 0 0 1 9.5 9A2.5 2.5 0 0 1 12 6.5A2.5 2.5 0 0 1 14.5 9a2.5 2.5 0 0 1-2.5 2.5M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7"/></svg>
+                                    <p>Jakarta Selatan</p>
+                                    </div> 
                                     <div class="pricing-star">
                                         <div class="price-wrap">
                                             <span class=" price-1">$3.44 </span>
@@ -1165,6 +962,10 @@
                                     <a href="shop-details" class="name-product font-worksans hover-text-4">
                                         Bag Of Succulent Oranges
                                     </a>
+                                    <div class="text">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M12 11.5A2.5 2.5 0 0 1 9.5 9A2.5 2.5 0 0 1 12 6.5A2.5 2.5 0 0 1 14.5 9a2.5 2.5 0 0 1-2.5 2.5M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7"/></svg>
+                                    <p>Depok</p>
+                                    </div> 
                                     <div class="pricing-star">
                                         <div class="price-wrap">
 
@@ -1239,7 +1040,7 @@
                                     </a>
                                     <div class="text">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M12 11.5A2.5 2.5 0 0 1 9.5 9A2.5 2.5 0 0 1 12 6.5A2.5 2.5 0 0 1 14.5 9a2.5 2.5 0 0 1-2.5 2.5M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7"/></svg>
-                                    <p>kab.bogor</p>
+                                    <p>Bogor</p>
                                     </div> 
                                     <div class="pricing-star">
                                         <div class="price-wrap">
@@ -1303,6 +1104,10 @@
                                     <a href="shop-details" class="name-product font-worksans hover-text-4">
                                         Extreme Budweiser
                                     </a>
+                                    <div class="text">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M12 11.5A2.5 2.5 0 0 1 9.5 9A2.5 2.5 0 0 1 12 6.5A2.5 2.5 0 0 1 14.5 9a2.5 2.5 0 0 1-2.5 2.5M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7"/></svg>
+                                    <p>Bekasi</p>
+                                    </div> 
                                     <div class="pricing-star">
                                         <div class="price-wrap">
                                             <span class=" price-2">$2.87</span>
@@ -1372,6 +1177,10 @@
                                     <a href="shop-details" class="name-product font-worksans hover-text-4">
                                         Sitema BakeIT Plastic Box
                                     </a>
+                                    <div class="text">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M12 11.5A2.5 2.5 0 0 1 9.5 9A2.5 2.5 0 0 1 12 6.5A2.5 2.5 0 0 1 14.5 9a2.5 2.5 0 0 1-2.5 2.5M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7"/></svg>
+                                    <p>Tanggerang</p>
+                                    </div> 
                                     <div class="pricing-star">
                                         <div class="price-wrap">
                                             <span class=" price-2">$3.00</span>
@@ -1433,6 +1242,10 @@
                                     <a href="shop-details" class="name-product font-worksans hover-text-4">
                                         Handmade And Created
                                     </a>
+                                    <div class="text">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M12 11.5A2.5 2.5 0 0 1 9.5 9A2.5 2.5 0 0 1 12 6.5A2.5 2.5 0 0 1 14.5 9a2.5 2.5 0 0 1-2.5 2.5M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7"/></svg>
+                                    <p>Bogor</p>
+                                    </div> 
                                     <div class="pricing-star">
                                         <div class="price-wrap">
                                             <span class=" price-2">$5.00</span>
@@ -1494,6 +1307,10 @@
                                     <a href="shop-details" class="name-product font-worksans hover-text-4">
                                         Avocado The Most Nutrient
                                     </a>
+                                    <div class="text">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M12 11.5A2.5 2.5 0 0 1 9.5 9A2.5 2.5 0 0 1 12 6.5A2.5 2.5 0 0 1 14.5 9a2.5 2.5 0 0 1-2.5 2.5M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7"/></svg>
+                                    <p>Bandung</p>
+                                    </div> 
                                     <div class="pricing-star">
                                         <div class="price-wrap">
                                             <span class=" price-2">$2.87</span>
@@ -1555,6 +1372,10 @@
                                     <a href="shop-details" class="name-product font-worksans hover-text-4">
                                         Golden Curcuma Flavored
                                     </a>
+                                    <div class="text">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M12 11.5A2.5 2.5 0 0 1 9.5 9A2.5 2.5 0 0 1 12 6.5A2.5 2.5 0 0 1 14.5 9a2.5 2.5 0 0 1-2.5 2.5M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7"/></svg>
+                                    <p>Jakarta Barat</p>
+                                    </div>
                                     <div class="pricing-star">
                                         <div class="price-wrap">
                                             <span class=" price-2">$3.00</span>
@@ -1622,6 +1443,10 @@
                                     <a href="shop-details" class="name-product font-worksans hover-text-4">
                                         Dense Superfood Available
                                     </a>
+                                    <div class="text">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M12 11.5A2.5 2.5 0 0 1 9.5 9A2.5 2.5 0 0 1 12 6.5A2.5 2.5 0 0 1 14.5 9a2.5 2.5 0 0 1-2.5 2.5M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7"/></svg>
+                                    <p>Jakarta Timur</p>
+                                    </div> 
                                     <div class="pricing-star">
                                         <div class="price-wrap">
                                             <span class=" price-2">$3.00</span>
@@ -1689,6 +1514,10 @@
                                     <a href="shop-details" class="name-product font-worksans hover-text-4">
                                         Organic Beef Box 1kg
                                     </a>
+                                    <div class="text">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M12 11.5A2.5 2.5 0 0 1 9.5 9A2.5 2.5 0 0 1 12 6.5A2.5 2.5 0 0 1 14.5 9a2.5 2.5 0 0 1-2.5 2.5M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7"/></svg>
+                                    <p>Bandung</p>
+                                    </div> 
                                     <div class="pricing-star">
                                         <div class="price-wrap">
                                             <span class=" price-2">$3.00</span>
@@ -1756,6 +1585,10 @@
                                     <a href="shop-details" class="name-product font-worksans hover-text-4">
                                         Orange Juice From Fruits
                                     </a>
+                                    <div class="text">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M12 11.5A2.5 2.5 0 0 1 9.5 9A2.5 2.5 0 0 1 12 6.5A2.5 2.5 0 0 1 14.5 9a2.5 2.5 0 0 1-2.5 2.5M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7"/></svg>
+                                    <p>Tanggerang</p>
+                                    </div> 
                                     <div class="pricing-star">
                                         <div class="price-wrap">
                                             <span class=" price-2">$3.00</span>
@@ -1839,7 +1672,7 @@
                             <div class="footer-left">
                                 <div class="logo">
                                     <a href="/">
-                                        <img src="./images/logo/logo-2.png" alt="">
+                                        <img src="./images/logo/Nusatani.png" alt="">
                                     </a>
                                 </div>
                             </div>
